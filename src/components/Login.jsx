@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react"
 import {useRef} from "react";
-import "../style/styleLogin.css"
-import image from "../Imagenes/playa.jpg"
+import "../styles/styleLogin.css"
+import image from "../images/playa.jpg"
 import { gsap } from "gsap";
 /*import axios from "axios";*/
-import useAuth from "../Hooks/useAuth";
-import useAxiosPrivate from "../Hooks/useAxiosPrivate";
-import useRefreshToken from "../Hooks/useRefreshToken";
+import useAuth from "../hooks/useAuth";
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import useRefreshToken from "../hooks/useRefreshToken";
 /*ICONOS DE REDES SOCIALES*/
 import { FaTiktok } from "react-icons/fa"
 import { SiInstagram } from "react-icons/si"

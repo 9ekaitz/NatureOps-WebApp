@@ -1,5 +1,5 @@
 import React from "react";
-import logoAlternatibo from "../../Imagenes/logoAlternatibo.png";
+import logoAlternatibo from "../../images/logoAlternatibo.png";
 
 
 function Aside() {

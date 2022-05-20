@@ -2,27 +2,26 @@ import React from "react";
 /*, { useState }*/
 /*import Aside from "./componentsDashBoard/Aside.jsx";*/
 /*ICONOS*/
-import { ImNewspaper } from "react-icons/im";
-import { MdEvent } from "react-icons/md"
-import { MdPlace } from "react-icons/md"
-import { CgProfile } from "react-icons/cg"
-import { ImCross} from "react-icons/im"
-import { FiLogOut } from "react-icons/fi"
-import { FiMenu } from "react-icons/fi"
-import { GrCircleInformation } from "react-icons/gr"
+import { ImNewspaper } from "react-icons/im";;
+import { MdEvent } from "react-icons/md";
+import { MdPlace } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+import { ImCross} from "react-icons/im";
+import { FiLogOut } from "react-icons/fi";
+import { FiMenu } from "react-icons/fi";
+import { GrCircleInformation } from "react-icons/gr";
 
-import { Helmet } from "react-helmet"
 /*IMAGENES*/
-import logo from "../Imagenes/logo.png"
-import basura from "../Imagenes/basura.jpg"
-import img_noticia1 from "../Imagenes/noticia1.jpg"
-import img_noticia2 from "../Imagenes/noticia2.jpg"
-import img_noticia3 from "../Imagenes/noticia3.jpg"
+import logo from "../images/logo.png";
+import basura from "../images/basura.jpg";
+import img_noticia1 from "../images/noticia1.jpg";
+import img_noticia2 from "../images/noticia2.jpg";
+import img_noticia3 from "../images/noticia3.jpg";
 
 /*import scriptReact from "../JavaScript/index.js"*/
 
 
-import "../style/styleSidebar.css"
+import "../styles/styleSidebar.css"
 
 
 
@@ -184,12 +183,6 @@ function DashBoard() {
           </div>
         </div>
       </div>
-      
-      <Helmet>
-       
-      </Helmet>
-      
-      
     </div>
   );
 }

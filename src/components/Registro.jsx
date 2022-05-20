@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import {useRef} from "react";
-import "../style/styleLogin.css"
-import image from "../Imagenes/faro.jpg"
+import "../styles/styleLogin.css"
+import image from "../images/faro.jpg"
 /*import BoxIcons from "boxicons"*/
 import { gsap } from "gsap"
 

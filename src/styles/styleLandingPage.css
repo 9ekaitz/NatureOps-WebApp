@@ -1,17 +1,17 @@
 /******************** Configuracion global *****************/
 @font-face
 {
-    src: url(../Estilos/FontCCBold.ttf);
+    src: url(../fonts/FontCCBold.ttf);
     font-family: fontCCBold;
 }
 @font-face
 {
-    src: url(../Estilos/FontCCLight.ttf);
+    src: url(../fonts/FontCCLight.ttf);
     font-family: fontCCLight;
 }
 @font-face
 {
-    src: url(../Estilos/FontCCMedium.ttf);
+    src: url(../fonts/FontCCMedium.ttf);
     font-family: fontCCMedium;
 }
 
@@ -59,7 +59,7 @@ body
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-image: url("../Imagenes/recogida.jpg");
+    background-image: url("../images/recogida.jpg");
     background-size:cover;
     background-position: 75% 100%;
     background-repeat: no-repeat;
