@@ -4,6 +4,8 @@ import Login from "./components/Login.jsx";
 import LandingPage  from "./components/LandingPage.jsx";
 import Registro from "./components/Registro.jsx";
 import DashBoard from "./components/Dashboard.jsx"; 
+import Eventos from "./components/Eventos.jsx"; 
+
 /*import Sidebar from "./components/componentsDashBoard/Sidebar.jsx"*/
 
 export function App() {
@@ -15,7 +17,8 @@ export function App() {
         <Route exact path="/login" component={Login}/>
         <Route exact path="/registro" component={Registro}/>
         <Route exact path="/dashboard" component={DashBoard}/>
-        
+        <Route exact path="/eventos" component={Eventos}/>
+
         
         
         
