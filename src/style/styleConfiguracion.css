@@ -1,0 +1,82 @@
+@font-face
+{
+    src: url(../Estilos/FontCCBold.ttf);
+    font-family: fontCCBold;
+}
+@font-face
+{
+    src: url(../Estilos/FontCCLight.ttf);
+    font-family: fontCCLight;
+}
+@font-face
+{
+    src: url(../Estilos/FontCCMedium.ttf);
+    font-family: fontCCMedium;
+}
+
+:root
+{
+   /*==== Variables ====*/
+   --header-height: 3rem;
+
+   /*==== Colors ====*/
+   --color_muy_azul_claro: #edebfd;
+   --color_blanco: #fcf8f8;
+   --color_azul_claro: #a296cf;
+   --color_azul_muy_oscuro: #6958BB;
+   --color_azul: #896eff;
+   /*==== Font ====*/
+   --big-font-size: 2.5rem;
+   --big-font-size-computer: 3.4rem;
+   --normal-font-size: 1.3rem;
+   --smal-font-size: 1rem;
+
+   /*==== z index ====*/
+   --z-fixed: 100;
+}
+
+.configuracion
+{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    height: 100vh;
+}
+
+.derecha
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--color_muy_azul_claro);
+    display: grid;
+    grid-template-rows: 30% 70%;
+    height: 100%;
+}
+
+.recientes
+{
+    padding: 2rem;
+    height: calc(100vh);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.nombreDePerfil
+{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   background: white;
+   margin: 2rem;
+   border-radius: 1.5rem;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+@media screen and (max-width: 768px){
+    .configuracion
+    {
+        grid-template-columns: 1fr;
+    }   
+    body
+    {
+        overflow: scroll;
+    }
+   
+}
