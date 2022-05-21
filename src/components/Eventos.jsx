@@ -7,18 +7,17 @@ import { MdPlace } from "react-icons/md"
 import { CgProfile } from "react-icons/cg"
 import { ImCross} from "react-icons/im"
 import { FiLogOut } from "react-icons/fi"
-import { FiMenu } from "react-icons/fi"
-import {FaStar} from "react-icons/fa"
+import { FiMenu } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr"
 
 import { Helmet } from "react-helmet"
 /*IMAGENES*/
-import logo from "../Imagenes/logo.png"
-import img_playa from "../Imagenes/PlayaConchaArtedo.jpg"
+import logo from "../images/logo.png"
+import img_playa from "../images/PlayaConcha.jpg"
 
 
-import "../style/styleSidebar.css"
-import "../style/styleEventos.css"
+import "../styles/styleSidebar.css"
+import "../styles/styleEventos.css"
 
 
 
@@ -49,7 +48,7 @@ function Eventos() {
   })*/
 
   return(
-    <div className="container">
+    <div className="containerEventos">
       <aside id="asidee" className="cerrar">
         <div className = "top">
           <div className="close" id="close-btn">
@@ -63,7 +62,7 @@ function Eventos() {
             <span> <ImNewspaper /></span>
             <h3>News</h3>
           </a>
-          <a href="https://www.google.es/">
+          <a href="/eventos">
             <span> <MdEvent /></span>
             <h3>Events</h3>
           </a>
@@ -75,7 +74,7 @@ function Eventos() {
             <span> <CgProfile /></span>
             <h3>Profile</h3>
           </a>
-          <a className="salir" href="https://www.google.es/">
+          <a className="salir" href="/login">
             <span> <FiLogOut /></span>
             <h3>Logout</h3>
           </a>
@@ -85,43 +84,78 @@ function Eventos() {
         <h1>Eventos</h1>
         <div className="eventos">
           <div className="apartado">
-            <h2>Eventos</h2>
+            <h2>Lista de eventos disponibles</h2>
             <GrCircleInformation/>
           </div>
-          <div className="eventCard destacado">
-            <FaStar className="estrella"/>
-            <p>Evento GreenPeace</p>
-            <p>2022-05-20</p>
-            <p>11:30</p>
-            <p>Playa de la Concha, Donostia</p>
-            <div className="imagen">
-              <img src={img_playa} alt="basura"></img>
+          <div className="listaEventos">
+            <div className="eventCard destacado">
+              <p>Evento GreenPeace</p>
+              <p>2022-05-20</p>
+              <p>11:30</p>
+              <p>Playa de la Concha, Donostia</p>
+              <div className="imagenCard">
+                <img src={img_playa} alt="playa"></img>
+              </div>
+              <button className="buttonDetalles">Detalles</button>
             </div>
-            <button>Detalles</button>
-          </div>
-          <div className="eventCard">
-            <p>Evento Carton</p>
-            <p>2022-05-20</p>
-            <p>11:30</p>
-            <p>Playa de la Concha, Donostia</p>
-            <div className="imagen">
-              <img src={img_playa} alt="basura"></img>
+            <div className="eventCard destacado">
+              <p>Evento Carton</p>
+              <p>2022-05-20</p>
+              <p>11:30</p>
+              <p>Playa de la Concha, Donostia</p>
+              <div className="imagenCard">
+                <img src={img_playa} alt="playa"></img>
+              </div>
+              <button className="buttonDetalles">Detalles</button>
             </div>
-            <button>Detalles</button>
-          </div>
-          <div className="eventCard">
-            <p>Evento Papel</p>
-            <p>2022-05-20</p>
-            <p>11:30</p>
-            <p>Playa de la Concha, Donostia</p>
-            <div className="imagen">
-              <img src={img_playa} alt="basura"></img>
+            <div className="eventCard">
+              <p>Evento Papel</p>
+              <p>2022-05-20</p>
+              <p>11:30</p>
+              <p>Playa de la Concha, Donostia</p>
+              <div className="imagenCard">
+                <img src={img_playa} alt="playa"></img>
+              </div>
+              <button className="buttonDetalles">Detalles</button>
             </div>
-            <button>Detalles</button>
+            <div className="eventCard">
+              <p>Evento Papel</p>
+              <p>2022-05-20</p>
+              <p>11:30</p>
+              <p>Playa de la Concha, Donostia</p>
+              <div className="imagenCard">
+                <img src={img_playa} alt="playa"></img>
+              </div>
+              <button className="buttonDetalles">Detalles</button>
+            </div>
+            <div className="eventCard">
+              <p>Evento Papel</p>
+              <p>2022-05-20</p>
+              <p>11:30</p>
+              <p>Playa de la Concha, Donostia</p>
+              <div className="imagenCard">
+                <img src={img_playa} alt="playa"></img>
+              </div>
+              <button className="buttonDetalles">Detalles</button>
+            </div>          
           </div>
+          
         </div>
       </main>
-      
+      <div className="right">
+        <div className="top">
+          <button id="menu-btn" onClick={abrirNavbar}><span><FiMenu/></span></button>
+          <div className="profile">
+            <div className="info">
+              <p>Hey, <b>Daniel</b> </p>
+              <small className="text-muted">Admin</small>
+            </div>
+            <div className="profile-photo">
+              <img src={logo} alt="perfil"/>
+            </div>
+          </div>
+        </div>
+      </div>
       <Helmet>
        
       </Helmet>
