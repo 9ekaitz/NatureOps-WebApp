@@ -11,12 +11,16 @@ import { FiLogOut } from "react-icons/fi";
 import { FiMenu } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr";
 import { FaPen } from "react-icons/fa";
+import{FaTrashAlt} from "react-icons/fa";
 
 
 /*IMAGENES*/
 import logo from "../images/logo.png";
-import basura from "../images/basura.jpg";
-import img_noticia2 from "../images/noticia2.jpg";
+import logro from "../images/logro_img.png";
+import logro2 from "../images/logro_img2.png";
+import logro3 from "../images/logro_img3.png";
+import logroNoConseguido from "../images/logroNoConseguido.png";
+import playa from "../images/playa.jpg";
 
 /*import scriptReact from "../JavaScript/index.js"*/
 
@@ -79,31 +83,48 @@ function Perfil() {
             <span> <CgProfile /></span>
             <h3>Profile</h3>
           </a>
-          <a className="salir" href="https://www.google.es/">
+          <a className="salir" href="/login">
             <span> <FiLogOut /></span>
             <h3>Logout</h3>
           </a>
         </div>
       </aside>
-      <main>
+      <main className="containerPerfil">
         <img className="imagenCentro" src={logo} alt="Logo"/>
         <div className="datosUsuario">
-          <h2>Username</h2>
-          <div className="datos">
-            <div className="col">
-              <p>Nombre</p>
-              <p>Telefono</p>
+          <div className="datosBody">
+            <h2>oihanee</h2>
+            <div className="datos">
+              <div className="col">
+                <p>Oihane</p>
+                <p>662263406</p>
+                <p>Trenbidearen Zumardia 7, 1I</p>
+              </div>
+              <div className="col">
+                <p>Epelde Martiarena</p>
+                <p>oihane800@gmail.com</p>
+                <p>20720</p>
+              </div>
             </div>
-            <div className="col">
-              <p>Apellidos</p>
-              <p>Correo</p>
-            </div>
+            <button className="editButton">Editar<FaPen className="icon"/></button>
           </div>
-          <button className="editButton">Editar<FaPen className="icon"/></button>
         </div>
         <div className="logros">
-          
+          <div className="apartado">
+            <h2>Logros obtenidos</h2>
+            <a href="https://www.google.com">Ver todos</a>
+          </div>
+          <div className="listLogros">
+            <img className="logroImg" src={logro} alt="Logro"/>
+            <img className="logroImg" src={logro2} alt="Logro"/>
+            <img className="logroImg" src={logro3} alt="Logro"/>
+            <img className="logroImg" src={logro} alt="Logro"/>
+            <img className="logroImg" src={logro2} alt="Logro"/>
+            <img className="logroImg" src={logroNoConseguido} alt="Logro"/>
+            <img className="logroImg" src={logroNoConseguido} alt="Logro"/>
+          </div>
         </div>
+        <button className="deleteButton">Eliminar cuenta<FaTrashAlt className="icon"/></button>
       </main>
       <div className="right">
         <div className="top">
@@ -123,12 +144,33 @@ function Perfil() {
             <h2>Recientes</h2>
             <GrCircleInformation/>
           </div>
-          <div className="imagen">
-            <img src={basura} alt="basura"></img>
+          <div className="listRecientes">
+            <div className="recientesCard">
+              <span>Te has suscrito a</span>
+              <div className="cardBody">
+                <p>Evento GreenPeace</p>
+                <p>2022-05-22</p>
+                <img src={playa} alt="playa"/>
+              </div>
+            </div>
+            <div className="recientesCard">
+              <span>Te has desuscrito de</span>
+              <div className="cardBody">
+                <p>Evento Carton</p>
+                <p>2022-05-22</p>
+                <img src={playa} alt="playa"/>
+              </div>
+            </div>
+            <div className="recientesCard">
+              <span>Has creado</span>
+              <div className="cardBody">
+                <p>Evento Papel</p>
+                <p>2022-05-28</p>
+                <img src={playa} alt="playa"/>
+              </div>
+            </div>
           </div>
-          <div className="imagen">
-            <img src={img_noticia2} alt="basura"></img>
-          </div>
+          
         </div>
       </div>
     </div>

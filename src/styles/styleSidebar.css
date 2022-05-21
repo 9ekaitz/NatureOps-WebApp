@@ -96,6 +96,7 @@ aside .top h2{
 }
 
 /**** SIDEBAR ****/
+
 aside .sidebar{
     background: var(--color-gris);
     display: flex;
@@ -285,6 +286,7 @@ main table tbody tr:last-child td{
 .right{
     margin-top: 1.4rem;
     margin-left: 1rem;
+    height: calc(100vh - 1.4rem);
 }
 
 .right .top{

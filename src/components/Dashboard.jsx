@@ -2,7 +2,7 @@ import React from "react";
 /*, { useState }*/
 /*import Aside from "./componentsDashBoard/Aside.jsx";*/
 /*ICONOS*/
-import { ImNewspaper } from "react-icons/im";;
+import { ImNewspaper } from "react-icons/im";
 import { MdEvent } from "react-icons/md";
 import { MdPlace } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
@@ -74,11 +74,11 @@ function DashBoard() {
             <span> <MdPlace /></span>
             <h3>Places</h3>
           </a>
-          <a href="https://www.google.es/">
+          <a href="/perfil">
             <span> <CgProfile /></span>
             <h3>Profile</h3>
           </a>
-          <a className="salir" href="https://www.google.es/">
+          <a className="salir" href="/login">
             <span> <FiLogOut /></span>
             <h3>Logout</h3>
           </a>
