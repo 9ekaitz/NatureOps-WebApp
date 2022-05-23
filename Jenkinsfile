@@ -15,7 +15,7 @@ pipeline {
         }
         stage ('Static Analysis') {
             environment {
-                def scannerHome = tool 'sonar-scanner-cli-4.7.0.2747-linux';
+                def scannerHome = tool 'SQScanner';
             }
             steps {
                 sh ' ./node_modules/eslint/bin/eslint.js -f checkstyle src > eslint.xml'
