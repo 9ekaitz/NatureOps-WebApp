@@ -97,12 +97,12 @@ function Perfil() {
             <div className="datos">
               <div className="col">
                 <p>Oihane</p>
+                <p>Epelde Martiarena</p>
                 <p>662263406</p>
-                <p>Trenbidearen Zumardia 7, 1I</p>
               </div>
               <div className="col">
-                <p>Epelde Martiarena</p>
                 <p>oihane800@gmail.com</p>
+                <p>Trenbidearen Zumardia 7, 1I</p>
                 <p>20720</p>
               </div>
             </div>
@@ -122,9 +122,10 @@ function Perfil() {
             <img className="logroImg" src={logro2} alt="Logro"/>
             <img className="logroImg" src={logroNoConseguido} alt="Logro"/>
             <img className="logroImg" src={logroNoConseguido} alt="Logro"/>
+            <img className="logroImg" src={logroNoConseguido} alt="Logro"/>
           </div>
+          <button className="deleteButton">Eliminar cuenta<FaTrashAlt className="icon"/></button>
         </div>
-        <button className="deleteButton">Eliminar cuenta<FaTrashAlt className="icon"/></button>
       </main>
       <div className="right">
         <div className="top">
