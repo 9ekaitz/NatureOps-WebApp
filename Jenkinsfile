@@ -14,8 +14,19 @@ pipeline {
             }
         }
         stage ('Static Analysis') {
+            environment {
+                def scannerHome = tool 'sonar-scanner-cli-4.7.0.2747-linux';
+            }
             steps {
                 sh ' ./node_modules/eslint/bin/eslint.js -f checkstyle src > eslint.xml'
+                withSonarQubeEnv('Sonarqube-NatureOps') {
+                sh '''
+                ${scannerHome}/bin/sonar-scanner \
+                -D sonar.projectKey=NatureOps-WebApp \
+                -D sonar.projectName=NatureOps-WebApp \
+                -D sonar.sources=./src \
+                '''
+            }
             }
             post {
                 always {
