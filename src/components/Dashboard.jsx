@@ -2,7 +2,7 @@ import React from "react";
 /*, { useState }*/
 /*import Aside from "./componentsDashBoard/Aside.jsx";*/
 /*ICONOS*/
-import { ImNewspaper } from "react-icons/im";;
+import { ImNewspaper } from "react-icons/im";
 import { MdEvent } from "react-icons/md";
 import { MdPlace } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
