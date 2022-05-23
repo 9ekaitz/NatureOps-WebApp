@@ -9,6 +9,8 @@ import { ImCross} from "react-icons/im"
 import { FiLogOut } from "react-icons/fi"
 import { FiMenu } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr"
+import { FaPlus } from "react-icons/fa"
+
 
 import { Helmet } from "react-helmet"
 /*IMAGENES*/
@@ -139,7 +141,7 @@ function Eventos() {
               <button className="buttonDetalles">Detalles</button>
             </div>          
           </div>
-          
+          <button className="addButton"><FaPlus className="icon" size="17px"/></button>
         </div>
       </main>
       <div className="right">

@@ -1,6 +1,7 @@
 :root{
     --box-shadow1: 0 1rem 2rem #FFE79A;
     --borde-eventoDestacado:#FFD44A;
+    --button-hover: #2ea2c5;
 }
 
 .containerEventos{
@@ -93,6 +94,25 @@ main{
     color: var(--color-gris);
 }
 
+.addButton{
+    display: flex;
+    float: right;
+    background-color: var(--azul-oscuro);
+    border: none;
+    padding: 1.5rem;
+    border-radius: 4rem;
+    align-items: center;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.addButton:hover{
+    background-color: var(--button-hover);
+}
+
+.icon{
+    color: white;
+}
 /**** MEDIA QUERIES ****/
 
 @media screen and (max-width: 1746px){
@@ -117,7 +137,7 @@ main{
         width: 100%;
         margin:0;
         height: 100vh;
-        grid-template-columns: 10% auto;
+        grid-template-columns: 10% auto auto;
 
     }
     
@@ -135,13 +155,19 @@ main{
     }
     */
     .containerEventos{
-        width: 100%;
+        width: 100vw;
         grid-template-columns: auto;
     }
 
     .listaEventos{
         grid-template-columns: auto auto;
-     }
+    }
+
+    main{
+        padding-top: 1.4rem;
+        padding-left: 2rem;
+        padding-right: 0;
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -162,10 +188,10 @@ main{
 
     .listaEventos{
         grid-template-columns: auto;
-     }
+    }
 
      .apartado{
          text-align: center;
-     }
+    }
 }
 
