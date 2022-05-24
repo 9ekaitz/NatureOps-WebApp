@@ -9,11 +9,10 @@ import { CgProfile } from "react-icons/cg";
 import { ImCross} from "react-icons/im";
 import { FiLogOut } from "react-icons/fi";
 import { FiMenu } from "react-icons/fi";
-import { GrCircleInformation } from "react-icons/gr";
+import {FaPlus} from "react-icons/fa";
 
 /*IMAGENES*/
 import logo from "../images/logo.png";
-import basura from "../images/basura.jpg";
 import img_noticia1 from "../images/noticia1.jpg";
 import img_noticia2 from "../images/noticia2.jpg";
 import img_noticia3 from "../images/noticia3.jpg";
@@ -22,10 +21,11 @@ import img_noticia3 from "../images/noticia3.jpg";
 
 
 import "../styles/styleSidebar.css"
+import "../styles/styleSitios.css"
 
 
 
-function DashBoard() {
+function Sitios() {
   //const sideMenu = document.querySelector("aside");
   //const closeBtn = document.querySelector("close-btn");
   
@@ -85,77 +85,34 @@ function DashBoard() {
         </div>
       </aside>
       <main>
-        <h1>Dashboard</h1>
-        <div className="noticias">
-          <div className="card">
-            <img src={img_noticia1} alt="noticia1"/>
-            <h4>La Costa Vasca contaminada</h4>
+        <h1>Sitios</h1>
+        <div className="listSitios">
+          <div className="sitioCard">
+            <img src={img_noticia1} alt="noticia1" className="imgSitios"/>
+            <h4>Playa de la Concha</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
             impedit quis ipsa fugit excepturi alias voluptatibus ratione.
             </p>
-            <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">Leer más</a>
+            <p>9.8</p>
           </div>
-          <div className="card">
-            <img src={img_noticia2} alt="noticia2"/>
+          <div className="sitioCard">
+            <img src={img_noticia2} alt="noticia2" className="imgSitios"/>
             <h4>La Costa Vasca contaminada</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
             impedit quis ipsa fugit excepturi alias voluptatibus ratione.
             </p>
-            <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">Leer más</a>
+            <p>8.4</p>
           </div>
-          <div className="card">
-            <img src={img_noticia3} alt="noticia2"/>
+          <div className="sitioCard">
+            <img src={img_noticia3} alt="noticia2" className="imgSitios"/>
             <h4>La Costa Vasca contaminada</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
             impedit quis ipsa fugit excepturi alias voluptatibus ratione.
             </p>
-            <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">Leer más</a>
+            <p>5.5</p>
           </div>
         </div>
-
-        <div className="eventos">
-          <div className="apartado">
-            <h2>Eventos</h2>
-            <GrCircleInformation/>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Lugar</th>
-                <th>Fecha</th>
-                <th>Hora</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Evento plastico</td>
-                <td>Playa Laida</td>
-                <td>10/06/2022</td>
-                <td>10:30</td>
-              </tr>
-              <tr>
-                <td>Evento carton</td>
-                <td>Playa Laga</td>
-                <td>15/06/2022</td>
-                <td>15:30</td>
-              </tr>
-              <tr>
-                <td>Donostia garbitu</td>
-                <td>La Zurriola</td>
-                <td>22/06/2022</td>
-                <td>11:00</td>
-              </tr>
-              <tr>
-                <td>Evento plastico</td>
-                <td>Playa Laida</td>
-                <td>10/06/2022</td>
-                <td>10:30</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <button className="buttonAdd"><FaPlus size="26px" color="white"/></button>
       </main>
       <div className="right">
         <div className="top">
@@ -170,21 +127,9 @@ function DashBoard() {
             </div>
           </div>
         </div>
-        <div className="galeria">
-          <div className="apartado">
-            <h2>Galeria</h2>
-            <GrCircleInformation/>
-          </div>
-          <div className="imagen">
-            <img src={basura} alt="basura"></img>
-          </div>
-          <div className="imagen">
-            <img src={img_noticia2} alt="basura"></img>
-          </div>
-        </div>
       </div>
     </div>
   );
 }
 
-export default DashBoard;
+export default Sitios;
