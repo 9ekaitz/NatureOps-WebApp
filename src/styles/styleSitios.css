@@ -36,10 +36,11 @@ main{
 }
 
 .buttonAdd{
+    float: right;
     display: flex;
     background-color: var(--azul-oscuro);
-    border-radius: 2.5rem;
-    padding: 2rem;
+    border-radius: 2rem;
+    padding: 1.5rem;
     align-items: center;
     border: none;
 }

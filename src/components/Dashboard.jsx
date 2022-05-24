@@ -18,20 +18,11 @@ import img_noticia1 from "../images/noticia1.jpg";
 import img_noticia2 from "../images/noticia2.jpg";
 import img_noticia3 from "../images/noticia3.jpg";
 
-/*import scriptReact from "../JavaScript/index.js"*/
-
-
 import "../styles/styleSidebar.css"
 
 
 
 function DashBoard() {
-  //const sideMenu = document.querySelector("aside");
-  //const closeBtn = document.querySelector("close-btn");
-  
-  //const closeBtn = document.getElementById("close-btn");
-
-  //const {toggle, setToggle} = useState(true);
 
   function abrirNavbar(){
 
@@ -44,12 +35,6 @@ function DashBoard() {
     document.getElementById("asidee").classList.remove("abrir");
     document.getElementById("asidee").classList.add("cerrar");
   }
-
-  /*closeBtn.addEventListener("click", () => {
-    console.log("Cerrar botoia");
-    sideMenu.classList.remove("irekia");
-    sideMenu.classList.add("itxia");
-  })*/
 
   return(
     <div className="container">
@@ -70,7 +55,7 @@ function DashBoard() {
             <span> <MdEvent /></span>
             <h3>Events</h3>
           </a>
-          <a href="https://www.google.es/">
+          <a href="/sitios">
             <span> <MdPlace /></span>
             <h3>Places</h3>
           </a>

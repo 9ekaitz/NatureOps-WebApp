@@ -13,12 +13,7 @@ import {FaPlus} from "react-icons/fa";
 
 /*IMAGENES*/
 import logo from "../images/logo.png";
-import img_noticia1 from "../images/noticia1.jpg";
-import img_noticia2 from "../images/noticia2.jpg";
-import img_noticia3 from "../images/noticia3.jpg";
-
-/*import scriptReact from "../JavaScript/index.js"*/
-
+import playa from "../images/playa.jpg";
 
 import "../styles/styleSidebar.css"
 import "../styles/styleSitios.css"
@@ -26,12 +21,6 @@ import "../styles/styleSitios.css"
 
 
 function Sitios() {
-  //const sideMenu = document.querySelector("aside");
-  //const closeBtn = document.querySelector("close-btn");
-  
-  //const closeBtn = document.getElementById("close-btn");
-
-  //const {toggle, setToggle} = useState(true);
 
   function abrirNavbar(){
 
@@ -44,12 +33,6 @@ function Sitios() {
     document.getElementById("asidee").classList.remove("abrir");
     document.getElementById("asidee").classList.add("cerrar");
   }
-
-  /*closeBtn.addEventListener("click", () => {
-    console.log("Cerrar botoia");
-    sideMenu.classList.remove("irekia");
-    sideMenu.classList.add("itxia");
-  })*/
 
   return(
     <div className="container">
@@ -70,7 +53,7 @@ function Sitios() {
             <span> <MdEvent /></span>
             <h3>Events</h3>
           </a>
-          <a href="https://www.google.es/">
+          <a href="/sitios">
             <span> <MdPlace /></span>
             <h3>Places</h3>
           </a>
@@ -88,7 +71,7 @@ function Sitios() {
         <h1>Sitios</h1>
         <div className="listSitios">
           <div className="sitioCard">
-            <img src={img_noticia1} alt="noticia1" className="imgSitios"/>
+            <img src={playa} alt="noticia1" className="imgSitios"/>
             <h4>Playa de la Concha</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
             impedit quis ipsa fugit excepturi alias voluptatibus ratione.
@@ -96,23 +79,31 @@ function Sitios() {
             <p>9.8</p>
           </div>
           <div className="sitioCard">
-            <img src={img_noticia2} alt="noticia2" className="imgSitios"/>
-            <h4>La Costa Vasca contaminada</h4>
+            <img src={playa} alt="noticia2" className="imgSitios"/>
+            <h4>Playa Zurriola</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
             impedit quis ipsa fugit excepturi alias voluptatibus ratione.
             </p>
             <p>8.4</p>
           </div>
           <div className="sitioCard">
-            <img src={img_noticia3} alt="noticia2" className="imgSitios"/>
-            <h4>La Costa Vasca contaminada</h4>
+            <img src={playa} alt="noticia2" className="imgSitios"/>
+            <h4>Playa Santiago</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
+            impedit quis ipsa fugit excepturi alias voluptatibus ratione.
+            </p>
+            <p>5.5</p>
+          </div>
+          <div className="sitioCard">
+            <img src={playa} alt="noticia2" className="imgSitios"/>
+            <h4>Playa Santiago</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
             impedit quis ipsa fugit excepturi alias voluptatibus ratione.
             </p>
             <p>5.5</p>
           </div>
         </div>
-        <button className="buttonAdd"><FaPlus size="26px" color="white"/></button>
+        <button className="buttonAdd"><FaPlus size="18px" color="white"/></button>
       </main>
       <div className="right">
         <div className="top">
