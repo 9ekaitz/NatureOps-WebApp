@@ -31,10 +31,10 @@ function Sitios() {
     (sitio)=>{
       return(
         <div className="sitioCard" key={sitio.id}>
-          <img src={sitio.imagen} alt="noticia1" className="imgSitios"/>
+          <img src={sitio.imagen} alt="img1" className="imgSitios"/>
           <h4>{sitio.nombre}</h4>
           <p>{sitio.descripcion}</p>
-          <p><b>Puntuacion: </b>{sitio.puntuacion}</p>
+          <p className="puntuacion"><b>PUNTUACIÓN: </b>{sitio.puntuacion}</p>
         </div>
       );
     }
