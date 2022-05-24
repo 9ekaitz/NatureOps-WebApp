@@ -8,8 +8,8 @@ import {FaPlus} from "react-icons/fa";
 
 /*IMAGENES*/
 import logo from "../images/logo.png";
-import playa from "../images/playa.jpg";
-
+/*import playa from "../images/playa.jpg";
+ */
 /*ESTILO*/
 import "../styles/styleSidebar.css"
 import "../styles/styleSitios.css"
@@ -31,7 +31,7 @@ function Sitios() {
     (sitio)=>{
       return(
         <div className="sitioCard" key={sitio.id}>
-          <img src={playa} alt="noticia1" className="imgSitios"/>
+          <img src={sitio.imagen} alt="noticia1" className="imgSitios"/>
           <h4>{sitio.nombre}</h4>
           <p>{sitio.descripcion}</p>
           <p><b>Puntuacion: </b>{sitio.puntuacion}</p>

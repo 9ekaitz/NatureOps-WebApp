@@ -3,24 +3,28 @@
         "id":0,
         "nombre":"Playa de la Concha",
         "descripcion":"La incomparable playa de La Concha es una de las señas de identidad de San Sebastián. Situada en pleno centro de la ciudad, ofrece al visitante la oportunidad de disfrutar de magníficas vistas, como la que nos ofrece su hermosa bahía en forma de concha, con la isla de Santa Clara en el centro.",
-        "puntuacion":9.8
+        "puntuacion":9.8,
+        "imagen":"https://turismo.euskadi.eus/contenidos/noticia/0000043522_o1_rec_turismo/es_43522/images/Playa-la-Concha-H.jpg"
     },
     {
         "id":1,
         "nombre":"Playa de la Zurriola",
         "descripcion":"La Playa de Zurriola es una de las tres playas de la ciudad de San Sebastián. Está situada entre la desembocadura del río Urumea y el monte Ulía, y tiene una longitud aproximada de 800 metros.La playa de Zurriola se ha consolidado como una playa de perfil más joven y apropiada para la práctica del surfismo.",
-        "puntuacion":8.4
+        "puntuacion":8.4,
+        "imagen":"https://sh-assets.holidu.com/imagecache/blog-photos/2258_Fill_670_0.jpg"
     },
     {
         "id":2,
         "nombre":"Playa de Santiago",
         "descripcion":"La playa Santiago de Deba se sitúa en el pequeño pueblo pesquero de Deba, ideal para los que buscan tranquilidad. Los surfistas han elegido a esta playa como una de las mejores playas del País Vasco ya que al estar abierta al mar tiene una de las olas más grandes del País Vasco. ¡Hasta 5 metros!",
-        "puntuacion":5.5
+        "puntuacion":5.5,
+        "imagen":"https://turismo.euskadi.eus/contenidos/g_naturaleza/0000003020_g1_rec_turismo/es_3020/images/DebaH.jpg"
     },
     {
         "id":3,
         "nombre":"Playa de Antilla",
         "descripcion":"La playa de la Antilla está situada en Orio y también es conocida como Plaiaundi. La peculiaridad de esta playa es que coincide con la desembocadura del río Oria, siendo una playa semiurbana, con alguna duna y de arena dorada. Destaca la gran cantidad de servicios que tiene esta playa como son los de socorrista, camping y zona deportiva. ",
-        "puntuacion":5.7
+        "puntuacion":5.7,
+        "imagen":"https://static.diariosur.es/comun/movil2016/imagenes_playas/0000416.jpg"
     }
 ]
