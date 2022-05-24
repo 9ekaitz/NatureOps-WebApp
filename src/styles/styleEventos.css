@@ -27,7 +27,7 @@ main{
 .listaEventos{
     display: grid;
     width: 100%;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
 }
 
@@ -115,20 +115,15 @@ main{
 }
 /**** MEDIA QUERIES ****/
 
-@media screen and (max-width: 1746px){
+@media screen and (max-width: 1670px) {
     .listaEventos{
-       grid-template-columns: auto auto auto auto;
-    }
-
-    .eventCard{
-        width: 90%;
+        grid-template-columns: repeat(3,1fr);
     }
 }
 
-
 @media screen and (max-width: 1446px){
     .listaEventos{
-       grid-template-columns: auto auto auto;
+       grid-template-columns: repeat(2,1fr);
     }
 }
 
@@ -144,23 +139,13 @@ main{
 }
 
 @media screen and (max-width: 800px){
-
-    /*
-    .abrir{
-        display:block;
-        padding-right: 0;
-    }
-    .cerrar{
-        display:none;
-    }
-    */
     .containerEventos{
         width: 100vw;
         grid-template-columns: auto;
     }
 
     .listaEventos{
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(2,1fr);
     }
 
     main{
@@ -171,16 +156,6 @@ main{
 }
 
 @media screen and (max-width: 600px){
-
-    /*
-    .abrir{
-        display:block;
-        padding-right: 0;
-    }
-    .cerrar{
-        display:none;
-    }
-    */
     .containerEventos{
         width: 100%;
         grid-template-columns: auto;
