@@ -1,11 +1,8 @@
 import React from "react";
-import { ImNewspaper } from "react-icons/im";
-import { MdEvent } from "react-icons/md"
-import { MdPlace } from "react-icons/md"
+import { ImNewspaper, ImCross} from "react-icons/im";
+import { MdEvent, MdPlace } from "react-icons/md"
 import { CgProfile } from "react-icons/cg"
-import { ImCross} from "react-icons/im"
-import { FiLogOut } from "react-icons/fi"
-import { FiMenu } from "react-icons/fi"
+import { FiLogOut, FiMenu } from "react-icons/fi"
 
 import logo from "../../images/logo.png"
 import "../../styles/styleGeneralForms.css"

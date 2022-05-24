@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react"
-import {useRef} from "react";
+import React, { useEffect, useState, useRef } from "react"
 import "../styles/styleLogin.css"
 import image from "../images/playa.jpg"
 import { gsap } from "gsap";
-/*import axios from "axios";*/
 import useAuth from "../hooks/useAuth";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import useRefreshToken from "../hooks/useRefreshToken";
@@ -37,11 +35,11 @@ function Login() {
           },
         }
       );
-        //console.log(JSON.stringify(response));
+      
       const accessToken = response?.data?.access_token;
       const refreshToken = response?.data?.refresh_token;
 
-      /*const roles = response?.data?.roles;*/
+      
       setAuth({ username, password, accessToken, refreshToken });
       setUsername("");
       setPassword("");

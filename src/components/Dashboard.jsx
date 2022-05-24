@@ -1,14 +1,9 @@
 import React from "react";
-/*, { useState }*/
-/*import Aside from "./componentsDashBoard/Aside.jsx";*/
-/*ICONOS*/
-import { ImNewspaper } from "react-icons/im";
-import { MdEvent } from "react-icons/md";
-import { MdPlace } from "react-icons/md";
+
+import { ImNewspaper, ImCross } from "react-icons/im";
+import { MdEvent, MdPlace } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
-import { ImCross} from "react-icons/im";
-import { FiLogOut } from "react-icons/fi";
-import { FiMenu } from "react-icons/fi";
+import { FiLogOut, FiMenu } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr";
 
 /*IMAGENES*/
@@ -18,20 +13,12 @@ import img_noticia1 from "../images/noticia1.jpg";
 import img_noticia2 from "../images/noticia2.jpg";
 import img_noticia3 from "../images/noticia3.jpg";
 
-/*import scriptReact from "../JavaScript/index.js"*/
-
 
 import "../styles/styleSidebar.css"
 
 
 
 function DashBoard() {
-  //const sideMenu = document.querySelector("aside");
-  //const closeBtn = document.querySelector("close-btn");
-  
-  //const closeBtn = document.getElementById("close-btn");
-
-  //const {toggle, setToggle} = useState(true);
 
   function abrirNavbar(){
 
@@ -44,12 +31,6 @@ function DashBoard() {
     document.getElementById("asidee").classList.remove("abrir");
     document.getElementById("asidee").classList.add("cerrar");
   }
-
-  /*closeBtn.addEventListener("click", () => {
-    console.log("Cerrar botoia");
-    sideMenu.classList.remove("irekia");
-    sideMenu.classList.add("itxia");
-  })*/
 
   return(
     <div className="container">

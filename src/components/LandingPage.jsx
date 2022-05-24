@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react"
-import {useRef} from "react";
+import React, { useEffect, useState, useRef } from "react"
 import "../styles/styleLandingPage.css"
 import { gsap } from "gsap"
 
@@ -28,20 +27,6 @@ function LandingPage() {
         opacity: 1,
       }
     );
-    /*gsap.fromTo( element.querySelector(".nav__toggle"),
-      {
-        delay: 1.2,
-        duration: 1,
-        opacity: 0,
-        y: 10,
-      },
-      {
-        delay: 1.2,
-        duration: 1,
-        opacity: 1,
-        y: 0,
-      }
-    );*/
     gsap.fromTo( element.querySelector(".nav__list"),
       {
         delay: 1.3,

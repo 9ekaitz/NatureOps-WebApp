@@ -8,7 +8,6 @@ import SubirImagen from "./components/SubirImagen.jsx"
 import CrearNoticia from "./components/CrearNoticia.jsx"
 import CrearEvento from "./components/CrearEvento.jsx"
 import Evento from "./components/Evento.jsx"
-/*import Sidebar from "./components/componentsDashBoard/Sidebar.jsx"*/
 
 export function App() {
 
