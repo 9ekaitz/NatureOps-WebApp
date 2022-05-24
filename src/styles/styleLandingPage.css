@@ -172,7 +172,7 @@ a
 
   .nav__link
   {
-    font-family: fontCCLight;
+    font-family: fontCCMedium, 'Candara', sans-serif;
     font-weight: bolder;
     transition: ease 0.3s;
     position: relative;
@@ -261,7 +261,7 @@ a
 .contenido h3
 {
   color: var(--color_azul_muy_oscuro);
-  font-family: fontCCBold;
+  font-family: fontCCMedium, 'Candara', sans-serif;
   font-weight: 400;
   font-size: 40px;
   letter-spacing: 1px;
@@ -269,7 +269,7 @@ a
 .contenido p
 {
   color: var(--color_azul_claro);
-  font-family: fontCCMedium;
+  font-family: fontCCMedium, 'Candara', sans-serif;
   font-weight: 100;
   font-size: 17px;
   margin-bottom: 40px;
@@ -279,7 +279,7 @@ a
 .contenido span
 {
   color: var(--color_azul);
-  font-family: fontCCLight;
+  font-family: fontCCMedium, 'Candara', sans-serif;
   font-weight: 400;
   font-size: 20px;
   margin-bottom: 20px;
@@ -290,7 +290,7 @@ a
 {
   background-color: var(--color_azul);
   color: var(--color_blanco);
-  font-family: fontCCLight;
+  font-family: fontCCMedium, 'Candara', sans-serif;
   font-size: 1.2rem;
   padding: 1.125rem 2rem;
   border-radius: .5rem;
