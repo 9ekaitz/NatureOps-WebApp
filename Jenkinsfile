@@ -26,6 +26,9 @@ pipeline {
                 -D sonar.projectName=NatureOps-WebApp \
                 -D sonar.sources=./src \
                 '''
+                timeout(time: 5, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true, credentialsId: 'sonar-webhook'
+                }
             }
             }
             post {
