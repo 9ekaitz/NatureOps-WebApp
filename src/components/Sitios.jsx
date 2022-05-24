@@ -10,9 +10,12 @@ import {FaPlus} from "react-icons/fa";
 import logo from "../images/logo.png";
 import playa from "../images/playa.jpg";
 
+/*ESTILO*/
 import "../styles/styleSidebar.css"
 import "../styles/styleSitios.css"
 
+/*DATOS*/
+import data from "../data/sitios.json"
 
 
 function Sitios() {
@@ -23,44 +26,27 @@ function Sitios() {
     document.getElementById("asidee").classList.add("abrir");
   }
 
+  
+  const DisplayData=data.map(
+    (sitio)=>{
+      return(
+        <div className="sitioCard" key={sitio.id}>
+          <img src={playa} alt="noticia1" className="imgSitios"/>
+          <h4>{sitio.nombre}</h4>
+          <p>{sitio.descripcion}</p>
+          <p><b>Puntuacion: </b>{sitio.puntuacion}</p>
+        </div>
+      );
+    }
+  )
+  
   return(
     <div className="container">
       <Aside/>
       <main>
         <h1>Sitios</h1>
         <div className="listSitios">
-          <div className="sitioCard">
-            <img src={playa} alt="noticia1" className="imgSitios"/>
-            <h4>Playa de la Concha</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
-            impedit quis ipsa fugit excepturi alias voluptatibus rationePDLC.
-            </p>
-            <p>9.8</p>
-          </div>
-          <div className="sitioCard">
-            <img src={playa} alt="noticia2" className="imgSitios"/>
-            <h4>Playa Zurriola</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
-            impedit quis ipsa fugit excepturi alias voluptatibus ratione.PZ
-            </p>
-            <p>8.4</p>
-          </div>
-          <div className="sitioCard">
-            <img src={playa} alt="noticia2" className="imgSitios"/>
-            <h4>Playa Santiago</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
-            impedit quis ipsa fugit excepturi alias voluptatibus ratione.PS
-            </p>
-            <p>5.5</p>
-          </div>
-          <div className="sitioCard">
-            <img src={playa} alt="noticia2" className="imgSitios"/>
-            <h4>Playa de Antilla</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
-            impedit quis ipsa fugit excepturi alias voluptatibus ratione.PDA
-            </p>
-            <p>5.7</p>
-          </div>
+          {DisplayData}
         </div>
         <button className="buttonAdd"><FaPlus size="18px" color="white"/></button>
       </main>
