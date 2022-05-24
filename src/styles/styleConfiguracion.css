@@ -47,7 +47,6 @@
     display: grid;
     grid-template-columns: 1fr;
     background-color: var(--color_muy_azul_claro);
-    display: grid;
     grid-template-rows: 30% 70%;
     height: 100%;
 }
