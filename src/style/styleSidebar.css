@@ -71,7 +71,7 @@ aside{
 aside .top{
     background-color: var(--color-gris);
     /*justify-content: space-between;*/
-    margin-top: 1.4rem;
+    padding-top: 1.4rem;
     gap:2rem;
     text-align: center;
     width: 100%;
@@ -92,6 +92,10 @@ aside .close{
 
 aside .top h2{
     color:var(--azul-clarito);
+    font-family: poppins, sans-serif;
+}
+
+h3{
     font-family: poppins, sans-serif;
 }
 
@@ -416,6 +420,10 @@ h2{
         margin-left: 2rem;
         margin-right: 2rem;
     }
+
+    .card a:hover{
+        text-decoration:underline;
+    }
     
     
 }
@@ -581,4 +589,6 @@ h2{
         
     }
 }
+
+
 

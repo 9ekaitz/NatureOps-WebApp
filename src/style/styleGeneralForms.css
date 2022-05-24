@@ -1,0 +1,271 @@
+:root{
+    --color-gris: #424242;
+    --azul-clarito: #E0F4FB;
+    --color-light: rgba(132,139,200,0.18);
+    --color-background: #f6f6f9;
+    --azul-oscuro: #48BFE3;
+}
+
+.claseSubirImagen{
+    display: grid;
+    grid-template-columns: 14rem auto;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ezkerra .cerrar {
+   height: 100vh; 
+}
+/*******************************************************/
+/*** CLASE EVENTO ***/
+.claseEvento{
+    grid-template-columns: 14rem auto 23rem;
+}
+
+.chat{
+    border-left: 2px solid black;
+    display: grid;
+    grid-template-rows: 9% 80% 11%;
+}
+
+.chat svg{
+    height: 2rem;
+    width: 2rem;
+}
+
+.topChat{
+    display: flex;
+    gap:2rem;
+    border-color: black;
+    border-bottom-width: 2px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-style: solid;
+}
+
+.formEscribirMsg{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.formEscribirMsg input{
+    height: 2rem;
+    margin-left: 1rem;
+}
+
+.topChat span{
+    margin:1rem;
+}
+
+/*******************************************************/
+/*ESKUINEKO ALDEA*/
+.eskuina{
+    background-color: var(--azul-clarito);
+    padding: 3rem;
+}
+/*APARTADO SELECCIONAR IMAGEN (SUBIR, SACAR)*/
+.seleccionarImagen{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3rem;
+    gap: 2rem;
+    height: 5rem;
+}
+
+.subir, .sacar{
+    border-radius: 15px;
+    background-color:var(--azul-oscuro) ;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 45% 55%;
+
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    font-family: poppins, sans-serif;
+    font-size: 18px;
+    text-align: start;
+}
+
+span{
+    text-align: end;
+    margin-right: 1rem;
+}
+
+.seleccionarImagen svg{
+    height: 2rem;
+    width: 2rem;
+    margin-top: 1.5rem;
+    text-align: end;
+}
+
+/*APARTADO FORM*/
+.forma{
+    display: grid;
+    margin: 5rem;
+    gap: 3rem;
+}
+
+.formNuevoLugar{
+    display: grid;
+    gap:1rem;
+}
+
+.panelBotones{
+    display: flex;
+    gap: 2rem;
+}
+.aceptar,.cancelar{
+    border-radius: 20px;
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.aceptar{
+    background-color: lightgreen;
+}
+.cancelar{
+    background-color: red;
+}
+
+.aceptar span, .cancelar span{
+    margin-right: 0.5rem;
+}
+.accept, .cancel{
+    margin-left: 1rem;
+}
+.panelBotones svg{
+    height: 2rem;
+    width: 2rem;
+    margin-top: 0.5rem;
+    text-align: end;
+}
+
+input, select{
+    border-radius: 5px;
+    height: 1.5rem;
+    background-color: #dcdcdc;
+}
+
+
+label{
+    font-family: 'Candara', sans-serif;
+    font-size: 20px;
+    margin-right: 1rem;
+}
+
+aside{
+    height: 100vh;
+}
+
+.ezkerra{
+    background-color: var(--azul-clarito);
+}
+
+.close{
+    background-color: #f6f6f9;
+}
+
+/*** CREAR NOTICIA ***/
+
+.noticia{
+    margin-left: 2rem;
+    padding-left: 5rem;
+}
+
+.noticia input{
+    width: calc(100% - 1rem);
+    margin-top: 1rem;
+}
+
+/*** CREAR EVENTO ***/
+.evento{
+    margin: 2.5rem 2rem 2rem 5rem;
+}
+.fechaHora {
+    display: flex;
+    gap: 2rem;
+}
+
+#descripcion {
+    width: calc(100% - 1rem);
+    height: 6rem;
+    margin-top: 1rem;
+}
+
+/*** QUERIES ***/
+@media screen and (max-width: 1100px){
+    .claseSubirImagen{
+        display: grid;
+        grid-template-columns: 7rem auto;
+        
+    }
+   
+}
+
+@media screen and (max-width: 800px){
+    .claseSubirImagen{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    aside .close button{
+        display: inline !important;
+        margin-top: 2rem;
+        color: #E0F4FB;
+    }
+    .close{
+        background-color: var(--color-gris);
+    }
+
+    .evento {
+        margin: 2.5rem 2rem 2rem 2rem;
+    }
+    .noticia{
+        padding-left: 0;
+    }
+
+     /************/
+    /*** CHAT ***/
+/*
+    .chat .topChat{
+        position: fixed;
+        top:0;
+        left:0;
+        padding: 0 0.8rem;
+        height: 4.6rem;
+        background:white;
+        align-items: center;
+        width:100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+    }
+
+    .topChat h1{
+        display: none;
+    }
+
+    .chat .topChat button{
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        position: absolute;
+        right: 1rem;
+    }
+    .chat .topChat button span{
+        font-size:1rem;
+    }
+*/
+}
+
+
+
