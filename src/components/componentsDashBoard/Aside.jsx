@@ -6,10 +6,9 @@ import { CgProfile } from "react-icons/cg"
 import { ImCross} from "react-icons/im"
 import { FiLogOut } from "react-icons/fi"
 import { FiMenu } from "react-icons/fi"
-import { BsChat } from "react-icons/bs"
 
-import logo from "../../Imagenes/logo.png"
-import "../../style/styleGeneralForms.css"
+import logo from "../../images/logo.png"
+import "../../styles/styleGeneralForms.css"
 
 function Aside() {
 

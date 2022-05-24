@@ -1,6 +1,6 @@
 import React from "react";
-import logoAlternatibo from "../../Imagenes/iconoDePerfil.png";
-import "../../style/styleConfiguracion.css";
+import logoAlternatibo from "../../images/iconoDePerfil.png";
+import "../../styles/styleConfiguracion.css";
 
 function Configuracion() {
   return (

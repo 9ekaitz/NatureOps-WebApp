@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import {useRef} from "react";
-import "../style/styleLandingPage.css"
+import "../styles/styleLandingPage.css"
 import { gsap } from "gsap"
 
 
