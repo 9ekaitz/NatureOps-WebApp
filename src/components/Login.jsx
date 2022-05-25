@@ -197,17 +197,17 @@ function Login() {
           <form onSubmit = {handleSubmit}>
             <div className="inputBx username">
               <span>Nombre de usuario</span>
-              <input type="text" name="" value={username} onChange={(e) => setUsername(e.target.value)}/>
+              <input data-testid="username" type="text" name="" value={username} onChange={(e) => setUsername(e.target.value)}/>
             </div>
             <div className="inputBx password">
               <span>Contraseña</span>
-              <input type="password" name="" value={password} onChange={(e) => setPassword(e.target.value)}/>
+              <input data-testid="contraseña" type="password" name="" value={password} onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <div className="remember">
               <label><input type="checkbox" name=""/> Recordar nombre de usuario</label>
             </div>
             <div className="inputBx boton">
-              <input type="submit" value="Acceder" name=""/>
+              <input data-testid="acceder" type="submit" value="Acceder" name=""/>
             </div>
                    
             <div className="inputBx signUp">
