@@ -8,6 +8,7 @@ import SubirImagen from "./components/SubirImagen.jsx"
 import CrearNoticia from "./components/CrearNoticia.jsx"
 import CrearEvento from "./components/CrearEvento.jsx"
 import Evento from "./components/Evento.jsx"
+import Noticias from "./components/Noticias.jsx"
 
 export function App() {
 
@@ -22,6 +23,8 @@ export function App() {
         <Route exact path="/crearNoticia" component={CrearNoticia}/>
         <Route exact path="/crearEvento" component={CrearEvento}/>
         <Route exact path="/evento" component={Evento}/>
+        <Route exact path="/noticias" component={Noticias}/>
+
       </Switch>
     </Router>
   );

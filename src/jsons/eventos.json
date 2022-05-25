@@ -1,0 +1,34 @@
+[
+    {
+        "id" : 1,
+        "nombre": "Urdaibai bizirik",
+        "lugar" : "Playa Laida",
+        "fecha": "10/06/2022",
+        "hora":"10:30"
+    },
+
+    {
+        "id" : 2,
+        "nombre": "Reciclaje de cartón",
+        "lugar" : "Playa Laga",
+        "fecha": "15/06/2022",
+        "hora":"15:30"
+    } ,
+
+    {
+        "id" : 3,
+        "nombre": "Donostia garbitu",
+        "lugar" : "La Zurriola",
+        "fecha": "22/06/2022",
+        "hora":"11:00"
+    } ,
+
+    {
+        "id" : 4,
+        "nombre": "Evento plástico",
+        "lugar" : "Deba",
+        "fecha": "20/07/2022",
+        "hora":"9:00"
+    } 
+
+]

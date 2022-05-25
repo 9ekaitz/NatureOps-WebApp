@@ -207,7 +207,11 @@ aside{
         grid-template-columns: 7rem auto;
         
     }
-   
+
+    aside{
+        height: 100%;
+    }
+
 }
 
 @media screen and (max-width: 800px){
@@ -233,6 +237,9 @@ aside{
         padding-left: 0;
     }
 
+    aside{
+        height: 100%;
+    }
      /************/
     /*** CHAT ***/
 /*

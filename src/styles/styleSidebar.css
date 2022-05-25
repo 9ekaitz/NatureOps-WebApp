@@ -52,6 +52,29 @@ p{
     
 }
 
+.noticiasGeneral{
+    display:grid;
+    grid-template-columns: 14rem auto;
+}
+.noticiasGeneral .noticias {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.2rem;
+    text-align: center;
+    align-items: center;
+}
+
+.noticiasGeneral main{
+    padding-top: 0.8rem;
+}
+
+.noticiasGeneral aside .sidebar .news{
+    background-color: var(--azul-clarito);
+    color:var(--color-gris);
+    border-radius: 5px 0px 0px 5px;
+    margin-left: 0.5rem;   
+}
+
 .card p{
     margin-bottom: 0.8rem;
 }
@@ -141,9 +164,7 @@ aside .sidebar a:hover{
     background-color: var(--azul-clarito);
     color:var(--color-gris);
     border-radius: 5px 0px 0px 5px;
-    margin-left: 0.5rem;
-
-    
+    margin-left: 0.5rem;   
 }
 aside .sidebar a.salir:hover{
     width: calc(100% - 1.5rem);
@@ -342,6 +363,18 @@ h2{
         height: 100vh;
     }
 
+    /*** CLASE NOTICIAS ***/
+    .noticiasGeneral{
+        grid-template-columns: 7rem auto;
+    }
+
+    .noticiasGeneral .noticias {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-bottom: 1rem;
+    }
+    /**********************/
+
     /*aside{
         /*height: 100vh;
         background-color: var(--color-gris);
@@ -512,6 +545,11 @@ h2{
         margin-top: 8rem;
         padding: 0 1rem;
         text-align: center;
+    }
+
+    .noticiasGeneral .noticias {
+        display: grid;
+        grid-template-columns: 1fr;
     }
     .noticias{
         text-align: center;

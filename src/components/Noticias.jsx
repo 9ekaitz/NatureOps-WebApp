@@ -1,13 +1,10 @@
 import React from "react";
-import Noticias from "../jsons/noticiasDashboard.json"
-import Eventos from "../jsons/eventos.json"
-import Galeria from "../jsons/galeria.json"
+import NoticiasJson from "../jsons/noticias.json"
 
 import { ImNewspaper, ImCross } from "react-icons/im";
 import { MdEvent, MdPlace } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { FiLogOut, FiMenu } from "react-icons/fi";
-import { GrCircleInformation } from "react-icons/gr";
 
 /*IMAGENES*/
 import logo from "../images/logo.png";
@@ -15,7 +12,7 @@ import "../styles/styleSidebar.css"
 
 
 
-function DashBoard() {
+function Noticias() {
 
   const cargarImagen = require.context("../images", true);
   function abrirNavbar(){
@@ -31,7 +28,7 @@ function DashBoard() {
   }
 
   return(
-    <div className="container">
+    <div className="container noticiasGeneral">
       <aside id="asidee" className="cerrar">
         <div className = "top">
           <div className="close" id="close-btn">
@@ -64,9 +61,9 @@ function DashBoard() {
         </div>
       </aside>
       <main>
-        <h1>Dashboard</h1>
+        <h1>Noticias</h1>
         <div className="noticias">
-          {Noticias.map(record=>{
+          {NoticiasJson.map(record=>{
             return(
               <div className="card" key={record.id}>
                 <img src={cargarImagen(`./${record.imagen}`)} alt={record.id}/>
@@ -77,69 +74,15 @@ function DashBoard() {
             )
           })
           }
-          
-        </div>
-        <div className="eventos">
-          <div className="apartado">
-            <h2>Eventos</h2>
-            <GrCircleInformation/>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Lugar</th>
-                <th>Fecha</th>
-                <th>Hora</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {Eventos.map(record=>{
-                return(
-                  <tr key={record.id}>
-                    <td>{record.nombre}</td>
-                    <td>{record.lugar}</td>
-                    <td>{record.fecha}</td>
-                    <td>{record.hora}</td>
-                  </tr>
-                )
-              })
-              }
-            </tbody>
-          </table>
         </div>
       </main>
       <div className="right">
         <div className="top">
           <button id="menu-btn" onClick={abrirNavbar}><span><FiMenu/></span></button>
-          <div className="profile">
-            <div className="info">
-              <p>Hey, <b>Daniel</b> </p>
-              <small className="text-muted">Admin</small>
-            </div>
-            <div className="profile-photo">
-              <img src={logo} alt="perfil"/>
-            </div>
-          </div>
-        </div>
-        <div className="galeria">
-          <div className="apartado">
-            <h2>Galeria</h2>
-            <GrCircleInformation/>
-          </div>
-          {Galeria.map(record=>{
-            return(
-              <div className="imagen" key={record.id}>
-                <img src={cargarImagen(`./${record.imagen}`)} alt={record.id}/>
-              </div>
-            )
-          })
-          }
         </div>
       </div>
     </div>
   );
 }
 
-export default DashBoard;
+export default Noticias;
