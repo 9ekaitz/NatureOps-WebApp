@@ -14,8 +14,23 @@ pipeline {
             }
         }
         stage ('Static Analysis') {
+            environment {
+                def scannerHome = tool 'SQScanner';
+            }
             steps {
                 sh ' ./node_modules/eslint/bin/eslint.js -f checkstyle src > eslint.xml'
+                withSonarQubeEnv('Sonarqube-NatureOps') {
+                sh '''
+                ${scannerHome}/bin/sonar-scanner \
+                -D sonar.projectKey=NatureOps-WebApp \
+                -D sonar.projectName=NatureOps-WebApp \
+                -D sonar.sources=./src \
+                '''
+                
+                }
+                timeout(time: 5, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true, credentialsId: 'sonar-webhook'
+                }
             }
             post {
                 always {
