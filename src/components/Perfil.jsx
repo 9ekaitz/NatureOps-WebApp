@@ -45,7 +45,6 @@ function Perfil() {
 
   function volver(){
     setEdit(false);
-    setDatosEditados(true);
   }
 
 
@@ -113,7 +112,7 @@ function Perfil() {
         </form>
       </div>
     );
-  }else if((username!="" && !edit) || datosEditados){
+  }else if(username!="" && !edit){
     let user={"username":username,"nombre":nombre,"apellidos":apellidos,"telefono":telefono,"correo":correo,"direccion":direccion,"codPostal":codPostal};
 
     console.log(user);
