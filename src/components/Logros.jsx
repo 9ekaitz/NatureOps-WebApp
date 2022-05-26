@@ -1,13 +1,8 @@
 import React from "react";
 /*, { useState }*/
-/*import Aside from "./componentsDashBoard/Aside.jsx";*/
+import Aside from "./componentsDashBoard/Aside.jsx";
 /*ICONOS*/
-import { ImNewspaper } from "react-icons/im";
-import { MdEvent } from "react-icons/md";
-import { MdPlace } from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
-import { ImCross} from "react-icons/im";
-import { FiLogOut } from "react-icons/fi";
+
 import { FiMenu } from "react-icons/fi";
 
 
@@ -17,7 +12,6 @@ import logro1 from "../images/logro_img.png";
 import logro2 from "../images/logro_img2.png";
 import logro3 from "../images/logro_img3.png";
 
-/*import scriptReact from "../JavaScript/index.js"*/
 
 
 import "../styles/styleSidebar.css"
@@ -26,12 +20,6 @@ import "../styles/styleLogros.css"
 
 
 function Logros() {
-  //const sideMenu = document.querySelector("aside");
-  //const closeBtn = document.querySelector("close-btn");
-  
-  //const closeBtn = document.getElementById("close-btn");
-
-  //const {toggle, setToggle} = useState(true);
 
   function abrirNavbar(){
 
@@ -39,51 +27,9 @@ function Logros() {
     document.getElementById("asidee").classList.add("abrir");
   }
 
-  function cerrarNavbar(){
-
-    document.getElementById("asidee").classList.remove("abrir");
-    document.getElementById("asidee").classList.add("cerrar");
-  }
-
-  /*closeBtn.addEventListener("click", () => {
-    console.log("Cerrar botoia");
-    sideMenu.classList.remove("irekia");
-    sideMenu.classList.add("itxia");
-  })*/
-
   return(
     <div  className="containerLogros">
-      <aside id="asidee" className="cerrar">
-        <div className = "top">
-          <div className="close" id="close-btn">
-            <button onClick={cerrarNavbar}><ImCross /></button>
-          </div>
-          <img className="imagenLogo" src={logo} alt="Logo"/>
-          <h2>NatureOps</h2>  
-        </div>
-        <div className="sidebar">
-          <a href="https://www.google.es/">
-            <span> <ImNewspaper /></span>
-            <h3>News</h3>
-          </a>
-          <a href="https://www.google.es/">
-            <span> <MdEvent /></span>
-            <h3>Events</h3>
-          </a>
-          <a href="https://www.google.es/">
-            <span> <MdPlace /></span>
-            <h3>Places</h3>
-          </a>
-          <a href="https://www.google.es/">
-            <span> <CgProfile /></span>
-            <h3>Profile</h3>
-          </a>
-          <a className="salir" href="https://www.google.es/">
-            <span> <FiLogOut /></span>
-            <h3>Logout</h3>
-          </a>
-        </div>
-      </aside>
+      <Aside/>
       <main>
         <h1>Logros</h1>
         <div className="listLogros">
