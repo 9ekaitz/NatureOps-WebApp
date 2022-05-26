@@ -17,7 +17,7 @@ import logro3 from "../images/logro_img3.png";
 import "../styles/styleSidebar.css"
 import "../styles/styleLogros.css"
 
-
+import data from "../data/logros.json";
 
 function Logros() {
 
@@ -27,12 +27,37 @@ function Logros() {
     document.getElementById("asidee").classList.add("abrir");
   }
 
+  const DisplayData=data.map(
+    (logro)=>{
+      return(
+        <div className="logroCard" key={logro.id}>
+          <div className="logroTop">
+            <img src={logro1} alt="logro1" className="logroImg"/>
+            <h4>{logro.nombre}</h4>
+          </div>
+          <p>{logro.descripcion}</p>
+          <div className="progress-element">
+            <span>Progreso: </span>
+            <div className="bar">
+              <div style={{"width": logro.progresoUsuario + "%", "backgroundColor":"#48BFE3", "height":"20px"}}>
+              </div>
+              <div style={{"width": (logro.maximo-logro.progresoUsuario) + "%", "backgroundColor":"aliceblue", "height":"20px"}}>
+              </div>
+            </div>
+          </div>
+        </div>
+              
+      );
+    } 
+  )
+
   return(
     <div  className="containerLogros">
       <Aside/>
       <main>
         <h1>Logros</h1>
         <div className="listLogros">
+          {DisplayData}
           <div className="logroCard">
             <div className="logroTop">
               <img src={logro1} alt="logro1" className="logroImg"/>

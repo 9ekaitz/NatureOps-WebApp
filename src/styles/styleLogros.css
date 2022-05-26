@@ -20,19 +20,22 @@ main{
 
 .listLogros{
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
 .logroCard{
-    display: flex;
+    display: grid;
     gap: 1rem;
-    flex-direction: column;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3,0.5fr);
     background-color: white;
     border-radius: 0.8rem;
+    justify-items: center;
     align-items: center;
     width: 100%;
     padding: 1rem;
+    
 }
 
 .logroCard p{
@@ -48,10 +51,16 @@ main{
 .logroTop{
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 .progress-element{
     display: inline-block;
+}
+
+.bar > div{
+    display: inline-block;
+    border-radius: 0.5rem 0 0.5rem 0;
 }
 
 .progress-element span{
@@ -75,13 +84,13 @@ progress{
 }
 
 .progress-container::before {
-    content: "5/10";
+    content: "";
     text-align: center;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    width: 50%;
+    width: 70%;
     background-color: var(--azul-oscuro);
 }
 
