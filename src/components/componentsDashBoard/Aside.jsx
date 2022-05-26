@@ -1,41 +1,52 @@
 import React from "react";
-import logoAlternatibo from "../../images/logoAlternatibo.png";
+import { ImNewspaper } from "react-icons/im";
+import { MdEvent } from "react-icons/md";
+import { MdPlace } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+import { ImCross} from "react-icons/im";
+import { FiLogOut } from "react-icons/fi";
 
+import logo from "../../images/logo.png";
 
 function Aside() {
 
+  function cerrarNavbar(){
+
+    document.getElementById("asidee").classList.remove("abrir");
+    document.getElementById("asidee").classList.add("cerrar");
+  }
+
   return(
-    <aside>
-      <div className="top">
-        <div className="logo">
-          <img src={logoAlternatibo} alt="Logo de NatureOps"/>
-          <h2>NATUR<span className='danger'>OPS</span></h2>
-        </div>
+    <aside id="asidee" className="cerrar">
+      <div className = "top">
         <div className="close" id="close-btn">
-          <box-icon name='x'></box-icon>
+          <button onClick={cerrarNavbar}><ImCross /></button>
         </div>
+        <img className="imagenLogo" src={logo} alt="Logo"/>
+        <h2>NatureOps</h2>  
       </div>
-
-
       <div className="sidebar">
-        <a href="/">
-          <box-icon type='solid' name='news'></box-icon>
-          <h3>Noticias</h3>
+        <a href="https://www.google.es/">
+          <span> <ImNewspaper /></span>
+          <h3>News</h3>
         </a>
-        <a href="/">
-          <box-icon type='solid' name='news'></box-icon>
-          <h3>Eventos</h3>
+        <a href="https://www.google.es/">
+          <span> <MdEvent /></span>
+          <h3>Events</h3>
         </a>
-        <a href="/">
-          <box-icon type='solid' name='news'></box-icon>
-          <h3>Sitios</h3>
+        <a href="https://www.google.es/">
+          <span> <MdPlace /></span>
+          <h3>Places</h3>
         </a>
-        <a href="/">
-          <box-icon type='solid' name='news'></box-icon>
-          <h3>Perfil</h3>
+        <a href="https://www.google.es/">
+          <span> <CgProfile /></span>
+          <h3>Profile</h3>
+        </a>
+        <a className="salir" href="/login">
+          <span> <FiLogOut /></span>
+          <h3>Logout</h3>
         </a>
       </div>
-
     </aside>
   );
 }

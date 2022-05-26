@@ -1,18 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 /*, { useState }*/
-/*import Aside from "./componentsDashBoard/Aside.jsx";*/
+import Aside from "./componentsDashBoard/Aside.jsx";
 /*ICONOS*/
-import { ImNewspaper } from "react-icons/im";
-import { MdEvent } from "react-icons/md";
-import { MdPlace } from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
-import { ImCross} from "react-icons/im";
-import { FiLogOut } from "react-icons/fi";
+
 import { FiMenu } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr";
-import { FaPen } from "react-icons/fa";
-import{FaTrashAlt} from "react-icons/fa";
-
+import { FaPen, FaTrashAlt, FaSave } from "react-icons/fa";
 
 /*IMAGENES*/
 import logo from "../images/logo.png";
@@ -22,128 +15,209 @@ import logro3 from "../images/logro_img3.png";
 import logroNoConseguido from "../images/logroNoConseguido.png";
 import playa from "../images/playa.jpg";
 
-/*import scriptReact from "../JavaScript/index.js"*/
+import "../styles/styleSidebar.css";
+import "../styles/stylePerfil.css";
+import "../styles/stylePerfilEdit.css";
 
+/*DATOS */
 
-import "../styles/styleSidebar.css"
-import "../styles/stylePerfil.css"
-
+import data from "../data/perfil.json";
 
 
 function Perfil() {
-  //const sideMenu = document.querySelector("aside");
-  //const closeBtn = document.querySelector("close-btn");
-  
-  //const closeBtn = document.getElementById("close-btn");
-
-  //const {toggle, setToggle} = useState(true);
-
-  function abrirNavbar(){
-
+  let [ edit, setEdit ] = useState(false);
+  function abrirNavbar() {
     document.getElementById("asidee").classList.remove("cerrar");
     document.getElementById("asidee").classList.add("abrir");
   }
 
-  function cerrarNavbar(){
+  function editar() {
+    setEdit(true);
+    console.log("editar");
+  }
+  const [ username, setUsername ] = useState("");
+  const [ nombre, setNombre ] = useState("");
+  const [ apellidos, setApellidos ] = useState("");
+  const [ telefono, setTelefono ] = useState("");
+  const [ correo, setCorreo ] = useState("");
+  const [ direccion, setDireccion ] = useState("");
+  const [ codPostal, setCodPostal ] = useState("");
 
-    document.getElementById("asidee").classList.remove("abrir");
-    document.getElementById("asidee").classList.add("cerrar");
+  function volver(){
+    setEdit(false);
+    setDatosEditados(true);
   }
 
-  /*closeBtn.addEventListener("click", () => {
-    console.log("Cerrar botoia");
-    sideMenu.classList.remove("irekia");
-    sideMenu.classList.add("itxia");
-  })*/
 
-  return(
-    <div className="container">
-      <aside id="asidee" className="cerrar">
-        <div className = "top">
-          <div className="close" id="close-btn">
-            <button onClick={cerrarNavbar}><ImCross /></button>
+  const handleSubmitForm=(e)=>{
+    e.preventDefault();
+    if(username!="" && nombre!="" && apellidos!="" && telefono!=""){
+      if(correo!="" && direccion!="" && codPostal!=""){
+        volver();
+      }
+    }
+  }
+  
+  let userForm;
+  if (edit) {
+    userForm = (
+      <div className="datosUsuario">
+        <form className="form" onSubmit={handleSubmitForm}>
+          <div className=" inputBox primero">
+            <input type="text" placeholder=" " name="username" required  onChange={(e) => setUsername(e.target.value)}/>
+            <label htmlFor="username" className="label-name">
+              <span className="content-name">Username</span>
+            </label>
           </div>
-          <img className="imagenLogo" src={logo} alt="Logo"/>
-          <h2>NatureOps</h2>  
-        </div>
-        <div className="sidebar">
-          <a href="https://www.google.es/">
-            <span> <ImNewspaper /></span>
-            <h3>News</h3>
-          </a>
-          <a href="https://www.google.es/">
-            <span> <MdEvent /></span>
-            <h3>Events</h3>
-          </a>
-          <a href="https://www.google.es/">
-            <span> <MdPlace /></span>
-            <h3>Places</h3>
-          </a>
-          <a href="https://www.google.es/">
-            <span> <CgProfile /></span>
-            <h3>Profile</h3>
-          </a>
-          <a className="salir" href="/login">
-            <span> <FiLogOut /></span>
-            <h3>Logout</h3>
-          </a>
-        </div>
-      </aside>
-      <main className="containerPerfil">
-        <img className="imagenCentro" src={logo} alt="Logo"/>
-        <div className="datosUsuario">
-          <div className="datosBody">
-            <h2>oihanee</h2>
-            <div className="datos">
-              <div className="col">
-                <p>Oihane</p>
-                <p>Epelde Martiarena</p>
-                <p>662263406</p>
-              </div>
-              <div className="col">
-                <p>oihane800@gmail.com</p>
-                <p>Trenbidearen Zumardia 7, 1I</p>
-                <p>20720</p>
-              </div>
+          <div className="col" id="col1">
+            <div className="inputBox">
+              <input type="text" placeholder=" " name="name" required onChange={(e) => setNombre(e.target.value)}/>
+              <label htmlFor="name" className="label-name">
+                <span className="content-name">Nombre</span>
+              </label>
             </div>
-            <button className="editButton">Editar<FaPen className="icon"/></button>
+            <div className="inputBox">
+              <input type="text" placeholder=" " name="apellidos" required onChange={(e) => setApellidos(e.target.value)}/>
+              <label htmlFor="apellidos" className="label-name">
+                <span className="content-name">Apellidos</span>
+              </label>
+            </div>
+            <div className="inputBox">
+              <input type="tel" placeholder=" " name="phone" required onChange={(e) => setTelefono(e.target.value)}/>
+              <label htmlFor="phone" className="label-name">
+                <span className="content-name">Telefono</span>
+              </label>
+            </div>
           </div>
+          <div className="col" id="col2">
+            <div className="inputBox">
+              <input type="email" placeholder=" " name="email" required onChange={(e) => setCorreo(e.target.value)}/>
+              <label htmlFor="email" className="label-name">
+                <span className="content-name">Correo</span>
+              </label>
+            </div>
+            <div className="inputBox">
+              <input type="text" placeholder=" " name="address" required onChange={(e) => setDireccion(e.target.value)}/>
+              <label htmlFor="address" className="label-name">
+                <span className="content-name">Dirección</span>
+              </label>
+            </div>
+            <div className="inputBox">
+              <input type="number" placeholder=" " name="codigoPostal" onChange={(e) => setCodPostal(e.target.value)}/>
+              <label htmlFor="codigoPostal" className="label-name">
+                <span className="content-name">Código Postal</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" className="saveButton">Guardar<FaSave className="icon" /></button>
+        </form>
+      </div>
+    );
+  }else if((username!="" && !edit) || datosEditados){
+    let user={"username":username,"nombre":nombre,"apellidos":apellidos,"telefono":telefono,"correo":correo,"direccion":direccion,"codPostal":codPostal};
+
+    console.log(user);
+    userForm = (
+      <div className="datosUsuario">
+        <div className="datosBody">
+          <h2>{username}</h2>
+          <div className="datos">
+            <div className="col">
+              <p>{nombre}</p>
+              <p>{apellidos}</p>
+              <p>{telefono}</p>
+            </div>
+            <div className="col">
+              <p>{correo}</p>
+              <p>{direccion}</p>
+              <p>{codPostal}</p>
+            </div>
+          </div>
+          <button className="editButton" onClick={editar}>
+            Editar
+            <FaPen className="icon" />
+          </button>
         </div>
+      </div>
+    );
+  } 
+  
+  else {//Lo que aparece cuando entras a la pagina
+    userForm = (      
+      <div className="datosUsuario">
+        <div className="datosBody">
+          <h2>{data.username}</h2>
+          <div className="datos">
+            <div className="col">
+              <p>{data.nombre}</p>
+              <p>{data.apellidos}</p>
+              <p>{data.telefono}</p>
+            </div>
+            <div className="col">
+              <p>{data.correo}</p>
+              <p>{data.direccion}</p>
+              <p>{data.codPostal}</p>
+            </div>
+          </div>
+          <button className="editButton" onClick={editar}>
+            Editar
+            <FaPen className="icon" />
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="container">
+      <Aside />
+      <main className="containerPerfil">
+        <img className="imagenCentro" src={logo} alt="Logo" />
+        {userForm}
         <div className="logros">
           <div className="apartado">
             <h2>Logros obtenidos</h2>
             <a href="https://www.google.com">Ver todos</a>
           </div>
           <div className="listLogros">
-            <img className="logroImg" src={logro} alt="Logro"/>
-            <img className="logroImg" src={logro2} alt="Logro"/>
-            <img className="logroImg" src={logro3} alt="Logro"/>
-            <img className="logroImg" src={logro} alt="Logro"/>
-            <img className="logroImg" src={logro2} alt="Logro"/>
-            <img className="logroImg" src={logroNoConseguido} alt="Logro"/>
-            <img className="logroImg" src={logroNoConseguido} alt="Logro"/>
-            <img className="logroImg" src={logroNoConseguido} alt="Logro"/>
+            <img className="logroImg" src={logro} alt="Logro" />
+            <img className="logroImg" src={logro2} alt="Logro" />
+            <img className="logroImg" src={logro3} alt="Logro" />
+            <img className="logroImg" src={logro} alt="Logro" />
+            <img className="logroImg" src={logro2} alt="Logro" />
+            <img className="logroImg" src={logroNoConseguido} alt="Logro" />
+            <img className="logroImg" src={logroNoConseguido} alt="Logro" />
+            <img className="logroImg" src={logroNoConseguido} alt="Logro" />
           </div>
-          <button className="deleteButton">Eliminar cuenta<FaTrashAlt className="icon"/></button>
+          <button className="deleteButton">
+            Eliminar cuenta
+            <FaTrashAlt className="icon" />
+          </button>
         </div>
       </main>
       <div className="right">
         <div className="top">
-          <button id="menu-btn" onClick={abrirNavbar}><span><FiMenu/></span></button>
+          <button id="menu-btn" onClick={abrirNavbar}>
+            <span>
+              <FiMenu />
+            </span>
+          </button>
           <div className="profile">
             <div className="info">
-              <p>Hey, <b>Daniel</b> </p>
+              <p>
+                Hey, <b>{data.nombre}</b>{" "}
+              </p>
               <small className="text-muted">Admin</small>
             </div>
             <div className="profile-photo">
-              <img src={logo} alt="perfil"/>
+              <img src={logo} alt="perfil" />
             </div>
           </div>
         </div>
         <div className="galeria">
           <div className="apartado">
             <h2>Recientes</h2>
-            <GrCircleInformation/>
+            <GrCircleInformation />
           </div>
           <div className="listRecientes">
             <div className="recientesCard">
@@ -151,7 +225,7 @@ function Perfil() {
               <div className="cardBody">
                 <p>Evento GreenPeace</p>
                 <p>2022-05-22</p>
-                <img src={playa} alt="playa"/>
+                <img src={playa} alt="playa" />
               </div>
             </div>
             <div className="recientesCard">
@@ -159,7 +233,7 @@ function Perfil() {
               <div className="cardBody">
                 <p>Evento Carton</p>
                 <p>2022-05-22</p>
-                <img src={playa} alt="playa"/>
+                <img src={playa} alt="playa" />
               </div>
             </div>
             <div className="recientesCard">
@@ -167,11 +241,10 @@ function Perfil() {
               <div className="cardBody">
                 <p>Evento Papel</p>
                 <p>2022-05-28</p>
-                <img src={playa} alt="playa"/>
+                <img src={playa} alt="playa" />
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </div>

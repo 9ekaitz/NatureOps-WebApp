@@ -1,0 +1,127 @@
+.saveButton{
+    margin: 1rem;
+    width: 30%;
+    background-color: var(--azul-oscuro);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    grid-column: span 2;
+    grid-row: 3;
+}
+
+.saveButton:hover{
+    background-color: var(--azul-boton-hover);
+}
+
+.icon{
+    margin-left: 1rem;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3, auto);
+    justify-items: center;
+    width: 100%;
+}
+
+.datosUsuario{
+    display: flex;
+    align-items: center;
+}
+
+.inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.primero{
+    width: 80%;
+    font-size: 20px;
+    grid-column: span 2;
+    grid-row: 1;
+}
+
+.col{
+    width: 80%;
+    grid-row: 2;
+}
+
+.inputBox input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: var(--azul-oscuro);
+    padding-top: 20px;
+}
+
+.inputBox input:focus + .label-name .content-name,
+.inputBox input:valid +.label-name .content-name{
+    transform: translateY(-150%);
+}
+
+.inputBox input:focus + .label-name::after,
+.inputBox input:valid + .label-name::after{
+    transform: translateY(0%);
+}
+
+.inputBox input:focus{
+    outline: none;
+}
+
+.label-name{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 2px solid var(--azul-oscuro);
+}
+
+.label-name::after{
+    content: "";
+    bottom: -1px;
+    left: 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+}
+
+.content-name{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 1558px){
+    
+    .form{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .col{
+        grid-column: 1;
+    }
+
+    #col1{
+        grid-row:2;
+    }
+
+    #col2{
+        grid-row: 3;
+    }
+
+    .saveButton{
+        grid-row: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+    }
+}
+
