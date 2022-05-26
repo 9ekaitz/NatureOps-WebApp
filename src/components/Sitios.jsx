@@ -8,8 +8,7 @@ import {FaPlus} from "react-icons/fa";
 
 /*IMAGENES*/
 import logo from "../images/logo.png";
-/*import playa from "../images/playa.jpg";
- */
+
 /*ESTILO*/
 import "../styles/styleSidebar.css"
 import "../styles/styleSitios.css"
