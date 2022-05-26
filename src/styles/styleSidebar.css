@@ -46,7 +46,6 @@ p{
     width: 100%;
     margin: 0 auto;
     height: 100vh;
-    /*gap: 1.8 rem;*/
     
     grid-template-columns: 14rem auto 23rem;
     
@@ -60,7 +59,6 @@ p{
 /***************************************************************************/
 
 aside{
-    /*height: 100vh;*/
     background-color: var(--color-gris);
     display: grid;
     grid-template-rows: 30% auto;
@@ -70,7 +68,6 @@ aside{
 
 aside .top{
     background-color: var(--color-gris);
-    /*justify-content: space-between;*/
     margin-top: 1.4rem;
     gap:2rem;
     text-align: center;
@@ -85,7 +82,7 @@ aside .top img{
 }
 
 aside .close{
-    text-align: end;
+    text-align: right;
     padding-right: 1rem;
     display: none;
 }
@@ -178,7 +175,6 @@ main .noticias > div{
     box-shadow: var(--box-shadow);
     transition: all 250ms ease;
     text-align: center;
-    /*overflow: hidden;*/
 }
 main .noticias > div > a{
     color:var(--azul-oscuro);
@@ -289,7 +285,7 @@ main table tbody tr:last-child td{
 
 .right .top{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 2rem;
     
 }
@@ -487,7 +483,7 @@ h2{
         border:none;
     }
     aside .top .close{
-        text-align: end;
+        text-align: right;
     }
     aside .top h2,.close{
         display: inline;
@@ -496,8 +492,6 @@ h2{
         display: inline;
     }
     aside .close{
-        /*text-align: end;
-        padding-right: 1rem;*/
         display: inline;
     }
     main{

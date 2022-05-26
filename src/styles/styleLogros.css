@@ -56,11 +56,12 @@ main{
 
 .progress-element{
     display: inline-block;
+    width: 90%;
 }
 
 .bar > div{
     display: inline-block;
-    border-radius: 0.5rem 0 0.5rem 0;
+    /*border-radius: 0.5rem 0 0.5rem 0;*/
 }
 
 .progress-element span{
