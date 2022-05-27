@@ -1,6 +1,8 @@
 import React from "react";
 /*, { useState }*/
 import Aside from "./componentsDashBoard/Aside.jsx";
+import Pagination from "./componentsDashBoard/Pagination.jsx";
+
 /*ICONOS*/
 
 import { FiMenu } from "react-icons/fi";
@@ -8,16 +10,10 @@ import { FiMenu } from "react-icons/fi";
 
 /*IMAGENES*/
 import logo from "../images/logo.png";
-/*import logro1 from "../images/logro_img.png";
-import logro2 from "../images/logro_img2.png";
-import logro3 from "../images/logro_img3.png";*/
-
-
 
 import "../styles/styleSidebar.css"
 import "../styles/styleLogros.css"
 
-import data from "../data/logros.json";
 
 function Logros() {
 
@@ -26,38 +22,13 @@ function Logros() {
     document.getElementById("asidee").classList.remove("cerrar");
     document.getElementById("asidee").classList.add("abrir");
   }
-  console.log(data);
-  const DisplayData=data.map(
-    (logro)=>{
-      return(
-        <div className="logroCard" key={logro.id}>
-          <div className="logroTop">
-            <img src={logro.imagen} alt="logro1" className="logroImg"/>
-            <h4>{logro.nombre}</h4>
-          </div>
-          <p>{logro.descripcion}</p>
-          <div className="progress-element">
-            <div className="bar">
-              <div style={{"width": logro.progresoUsuario + "%", "backgroundColor":"#48BFE3", "height":"20px"}}>
-              </div>
-              <div style={{"width": (logro.maximo-logro.progresoUsuario) + "%", "backgroundColor":"aliceblue", "height":"20px"}}>
-              </div>
-            </div>
-          </div>
-        </div>
-              
-      );
-    } 
-  )
 
   return(
     <div  className="containerLogros">
       <Aside/>
       <main>
         <h1>Logros</h1>
-        <div className="listLogros">
-          {DisplayData}
-        </div>
+        <Pagination itemsPerPage="9"/>
       </main>
       <div className="right">
         <div className="top">
