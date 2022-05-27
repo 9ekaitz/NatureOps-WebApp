@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
-import "../../styles/styleLogros.css"
-import data from "../../data/logros.json";
+import "../styles/styleLogros.css"
+import data from "../data/logros.json";
 
-import logro1 from "../../images/logro_img.png";
+import logro1 from "../images/logro_img.png";
 
 function Pagination({ itemsPerPage }) {
   const [currentItems, setCurrentItems] = useState(null);
@@ -12,7 +12,6 @@ function Pagination({ itemsPerPage }) {
   console.log(data);
 
   useEffect(() => {
-    // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage;
     console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     setCurrentItems(DisplayData.slice(itemOffset, endOffset));

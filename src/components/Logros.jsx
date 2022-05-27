@@ -1,7 +1,7 @@
 import React from "react";
 /*, { useState }*/
 import Aside from "./componentsDashBoard/Aside.jsx";
-import Pagination from "./componentsDashBoard/Pagination.jsx";
+import Pagination from "./Pagination.jsx";
 
 /*ICONOS*/
 
