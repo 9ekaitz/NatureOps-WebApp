@@ -11,6 +11,7 @@ import useRefreshToken from "../hooks/useRefreshToken";
 import { FaTiktok } from "react-icons/fa"
 import { SiInstagram } from "react-icons/si"
 import { FiTwitter } from "react-icons/fi"
+import jwt_decode from "jwt-decode"
 
 const LOGIN_URL = "/api/login";
 
@@ -43,6 +44,7 @@ function Login() {
 
       /*const roles = response?.data?.roles;*/
       setAuth({ username, password, accessToken, refreshToken });
+      console.log(jwt_decode(accessToken))
       setUsername("");
       setPassword("");
     } catch (err) {
