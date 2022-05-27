@@ -113,6 +113,21 @@ main{
 .icon{
     color: white;
 }
+
+.pagination{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    grid-column: span 4;
+    margin-bottom: 1rem;
+    border-radius: 0.8rem;
+}
+
+.pagination > li >a{
+    color: var(--azul-oscuro);
+}
 /**** MEDIA QUERIES ****/
 
 @media screen and (max-width: 1670px) {

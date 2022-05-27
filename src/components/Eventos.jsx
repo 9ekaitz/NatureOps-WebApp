@@ -6,9 +6,9 @@ import { FaPlus } from "react-icons/fa"
 
 /*IMAGENES*/
 import logo from "../images/logo.png"
-import img_playa from "../images/PlayaConcha.jpg"
 
 import Aside from "./componentsDashBoard/Aside.jsx"
+import PaginationComponent from "./componentsDashBoard/PaginationComponent.jsx";
 
 
 import "../styles/styleSidebar.css"
@@ -24,26 +24,42 @@ function Eventos() {
     document.getElementById("asidee").classList.add("abrir");
   }
 
- 
+  const DisplayData=[];
+  let DisplayDataItem={};
 
-  const DisplayData=data.map(
-    (evento)=>{
-      return(
-        <div className="eventCard destacado" key={evento.id}>
-          <p>{evento.nombre}</p>
-          <p>{evento.fecha}</p>
+  for(let i=0;i<data.length;i++){
+    if(data[i].destacado==1){
+      DisplayDataItem=
+        <div className="eventCard destacado">
+          <p>{data[i].nombre}</p>
+          <p>{data[i].fecha}</p>
           <p>11:30</p>
-          <p>{evento.lugar}</p>
+          <p>{data[i].lugar}</p>
           <div className="imagenCard">
-            <img src={img_playa} alt="playa1"></img>
+            <img src={data[i].foto} alt="playa1"></img>
           </div>
           <button className="buttonDetalles">Detalles</button>
         </div>
-              
-      );
-    } 
-  )
-  
+                  
+          
+    }else{
+      DisplayDataItem=
+        <div className="eventCard">
+          <p>{data[i].nombre}</p>
+          <p>{data[i].fecha}</p>
+          <p>11:30</p>
+          <p>{data[i].lugar}</p>
+          <div className="imagenCard">
+            <img src={data[i].foto} alt="playa1"></img>
+          </div>
+          <button className="buttonDetalles">Detalles</button>
+        </div>
+                  
+          
+    }
+
+    DisplayData[i]=DisplayDataItem;
+  }
 
   return(
     <div className="containerEventos">
@@ -55,47 +71,7 @@ function Eventos() {
             <h2>Lista de eventos disponibles</h2>
           </div>
           <div className="listaEventos">
-            {DisplayData}
-            <div className="eventCard destacado">
-              <p>Evento Carton</p>
-              <p>2022-02-12</p>
-              <p>12:30</p>
-              <p>Playa de Zurriola, Donostia</p>
-              <div className="imagenCard">
-                <img src={img_playa} alt="playa2"></img>
-              </div>
-              <button className="buttonDetalles">Detalles</button>
-            </div>
-            <div className="eventCard">
-              <p>Evento Papel</p>
-              <p>2022-07-23</p>
-              <p>15:30</p>
-              <p>Playa de Santiago, Deba</p>
-              <div className="imagenCard">
-                <img src={img_playa} alt="playa3"></img>
-              </div>
-              <button className="buttonDetalles">Detalles</button>
-            </div>
-            <div className="eventCard">
-              <p>Evento Plastico</p>
-              <p>2022-04-20</p>
-              <p>17:30</p>
-              <p>Playa de Getaria, Getaria</p>
-              <div className="imagenCard">
-                <img src={img_playa} alt="playa4"></img>
-              </div>
-              <button className="buttonDetalles">Detalles</button>
-            </div>
-            <div className="eventCard">
-              <p>Evento Beluga</p>
-              <p>2022-08-24</p>
-              <p>18:30</p>
-              <p>Playa Grande, Zarautz</p>
-              <div className="imagenCard">
-                <img src={img_playa} alt="playa5"></img>
-              </div>
-              <button className="buttonDetalles">Detalles</button>
-            </div>          
+            <PaginationComponent DisplayData={DisplayData} itemsPerPage="8"/>         
           </div>
           <button className="addButton"><FaPlus className="icon" size="17px"/></button>
         </div>
