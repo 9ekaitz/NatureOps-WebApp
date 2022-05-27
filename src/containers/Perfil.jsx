@@ -23,9 +23,8 @@ import "../styles/stylePerfilEdit.css";
 
 import data from "../data/perfil.json";
 
-
 function Perfil() {
-  let [ edit, setEdit ] = useState(false);
+  let [edit, setEdit] = useState(false);
   function abrirNavbar() {
     document.getElementById("asidee").classList.remove("cerrar");
     document.getElementById("asidee").classList.add("abrir");
@@ -35,54 +34,77 @@ function Perfil() {
     setEdit(true);
     console.log("editar");
   }
-  const [ username, setUsername ] = useState("");
-  const [ nombre, setNombre ] = useState("");
-  const [ apellidos, setApellidos ] = useState("");
-  const [ telefono, setTelefono ] = useState("");
-  const [ correo, setCorreo ] = useState("");
-  const [ direccion, setDireccion ] = useState("");
-  const [ codPostal, setCodPostal ] = useState("");
+  const [username, setUsername] = useState("");
+  const [nombre, setNombre] = useState("");
+  const [apellidos, setApellidos] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [direccion, setDireccion] = useState("");
+  const [codPostal, setCodPostal] = useState("");
 
-  function volver(){
+  function volver() {
     setEdit(false);
   }
 
-
-  const handleSubmitForm=(e)=>{
+  const handleSubmitForm = (e) => {
     e.preventDefault();
-    if(username!="" && nombre!="" && apellidos!="" && telefono!=""){
-      if(correo!="" && direccion!="" && codPostal!=""){
+    if (username != "" && nombre != "" && apellidos != "" && telefono != "") {
+      if (correo != "" && direccion != "" && codPostal != "") {
         volver();
       }
     }
-  }
-  
+  };
+
   let userForm;
   if (edit) {
     userForm = (
       <div className="datosUsuario">
         <form className="form" onSubmit={handleSubmitForm}>
           <div className=" inputBox primero">
-            <input type="text" placeholder=" " name="username" required  onChange={(e) => setUsername(e.target.value)}/>
+            <input
+              type="text"
+              placeholder=" "
+              name="username"
+              required
+              onChange={(e) => setUsername(e.target.value)}
+            />
             <label htmlFor="username" className="label-name">
               <span className="content-name">Username</span>
             </label>
           </div>
           <div className="col" id="col1">
             <div className="inputBox">
-              <input type="text" placeholder=" " name="name" required onChange={(e) => setNombre(e.target.value)}/>
+              <input
+                type="text"
+                placeholder=" "
+                name="name"
+                required
+                onChange={(e) => setNombre(e.target.value)}
+              />
               <label htmlFor="name" className="label-name">
                 <span className="content-name">Nombre</span>
               </label>
             </div>
             <div className="inputBox">
-              <input type="text" placeholder=" " name="apellidos" required onChange={(e) => setApellidos(e.target.value)}/>
+              <input
+                type="text"
+                placeholder=" "
+                name="apellidos"
+                required
+                onChange={(e) => setApellidos(e.target.value)}
+              />
               <label htmlFor="apellidos" className="label-name">
                 <span className="content-name">Apellidos</span>
               </label>
             </div>
             <div className="inputBox">
-              <input type="tel" placeholder=" " name="phone" required onChange={(e) => setTelefono(e.target.value)}/>
+              <input
+                type="tel"
+                placeholder=" "
+                name="phone"
+                required
+                onChange={(e) => setTelefono(e.target.value)}
+              />
               <label htmlFor="phone" className="label-name">
                 <span className="content-name">Telefono</span>
               </label>
@@ -90,30 +112,58 @@ function Perfil() {
           </div>
           <div className="col" id="col2">
             <div className="inputBox">
-              <input type="email" placeholder=" " name="email" required onChange={(e) => setCorreo(e.target.value)}/>
+              <input
+                type="email"
+                placeholder=" "
+                name="email"
+                required
+                onChange={(e) => setCorreo(e.target.value)}
+              />
               <label htmlFor="email" className="label-name">
                 <span className="content-name">Correo</span>
               </label>
             </div>
             <div className="inputBox">
-              <input type="text" placeholder=" " name="address" required onChange={(e) => setDireccion(e.target.value)}/>
+              <input
+                type="text"
+                placeholder=" "
+                name="address"
+                required
+                onChange={(e) => setDireccion(e.target.value)}
+              />
               <label htmlFor="address" className="label-name">
                 <span className="content-name">Dirección</span>
               </label>
             </div>
             <div className="inputBox">
-              <input type="number" placeholder=" " name="codigoPostal" onChange={(e) => setCodPostal(e.target.value)}/>
+              <input
+                type="number"
+                placeholder=" "
+                name="codigoPostal"
+                onChange={(e) => setCodPostal(e.target.value)}
+              />
               <label htmlFor="codigoPostal" className="label-name">
                 <span className="content-name">Código Postal</span>
               </label>
             </div>
           </div>
-          <button type="submit" className="saveButton">Guardar<FaSave className="icon" /></button>
+          <button type="submit" className="saveButton">
+            Guardar
+            <FaSave className="icon" />
+          </button>
         </form>
       </div>
     );
-  }else if(username!="" && !edit){
-    let user={"username":username,"nombre":nombre,"apellidos":apellidos,"telefono":telefono,"correo":correo,"direccion":direccion,"codPostal":codPostal};
+  } else if (username != "" && !edit) {
+    let user = {
+      username: username,
+      nombre: nombre,
+      apellidos: apellidos,
+      telefono: telefono,
+      correo: correo,
+      direccion: direccion,
+      codPostal: codPostal,
+    };
 
     console.log(user);
     userForm = (
@@ -139,10 +189,9 @@ function Perfil() {
         </div>
       </div>
     );
-  } 
-  
-  else {//Lo que aparece cuando entras a la pagina
-    userForm = (      
+  } else {
+    //Lo que aparece cuando entras a la pagina
+    userForm = (
       <div className="datosUsuario">
         <div className="datosBody">
           <h2>{data.username}</h2>
