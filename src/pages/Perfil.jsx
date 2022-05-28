@@ -7,6 +7,8 @@ import { FiMenu } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr";
 import { FaPen, FaTrashAlt, FaSave } from "react-icons/fa";
 
+import Button from "../components/Button";
+
 /*IMAGENES*/
 import logo from "../images/logo.png";
 import logro from "../images/logro_img.png";
@@ -154,41 +156,6 @@ function Perfil() {
         </form>
       </div>
     );
-  } else if (username != "" && !edit) {
-    let user = {
-      username: username,
-      nombre: nombre,
-      apellidos: apellidos,
-      telefono: telefono,
-      correo: correo,
-      direccion: direccion,
-      codPostal: codPostal,
-    };
-
-    console.log(user);
-    userForm = (
-      <div className="datosUsuario">
-        <div className="datosBody">
-          <h2>{username}</h2>
-          <div className="datos">
-            <div className="col">
-              <p>{nombre}</p>
-              <p>{apellidos}</p>
-              <p>{telefono}</p>
-            </div>
-            <div className="col">
-              <p>{correo}</p>
-              <p>{direccion}</p>
-              <p>{codPostal}</p>
-            </div>
-          </div>
-          <button className="editButton" onClick={editar}>
-            Editar
-            <FaPen className="icon" />
-          </button>
-        </div>
-      </div>
-    );
   } else {
     //Lo que aparece cuando entras a la pagina
     userForm = (
@@ -207,10 +174,14 @@ function Perfil() {
               <p>{data.codPostal}</p>
             </div>
           </div>
-          <button className="editButton" onClick={editar}>
+          <Button
+            onClick={editar}
+            buttonSize="btn--medium"
+            buttonStyle="btn--primary--solid"
+            icon={<FaPen />}
+          >
             Editar
-            <FaPen className="icon" />
-          </button>
+          </Button>
         </div>
       </div>
     );

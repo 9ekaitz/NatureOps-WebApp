@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Login from "./containers/Login.jsx";
-import LandingPage  from "./containers/LandingPage.jsx";
-import Registro from "./containers/Registro.jsx";
-import DashBoard from "./containers/Dashboard.jsx"; 
-import Perfil from "./containers/Perfil.jsx"; 
-import Prueba from "./containers/Prueba.jsx"; 
+import Login from "./pages/Login.jsx";
+import LandingPage  from "./pages/LandingPage.jsx";
+import Registro from "./pages/Registro.jsx";
+import DashBoard from "./pages/Dashboard.jsx"; 
+import Perfil from "./pages/Perfil.jsx"; 
+import Prueba from "./pages/Prueba.jsx"; 
 
 /*import Sidebar from "./components/componentsDashBoard/Sidebar.jsx"*/
 

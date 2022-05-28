@@ -1,5 +1,6 @@
 :root {
   --primary: #48bfe3;
+  --secondary: #896eff;
   --warning: #ffd028;
   --danger: #d50000;
   --success: #00c853;
@@ -10,7 +11,7 @@
 .btn {
   /* FIXME: font family */
   font-family: 'Courier New', Courier, monospace;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3 ease;
   display: flex;
@@ -18,7 +19,8 @@
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  /* transform: translateY(-3px); */
+  filter: brightness(90%);
 }
 
 .btn--primary--solid {
@@ -31,6 +33,18 @@
   background-color: transparent;
   color: var(--primary);
   border: 2px solid var(--primary);
+}
+
+.btn--secondary--solid {
+  background-color: var(--secondary);
+  color: var(--white);
+  border: none;
+}
+
+.btn--secondary--outline {
+  background-color: transparent;
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
 }
 
 .btn--warning--solid {
@@ -70,7 +84,7 @@
 }
 
 .btn--medium {
-  padding: 10px 20px;
+  padding: 10px 10px;
   font-size: 18;
 }
 

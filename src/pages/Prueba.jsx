@@ -1,6 +1,4 @@
 import React from "react";
-import Button from "../components/Button.jsx";
-import { FaSave } from "react-icons/fa";
 
 function Prueba() {
   return (
@@ -12,7 +10,6 @@ function Prueba() {
         height: "100vh"
       }}
     >
-      <Button text="Hello" buttonStyle="btn--danger--outline" buttonSize="btn--large" icon={<FaSave />}/>
     </div>
   );
 }

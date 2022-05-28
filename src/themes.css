@@ -1,0 +1,12 @@
+.light {
+  /* TODO: fix the theme and change the components */
+  --primary: #48bfe3;
+  --secondary: #896eff;
+  --warning: #ffd028;
+  --danger: #d50000;
+  --success: #00c853;
+  --white: #fdfdfd;
+  --black: #121212;
+  --nav-accent: #e0f4fb;
+  --nav-background: #424242;
+}

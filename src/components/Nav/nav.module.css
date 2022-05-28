@@ -1,0 +1,38 @@
+:root {
+  --nav-accent: #e0f4fb;
+  --nav-background: #222222;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: var(--nav-background);
+}
+
+.nav.collapse {
+  width: 5rem;
+}
+
+.nav .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: var(--nav-accent);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.nav .center {
+  flex-grow: 1;
+}
+
+.logo {
+  max-width: 7rem;
+  width: calc(100% - 2rem);
+  margin: 1rem;
+}

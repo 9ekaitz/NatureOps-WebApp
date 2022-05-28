@@ -1,13 +1,15 @@
 import React from "react";
-import "./button.css";
+import classes from "./button.module.css";
 
 
 const STYLES = [
   "btn--primary--solid",
+  "btn--secondary--solid",
   "btn--warning--solid",
   "btn--danger--solid",
   "btn--success--solid",
   "btn--primary--outline",
+  "btn--secondary--outline",
   "btn--warning--outline",
   "btn--danger--outline",
   "btn--success--outline",
@@ -15,7 +17,7 @@ const STYLES = [
 
 const SIZES = ["btn--medium", "btn--large"];
 
-function Button({ text, onClick, buttonStyle, buttonSize, icon }) {
+function Button({ children, onClick, buttonStyle, buttonSize, icon }) {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
     : STYLES[0];
@@ -24,9 +26,9 @@ function Button({ text, onClick, buttonStyle, buttonSize, icon }) {
   return (
     <button
       onClick={onClick}
-      className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+      className={`${classes.btn} ${classes[checkButtonStyle]} ${classes[checkButtonSize]}`}
     >
-      {text}{icon}
+      {children}{icon}
     </button>
   );
 }
