@@ -7,8 +7,6 @@ import DashBoard from "./pages/Dashboard.jsx";
 import Perfil from "./pages/Perfil.jsx"; 
 import Prueba from "./pages/Prueba.jsx"; 
 
-/*import Sidebar from "./components/componentsDashBoard/Sidebar.jsx"*/
-
 export function App() {
 
   return (

@@ -1,11 +1,11 @@
 import React from "react";
 
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiLogOut } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr";
-import Nav from "../components/Nav";
 import { ImNewspaper } from "react-icons/im";
 import { MdEvent, MdPlace, MdAccountCircle } from "react-icons/md";
-import { FiLogOut } from "react-icons/fi";
+
+import Nav from "../components/Nav";
 
 /*IMAGENES*/
 import logo from "../images/logo.png";
