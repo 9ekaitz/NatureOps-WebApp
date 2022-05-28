@@ -1,1 +1,1 @@
-export {default} from "./NavItem.jsx"
+export { default } from "./NavItem.jsx";

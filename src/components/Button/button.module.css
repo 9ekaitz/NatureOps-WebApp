@@ -10,7 +10,7 @@
 
 .btn {
   /* FIXME: font family */
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3 ease;

@@ -1,13 +1,5 @@
 import React from "react";
-/*, { useState }*/
-/*import Aside from "./componentsDashBoard/Aside.jsx";*/
-/*ICONOS*/
-// import { ImNewspaper } from "react-icons/im";
-// import { MdEvent } from "react-icons/md";
-// import { MdPlace } from "react-icons/md";
-// import { CgProfile } from "react-icons/cg";
-// import { ImCross} from "react-icons/im";
-// import { FiLogOut } from "react-icons/fi";
+
 import { FiMenu } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr";
 import Nav from "../components/Nav";
@@ -22,23 +14,7 @@ import img_noticia1 from "../images/noticia1.jpg";
 import img_noticia2 from "../images/noticia2.jpg";
 import img_noticia3 from "../images/noticia3.jpg";
 
-/*import scriptReact from "../JavaScript/index.js"*/
-
-import "../styles/styleSidebar.css";
-
 function DashBoard() {
-  //const sideMenu = document.querySelector("aside");
-  //const closeBtn = document.querySelector("close-btn");
-
-  //const closeBtn = document.getElementById("close-btn");
-
-  //const {toggle, setToggle} = useState(true);
-
-  function abrirNavbar() {
-    document.getElementById("asidee").classList.remove("cerrar");
-    document.getElementById("asidee").classList.add("abrir");
-  }
-
   const handleClickNoticias = () => {
     console.log("Noticias clicked");
   };
@@ -163,7 +139,7 @@ function DashBoard() {
       </main>
       <div className="right">
         <div className="top">
-          <button id="menu-btn" onClick={abrirNavbar}>
+          <button id="menu-btn">
             <span>
               <FiMenu />
             </span>

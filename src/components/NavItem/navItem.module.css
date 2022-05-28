@@ -15,17 +15,17 @@
   align-items: center;
   gap: 1rem;
   border-radius: 8px 0 0 8px;
-  transition: background-color .3s;
-  transition: color .3s;
+  transition: background-color 0.3s, color 0.3s;
   font-size: 1.2rem;
 }
 
 .item.collapse {
-  width: calc(100% - .5rem);
-  margin-left: .5rem;
+  width: calc(100% - 0.5rem);
+  margin-left: 0.5rem;
 }
 
-.item:hover, .current {
+.item:hover,
+.current {
   background-color: var(--nav-accent);
   color: var(--nav-background);
   border-radius: 8px 0 0 8px;

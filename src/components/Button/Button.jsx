@@ -1,7 +1,6 @@
 import React from "react";
 import classes from "./button.module.css";
 
-
 const STYLES = [
   "btn--primary--solid",
   "btn--secondary--solid",
@@ -28,7 +27,8 @@ function Button({ children, onClick, buttonStyle, buttonSize, icon }) {
       onClick={onClick}
       className={`${classes.btn} ${classes[checkButtonStyle]} ${classes[checkButtonSize]}`}
     >
-      {children}{icon}
+      {children}
+      {icon}
     </button>
   );
 }
