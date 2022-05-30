@@ -1,10 +1,8 @@
 import React from "react";
 
-/*ICONOS*/
 import { FiMenu } from "react-icons/fi"
 import { FaPlus } from "react-icons/fa"
 
-/*IMAGENES*/
 import logo from "../images/logo.png"
 
 import Aside from "./componentsDashBoard/Aside.jsx"
@@ -13,6 +11,8 @@ import PaginationComponent from "./componentsDashBoard/PaginationComponent.jsx";
 
 import "../styles/styleSidebar.css"
 import "../styles/styleEventos.css"
+import "../styles/pagination.css"
+
 import data from "../data/eventos.json";
 
 
@@ -28,36 +28,19 @@ function Eventos() {
   let DisplayDataItem={};
 
   for(let i=0;i<data.length;i++){
-    if(data[i].destacado==1){
-      DisplayDataItem=
-        <div className="eventCard destacado">
-          <p>{data[i].nombre}</p>
-          <p>{data[i].fecha}</p>
-          <p>11:30</p>
-          <p>{data[i].lugar}</p>
-          <div className="imagenCard">
-            <img src={data[i].foto} alt="playa1"></img>
-          </div>
-          <button className="buttonDetalles">Detalles</button>
+    let fecha=data[i].fecha;
+    let fechaHora=fecha.split(" ");
+    DisplayDataItem=
+      <div className={`eventCard ${data[i].destacado?"destacado":""}`}>
+        <p>{data[i].nombre}</p>
+        <p>{fechaHora[0]}</p>
+        <p>{fechaHora[1]}</p>
+        <p>{data[i].lugar}</p>
+        <div className="imagenCard">
+          <img src={data[i].foto} alt="playa1"></img>
         </div>
-                  
-          
-    }else{
-      DisplayDataItem=
-        <div className="eventCard">
-          <p>{data[i].nombre}</p>
-          <p>{data[i].fecha}</p>
-          <p>11:30</p>
-          <p>{data[i].lugar}</p>
-          <div className="imagenCard">
-            <img src={data[i].foto} alt="playa1"></img>
-          </div>
-          <button className="buttonDetalles">Detalles</button>
-        </div>
-                  
-          
-    }
-
+        <button className="buttonDetalles">Detalles</button>
+      </div>
     DisplayData[i]=DisplayDataItem;
   }
 

@@ -8,32 +8,25 @@ function PaginationComponent({DisplayData, itemsPerPage}){
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % DisplayData.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
     setItemOffset(newOffset);
   };
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     setCurrentItems(DisplayData.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(DisplayData.length / itemsPerPage));
   }, [itemOffset, itemsPerPage]);
-
-  console.log(itemsPerPage);
-  console.log(DisplayData);
 
   return(
     <>
       {currentItems}
       <ReactPaginate
         breakLabel="..."
-        nextLabel="NEXT >"
+        nextLabel=">"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel="< PREVIOUS"
+        previousLabel="<"
         renderOnZeroPageCount={null}
         containerClassName="pagination"
         nextLinkClassName="next"

@@ -1,0 +1,28 @@
+.pagination{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    grid-column: span 4;
+    margin-bottom: 1rem;
+    border-radius: 0.8rem;
+}
+
+.pagination > li >a{
+    color: var(--azul-oscuro);
+}
+
+.pagination:hover{
+    cursor: pointer;
+}
+
+li .next, li .previous{
+    border: 1px solid var(--azul-oscuro);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+li .next:hover, li .previous:hover{
+    border: 2px solid var(--azul-oscuro);
+}
