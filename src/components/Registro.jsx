@@ -1,7 +1,6 @@
 import React, { useEffect,useRef } from "react"
 import "../styles/styleLogin.css"
 import image from "../images/faro.jpg"
-/*import BoxIcons from "boxicons"*/
 import { gsap } from "gsap"
 
 function Registro() {
