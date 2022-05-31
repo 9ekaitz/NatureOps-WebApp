@@ -50,7 +50,7 @@ function Login() {
     } catch (err) {
       if(!err?.response)
       {
-        setErrorMessage("No server response!");
+        setErrorMessage("El servidor no responde!");
       }
       else if(err.response?.status == 403)
       {
