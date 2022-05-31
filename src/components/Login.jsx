@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {useNavigate, useLocation} from "react-router-dom";
-import { useRef } from "react";
 import "../styles/styleLogin.css";
 import image from "../images/playa.jpg";
 import { gsap } from "gsap";
 import axios from "../api/axios";
-import useAuth from "../hooks/useAuth";
 /*ICONOS DE REDES SOCIALES*/
 import { FaTiktok } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { FiTwitter } from "react-icons/fi";
-import jwt_decode from "jwt-decode";
+import useAuth from "../hooks/useAuth";
+
+import accessTokenSaver from "../utils/heleper"
 
 const LOGIN_URL = "/api/login";
 
 function Login() {
   const { setAuth } = useAuth();
+
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
@@ -36,18 +37,13 @@ function Login() {
           "Content-type": "multipart/formdata",
         },
       });
-      //console.log(JSON.stringify(response));
-      const accessToken = response?.data?.access_token;
-      const refreshToken = response?.data?.refresh_token;
-
-      const role = jwt_decode(accessToken).roles[0];
-      /*const roles = response?.data?.roles;*/
-      setAuth({ username, role, accessToken, refreshToken });
+      accessTokenSaver(setAuth, response, username);
       setUsername("");
       setPassword("");
       navigate(from, {replace: true})
 
     } catch (err) {
+      console.log(err)
       if(!err?.response)
       {
         setErrorMessage("El servidor no responde!");

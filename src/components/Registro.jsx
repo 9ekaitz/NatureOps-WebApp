@@ -6,8 +6,8 @@ import image from "../images/faro.jpg"
 /*import BoxIcons from "boxicons"*/
 import { gsap } from "gsap"
 import axios from "../api/axios";
-import jwt_decode from "jwt-decode";
 import useAuth from "../hooks/useAuth";
+import accessTokenSaver from "../utils/heleper";
 
 
 const REGISTRO_URL = "/api/register";
@@ -153,6 +153,13 @@ function Registro() {
    
   },[])
 
+  const cleanFields = () =>
+  {
+    setUsername("");
+    setPassword("");
+    setCorreo("");
+    setName("");
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     if(password != passwordRep)
@@ -168,13 +175,8 @@ function Registro() {
             "Content-type": "application/json",
           },
         });
-        const accessToken = response?.data?.access_token;
-        const refreshToken = response?.data?.refresh_token;
-  
-        const role = jwt_decode(accessToken).roles[0];
-        setAuth({ username, role, accessToken, refreshToken });
-        setUsername("");
-        setPassword("");
+        accessTokenSaver(setAuth, response, username);
+        cleanFields();
         navigate(from, {replace: true})
       } catch (err) {
         if(!err?.response)
