@@ -192,9 +192,9 @@ function Login() {
         <img src={image} alt="imgen de un faro"/>
       </div>
       <div className="contentBx">
-        <div className="formBx">
+        <div className="formBx" >
           <h2 className="login">Inicio de sesión</h2>
-          <form onSubmit = {handleSubmit}>
+          <form onSubmit = {handleSubmit} data-testid="form">
             <div className="inputBx username">
               <span>Nombre de usuario</span>
               <input data-testid="username" type="text" name="" value={username} onChange={(e) => setUsername(e.target.value)}/>

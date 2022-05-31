@@ -1,7 +1,8 @@
 import React from "react";
 import '@testing-library/jest-dom/extend-expect';
-import { getByTestId, render } from "@testing-library/react";
+import { getByTestId, render, fireEvent, fakeEvent, } from "@testing-library/react";
 import { screen} from "@testing-library/dom";
+import { mount } from "enzyme";
 
 import Login from "../components/Login.jsx";
 
@@ -20,8 +21,32 @@ test('el componente se esta renderizando', () => {
 
     const inputAcceder = componente.queryByTestId("acceder");
     expect(inputAcceder).toHaveAttribute('type', 'submit');
+
 })
 
 test('testear el form', () =>{
+    
+    const componente = render(<Login/>)
+    const usernameLabel = componente.queryByTestId("username");
+    fireEvent.change(usernameLabel, {target: {value:'esto es un test'}});
+    expect(usernameLabel).toHaveAttribute('value', 'esto es un test');
+
+    
+    const passwordLabel = componente.queryByTestId("contraseña");
+    fireEvent.change(passwordLabel, {target: {value:'esto es un test contraseña'}});
+    expect(passwordLabel).toHaveAttribute('value', 'esto es un test contraseña');
+     
+})
+
+
+
+test('ejecutar handle submit', () =>{
+
+    /* TEST HAU APARTE UTZI DUGU */
+    const componente = render(<Login/>)
+    const inputAcceder = componente.queryByTestId("acceder");
+    fireEvent.click(inputAcceder);
+    /*const mockhandler = jest.fn();
+    expect(mockhandler).toBeCalledTimes(1);*/
 
 })

@@ -107,12 +107,12 @@ function LandingPage() {
           </div>
         
           <div className="nav__toggle" id="nav-toggle">
-            <box-icon name='menu' onClick={() => cerraryAbrir(true)}></box-icon>
+            <box-icon name='menu' data-testid="irekiNavbar" type="" onClick={() => cerraryAbrir(true)}></box-icon>
           </div>
 
-          <div className={toggle ? "nav__menu show" : "nav__menu"}id="nav-menu">
+          <div data-testid="navbar" className={toggle ? "nav__menu show" : "nav__menu"}id="nav-menu">
             <div className="nav__close" id="nav-close">
-              <box-icon name='x' onClick={() => cerraryAbrir(false)}></box-icon>
+              <box-icon name='x' data-testid="itxiNavbar" type="" onClick={() => cerraryAbrir(false)}></box-icon>
             </div>
 
             <ul className="nav__list">

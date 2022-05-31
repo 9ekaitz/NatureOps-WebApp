@@ -8,7 +8,7 @@ import "../styles/styleGeneralForms.css"
 function Evento() {
 
   return(
-    <div className="claseSubirImagen claseEvento">
+    <div className="claseSubirImagen claseEvento" data-testid="eventoa">
       <Aside/>
       <div className="eskuina">
         <div className="forma noticia">

@@ -7,7 +7,7 @@ import "../styles/styleGeneralForms.css"
 function CrearEvento() {
 
   return(
-    <div className="claseSubirImagen">
+    <div className="claseSubirImagen" data-testid="eventoaSortu">
             
       <div className="ezkerra">
         <Aside/>
@@ -21,7 +21,7 @@ function CrearEvento() {
           <div className="formLugar">
             <label htmlFor="lname">Lugar: </label>
             <select>
-              <option selected value="lesaka">Lesaka</option>
+              <option defaultValue="lesaka">Lesaka</option>
               <option value="arrasate">Arrasate</option>
               <option value="donosti">Donostia</option>
               <option value="zarautz">Zarautz</option>

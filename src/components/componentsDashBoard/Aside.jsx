@@ -23,11 +23,11 @@ function Aside() {
   }
 
   return(
-    <div className="ezkerra">
-      <aside id="asidee" className="cerrar">
+    <div className="ezkerra" data-testid="asideClass">
+      <aside id="asidee" className="cerrar" data-testid="asidea">
         <div className = "top">
           <div className="close" id="close-btn">
-            <button onClick={cerrarNavbar}><ImCross /></button>
+            <button data-testid="botonCerrar" onClick={cerrarNavbar}><ImCross /></button>
           </div>
           <img className="imagenLogo" src={logo} alt="Logo"/>
           <h2>NatureOps</h2>  
@@ -57,7 +57,7 @@ function Aside() {
       </aside>
       <div className="right">
         <div className="top">
-          <button id="menu-btn" onClick={abrirNavbar}><span><FiMenu/></span></button>
+          <button data-testid="botonAbrir" id="menu-btn" onClick={abrirNavbar}><span><FiMenu/></span></button>
         </div>
       </div>
     </div>  

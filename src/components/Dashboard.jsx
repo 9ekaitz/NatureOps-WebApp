@@ -12,12 +12,24 @@ import { GrCircleInformation } from "react-icons/gr";
 /*IMAGENES*/
 import logo from "../images/logo.png";
 import "../styles/styleSidebar.css"
+//import cargarImagen from "../images"
+
+
 
 
 
 function DashBoard() {
 
+  /*
+  *
   const cargarImagen = require.context("../images", true);
+  <img src={cargarImagen(`./${record.imagen}`)} alt={record.id}/>
+  <img src={cargarImagen(`./${record.imagen}`)} alt={record.id}/>
+  *
+  */
+
+
+  
   function abrirNavbar(){
 
     document.getElementById("asidee").classList.remove("cerrar");
@@ -31,11 +43,11 @@ function DashBoard() {
   }
 
   return(
-    <div className="container">
-      <aside id="asidee" className="cerrar">
+    <div className="container" data-testid="dashboarda">
+      <aside id="asidee" className="cerrar" data-testid="asidea">
         <div className = "top">
           <div className="close" id="close-btn">
-            <button onClick={cerrarNavbar}><ImCross /></button>
+            <button data-testid="botonCerrar" onClick={cerrarNavbar}><ImCross /></button>
           </div>
           <img className="imagenLogo" src={logo} alt="Logo"/>
           <h2>NatureOps</h2>  
@@ -69,7 +81,7 @@ function DashBoard() {
           {Noticias.map(record=>{
             return(
               <div className="card" key={record.id}>
-                <img src={cargarImagen(`./${record.imagen}`)} alt={record.id}/>
+                
                 <h4>{record.titulo}</h4>
                 <p>{record.descripcion}</p>
                 <a href={record.URL}>Leer más</a> 
@@ -112,7 +124,7 @@ function DashBoard() {
       </main>
       <div className="right">
         <div className="top">
-          <button id="menu-btn" onClick={abrirNavbar}><span><FiMenu/></span></button>
+          <button id="menu-btn" data-testid="botonAbrir" onClick={abrirNavbar}><span><FiMenu/></span></button>
           <div className="profile">
             <div className="info">
               <p>Hey, <b>Daniel</b> </p>
@@ -131,7 +143,7 @@ function DashBoard() {
           {Galeria.map(record=>{
             return(
               <div className="imagen" key={record.id}>
-                <img src={cargarImagen(`./${record.imagen}`)} alt={record.id}/>
+                
               </div>
             )
           })
