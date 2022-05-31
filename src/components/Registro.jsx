@@ -3,7 +3,6 @@ import {useNavigate, useLocation} from "react-router-dom";
 import {useRef} from "react";
 import "../styles/styleRegistro.css"
 import image from "../images/faro.jpg"
-/*import BoxIcons from "boxicons"*/
 import { gsap } from "gsap"
 import axios from "../api/axios";
 import useAuth from "../hooks/useAuth";
