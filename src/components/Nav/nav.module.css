@@ -33,7 +33,7 @@
 .nav .top {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
   height: 12rem;
   color: var(--nav-accent);
