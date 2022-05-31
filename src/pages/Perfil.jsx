@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 /*, { useState }*/
 import Aside from "./componentsDashBoard/Aside.jsx";
+
 /*ICONOS*/
 
 import { FiMenu } from "react-icons/fi";
@@ -8,6 +9,8 @@ import { GrCircleInformation } from "react-icons/gr";
 import { FaPen, FaTrashAlt, FaSave } from "react-icons/fa";
 
 import Button from "../components/Button";
+/*import axios from "axios";*/
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
 
 /*IMAGENES*/
 import logo from "../images/logo.png";
@@ -27,6 +30,17 @@ import data from "../data/perfil.json";
 
 function Perfil() {
   let [edit, setEdit] = useState(false);
+  const axiosPrivate = useAxiosPrivate();
+
+
+  useEffect(() =>{
+    const response = axiosPrivate.get("/api/get"
+    );
+    console.log(response)
+  },[])
+  
+
+
   function abrirNavbar() {
     document.getElementById("asidee").classList.remove("cerrar");
     document.getElementById("asidee").classList.add("abrir");
@@ -38,11 +52,7 @@ function Perfil() {
   }
   const [username, setUsername] = useState("");
   const [nombre, setNombre] = useState("");
-  const [apellidos, setApellidos] = useState("");
-  const [telefono, setTelefono] = useState("");
   const [correo, setCorreo] = useState("");
-  const [direccion, setDireccion] = useState("");
-  const [codPostal, setCodPostal] = useState("");
 
   function volver() {
     setEdit(false);
@@ -50,8 +60,8 @@ function Perfil() {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    if (username != "" && nombre != "" && apellidos != "" && telefono != "") {
-      if (correo != "" && direccion != "" && codPostal != "") {
+    if (username != "" && nombre != "") {
+      if (correo != "") {
         volver();
       }
     }
@@ -87,30 +97,8 @@ function Perfil() {
                 <span className="content-name">Nombre</span>
               </label>
             </div>
-            <div className="inputBox">
-              <input
-                type="text"
-                placeholder=" "
-                name="apellidos"
-                required
-                onChange={(e) => setApellidos(e.target.value)}
-              />
-              <label htmlFor="apellidos" className="label-name">
-                <span className="content-name">Apellidos</span>
-              </label>
-            </div>
-            <div className="inputBox">
-              <input
-                type="tel"
-                placeholder=" "
-                name="phone"
-                required
-                onChange={(e) => setTelefono(e.target.value)}
-              />
-              <label htmlFor="phone" className="label-name">
-                <span className="content-name">Telefono</span>
-              </label>
-            </div>
+           
+           
           </div>
           <div className="col" id="col2">
             <div className="inputBox">
@@ -125,29 +113,7 @@ function Perfil() {
                 <span className="content-name">Correo</span>
               </label>
             </div>
-            <div className="inputBox">
-              <input
-                type="text"
-                placeholder=" "
-                name="address"
-                required
-                onChange={(e) => setDireccion(e.target.value)}
-              />
-              <label htmlFor="address" className="label-name">
-                <span className="content-name">Dirección</span>
-              </label>
-            </div>
-            <div className="inputBox">
-              <input
-                type="number"
-                placeholder=" "
-                name="codigoPostal"
-                onChange={(e) => setCodPostal(e.target.value)}
-              />
-              <label htmlFor="codigoPostal" className="label-name">
-                <span className="content-name">Código Postal</span>
-              </label>
-            </div>
+          
           </div>
           <button type="submit" className="saveButton">
             Guardar
@@ -165,13 +131,9 @@ function Perfil() {
           <div className="datos">
             <div className="col">
               <p>{data.nombre}</p>
-              <p>{data.apellidos}</p>
-              <p>{data.telefono}</p>
             </div>
             <div className="col">
               <p>{data.correo}</p>
-              <p>{data.direccion}</p>
-              <p>{data.codPostal}</p>
             </div>
           </div>
           <Button
