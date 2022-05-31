@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Login from "./pages/Login.jsx";
 import LandingPage  from "./pages/LandingPage.jsx";
 import Registro from "./pages/Registro.jsx";
@@ -12,20 +12,16 @@ import Prueba from "./pages/Prueba.jsx";
 export function App() {
 
   return (
-    <Router>      
-      <Switch>
-        <Route exact path="/" component={LandingPage}/>
-        <Route exact path="/login" component={Login}/>
-        <Route exact path="/registro" component={Registro}/>
-        <Route exact path="/dashboard" component={DashBoard}/>
-        <Route exact path="/perfil" component={Perfil}/>
-        <Route exact path="/prueba" component={Prueba}/>
-
-        
-        
-        
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Routes>    
+        <Route  path="/" element={<LandingPage></LandingPage>}/>
+        <Route  path="/login" element={<Login/>}/>
+        <Route  path="/registro" element={<Registro/>}/>
+        <Route  path="/dashboard" element={<DashBoard/>}/>
+        <Route  path="/perfil" element={<Perfil/>}/>
+        <Route  path="/prueba" element={<Prueba/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
