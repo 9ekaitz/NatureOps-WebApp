@@ -39,7 +39,7 @@ function Sitios() {
   )
   
   return(
-    <div className="container">
+    <div className="container" data-testid="container">
       <Aside/>
       <main>
         <h1>Sitios</h1>
@@ -50,7 +50,7 @@ function Sitios() {
       </main>
       <div className="right">
         <div className="top">
-          <button id="menu-btn" onClick={abrirNavbar}><span><FiMenu/></span></button>
+          <button id="menu-btn" data-testid="botonAbrir" onClick={abrirNavbar}><span><FiMenu/></span></button>
           <div className="profile">
             <div className="info">
               <p>Hey, <b>Daniel</b> </p>

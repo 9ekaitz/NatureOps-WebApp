@@ -12,10 +12,10 @@ function Aside() {
     document.getElementById("asidee").classList.add("cerrar");
   }
   return(
-    <aside id="asidee" className="cerrar">
+    <aside id="asidee" className="cerrar" data-testid="asidea">
       <div className = "top">
         <div className="close" id="close-btn">
-          <button onClick={cerrarNavbar}><ImCross /></button>
+          <button data-testid="botonCerrar" onClick={cerrarNavbar}><ImCross /></button>
         </div>
         <img className="imagenLogo" src={logo} alt="Logo"/>
         <h2>NatureOps</h2>  
