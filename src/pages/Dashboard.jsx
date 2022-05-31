@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { FiMenu, FiLogOut } from "react-icons/fi";
+import { FiLogOut } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr";
 import { ImNewspaper } from "react-icons/im";
 import { MdEvent, MdPlace, MdAccountCircle } from "react-icons/md";
 
 import Nav from "../components/Nav";
+import Header from "../components/Header";
 
 /*IMAGENES*/
-import logo from "../images/logo.png";
 import basura from "../images/basura.jpg";
 import img_noticia1 from "../images/noticia1.jpg";
 import img_noticia2 from "../images/noticia2.jpg";
 import img_noticia3 from "../images/noticia3.jpg";
 
 function DashBoard() {
+  
+  const [collapsed, setCollapsed] = useState(false);
+  
   const handleClickNoticias = () => {
     console.log("Noticias clicked");
   };
+
+  const toggleNav = () => {
+    setCollapsed(prev => !prev);
+  };
+
   const navigationData = [
     {
       text: "Noticias",
@@ -50,8 +58,9 @@ function DashBoard() {
   ];
 
   return (
-    <div className="container">
-      <Nav dataCenter={navigationData} dataBottom={navFooterData} />
+    <React.Fragment>
+      <Header username="Oihane" role="Admin" menuOnClick={toggleNav} />
+      <Nav collapse={collapsed} onClickOverlay={toggleNav} dataCenter={navigationData} dataBottom={navFooterData} />
       <main>
         <h1>Dashboard</h1>
         <div className="noticias">
@@ -92,7 +101,6 @@ function DashBoard() {
             </a>
           </div>
         </div>
-
         <div className="eventos">
           <div className="apartado">
             <h2>Eventos</h2>
@@ -136,40 +144,22 @@ function DashBoard() {
             </tbody>
           </table>
         </div>
+        <div className="right">
+          <div className="galeria">
+            <div className="apartado">
+              <h2>Galeria</h2>
+              <GrCircleInformation />
+            </div>
+            <div className="imagen">
+              <img src={basura} alt="basura"></img>
+            </div>
+            <div className="imagen">
+              <img src={img_noticia2} alt="basura"></img>
+            </div>
+          </div>
+        </div>
       </main>
-      <div className="right">
-        <div className="top">
-          <button id="menu-btn">
-            <span>
-              <FiMenu />
-            </span>
-          </button>
-          <div className="profile">
-            <div className="info">
-              <p>
-                Hey, <b>Daniel</b>{" "}
-              </p>
-              <small className="text-muted">Admin</small>
-            </div>
-            <div className="profile-photo">
-              <img src={logo} alt="perfil" />
-            </div>
-          </div>
-        </div>
-        <div className="galeria">
-          <div className="apartado">
-            <h2>Galeria</h2>
-            <GrCircleInformation />
-          </div>
-          <div className="imagen">
-            <img src={basura} alt="basura"></img>
-          </div>
-          <div className="imagen">
-            <img src={img_noticia2} alt="basura"></img>
-          </div>
-        </div>
-      </div>
-    </div>
+    </React.Fragment>
   );
 }
 

@@ -1,0 +1,61 @@
+.header {
+  grid-column: 2;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  z-index: 1;
+  box-shadow: 0 0 16px 1px #00000050;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 1rem;
+}
+
+.headerRight .role {
+  display: block;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.logo {
+  max-width: 7rem;
+  height: calc(100% - 1rem);
+  margin: 0.5rem;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+  padding: 0.4rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--white);
+}
+
+.iconButton:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+.iconButton:active {
+  filter: brightness(120%);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header {
+    grid-column: 1;
+  }
+}

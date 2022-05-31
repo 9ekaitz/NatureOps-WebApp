@@ -1,13 +1,13 @@
 import React from "react";
-import classes from "./navItem.module.css";
+import styles from "./navItem.module.css";
 
 function NavItem({ children, icon, onClick, collapse }) {
-  const collapseClass = collapse ? classes.collapse : "";
+  const collapseClass = collapse ? styles.collapse : "";
 
   return (
-    <button className={`${classes.item} ${collapseClass}`} onClick={onClick}>
-      <span className={`${classes.icon} ${collapseClass}`}>{icon}</span>
-      {collapse ? "" : children}
+    <button className={`${styles.item} ${collapseClass}`} onClick={onClick}>
+      <span className={styles.icon}>{icon}</span>
+      <span className={styles.text}>{children}</span>
     </button>
   );
 }

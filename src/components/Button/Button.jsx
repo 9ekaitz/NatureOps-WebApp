@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./button.module.css";
+import styles from "./button.module.css";
 
 const STYLES = [
   "btn--primary--solid",
@@ -25,7 +25,7 @@ function Button({ children, onClick, buttonStyle, buttonSize, icon }) {
   return (
     <button
       onClick={onClick}
-      className={`${classes.btn} ${classes[checkButtonStyle]} ${classes[checkButtonSize]}`}
+      className={`${styles.btn} ${styles[checkButtonStyle]} ${styles[checkButtonSize]}`}
     >
       {children}
       {icon}
