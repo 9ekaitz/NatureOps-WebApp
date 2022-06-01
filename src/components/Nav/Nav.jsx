@@ -11,7 +11,7 @@ function Nav({ dataCenter, dataBottom, collapse, onClickOverlay }) {
     return (
       <NavItem
         key={index}
-        onClick={item.onClick}
+        path={item.path}
         icon={item.icon}
         collapse={collapse}
       >

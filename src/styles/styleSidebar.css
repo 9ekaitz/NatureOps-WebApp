@@ -51,6 +51,8 @@ p {
 /**** MAIN ****/
 /**************/
 main {
+  display: grid;
+  grid-template-columns: 1fr auto;
   padding-top: 1.4rem;
   padding-left: 2rem;
   overflow: auto;

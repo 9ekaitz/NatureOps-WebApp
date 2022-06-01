@@ -17,7 +17,11 @@
   font-style: normal;
 }
 
-* {
+:root {
   font-size: 16px;
   font-family: "FontCC", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
 }
