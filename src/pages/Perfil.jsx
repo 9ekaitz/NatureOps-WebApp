@@ -1,10 +1,6 @@
-import React, { useState , useEffect} from "react";
-/*, { useState }*/
-import Aside from "./componentsDashBoard/Aside.jsx";
-
+import React, { useState, useEffect } from "react";
 /*ICONOS*/
 
-import { FiMenu } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr";
 import { FaPen, FaTrashAlt, FaSave } from "react-icons/fa";
 
@@ -13,14 +9,12 @@ import Button from "../components/Button";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 
 /*IMAGENES*/
-import logo from "../images/logo.png";
 import logro from "../images/logro_img.png";
 import logro2 from "../images/logro_img2.png";
 import logro3 from "../images/logro_img3.png";
 import logroNoConseguido from "../images/logroNoConseguido.png";
 import playa from "../images/playa.jpg";
 
-import "../styles/styleSidebar.css";
 import "../styles/stylePerfil.css";
 import "../styles/stylePerfilEdit.css";
 
@@ -32,19 +26,10 @@ function Perfil() {
   let [edit, setEdit] = useState(false);
   const axiosPrivate = useAxiosPrivate();
 
-
-  useEffect(() =>{
-    const response = axiosPrivate.get("/api/get"
-    );
-    console.log(response)
-  },[])
-  
-
-
-  function abrirNavbar() {
-    document.getElementById("asidee").classList.remove("cerrar");
-    document.getElementById("asidee").classList.add("abrir");
-  }
+  useEffect(() => {
+    const response = axiosPrivate.get("/api/get");
+    console.log(response);
+  }, []);
 
   function editar() {
     setEdit(true);
@@ -97,8 +82,6 @@ function Perfil() {
                 <span className="content-name">Nombre</span>
               </label>
             </div>
-           
-           
           </div>
           <div className="col" id="col2">
             <div className="inputBox">
@@ -113,7 +96,6 @@ function Perfil() {
                 <span className="content-name">Correo</span>
               </label>
             </div>
-          
           </div>
           <button type="submit" className="saveButton">
             Guardar
@@ -150,85 +132,67 @@ function Perfil() {
   }
 
   return (
-    <div className="container">
-      <Aside />
+    <React.Fragment>
       <main className="containerPerfil">
-        <img className="imagenCentro" src={logo} alt="Logo" />
-        {userForm}
-        <div className="logros">
-          <div className="apartado">
-            <h2>Logros obtenidos</h2>
-            <a href="https://www.google.com">Ver todos</a>
+        <div>
+          {userForm}
+          <div className="logros">
+            <div className="apartado">
+              <h2>Logros obtenidos</h2>
+              <a href="https://www.google.com">Ver todos</a>
+            </div>
+            <div className="listLogros">
+              <img className="logroImg" src={logro} alt="Logro" />
+              <img className="logroImg" src={logro2} alt="Logro" />
+              <img className="logroImg" src={logro3} alt="Logro" />
+              <img className="logroImg" src={logro} alt="Logro" />
+              <img className="logroImg" src={logro2} alt="Logro" />
+              <img className="logroImg" src={logroNoConseguido} alt="Logro" />
+              <img className="logroImg" src={logroNoConseguido} alt="Logro" />
+              <img className="logroImg" src={logroNoConseguido} alt="Logro" />
+            </div>
+            <button className="deleteButton">
+              Eliminar cuenta
+              <FaTrashAlt className="icon" />
+            </button>
           </div>
-          <div className="listLogros">
-            <img className="logroImg" src={logro} alt="Logro" />
-            <img className="logroImg" src={logro2} alt="Logro" />
-            <img className="logroImg" src={logro3} alt="Logro" />
-            <img className="logroImg" src={logro} alt="Logro" />
-            <img className="logroImg" src={logro2} alt="Logro" />
-            <img className="logroImg" src={logroNoConseguido} alt="Logro" />
-            <img className="logroImg" src={logroNoConseguido} alt="Logro" />
-            <img className="logroImg" src={logroNoConseguido} alt="Logro" />
+        </div>
+        <div className="right">
+          <div className="galeria">
+            <div className="apartado">
+              <h2>Recientes</h2>
+              <GrCircleInformation />
+            </div>
+            <div className="listRecientes">
+              <div className="recientesCard">
+                <span>Te has suscrito a</span>
+                <div className="cardBody">
+                  <p>Evento GreenPeace</p>
+                  <p>2022-05-22</p>
+                  <img src={playa} alt="playa" />
+                </div>
+              </div>
+              <div className="recientesCard">
+                <span>Te has desuscrito de</span>
+                <div className="cardBody">
+                  <p>Evento Carton</p>
+                  <p>2022-05-22</p>
+                  <img src={playa} alt="playa" />
+                </div>
+              </div>
+              <div className="recientesCard">
+                <span>Has creado</span>
+                <div className="cardBody">
+                  <p>Evento Papel</p>
+                  <p>2022-05-28</p>
+                  <img src={playa} alt="playa" />
+                </div>
+              </div>
+            </div>
           </div>
-          <button className="deleteButton">
-            Eliminar cuenta
-            <FaTrashAlt className="icon" />
-          </button>
         </div>
       </main>
-      <div className="right">
-        <div className="top">
-          <button id="menu-btn" onClick={abrirNavbar}>
-            <span>
-              <FiMenu />
-            </span>
-          </button>
-          <div className="profile">
-            <div className="info">
-              <p>
-                Hey, <b>{data.nombre}</b>{" "}
-              </p>
-              <small className="text-muted">Admin</small>
-            </div>
-            <div className="profile-photo">
-              <img src={logo} alt="perfil" />
-            </div>
-          </div>
-        </div>
-        <div className="galeria">
-          <div className="apartado">
-            <h2>Recientes</h2>
-            <GrCircleInformation />
-          </div>
-          <div className="listRecientes">
-            <div className="recientesCard">
-              <span>Te has suscrito a</span>
-              <div className="cardBody">
-                <p>Evento GreenPeace</p>
-                <p>2022-05-22</p>
-                <img src={playa} alt="playa" />
-              </div>
-            </div>
-            <div className="recientesCard">
-              <span>Te has desuscrito de</span>
-              <div className="cardBody">
-                <p>Evento Carton</p>
-                <p>2022-05-22</p>
-                <img src={playa} alt="playa" />
-              </div>
-            </div>
-            <div className="recientesCard">
-              <span>Has creado</span>
-              <div className="cardBody">
-                <p>Evento Papel</p>
-                <p>2022-05-28</p>
-                <img src={playa} alt="playa" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </React.Fragment>
   );
 }
 

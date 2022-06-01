@@ -1,14 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./navItem.module.css";
 
-function NavItem({ children, icon, onClick, collapse }) {
-  const collapseClass = collapse ? styles.collapse : "";
-
+function NavItem({ children, icon, path, collapse }) {
   return (
-    <button className={`${styles.item} ${collapseClass}`} onClick={onClick}>
+    <Link
+      className={`${styles.item} ${collapse ? styles.collapse : ""}`}
+      to={path}
+    >
       <span className={styles.icon}>{icon}</span>
       <span className={styles.text}>{children}</span>
-    </button>
+    </Link>
   );
 }
 
