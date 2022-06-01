@@ -28,11 +28,11 @@ p {
 }
 
 #root {
-  display: grid;
+  /*display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   overflow: hidden;
-  height: 100vh;
+  height: 100vh;*/
 }
 
 @media (max-width: 768px) {

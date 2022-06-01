@@ -10,17 +10,21 @@ import { SiInstagram } from "react-icons/si";
 import { FiTwitter } from "react-icons/fi";
 import useAuth from "../hooks/useAuth";
 
-import accessTokenSaver from "../utils/heleper"
+//import accessTokenSaver from "../utils/heleper";
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import jwt_decode from "jwt-decode";
+
 
 const LOGIN_URL = "/api/login";
 
 function Login() {
   const { setAuth } = useAuth();
+  const axiosPrivate = useAxiosPrivate();
 
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || "/dashboard";
+  const from = location.state?.from?.pathname || "/perfil";
 
   let ref = useRef(null);
   const [username, setUsername] = useState("");
@@ -37,9 +41,17 @@ function Login() {
           "Content-type": "multipart/formdata",
         },
       });
-      accessTokenSaver(setAuth, response, username);
+
+      const user = username;
+      const accessToken = response?.data?.access_token;
+      const refreshToken = response?.data?.refresh_token;
+      const role = jwt_decode(accessToken).roles[0];
+      setAuth({user, role, accessToken, refreshToken});
+    
       setUsername("");
       setPassword("");
+
+
       navigate(from, {replace: true})
 
     } catch (err) {

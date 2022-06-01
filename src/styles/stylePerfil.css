@@ -157,6 +157,16 @@
     box-shadow: none;
     border: 3px solid var(--azul-oscuro);
 }
+
+.error
+{
+    color: firebrick !important;
+    margin-top: 20px;
+}
+.errorHidden
+{
+   display: none;
+}
 /**** MEDIA QUERIES ****/
 
 @media screen and (max-width: 1576px) {
