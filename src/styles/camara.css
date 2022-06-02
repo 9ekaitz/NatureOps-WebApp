@@ -1,0 +1,58 @@
+.mainPantallaCamara{
+    display: grid;
+    grid-template-columns: 14rem auto;
+    padding: 0;
+}
+
+.camaraContainer h1{
+    text-align: center;
+}
+
+.divCamara, .divFoto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 3rem;
+    margin: 1rem;
+}
+
+.camara{
+    width: 50%;
+    height: 70%;
+    border-radius: 0.8rem;
+}
+
+.botonCamara{
+    background-color: var(--azul-oscuro);
+    border: none;
+    color: white;
+    padding: 1rem;
+    border-radius: 4rem;
+    width: 10%;
+    height: fit-content;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.botonCamara svg{
+    width: 30%;
+    height: 60%;
+}
+
+.fotoCamara{
+    width: 30%;
+    height: 50%;
+    border-radius: 0.8rem;
+}
+
+.divFoto span{
+    margin-top: 1rem;
+    font-size: 24px;
+    font-family: 'Candara' sans-serif;
+}
+
+.oculto{
+    display: none;
+}
