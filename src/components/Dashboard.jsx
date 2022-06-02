@@ -1,5 +1,4 @@
-import React from "react";
-import Noticias from "../jsons/noticiasDashboard.json"
+import React, {useEffect, useState} from "react";
 import Eventos from "../jsons/eventos.json"
 import Galeria from "../jsons/galeria.json"
 
@@ -9,9 +8,13 @@ import { CgProfile } from "react-icons/cg";
 import { FiLogOut, FiMenu } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr";
 
+
+//import useAxiosPrivate from "../hooks/useAxiosPrivate";
+
 /*IMAGENES*/
 import logo from "../images/logo.png";
 import "../styles/styleSidebar.css"
+import axios from "../api/axios";
 //import cargarImagen from "../images"
 
 
@@ -19,6 +22,10 @@ import "../styles/styleSidebar.css"
 
 
 function DashBoard() {
+  //const axiosPrivate = useAxiosPrivate();
+  let noticias = [];
+  const [news, setNews] = useState([]);
+
 
   /*
   *
@@ -27,7 +34,21 @@ function DashBoard() {
   <img src={cargarImagen(`./${record.imagen}`)} alt={record.id}/>
   *
   */
+ 
+  const fetchData = async () =>{
+    const response = await axios.get("/api/news/0/3"
+    );
+    noticias = response?.data;
+    setNews(noticias)
+  }
 
+  
+    
+
+  useEffect(() =>{
+    noticias = null;
+    fetchData();
+  },[])
 
   
   function abrirNavbar(){
@@ -41,6 +62,7 @@ function DashBoard() {
     document.getElementById("asidee").classList.remove("abrir");
     document.getElementById("asidee").classList.add("cerrar");
   }
+
 
   return(
     <div className="container" data-testid="dashboarda">
@@ -78,12 +100,11 @@ function DashBoard() {
       <main>
         <h1>Dashboard</h1>
         <div className="noticias">
-          {Noticias.map(record=>{
+          {news.map(record=>{
             return(
-              <div className="card" key={record.id}>
-                
-                <h4>{record.titulo}</h4>
-                <p>{record.descripcion}</p>
+              <div className="card" key={record.id}>  
+                <h4>{record.title}</h4>
+                <p>{record.subtitle}</p>
                 <a href={record.URL}>Leer más</a> 
               </div>
             )

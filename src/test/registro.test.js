@@ -1,12 +1,12 @@
 import React from "react";
-import '@testing-library/jest-dom/extend-expect';
+import "@testing-library/jest-dom/extend-expect";
 import { render } from "@testing-library/react";
 
 import Registro from "../components/Registro";
 
-test('el componente se esta renderizando', () => {
-    const componente = render(<Registro/>);
-    const input = componente.queryByTestId("inputa");
-    expect(input).toHaveAttribute('name', '');
-    expect(input).toHaveAttribute('type', 'text');
+test("el componente se esta renderizando", () => {
+  const componente = render(<Registro/>);
+  const input = componente.queryByTestId("inputa");
+  expect(input).toHaveAttribute("name", "");
+  expect(input).toHaveAttribute("type", "text");
 })
