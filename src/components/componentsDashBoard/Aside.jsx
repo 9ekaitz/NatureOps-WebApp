@@ -33,19 +33,19 @@ function Aside() {
           <h2>NatureOps</h2>  
         </div>
         <div className="sidebar">
-          <a href="https://www.google.es/">
+          <a id="news" href="https://www.google.es/">
             <span> <ImNewspaper /></span>
             <h3>News</h3>
           </a>
-          <a href="https://www.google.es/">
+          <a id="events" href="https://www.google.es/">
             <span> <MdEvent /></span>
             <h3>Events</h3>
           </a>
-          <a href="https://www.google.es/">
+          <a id="places" href="https://www.google.es/">
             <span> <MdPlace /></span>
             <h3>Places</h3>
           </a>
-          <a href="https://www.google.es/">
+          <a id="profile" href="https://www.google.es/">
             <span> <CgProfile /></span>
             <h3>Profile</h3>
           </a>
