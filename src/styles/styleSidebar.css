@@ -51,7 +51,8 @@ p{
     grid-template-columns: 14rem auto 23rem;
     
 }
-
+/********************************************/
+/*** NOTICIAS PANTALLA ***/
 .noticiasGeneral{
     display:grid;
     grid-template-columns: 14rem auto;
@@ -68,12 +69,37 @@ p{
     padding-top: 0.8rem;
 }
 
-.noticiasGeneral aside .sidebar .news{
+.noticiasGeneral aside .sidebar #news{
     background-color: var(--azul-clarito);
     color:var(--color-gris);
     border-radius: 5px 0px 0px 5px;
     margin-left: 0.5rem;   
 }
+
+/*** PAGINACION ***/
+
+.pagination{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    grid-column: span 4;
+    margin-bottom: 1rem;
+    width: calc(100% - 2rem);
+    border-radius: 0.8rem;
+}
+
+.pagination > li >a{
+    color: var(--azul-oscuro);
+}
+
+.pagination > li >a:hover{
+    text-decoration: underline;
+}
+
+/**********************************************/
+
 
 .card p{
     margin-bottom: 0.8rem;
@@ -88,6 +114,7 @@ aside{
     display: grid;
     grid-template-rows: 30% auto;
 }
+
 
 /**** TOP ZATIA****/
 
@@ -185,7 +212,7 @@ main{
     
 }
 
-/***NOTICIAS***/
+/***NOTICIAS DASHBOARD***/
 
 main .noticias{
     display: grid;
@@ -579,6 +606,10 @@ h2{
     .card p{
         margin:3rem;
     }
+
+    .pagination{
+        grid-column: span 1;
+    }
   
     main .eventos{
         position:relative;
@@ -625,6 +656,10 @@ h2{
     .galeria img{
         width: calc(100% - 1rem);
         
+    }
+
+    .pagination{
+        grid-column: span 1;
     }
 }
 
