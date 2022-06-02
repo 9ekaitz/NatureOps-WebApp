@@ -30,7 +30,7 @@ function Nav({ dataCenter, dataBottom, collapse, onClickOverlay }) {
         <div className={styles.center}>{dataCenter.map(renderNavItem)}</div>
         <div className={styles.bottom}>{dataBottom.map(renderNavItem)}</div>
       </aside>
-      <div onClick={onClickOverlay} onKeyDown={onClickOverlay} className={`${styles.overlay} ${collapse ? styles.collapse : ""}`}></div>
+      <div onClick={onClickOverlay} onKeyDown={onClickOverlay} role="button" tabIndex={0} className={`${styles.overlay} ${collapse ? styles.collapse : ""}`}></div>
     </React.Fragment>
   );
 }

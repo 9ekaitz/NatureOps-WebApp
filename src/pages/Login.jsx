@@ -1,64 +1,37 @@
 import React, { useEffect, useState, useRef } from "react";
-import {useNavigate, useLocation} from "react-router-dom";
 import "../styles/styleLogin.css";
 import image from "../images/playa.jpg";
 import { gsap } from "gsap";
-import axios from "../api/axios";
 /*ICONOS DE REDES SOCIALES*/
 import { FaTiktok } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { FiTwitter } from "react-icons/fi";
 import useAuth from "../hooks/useAuth";
 
-import accessTokenSaver from "../utils/heleper"
-
-const LOGIN_URL = "/api/login";
-
 function Login() {
-  const { setAuth } = useAuth();
-
   const [errorMessage, setErrorMessage] = useState("");
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/dashboard";
+  const { onLogin } = useAuth();
 
   let ref = useRef(null);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append("username", username);
-    formData.append("password", password);
-    try {
-      const response = await axios.post(LOGIN_URL, formData, {
-        headers: {
-          "Content-type": "multipart/formdata",
-        },
-      });
-      accessTokenSaver(setAuth, response, username);
-      setUsername("");
-      setPassword("");
-      navigate(from, {replace: true})
-
-    } catch (err) {
-      console.log(err)
-      if(!err?.response)
-      {
+    onLogin({ username: username, password: password }).catch((err) => {
+      if (!err?.response) {
         setErrorMessage("El servidor no responde!");
-      }
-      else if(err.response?.status == 403)
-      {
+      } else if (err.response?.status == 401) {
         setErrorMessage("Usuario o contraseña incorrectos!");
       }
-
-    }
+    })
+    setUsername("");
+    setPassword("");
   };
 
   useEffect(() => {
     setErrorMessage("");
-  }, [username, password])
+  }, [username, password]);
 
   useEffect(() => {
     const element = ref.current;
@@ -204,7 +177,7 @@ function Login() {
       <div className="contentBx">
         <div className="formBx">
           <h2 className="login">Inicio de sesión</h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleLogin}>
             <div className="inputBx username">
               <span>Nombre de usuario</span>
               <input
@@ -223,7 +196,12 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            {errorMessage && <p className={errorMessage ? "error" : "errorHidden"}> {errorMessage} </p>}
+            {errorMessage && (
+              <p className={errorMessage ? "error" : "errorHidden"}>
+                {" "}
+                {errorMessage}{" "}
+              </p>
+            )}
 
             <div className="remember">
               <label>
