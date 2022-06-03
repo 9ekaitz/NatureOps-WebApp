@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Login from "./components/Login.jsx";
-import LandingPage  from "./components/LandingPage.jsx";
+import LandingPage from "./components/LandingPage.jsx";
 import Registro from "./components/Registro.jsx";
 import DashBoard from "./components/Dashboard.jsx"; 
 import SubirFoto from "./components/SubirFoto.jsx"
@@ -13,24 +13,21 @@ import Foto from "./components/SacarFoto.jsx"
 
 
 export function App() {
-
   return (
-    <Router>      
-      <Switch>
-        <Route exact path="/" component={LandingPage}/>
-        <Route exact path="/login" component={Login}/>
-        <Route exact path="/registro" component={Registro}/>
-        <Route exact path="/dashboard" component={DashBoard}/>
-        <Route exact path="/subirFoto" component={SubirFoto}/>
-        <Route exact path="/crearNoticia" component={CrearNoticia}/>
-        <Route exact path="/crearEvento" component={CrearEvento}/>
-        <Route exact path="/evento" component={Evento}/>
-        <Route exact path="/noticias" component={Noticias}/>
-        <Route exact path="/camara" component={Foto}/>
-
-
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="/dashboard" element={<DashBoard />}/>
+        <Route path="/noticias" element={<Noticias />}/>
+        <Route exact path="/subirFoto" element={<SubirFoto/>}/>
+        <Route exact path="/crearNoticia" element={<CrearNoticia/>}/>
+        <Route exact path="/crearEvento" element={<CrearEvento/>}/>
+        <Route exact path="/evento" element={<Evento/>}/>
+        <Route exact path="/noticias" element={<Noticias/>}/>
+        <Route exact path="/camara" element={<Foto/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
-

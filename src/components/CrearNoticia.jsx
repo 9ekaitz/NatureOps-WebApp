@@ -13,7 +13,7 @@ function CrearNoticia() {
     span.innerHTML=fileName;
   }
   return(
-    <div className="claseSubirImagen">
+    <div className="claseSubirImagen" data-testid="noticiaSortu">
       <Aside/>
       <div className="eskuina">
         <div className="forma formNoticia">

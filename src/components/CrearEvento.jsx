@@ -12,7 +12,7 @@ import lugares from "../jsons/nombresSitios.json"
 function CrearEvento() {
 
   return(
-    <div className="claseSubirImagen">
+    <div className="claseSubirImagen" data-testid="eventoaSortu">
             
       <div className="ezkerra">
         <Aside/>

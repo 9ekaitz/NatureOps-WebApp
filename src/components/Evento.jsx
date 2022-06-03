@@ -11,7 +11,7 @@ function Evento() {
   let fechaHora=data.fecha.split(" ");
 
   return(
-    <div className="claseSubirImagen claseEvento">
+    <div className="claseSubirImagen claseEvento" data-testid="eventoa">
       <Aside/>
       <div className="infoEvento">
         <div className="tituloEvento">

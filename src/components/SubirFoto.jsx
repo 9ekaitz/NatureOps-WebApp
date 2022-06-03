@@ -44,7 +44,7 @@ function SubirFotoPrueba() {
         <Aside/>
       </div>
       <div className="eskuina">
-        <div className="seleccionarImagen">
+        <div className="seleccionarImagen" data-testid="subirImagen">
           <h1>Añadir imagen</h1>
           <div className="añadirImagen">
             <h2>Opciones: </h2>
