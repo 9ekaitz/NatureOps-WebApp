@@ -17,40 +17,96 @@ import playa from "../images/playa.jpg";
 
 import "../styles/stylePerfil.css";
 import "../styles/stylePerfilEdit.css";
+import accessTokenSaver from "../utils/heleper";
+import useAuth from "../hooks/useAuth";
 
 /*DATOS */
+const UPDATE_URL = "/api/update";
 
-import data from "../data/perfil.json";
 
 function Perfil() {
+  const { setAuth } = useAuth();
   let [edit, setEdit] = useState(false);
   const axiosPrivate = useAxiosPrivate();
+  const [errorMessage, setErrorMessage] = useState("");
+  const [username, setUsername] = useState("");
+  const [nombre, setNombre] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [usernameLabel, setUsernameLabel] = useState("username");
+  const [userLabel, setUserLabel] = useState("nombre");
+  const [correoLabel, setCorreoLabel] = useState("correo");
 
-  useEffect(() => {
-    const response = axiosPrivate.get("/api/get");
-    console.log(response);
-  }, []);
-
+  const fetchData = async () =>{
+    const response = await axiosPrivate.get("/api/get"
+    );
+    setUsernameLabel(response.data?.username);
+    setUserLabel(response.data?.name);
+    setCorreoLabel(response.data?.email);
+  }
+ 
+  useEffect(() =>{
+    fetchData();
+   
+  },[])
+  
+ 
   function editar() {
     setEdit(true);
     console.log("editar");
   }
-  const [username, setUsername] = useState("");
-  const [nombre, setNombre] = useState("");
-  const [correo, setCorreo] = useState("");
 
   function volver() {
     setEdit(false);
   }
 
-  const handleSubmitForm = (e) => {
+  const cleanFields = () =>
+  {
+    setUsernameLabel(username);
+    setUserLabel(nombre);
+    setCorreoLabel(correo);
+    setUsername("");
+    setNombre("");
+    setCorreo("");
+    
+  }
+
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
-    if (username != "" && nombre != "") {
-      if (correo != "") {
+    if (username != " " && nombre != " " && correo != " ") {
+      try {
+        let data = {"username": username, "name": nombre, "email": correo}
+        const response = await axiosPrivate.post(UPDATE_URL, data, {
+          headers: {
+            "Content-type": "application/json",
+          },
+        });
+        accessTokenSaver(setAuth, response, username);
+        cleanFields();
         volver();
+      } catch (err) {
+        if(!err?.response)
+        {
+          setErrorMessage("El servidor no responde!");
+        }
+        else if(err.response?.status == 403)
+        {
+          setErrorMessage("token ha expirado!");
+        }
+        else if(err.response?.status == 409)
+        {
+          setErrorMessage("El nombre de usuario ya existe!")
+        }
       }
     }
+    else
+    {
+      setErrorMessage("Hay campos vacios!")
+    }
   };
+
+  useEffect(() => {
+    setErrorMessage("");
+  }, [username, nombre, correo])
 
   let userForm;
   if (edit) {
@@ -97,6 +153,9 @@ function Perfil() {
               </label>
             </div>
           </div>
+
+          {errorMessage && <p className={errorMessage ? "error" : "errorHidden"}> {errorMessage} </p>}
+
           <button type="submit" className="saveButton">
             Guardar
             <FaSave className="icon" />
@@ -109,13 +168,13 @@ function Perfil() {
     userForm = (
       <div className="datosUsuario">
         <div className="datosBody">
-          <h2>{data.username}</h2>
+          <h2>{usernameLabel}</h2>
           <div className="datos">
             <div className="col">
-              <p>{data.nombre}</p>
+              <p>{userLabel}</p>
             </div>
             <div className="col">
-              <p>{data.correo}</p>
+              <p>{correoLabel}</p>
             </div>
           </div>
           <Button
