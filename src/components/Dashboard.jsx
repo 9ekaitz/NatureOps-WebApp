@@ -63,6 +63,7 @@ function DashBoard() {
     document.getElementById("asidee").classList.add("cerrar");
   }
 
+  const cargarImagenNoti = require.context("../images", true);
 
   return(
     <div className="container" data-testid="dashboarda">
@@ -103,6 +104,7 @@ function DashBoard() {
           {news.map(record=>{
             return(
               <div className="card" key={record.id}>  
+                <img src={cargarImagenNoti(`./${record.image}`)} alt={record.id}/>
                 <h4>{record.title}</h4>
                 <p>{record.subtitle}</p>
                 <a href={record.URL}>Leer más</a> 
