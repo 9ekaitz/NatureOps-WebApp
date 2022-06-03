@@ -5,7 +5,7 @@ import FormNuevoLugarComponente from "./componentsDashBoard/FormNuevoLugarCompon
 import { FiCheck } from "react-icons/fi"
 import { VscChromeClose } from "react-icons/vsc"
 
-import "../styles/prueba.css"
+import "../styles/styleGeneralForms.css"
 
 import lugares from "../jsons/nombresSitios.json"
 

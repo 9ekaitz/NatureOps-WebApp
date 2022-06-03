@@ -1,9 +1,6 @@
 import React from "react";
 import NoticiasJson from "../jsons/noticias.json"
 
-
-
-
 /*IMAGENES*/
 
 import "../styles/styleSidebar.css"

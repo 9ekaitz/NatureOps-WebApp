@@ -1,12 +1,17 @@
 import React from "react";
 import Aside from "./componentsDashBoard/Aside.jsx" 
-import InputFileComponent from "./componentsDashBoard/InputFileComponent.jsx";
 import { FiCheck } from "react-icons/fi"
 import { VscChromeClose } from "react-icons/vsc"
-import "../styles/prueba.css"
+import "../styles/styleGeneralForms.css"
 
 function CrearNoticia() {
 
+  function changeText(){
+    let input=document.getElementById("fileInput");
+    let fileName=input.files[0].name;
+    let span=document.getElementById("fileSpan");
+    span.innerHTML=fileName;
+  }
   return(
     <div className="claseSubirImagen">
       <Aside/>
@@ -25,7 +30,10 @@ function CrearNoticia() {
             <label htmlFor="fname">Resumen: </label>
             <input type="text" id="resumenInput" name="fname" className="inputClass"/>
           </div>
-          <InputFileComponent grande="0"/>
+          <div className="foto">
+            <span id="fileSpan">Seleccionar Imagen</span>
+            <input type="file" id="fileInput" name="fname" onChange={changeText}/>
+          </div>
           <div className="formImagen url">
             <label htmlFor="fname">URL: </label>
             <input type="text" id="fname" name="fname" className="inputClass"/>

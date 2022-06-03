@@ -2,7 +2,7 @@ import React from "react";
 import Aside from "./componentsDashBoard/Aside.jsx" 
 import PanelBotones from "./componentsDashBoard/PanelBotones.jsx";
 
-import "../styles/prueba.css"
+import "../styles/styleGeneralForms.css"
 
 import data from "../jsons/evento.json"
 

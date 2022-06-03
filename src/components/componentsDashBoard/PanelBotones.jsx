@@ -18,7 +18,7 @@ function PanelBotones({numBotones, cancelRuta, acceptRuta, pantallaFoto}){
 
   if(pantallaFoto==true && numBotones==2){
     return(
-      <div className="panelBotones">
+      <div className="panelBotones span2 largo">
         <button className="accept" onClick={()=>changePage(acceptRuta)}>ACEPTAR<FiCheck/></button>
         <button className="cancel" onClick={()=>eraseAndChange(cancelRuta)}>CANCELAR<VscChromeClose/></button>
       </div>
