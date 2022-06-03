@@ -5,7 +5,6 @@ import { GrCircleInformation } from "react-icons/gr";
 import { FaPen, FaTrashAlt, FaSave } from "react-icons/fa";
 
 import Button from "../components/Button";
-/*import axios from "axios";*/
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 
 /*IMAGENES*/
