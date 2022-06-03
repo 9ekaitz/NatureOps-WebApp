@@ -83,11 +83,6 @@ main .noticias > div > a {
   color: var(--azul-oscuro);
 }
 
-p,
-td {
-  font-family: "Candara", sans-serif;
-}
-
 h4 {
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;

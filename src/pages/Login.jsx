@@ -38,14 +38,14 @@ function Login() {
     gsap.fromTo(
       element.querySelector(".login"),
       {
-        delay: 1.2,
+        delay: .6,
         duration: 1,
         opacity: 0,
         x: 10,
         y: 10,
       },
       {
-        delay: 1.2,
+        delay: .6,
         duration: 1,
         opacity: 1,
         x: 0,
@@ -55,14 +55,14 @@ function Login() {
     gsap.fromTo(
       element.querySelector(".username"),
       {
-        delay: 1.4,
+        delay: .8,
         duration: 1,
         opacity: 0,
         x: 10,
         y: 10,
       },
       {
-        delay: 1.4,
+        delay: .8,
         duration: 1,
         opacity: 1,
         x: 0,
@@ -72,14 +72,14 @@ function Login() {
     gsap.fromTo(
       element.querySelector(".password"),
       {
-        delay: 1.6,
+        delay: 1,
         duration: 1,
         opacity: 0,
         x: 10,
         y: 10,
       },
       {
-        delay: 1.6,
+        delay: 1,
         duration: 1,
         opacity: 1,
         x: 0,
@@ -89,14 +89,14 @@ function Login() {
     gsap.fromTo(
       element.querySelector(".remember"),
       {
-        delay: 1.8,
+        delay: 1.2,
         duration: 1,
         opacity: 0,
         x: 10,
         y: 10,
       },
       {
-        delay: 1.8,
+        delay: 1.2,
         duration: 1,
         opacity: 1,
         x: 0,
@@ -106,14 +106,14 @@ function Login() {
     gsap.fromTo(
       element.querySelector(".boton"),
       {
-        delay: 2,
+        delay: 1.4,
         duration: 1,
         opacity: 0,
         x: 10,
         y: 10,
       },
       {
-        delay: 2,
+        delay: 1.4,
         duration: 1,
         opacity: 1,
         x: 0,
@@ -123,14 +123,14 @@ function Login() {
     gsap.fromTo(
       element.querySelector(".signUp"),
       {
-        delay: 2.2,
+        delay: 1.6,
         duration: 1,
         opacity: 0,
         x: 10,
         y: 10,
       },
       {
-        delay: 2.2,
+        delay: 1.6,
         duration: 1,
         opacity: 1,
         x: 0,
@@ -140,13 +140,13 @@ function Login() {
     gsap.fromTo(
       element.querySelector(".socialMedia"),
       {
-        delay: 2.6,
+        delay: 1.8,
         duration: 1,
         opacity: 0,
         y: 20,
       },
       {
-        delay: 2.6,
+        delay: 1.8,
         duration: 1,
         opacity: 1,
         y: 0,
@@ -155,13 +155,13 @@ function Login() {
     gsap.fromTo(
       element.querySelector(".sci"),
       {
-        delay: 2.8,
+        delay: 2,
         duration: 1,
         opacity: 0,
         y: 20,
       },
       {
-        delay: 2.8,
+        delay: 2,
         duration: 1,
         opacity: 1,
         y: 0,

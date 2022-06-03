@@ -6,7 +6,7 @@ function ProtectedRoute({ children }) {
   const { auth } = useAuth();
   const location = useLocation();
 
-  if (!auth.accessToken) {
+  if (!auth?.accessToken) {
     return <Navigate to="/login" replace state={{from: location}} />;
   }
   return children;
