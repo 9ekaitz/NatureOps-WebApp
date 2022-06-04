@@ -1,17 +1,16 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import Aside from "./componentsDashBoard/Aside.jsx";
-import PaginationComponent from "./componentsDashBoard/PaginationComponent.jsx";
+import ReactPaginate from "react-paginate";
+import axios from "../api/axios";
+
 
 import { FiMenu } from "react-icons/fi";
 
 import logo from "../images/logo.png";
-import logro1 from "../images/logro_img.png";
 
 import "../styles/styleSidebar.css";
 import "../styles/styleLogros.css";
 import "../styles/pagination.css";
-
-import data from "../data/logros.json";
 
 function Logros() {
 
@@ -21,12 +20,48 @@ function Logros() {
     document.getElementById("asidee").classList.add("abrir");
   }
 
-  const DisplayData=data.map(
+  const [items, setItems] = useState([]);
+  const [pageCount, setpageCount] = useState(0);
+  /*const fetchSize = async () =>{
+    const response = await axios.get("api/news/size");
+    setSize(response?.data); 
+    return response;
+  }*/
+  useEffect(() =>{
+
+    const fetchData = async () =>{
+      const response = await axios.get("api/news/0/8");
+      setItems(response.data);
+    }
+
+    const fetchSize = async () =>{
+      const responseSize = await axios.get("api/news/size");
+      setpageCount(responseSize.data/8);
+    }
+   
+    fetchData();
+    fetchSize();
+   
+  },[])
+
+  const handlePageClick = async (data) => {
+    const fetchData = async () =>{
+     
+      console.log(data);
+      let url = "api/news/" + data.selected + "/3";
+      const response = await axios.get(url);
+      setItems(response.data);
+    }
+    fetchData();
+  }
+ 
+  const cargarImagenNoti = require.context("../images", true);
+  const DisplayData=items.map(
     (logro)=>{
       return(
-        <div className="logroCard" key={logro.id}>
+        <div className="logroCard" key={logro.id} itemsPerPage="8">
           <div className="logroTop">
-            <img src={logro1} alt="logro1" className="logroImg"/>
+            <img src={cargarImagenNoti(`./${logro.image}`)} alt={logro.id} className="logroImg"/>
             <h4>{logro.nombre}</h4>
           </div>
           <p>{logro.descripcion}</p>
@@ -50,7 +85,20 @@ function Logros() {
       <main>
         <h1>Logros</h1>
         <div className="listLogros">
-          <PaginationComponent DisplayData={DisplayData} itemsPerPage="9"/>
+          {DisplayData}
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel="SIGUIENTE >"
+            onPageChange={handlePageClick}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={3}
+            pageCount={pageCount}
+            previousLabel="< ANTERIOR"
+            renderOnZeroPageCount={null}
+            containerClassName="pagination"
+            nextLinkClassName="next"
+            previousLinkClassName="previous"
+          />
         </div>
       </main>
       <div className="right">
