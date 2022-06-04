@@ -21,17 +21,12 @@ function Logros() {
 
   const [items, setItems] = useState([]);
   const [pageCount, setpageCount] = useState(0);
-  /*const fetchSize = async () =>{
-    const response = await axios.get("api/news/size");
-    setSize(response?.data); 
-    return response;
-  }*/
+
   useEffect(() =>{
 
     const fetchData = async () =>{
       const response = await axios.get("api/achivements/a/0/3");
       setItems(response.data);
-      console.log(response.data);
     }
 
     const fetchSize = async () =>{
@@ -47,7 +42,6 @@ function Logros() {
   const handlePageClick = async (data) => {
     const fetchData = async () =>{
      
-      console.log(data);
       let url = "api/achivements/a/" + data.selected + "/3";
       const response = await axios.get(url);
       setItems(response.data);

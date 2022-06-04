@@ -1,18 +1,10 @@
 import React from "react";
-<<<<<<< HEAD
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-=======
 import { BrowserRouter, Routes, Route} from "react-router-dom";
->>>>>>> origin/master
 import Login from "./components/Login.jsx";
 import LandingPage  from "./components/LandingPage.jsx";
 import Registro from "./components/Registro.jsx";
 import DashBoard from "./components/Dashboard.jsx"; 
-<<<<<<< HEAD
 import Logros from "./components/Logros.jsx"; 
-=======
-
->>>>>>> origin/master
 
 export function App() {
 
