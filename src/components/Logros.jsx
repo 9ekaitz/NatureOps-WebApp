@@ -30,13 +30,14 @@ function Logros() {
   useEffect(() =>{
 
     const fetchData = async () =>{
-      const response = await axios.get("api/news/0/8");
+      const response = await axios.get("api/achivements/a/0/3");
       setItems(response.data);
+      console.log(response.data);
     }
 
     const fetchSize = async () =>{
-      const responseSize = await axios.get("api/news/size");
-      setpageCount(responseSize.data/8);
+      const responseSize = await axios.get("api/achivements/size");
+      setpageCount(responseSize.data/3);
     }
    
     fetchData();
@@ -48,7 +49,7 @@ function Logros() {
     const fetchData = async () =>{
      
       console.log(data);
-      let url = "api/news/" + data.selected + "/3";
+      let url = "api/achivements/a/" + data.selected + "/3";
       const response = await axios.get(url);
       setItems(response.data);
     }
@@ -59,22 +60,22 @@ function Logros() {
   const DisplayData=items.map(
     (logro)=>{
       return(
-        <div className="logroCard" key={logro.id} itemsPerPage="8">
+        <div className="logroCard" key={logro.achivement.id} itemsPerPage="8">
           <div className="logroTop">
-            <img src={cargarImagenNoti(`./${logro.image}`)} alt={logro.id} className="logroImg"/>
-            <h4>{logro.nombre}</h4>
+            <img src={cargarImagenNoti(`./${logro.achivement.image}`)} alt={logro.id} className="logroImg"/>
+            <h4>{logro.achivement.desription}</h4>
           </div>
-          <p>{logro.descripcion}</p>
+          <p>{logro.achivement.objetivo}</p>
           <div className="progress-element">
             <div className="bar">
-              <div style={{"width": logro.progresoUsuario + "%", "backgroundColor":"#48BFE3", "height":"20px", "borderRadius":"2px"}}>
+              <div style={{"width": logro.progress + "%", "backgroundColor":"#48BFE3", "height":"20px", "borderRadius":"2px"}}>
               </div>
-              <div style={{"width": (logro.maximo-logro.progresoUsuario) + "%", "backgroundColor":"aliceblue", "height":"20px", "borderRadius":"2px"}}>
+              <div style={{"width": (logro.achivement.objetivoMax-logro.progress) + "%", "backgroundColor":"aliceblue", "height":"20px", "borderRadius":"2px"}}>
               </div>
             </div>
           </div>
         </div>
-                
+          
       );
     }
   )

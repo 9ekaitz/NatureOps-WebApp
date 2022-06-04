@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Login from "./components/Login.jsx";
 import LandingPage  from "./components/LandingPage.jsx";
 import Registro from "./components/Registro.jsx";
@@ -9,19 +9,15 @@ import Logros from "./components/Logros.jsx";
 export function App() {
 
   return (
-    <Router>      
-      <Switch>
-        <Route exact path="/" component={LandingPage}/>
-        <Route exact path="/login" component={Login}/>
-        <Route exact path="/registro" component={Registro}/>
-        <Route exact path="/dashboard" component={DashBoard}/>
-        <Route exact path="/logros" component={Logros}/>
-
-        
-        
-        
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="/dashboard" element={<DashBoard />}/>
+        <Route path="/logros" element={<Logros />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
