@@ -67,15 +67,9 @@ function Logros() {
           <p>{logro.achivement.objetivo}</p>
           <div className="progress-element">
             <div className="bar">
-<<<<<<< HEAD
-              <div style={{"width": logro.progress + "%", "backgroundColor":"#48BFE3", "height":"20px", "borderRadius":"2px"}}>
-              </div>
-              <div style={{"width": (logro.achivement.objetivoMax-logro.progress) + "%", "backgroundColor":"aliceblue", "height":"20px", "borderRadius":"2px"}}>
-=======
               <div className="progressBars" style={{"width": logro.progresoUsuario + "%", "backgroundColor":"#48BFE3"}}>
               </div>
               <div className="progressBars" style={{"width": (logro.maximo-logro.progresoUsuario) + "%", "backgroundColor":"aliceblue"}}>
->>>>>>> 165a138c9eb04e773498f037cc1c592fc8fdf633
               </div>
             </div>
           </div>
