@@ -3,7 +3,6 @@ import Aside from "./componentsDashBoard/Aside.jsx";
 import ReactPaginate from "react-paginate";
 import axios from "../api/axios";
 
-
 import { FiMenu } from "react-icons/fi";
 
 import logo from "../images/logo.png";
@@ -68,9 +67,15 @@ function Logros() {
           <p>{logro.achivement.objetivo}</p>
           <div className="progress-element">
             <div className="bar">
+<<<<<<< HEAD
               <div style={{"width": logro.progress + "%", "backgroundColor":"#48BFE3", "height":"20px", "borderRadius":"2px"}}>
               </div>
               <div style={{"width": (logro.achivement.objetivoMax-logro.progress) + "%", "backgroundColor":"aliceblue", "height":"20px", "borderRadius":"2px"}}>
+=======
+              <div className="progressBars" style={{"width": logro.progresoUsuario + "%", "backgroundColor":"#48BFE3"}}>
+              </div>
+              <div className="progressBars" style={{"width": (logro.maximo-logro.progresoUsuario) + "%", "backgroundColor":"aliceblue"}}>
+>>>>>>> 165a138c9eb04e773498f037cc1c592fc8fdf633
               </div>
             </div>
           </div>
@@ -89,12 +94,12 @@ function Logros() {
           {DisplayData}
           <ReactPaginate
             breakLabel="..."
-            nextLabel="SIGUIENTE >"
+            nextLabel=">"
             onPageChange={handlePageClick}
             marginPagesDisplayed={2}
             pageRangeDisplayed={3}
             pageCount={pageCount}
-            previousLabel="< ANTERIOR"
+            previousLabel="<"
             renderOnZeroPageCount={null}
             containerClassName="pagination"
             nextLinkClassName="next"

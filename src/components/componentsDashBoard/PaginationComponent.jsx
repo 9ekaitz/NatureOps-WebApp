@@ -31,6 +31,7 @@ function PaginationComponent({DisplayData, itemsPerPage}){
         containerClassName="pagination"
         nextLinkClassName="next"
         previousLinkClassName="previous"
+        
       />
     </>
     
