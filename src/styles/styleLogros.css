@@ -20,7 +20,7 @@
 .logroCard{
     display: grid;
     gap: 1rem;
-    grid-template-rows: repeat(3,0.5fr);
+    grid-template-rows: repeat(3,1fr);
     background-color: white;
     border-radius: 0.8rem;
     justify-items: center;
@@ -61,6 +61,11 @@
 
 .pagination{
     grid-column: span 3;
+}
+
+.progressBars{
+    height:20px;
+    border-radius:2px;
 }
 
 @media  screen and (max-width:1379px) {

@@ -8,6 +8,10 @@
     border-radius: 0.8rem;
 }
 
+.selected{
+    font-weight: bolder;
+}
+
 .pagination > li >a{
     color: var(--azul-oscuro);
 }
