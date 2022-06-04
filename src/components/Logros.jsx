@@ -80,7 +80,7 @@ function Logros() {
   )
 
   return(
-    <div  className="containerLogros">
+    <div  className="containerLogros" data-testid="containerLogros">
       <Aside/>
       <main>
         <h1>Logros</h1>
@@ -103,7 +103,7 @@ function Logros() {
       </main>
       <div className="right">
         <div className="top">
-          <button id="menu-btn" onClick={abrirNavbar}><span><FiMenu/></span></button>
+          <button id="menu-btn" data-testid="botonAbrir" onClick={abrirNavbar}><span><FiMenu/></span></button>
           <div className="profile">
             <div className="info">
               <p>Hey, <b>Daniel</b> </p>
