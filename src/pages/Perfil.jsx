@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-/*ICONOS*/
-
+import { useNavigate } from "react-router";
 import { GrCircleInformation } from "react-icons/gr";
 import { FaPen, FaTrashAlt, FaSave } from "react-icons/fa";
 
@@ -16,15 +15,13 @@ import playa from "../images/playa.jpg";
 
 import "../styles/stylePerfil.css";
 import "../styles/stylePerfilEdit.css";
-import accessTokenSaver from "../utils/heleper";
 import useAuth from "../hooks/useAuth";
 
 /*DATOS */
 const UPDATE_URL = "/api/update";
 
-
 function Perfil() {
-  const { setAuth } = useAuth();
+  const { auth } = useAuth();
   let [edit, setEdit] = useState(false);
   const axiosPrivate = useAxiosPrivate();
   const [errorMessage, setErrorMessage] = useState("");
@@ -34,21 +31,23 @@ function Perfil() {
   const [usernameLabel, setUsernameLabel] = useState("username");
   const [userLabel, setUserLabel] = useState("nombre");
   const [correoLabel, setCorreoLabel] = useState("correo");
+  const navigate = useNavigate();
 
-  const fetchData = async () =>{
-    const response = await axiosPrivate.get("/api/get"
-    );
-    setUsernameLabel(response.data?.username);
-    setUserLabel(response.data?.name);
-    setCorreoLabel(response.data?.email);
-  }
- 
-  useEffect(() =>{
+  const fetchData = async () => {
+    try {
+      const response = await axiosPrivate.get("/api/get");
+      setUsernameLabel(response.data?.username);
+      setUserLabel(response.data?.name);
+      setCorreoLabel(response.data?.email);
+    } catch (error) {
+      navigate("/login");
+    }
+  };
+
+  useEffect(() => {
     fetchData();
-   
-  },[])
-  
- 
+  }, [auth]);
+
   function editar() {
     setEdit(true);
     console.log("editar");
@@ -58,54 +57,46 @@ function Perfil() {
     setEdit(false);
   }
 
-  const cleanFields = () =>
-  {
-    setUsernameLabel(username);
-    setUserLabel(nombre);
-    setCorreoLabel(correo);
+  const cleanFields = () => {
+    // setUsernameLabel(username);
+    // setUserLabel(nombre);
+    // setCorreoLabel(correo);
     setUsername("");
     setNombre("");
     setCorreo("");
-    
-  }
+  };
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
     if (username != " " && nombre != " " && correo != " ") {
       try {
-        let data = {"username": username, "name": nombre, "email": correo}
+        let data = { username: username, name: nombre, email: correo };
         const response = await axiosPrivate.post(UPDATE_URL, data, {
           headers: {
             "Content-type": "application/json",
           },
         });
-        accessTokenSaver(setAuth, response, username);
+        auth.setAccessToken(response.data.access_token)
+        auth.setRefreshToken(response?.data?.refresh_token);
         cleanFields();
         volver();
       } catch (err) {
-        if(!err?.response)
-        {
+        if (!err?.response) {
           setErrorMessage("El servidor no responde!");
-        }
-        else if(err.response?.status == 403)
-        {
+        } else if (err.response?.status == 403) {
           setErrorMessage("token ha expirado!");
-        }
-        else if(err.response?.status == 409)
-        {
-          setErrorMessage("El nombre de usuario ya existe!")
+        } else if (err.response?.status == 409) {
+          setErrorMessage("El nombre de usuario ya existe!");
         }
       }
-    }
-    else
-    {
-      setErrorMessage("Hay campos vacios!")
+    } else {
+      setErrorMessage("Hay campos vacios!");
     }
   };
 
   useEffect(() => {
     setErrorMessage("");
-  }, [username, nombre, correo])
+  }, [username, nombre, correo]);
 
   let userForm;
   if (edit) {
@@ -153,7 +144,12 @@ function Perfil() {
             </div>
           </div>
 
-          {errorMessage && <p className={errorMessage ? "error" : "errorHidden"}> {errorMessage} </p>}
+          {errorMessage && (
+            <p className={errorMessage ? "error" : "errorHidden"}>
+              {" "}
+              {errorMessage}{" "}
+            </p>
+          )}
 
           <button type="submit" className="saveButton">
             Guardar

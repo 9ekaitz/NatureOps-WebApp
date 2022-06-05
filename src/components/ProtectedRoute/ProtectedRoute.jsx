@@ -1,12 +1,12 @@
 import React from "react";
-import useAuth from "../../hooks/useAuth";
 import { Navigate, useLocation } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 function ProtectedRoute({ children }) {
-  const { auth } = useAuth();
   const location = useLocation();
+  const {auth} = useAuth();
 
-  if (!auth?.accessToken) {
+  if (!auth.accessToken) {
     return <Navigate to="/login" replace state={{from: location}} />;
   }
   return children;

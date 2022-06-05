@@ -1,11 +1,12 @@
 import React from "react";
 
 import logo from "../../images/logo.svg";
+import { FiLogOut } from "react-icons/fi";
 
 import NavItem from "../NavItem";
 import styles from "./nav.module.css";
 
-function Nav({ dataCenter, dataBottom, collapse, onClickOverlay }) {
+function Nav({ dataCenter, collapse, onClickOverlay }) {
   const brand = collapse ? "" : "NATUREOPS";
   const renderNavItem = (item, index) => {
     return (
@@ -28,9 +29,19 @@ function Nav({ dataCenter, dataBottom, collapse, onClickOverlay }) {
           {brand}
         </div>
         <div className={styles.center}>{dataCenter.map(renderNavItem)}</div>
-        <div className={styles.bottom}>{dataBottom.map(renderNavItem)}</div>
+        <div className={styles.bottom}>
+          <NavItem path="/logout" icon={<FiLogOut />} collapse={collapse}>
+            Cerrar Sesion
+          </NavItem>
+        </div>
       </aside>
-      <div onClick={onClickOverlay} onKeyDown={onClickOverlay} role="button" tabIndex={0} className={`${styles.overlay} ${collapse ? styles.collapse : ""}`}></div>
+      <div
+        onClick={onClickOverlay}
+        onKeyDown={onClickOverlay}
+        role="button"
+        tabIndex={0}
+        className={`${styles.overlay} ${collapse ? styles.collapse : ""}`}
+      ></div>
     </React.Fragment>
   );
 }

@@ -6,6 +6,7 @@ import Registro from "./pages/Registro.jsx";
 import DashBoard from "./pages/Dashboard.jsx";
 import Overview from "./pages/Overview.jsx";
 import Perfil from "./pages/Perfil.jsx";
+import Logout from "./pages/Logout.jsx";
 import "./styles/main.css";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.jsx";
 
@@ -15,6 +16,7 @@ export function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/registro" element={<Registro />} />
+      <Route path="/logout" element={<Logout />} />
       <Route
         path="/dashboard"
         element={

@@ -6,7 +6,6 @@ import image from "../images/faro.jpg"
 import { gsap } from "gsap"
 import axios from "../api/axios";
 import useAuth from "../hooks/useAuth";
-import accessTokenSaver from "../utils/heleper";
 
 
 const REGISTRO_URL = "/api/register";
@@ -14,7 +13,7 @@ const REGISTRO_URL = "/api/register";
 
 function Registro() {
   
-  const { setAuth } = useAuth();
+  const { onLogin } = useAuth();
   let ref = useRef(null)
   const [errorMessage, setErrorMessage] = useState(true);
   const navigate = useNavigate();
@@ -174,9 +173,8 @@ function Registro() {
             "Content-type": "application/json",
           },
         });
-        accessTokenSaver(setAuth, response, username);
         cleanFields();
-        navigate(from, {replace: true})
+        onLogin({"username":username, "password":password});
       } catch (err) {
         if(!err?.response)
         {

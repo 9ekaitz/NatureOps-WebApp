@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router";
-import { FiLogOut } from "react-icons/fi";
 import { ImNewspaper } from "react-icons/im";
 import {
   MdEvent,
@@ -11,11 +10,12 @@ import {
 
 import Nav from "../components/Nav";
 import Header from "../components/Header";
-import "../styles/dashboard.css"
+import "../styles/dashboard.css";
+import useAuth from "../hooks/useAuth";
 
 function DashBoard() {
   const [collapsed, setCollapsed] = useState(false);
-
+  const {auth} = useAuth();
   const toggleNav = () => {
     setCollapsed((prev) => !prev);
   };
@@ -48,22 +48,13 @@ function DashBoard() {
     },
   ];
 
-  const navFooterData = [
-    {
-      text: "Cerrar Sesion",
-      path: "/logout",
-      icon: <FiLogOut />,
-    },
-  ];
-
   return (
     <React.Fragment>
-      <Header username="Oihane" role="Admin" menuOnClick={toggleNav} />
+      <Header username={auth.userData.username} role="Admin" menuOnClick={toggleNav} />
       <Nav
         collapse={collapsed}
         onClickOverlay={toggleNav}
         dataCenter={navigationData}
-        dataBottom={navFooterData}
       />
       <Outlet />
     </React.Fragment>

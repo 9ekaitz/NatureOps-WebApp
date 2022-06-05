@@ -10,7 +10,7 @@ import useAuth from "../hooks/useAuth";
 
 function Login() {
   const [errorMessage, setErrorMessage] = useState("");
-  const { onLogin } = useAuth();
+  const { onLogin, auth } = useAuth();
 
   let ref = useRef(null);
   const [username, setUsername] = useState("");
