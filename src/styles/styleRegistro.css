@@ -1,18 +1,19 @@
 @font-face
 {
-    src: url(fonts/FontCCBold.ttf);
+    src: url(../fonts/FontCCBold.ttf);
     font-family: fontCCBold;
 }
 @font-face
 {
-    src: url(fonts/FontCCLight.ttf);
+    src: url(../fonts/FontCCLight.ttf);
     font-family: fontCCLight;
 }
 @font-face
 {
-    src: url(fonts/FontCCMedium.ttf);
+    src: url(../fonts/FontCCMedium.ttf);
     font-family: fontCCMedium;
 }
+
 
 :root
 {
@@ -93,12 +94,13 @@ section
     letter-spacing: 1px;
 }
 
-.formBx .inputBx
+.formBx .inputBxRegistro
 {
     margin-bottom: 15px;
+    margin-top: 45px;
 }
 
-.formBx .inputBx span
+.formBx .inputBxRegistro span
 {
     font-family: fontCCLight,'Candara', sans-serif;
     font-size: 16px;
@@ -109,7 +111,7 @@ section
     letter-spacing: 1px;
 }
 
-.formBx .inputBx input
+.formBx .inputBxRegistro input
 {
     font-family: fontCCLight,'Candara', sans-serif;
     width: 100%;
@@ -124,7 +126,7 @@ section
     border-radius: 30px;
 }
 
-.formBx .inputBx input[type="submit"]
+.formBx .inputBxRegistro input[type="submit"]
 {
     background: var(--color_de_botton);
     color: #fff;
@@ -139,7 +141,7 @@ section
 
 }
 
-.formBx .inputBx input[type="submit"]:hover
+.formBx .inputBxRegistro input[type="submit"]:hover
 {
     background: var(--color_mas_oscuro);
     transition: ease 0.5s;
@@ -155,14 +157,14 @@ section
     font-weight: 400;
 }
 
-.formBx .inputBx p
+.formBx .inputBxRegistro p
 {
     color: #607d8d;
     font-family: fontCCLight,'Candara', sans-serif;
 
 }
 
-.formBx .inputBx p a
+.formBx .inputBxRegistro p a
 {
     color: var(--color_de_botton);
     font-family: fontCCLight,'Candara', sans-serif;
@@ -171,9 +173,14 @@ section
 
 .error
 {
-    color: red !important;
-    visibility: hidden;
+    color: firebrick !important;
+    position: absolute;
 }
+.errorHidden
+{
+   display: none;
+}
+
 
 
 /************************ Red sociales *********************/

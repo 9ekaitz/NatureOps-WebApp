@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Login from "./components/Login.jsx";
 import LandingPage  from "./components/LandingPage.jsx";
 import Registro from "./components/Registro.jsx";
