@@ -180,7 +180,7 @@ function Registro() {
         {
           setErrorMessage("El servidor no responde!");
         }
-        else if(err.response?.status == 403)
+        else if(err.response?.status == 409)
         {
           setErrorMessage(err.response?.data);
         }
