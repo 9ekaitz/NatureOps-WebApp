@@ -1,5 +1,4 @@
 import React, { useEffect , useState} from "react"
-import {useNavigate, useLocation} from "react-router-dom";
 import {useRef} from "react";
 import "../styles/styleRegistro.css"
 import image from "../images/faro.jpg"
@@ -16,10 +15,6 @@ function Registro() {
   const { onLogin } = useAuth();
   let ref = useRef(null)
   const [errorMessage, setErrorMessage] = useState(true);
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/dashboard";
-
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -168,7 +163,7 @@ function Registro() {
     {
       const data = {"username" : username, "password": password, "email": correo, "name": name};
       try {
-        const response = await axios.post(REGISTRO_URL, data, {
+        await axios.post(REGISTRO_URL, data, {
           headers: {
             "Content-type": "application/json",
           },
