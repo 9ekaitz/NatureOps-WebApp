@@ -27,19 +27,11 @@ p {
   margin-right: 0.5rem;
 }
 
-#root {
-  /*display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
-  overflow: hidden;
-  height: 100vh;*/
-}
-
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   #root {
     grid-template-columns: 1fr;
   }
-}
+} */
 
 .card p {
   margin-bottom: 0.8rem;

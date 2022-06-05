@@ -10,7 +10,6 @@ import {
 
 import Nav from "../components/Nav";
 import Header from "../components/Header";
-import "../styles/dashboard.css";
 import useAuth from "../hooks/useAuth";
 
 function DashBoard() {
@@ -22,34 +21,34 @@ function DashBoard() {
 
   const navigationData = [
     {
-      text: "Resumen",
+      text: "Dashboard.Nav.Overview",
       path: "",
       icon: <MdSpaceDashboard />,
     },
     {
-      text: "Noticias",
+      text: "Dashboard.Nav.News",
       path: "noticias",
       icon: <ImNewspaper />,
     },
     {
-      text: "Eventos",
+      text: "Dashboard.Nav.Events",
       path: "eventos",
       icon: <MdEvent />,
     },
     {
-      text: "Sitios",
+      text: "Dashboard.Nav.Places",
       path: "sitios",
       icon: <MdPlace />,
     },
     {
-      text: "Perfil",
+      text: "Dashboard.Nav.Profile",
       path: "perfil",
       icon: <MdAccountCircle />,
     },
   ];
 
   return (
-    <React.Fragment>
+    <div id="dashboard">
       <Header username={auth.userData.username} role="Admin" menuOnClick={toggleNav} />
       <Nav
         collapse={collapsed}
@@ -57,7 +56,7 @@ function DashBoard() {
         dataCenter={navigationData}
       />
       <Outlet />
-    </React.Fragment>
+    </div>
   );
 }
 

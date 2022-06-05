@@ -1,0 +1,35 @@
+{
+  "Login": {
+    "Login": "Saioa Hasi",
+    "Username": "Erabiltzailea",
+    "Password": "Pasahitza",
+    "Login Button": "Sartu",
+    "Remember me": "Saioa gorde",
+    "Don't have account yet?": "¿Ez daukazu konturik?",
+    "Register": "Izena eman",
+    "Social media": "Gure sare sozialak bisistatu"
+  },
+  "Dashboard": {
+    "Nav": {
+      "Overview": "Laburpena",
+      "News": "Berriak",
+      "Events": "Ebentuak",
+      "Places": "Lekuak",
+      "Profile": "Profila",
+      "Logout": "Saioa itxi"
+    }
+  },
+  "Landing": {
+    "Beluga Presents": "Beluga Team presentatzen du",
+    "Start Button": "Hasi"
+  },
+  "Register": {
+    "Register": "Izena eman",
+    "Name": "Izena",
+    "Email": "Posta elektronikoa",
+    "Username": "Erabiltzailea",
+    "Password": "Pasahitza",
+    "Repeat Password": "Pasahitza errepikatu",
+    "Register Button": "Izena eman"
+  }
+}

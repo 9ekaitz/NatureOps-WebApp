@@ -1,0 +1,35 @@
+{
+  "Login": {
+    "Login": "Login",
+    "Username": "Username",
+    "Password": "Password",
+    "Login Button": "Login",
+    "Remember me": "Remember me",
+    "Don't have account yet?": "Don't have an account yet?",
+    "Register": "Register",
+    "Social media": "Check out our social media"
+  },
+  "Dashboard": {
+    "Nav": {
+      "Overview": "Overview",
+      "News": "News",
+      "Events": "Events",
+      "Places": "Places",
+      "Profile": "Profile",
+      "Logout": "Logout"
+    }
+  },
+  "Landing": {
+    "Beluga Presents": "Beluga Team presents",
+    "Start Button": "Get Started"
+  },
+  "Register": {
+    "Register": "Register",
+    "Name": "Name",
+    "Email": "Email",
+    "Username": "Username",
+    "Password": "Password",
+    "Repeat Password": "Repeat password",
+    "Register Button": "Register"
+  }
+}

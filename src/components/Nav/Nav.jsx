@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useTranslation } from "react-i18next";
 import logo from "../../images/logo.svg";
 import { FiLogOut } from "react-icons/fi";
 
@@ -7,6 +7,7 @@ import NavItem from "../NavItem";
 import styles from "./nav.module.css";
 
 function Nav({ dataCenter, collapse, onClickOverlay }) {
+  const {t} = useTranslation();
   const brand = collapse ? "" : "NATUREOPS";
   const renderNavItem = (item, index) => {
     return (
@@ -16,7 +17,7 @@ function Nav({ dataCenter, collapse, onClickOverlay }) {
         icon={item.icon}
         collapse={collapse}
       >
-        {item.text}
+        {t(item.text)}
       </NavItem>
     );
   };
@@ -31,7 +32,7 @@ function Nav({ dataCenter, collapse, onClickOverlay }) {
         <div className={styles.center}>{dataCenter.map(renderNavItem)}</div>
         <div className={styles.bottom}>
           <NavItem path="/logout" icon={<FiLogOut />} collapse={collapse}>
-            Cerrar Sesion
+            {t("Dashboard.Nav.Logout")}
           </NavItem>
         </div>
       </aside>

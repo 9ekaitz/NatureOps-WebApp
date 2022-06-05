@@ -1,0 +1,35 @@
+{
+  "Login": {
+    "Login": "Iniciar Sesion",
+    "Username": "Nombre de Usuario",
+    "Password": "Contraseña",
+    "Login Button": "Acceder",
+    "Remember me": "Recordar nombre de usuario",
+    "Don't have account yet?": "¿No tienes una cuenta?",
+    "Register": "Registrate",
+    "Social media": "Visita nuestras redes sociales"
+  },
+  "Dashboard": {
+    "Nav": {
+      "Overview": "Resumen",
+      "News": "Noticias",
+      "Events": "Eventos",
+      "Places": "Sitios",
+      "Profile": "Perfil",
+      "Logout": "Cerrar Sesion"
+    }
+  },
+  "Landing": {
+    "Beluga Presents": "Beluga Team presenta",
+    "Start Button": "Comenzar"
+  },
+  "Register": {
+    "Register": "Registrarse",
+    "Name": "Nombre",
+    "Email": "Correo electronico",
+    "Username": "Nombre de usuario",
+    "Password": "Contraseña",
+    "Repeat Password": "Repetir contraseña",
+    "Register Button": "Registrarse"
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import "../styles/styleLogin.css";
 import image from "../images/playa.jpg";
 import { gsap } from "gsap";
@@ -10,7 +11,8 @@ import useAuth from "../hooks/useAuth";
 
 function Login() {
   const [errorMessage, setErrorMessage] = useState("");
-  const { onLogin, auth } = useAuth();
+  const { onLogin } = useAuth();
+  const { t } = useTranslation();
 
   let ref = useRef(null);
   const [username, setUsername] = useState("");
@@ -24,7 +26,7 @@ function Login() {
       } else if (err.response?.status == 401) {
         setErrorMessage("Usuario o contraseña incorrectos!");
       }
-    })
+    });
     setUsername("");
     setPassword("");
   };
@@ -38,14 +40,14 @@ function Login() {
     gsap.fromTo(
       element.querySelector(".login"),
       {
-        delay: .6,
+        delay: 0.6,
         duration: 1,
         opacity: 0,
         x: 10,
         y: 10,
       },
       {
-        delay: .6,
+        delay: 0.6,
         duration: 1,
         opacity: 1,
         x: 0,
@@ -55,14 +57,14 @@ function Login() {
     gsap.fromTo(
       element.querySelector(".username"),
       {
-        delay: .8,
+        delay: 0.8,
         duration: 1,
         opacity: 0,
         x: 10,
         y: 10,
       },
       {
-        delay: .8,
+        delay: 0.8,
         duration: 1,
         opacity: 1,
         x: 0,
@@ -176,10 +178,10 @@ function Login() {
       </div>
       <div className="contentBx">
         <div className="formBx">
-          <h2 className="login">Inicio de sesión</h2>
+          <h2 className="login">{t("Login.Login")}</h2>
           <form onSubmit={handleLogin}>
             <div className="inputBx username">
-              <span>Nombre de usuario</span>
+              <span>{t("Login.Username")}</span>
               <input
                 type="text"
                 name=""
@@ -188,7 +190,7 @@ function Login() {
               />
             </div>
             <div className="inputBx password">
-              <span>Contraseña</span>
+              <span>{t("Login.Password")}</span>
               <input
                 type="password"
                 name=""
@@ -205,21 +207,27 @@ function Login() {
 
             <div className="remember">
               <label>
-                <input type="checkbox" name="" /> Recordar nombre de usuario
+                <input type="checkbox" name="" />
+                {t("Login.Remember me")}
               </label>
             </div>
             <div className="inputBx boton">
-              <input type="submit" value="Acceder" name="" />
+              <input
+                type="submit"
+                value={t("Login.Login Button")}
+                name=""
+              />
             </div>
 
             <div className="inputBx signUp">
               <p>
-                ¿No tienes una cuenta? <a href="/registro">Registarse</a>
+                {t("Login.Don't have account yet?")}{" "}
+                <a href="/registro">{t("Login.Register")}</a>
               </p>
             </div>
           </form>
 
-          <h3 className="socialMedia">Visita nuestras redes sociales</h3>
+          <h3 className="socialMedia">{t("Login.Social media")}</h3>
           <ul className="sci">
             <li className="smBx">
               <FiTwitter />

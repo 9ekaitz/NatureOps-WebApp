@@ -1,4 +1,5 @@
 import React, { useEffect , useState} from "react"
+import { useTranslation } from "react-i18next";
 import {useRef} from "react";
 import "../styles/styleRegistro.css"
 import image from "../images/faro.jpg"
@@ -11,7 +12,7 @@ const REGISTRO_URL = "/api/register";
 
 
 function Registro() {
-  
+  const {t} = useTranslation();
   const { onLogin } = useAuth();
   let ref = useRef(null)
   const [errorMessage, setErrorMessage] = useState(true);
@@ -63,7 +64,7 @@ function Registro() {
         y: 0,
       }
     );
-    gsap.fromTo( element.querySelector(".apellido"),
+    gsap.fromTo( element.querySelector(".email"),
       {
         delay: 1.6,
         duration: 1,
@@ -193,31 +194,31 @@ function Registro() {
       </div>
       <div className="contentBx">
         <div className="formBx">
-          <h2 className="login">Registrarse</h2>
+          <h2 className="login">{t("Register.Register")}</h2>
           <form onSubmit={handleSubmit}>
             <div className="inputBx name">
-              <span>Nombre</span>
+              <span>{t("Register.Name")}</span>
               <input type="text" name="" value={name}  onChange={(e) => setName(e.target.value)}/>
             </div>
-            <div className="inputBx apellido">
-              <span>Correo</span>
+            <div className="inputBx email">
+              <span>{t("Register.Email")}</span>
               <input type="text" name="" value={correo} onChange={(e) => setCorreo(e.target.value)}/>
             </div>
             <div className="inputBx username">
-              <span>Nombre de usuario</span>
+              <span>{t("Register.Username")}</span>
               <input type="text" name="" value={username} onChange={(e) => setUsername(e.target.value)}/>
             </div>
             <div className="inputBx password">
-              <span>Contraseña</span>
+              <span>{t("Register.Password")}</span>
               <input type="password" name="" value={password} onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <div className="inputBx passwordrep">
-              <span>Repetir contraseña</span>
+              <span>{t("Register.Repeat Password")}</span>
               <input type="password" name="" value={passwordRep} onChange={(e) => setPasswordRep(e.target.value)}/>
             </div>
             {errorMessage && <p className={errorMessage ? "error" : "errorHidden"}> {errorMessage} </p>}
             <div className="inputBxRegistro boton">
-              <input type="submit" value="Registarse" name=""/>
+              <input type="submit" value={t("Register.Register Button")} name=""/>
             </div>
           </form>
             
