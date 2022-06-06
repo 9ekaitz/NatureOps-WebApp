@@ -23,29 +23,29 @@ function Aside() {
   }
 
   return(
-    <div className="ezkerra">
-      <aside id="asidee" className="cerrar">
+    <div className="ezkerra" data-testid="asideClass">
+      <aside id="asidee" className="cerrar" data-testid="asidea">
         <div className = "top">
           <div className="close" id="close-btn">
-            <button onClick={cerrarNavbar}><ImCross /></button>
+            <button data-testid="botonCerrar" onClick={cerrarNavbar}><ImCross /></button>
           </div>
           <img className="imagenLogo" src={logo} alt="Logo"/>
           <h2>NatureOps</h2>  
         </div>
         <div className="sidebar">
-          <a href="https://www.google.es/">
+          <a id="news" href="https://www.google.es/">
             <span> <ImNewspaper /></span>
             <h3>News</h3>
           </a>
-          <a href="https://www.google.es/">
+          <a id="events" href="https://www.google.es/">
             <span> <MdEvent /></span>
             <h3>Events</h3>
           </a>
-          <a href="https://www.google.es/">
+          <a id="places" href="https://www.google.es/">
             <span> <MdPlace /></span>
             <h3>Places</h3>
           </a>
-          <a href="https://www.google.es/">
+          <a id="profile" href="https://www.google.es/">
             <span> <CgProfile /></span>
             <h3>Profile</h3>
           </a>
@@ -57,7 +57,7 @@ function Aside() {
       </aside>
       <div className="right">
         <div className="top">
-          <button id="menu-btn" onClick={abrirNavbar}><span><FiMenu/></span></button>
+          <button data-testid="botonAbrir" id="menu-btn" onClick={abrirNavbar}><span><FiMenu/></span></button>
         </div>
       </div>
     </div>  

@@ -1,0 +1,154 @@
+.seleccionarImagen{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 0.8rem;
+    height: fit-content;
+    padding: 2rem;
+    max-width: calc(1167.2px + 6rem + 4rem);
+    justify-self: center;
+}
+
+.seleccionarImagen>h2, .seleccionarImagen>h1{
+    margin:0;
+}
+
+.añadirImagen{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,auto);
+    gap: 1rem;
+    height: 80%;
+}
+
+.añadirImagen>h2{
+    grid-column: span 2;
+    height: calc(10% - 0.5rem);
+}
+
+.subir, .sacarFoto{
+    border-radius: 0.8rem;
+    background-color:white ;
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid var(--azul-oscuro);
+}
+
+.sacarFoto,.subir{
+    width: 50%;
+    height: 60%;
+}
+
+.divOpciones{
+    display: flex;
+    gap: 1rem;
+    justify-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column: 1 / span 2;
+    width: 100%;
+}
+
+.subir{
+    position: relative;
+}
+
+.subir span, .sacarFoto, .botonPequeño{
+    font-family: poppins, sans-serif;
+    font-size: 18px;
+}
+
+.subir > svg,.sacarFoto > svg{
+    min-width: 20.11px;
+    min-height: 40.23px;
+}
+
+.subir .iconGrande{
+    margin-right: 1rem;
+}
+.subir:hover, .sacarFoto:hover{
+    border: 3px solid var(--azul-oscuro);
+}
+
+.detallesDeFoto{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 60%;
+}
+
+.fotoElegida{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    gap: 1rem;
+    height: 90%;
+}
+
+.imgPreview{
+    width: auto;
+    max-height: 211.8px;
+    border-radius: 0.8rem;
+}
+
+@media screen and (max-width: 1179px){
+
+    .subir>input{
+        padding: 1.5rem;
+    }
+
+    .subir{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:1100px) {
+
+    .seleccionarImagen{
+        height: fit-content;
+    }
+
+    .divOpciones{
+        grid-column: span 1;;
+    }
+
+    .añadirImagen{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(6,auto);
+    }
+
+    .añadirImagen > h2, .panelBotones{
+        grid-column: 1;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    .seleccionarImagen{
+        margin: 6.6rem 0;
+        align-self: start;
+    }
+
+}
+
+@media screen and (max-width:450px){
+    .seleccionarImagen{
+        padding: 1rem 0.5rem;
+    }
+
+    .divOpciones{
+        flex-direction: column;
+    }
+
+    .subir,.sacarFoto{
+        width: 90%;
+        height: 30%;
+    }
+}

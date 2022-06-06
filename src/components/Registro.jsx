@@ -140,7 +140,7 @@ function Registro() {
           <form>
             <div className="inputBx name">
               <span>Nombre</span>
-              <input type="text" name=""/>
+              <input data-testid="inputa" type="text" name=""/>
             </div>
             <div className="inputBx apellido">
               <span>Apellido</span>

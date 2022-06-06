@@ -1,0 +1,107 @@
+.mainPantallaCamara{
+    display: grid;
+    grid-template-columns: 14rem auto;
+    padding: 0;
+}
+
+.camaraContainer{
+    margin-top: 2rem;
+}
+
+.camaraContainer h1{
+    text-align: center;
+}
+
+.divCamara, .divFoto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 0 3rem;
+    margin:0 1rem;
+}
+
+.camara{
+    border-radius: 0.8rem;
+    max-width: 1041.2px;
+    min-width: 444.8px;
+    height: 90%;
+}
+
+.fotoCamara{
+    border-radius: 0.8rem;
+    min-width: 444.8px;
+}
+
+.divBotones{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.botonCamara, .botonGira{
+    background-color: var(--azul-oscuro);
+    border: none;
+    color: white;
+    padding: 1rem;
+    border-radius: 4rem;
+    width: 10%;
+    height: fit-content;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    max-width: calc(181.03px + 2rem);
+    min-width: calc(98.8px + 2rem);
+}
+
+.botonCamara svg, .botonGira svg{
+    width: 30%;
+    height: 60%;
+}
+
+.divFoto span{
+    margin-top: 1rem;
+    font-size: 24px;
+    font-family: 'Candara' sans-serif;
+}
+
+.oculto{
+    display: none;
+}
+
+@media screen and (max-width:970px){
+    .camara{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .mainPantallaCamara{
+        grid-template-columns: 4rem auto;
+    }
+}
+
+@media screen and (max-width:800px){
+    .mainPantallaCamara{
+      grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width:600px){
+    .divCamara,.divFoto{
+      margin: 0;
+      padding: 0;
+    }
+
+    .camara{
+        min-width: 300px;
+    }
+
+    .fotoCamara{
+        width: 100%;
+    }
+
+    .divBotones{
+        margin-top: 1rem;
+    }
+}

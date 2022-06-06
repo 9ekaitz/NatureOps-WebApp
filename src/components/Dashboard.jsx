@@ -1,5 +1,4 @@
-import React from "react";
-import Noticias from "../jsons/noticiasDashboard.json"
+import React, {useEffect, useState} from "react";
 import Eventos from "../jsons/eventos.json"
 import Galeria from "../jsons/galeria.json"
 
@@ -9,15 +8,49 @@ import { CgProfile } from "react-icons/cg";
 import { FiLogOut, FiMenu } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr";
 
+
+//import useAxiosPrivate from "../hooks/useAxiosPrivate";
+
 /*IMAGENES*/
 import logo from "../images/logo.png";
 import "../styles/styleSidebar.css"
+import axios from "../api/axios";
+//import cargarImagen from "../images"
+
+
 
 
 
 function DashBoard() {
+  //const axiosPrivate = useAxiosPrivate();
+  let noticias = [];
+  const [news, setNews] = useState([]);
 
+
+  /*
+  *
   const cargarImagen = require.context("../images", true);
+  <img src={cargarImagen(`./${record.imagen}`)} alt={record.id}/>
+  <img src={cargarImagen(`./${record.imagen}`)} alt={record.id}/>
+  *
+  */
+ 
+  const fetchData = async () =>{
+    const response = await axios.get("/api/news/0/3"
+    );
+    noticias = response?.data;
+    setNews(noticias)
+  }
+
+  
+    
+
+  useEffect(() =>{
+    noticias = null;
+    fetchData();
+  },[])
+
+  
   function abrirNavbar(){
 
     document.getElementById("asidee").classList.remove("cerrar");
@@ -30,12 +63,14 @@ function DashBoard() {
     document.getElementById("asidee").classList.add("cerrar");
   }
 
+  const cargarImagenNoti = require.context("../images", true);
+
   return(
-    <div className="container">
-      <aside id="asidee" className="cerrar">
+    <div className="container" data-testid="dashboarda">
+      <aside id="asidee" className="cerrar" data-testid="asidea">
         <div className = "top">
           <div className="close" id="close-btn">
-            <button onClick={cerrarNavbar}><ImCross /></button>
+            <button data-testid="botonCerrar" onClick={cerrarNavbar}><ImCross /></button>
           </div>
           <img className="imagenLogo" src={logo} alt="Logo"/>
           <h2>NatureOps</h2>  
@@ -66,12 +101,12 @@ function DashBoard() {
       <main>
         <h1>Dashboard</h1>
         <div className="noticias">
-          {Noticias.map(record=>{
+          {news.map(record=>{
             return(
-              <div className="card" key={record.id}>
-                <img src={cargarImagen(`./${record.imagen}`)} alt={record.id}/>
-                <h4>{record.titulo}</h4>
-                <p>{record.descripcion}</p>
+              <div className="card" key={record.id}>  
+                <img src={cargarImagenNoti(`./${record.image}`)} alt={record.id}/>
+                <h4>{record.title}</h4>
+                <p>{record.subtitle}</p>
                 <a href={record.URL}>Leer más</a> 
               </div>
             )
@@ -112,7 +147,7 @@ function DashBoard() {
       </main>
       <div className="right">
         <div className="top">
-          <button id="menu-btn" onClick={abrirNavbar}><span><FiMenu/></span></button>
+          <button id="menu-btn" data-testid="botonAbrir" onClick={abrirNavbar}><span><FiMenu/></span></button>
           <div className="profile">
             <div className="info">
               <p>Hey, <b>Daniel</b> </p>
@@ -131,7 +166,7 @@ function DashBoard() {
           {Galeria.map(record=>{
             return(
               <div className="imagen" key={record.id}>
-                <img src={cargarImagen(`./${record.imagen}`)} alt={record.id}/>
+                
               </div>
             )
           })
