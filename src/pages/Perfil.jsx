@@ -5,7 +5,10 @@ import { FaPen, FaTrashAlt, FaSave } from "react-icons/fa";
 
 import Button from "../components/Button";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import style from "../styles/stylePerfil.module.css";
+import styleLabel from "../styles/stylePerfilEdit.module.css";
 
+import "../styles/main.css";
 /*IMAGENES*/
 import logro from "../images/logro_img.png";
 import logro2 from "../images/logro_img2.png";
@@ -13,8 +16,6 @@ import logro3 from "../images/logro_img3.png";
 import logroNoConseguido from "../images/logroNoConseguido.png";
 import playa from "../images/playa.jpg";
 
-import "../styles/stylePerfil.css";
-import "../styles/stylePerfilEdit.css";
 import useAuth from "../hooks/useAuth";
 
 /*DATOS */
@@ -101,9 +102,9 @@ function Perfil() {
   let userForm;
   if (edit) {
     userForm = (
-      <div className="datosUsuario">
-        <form className="form" onSubmit={handleSubmitForm}>
-          <div className=" inputBox primero">
+      <div className={style.datosUsuario}>
+        <form className={style.form} onSubmit={handleSubmitForm}>
+          <div className={`${styleLabel.inputBox} ${styleLabel.primero}`}>
             <input
               type="text"
               placeholder=" "
@@ -111,12 +112,12 @@ function Perfil() {
               required
               onChange={(e) => setUsername(e.target.value)}
             />
-            <label htmlFor="username" className="label-name">
-              <span className="content-name">Username</span>
+            <label htmlFor="username" className={styleLabel.labelName}>
+              <span className={styleLabel.contentName}>Username</span>
             </label>
           </div>
-          <div className="col" id="col1">
-            <div className="inputBox">
+          <div className={style.col} id="col1">
+            <div className={styleLabel.inputBox}>
               <input
                 type="text"
                 placeholder=" "
@@ -124,13 +125,13 @@ function Perfil() {
                 required
                 onChange={(e) => setNombre(e.target.value)}
               />
-              <label htmlFor="name" className="label-name">
-                <span className="content-name">Nombre</span>
+              <label htmlFor="name" className={styleLabel.labelName}>
+                <span className={styleLabel.contentName}>Nombre</span>
               </label>
             </div>
           </div>
-          <div className="col" id="col2">
-            <div className="inputBox">
+          <div className={style.col} id="col2">
+            <div className={styleLabel.inputBox}>
               <input
                 type="email"
                 placeholder=" "
@@ -138,22 +139,22 @@ function Perfil() {
                 required
                 onChange={(e) => setCorreo(e.target.value)}
               />
-              <label htmlFor="email" className="label-name">
-                <span className="content-name">Correo</span>
+              <label htmlFor="email" className={styleLabel.labelName}>
+                <span className={styleLabel.contentName}>Correo</span>
               </label>
             </div>
           </div>
 
           {errorMessage && (
-            <p className={errorMessage ? "error" : "errorHidden"}>
+            <p className={`${errorMessage ? style.error : style.errorHidden}`}>
               {" "}
               {errorMessage}{" "}
             </p>
           )}
 
-          <button type="submit" className="saveButton">
+          <button type="submit" className={styleLabel.saveButton}>
             Guardar
-            <FaSave className="icon" />
+            <FaSave className={styleLabel.icon} />
           </button>
         </form>
       </div>
@@ -161,14 +162,14 @@ function Perfil() {
   } else {
     //Lo que aparece cuando entras a la pagina
     userForm = (
-      <div className="datosUsuario">
-        <div className="datosBody">
+      <div className={style.datosUsuario}>
+        <div className={style.datosBody}>
           <h2>{usernameLabel}</h2>
-          <div className="datos">
-            <div className="col">
+          <div className={style.datos}>
+            <div className={styleLabel.col}>
               <p>{userLabel}</p>
             </div>
-            <div className="col">
+            <div className={styleLabel.col}>
               <p>{correoLabel}</p>
             </div>
           </div>
@@ -187,61 +188,67 @@ function Perfil() {
 
   return (
     <React.Fragment>
-      <main className="containerPerfil">
-        <div>
+      <main className={style.containerPerfil}>
+        <div className={style.izquierda}>
           {userForm}
-          <div className="logros">
-            <div className="apartado">
+          <div className={style.logros}>
+            <div className={style.apartado}>
               <h2>Logros obtenidos</h2>
               <a href="https://www.google.com">Ver todos</a>
             </div>
-            <div className="listLogros">
-              <img className="logroImg" src={logro} alt="Logro" />
-              <img className="logroImg" src={logro2} alt="Logro" />
-              <img className="logroImg" src={logro3} alt="Logro" />
-              <img className="logroImg" src={logro} alt="Logro" />
-              <img className="logroImg" src={logro2} alt="Logro" />
-              <img className="logroImg" src={logroNoConseguido} alt="Logro" />
-              <img className="logroImg" src={logroNoConseguido} alt="Logro" />
-              <img className="logroImg" src={logroNoConseguido} alt="Logro" />
+            <div className={style.listaLogros}>
+              <img className={style.logroImg} src={logro} alt="Logro" />
+              <img className={style.logroImg} src={logro2} alt="Logro" />
+              <img className={style.logroImg} src={logro3} alt="Logro" />
+              <img className={style.logroImg} src={logro} alt="Logro" />
+              <img className={style.logroImg} src={logro2} alt="Logro" />
+              <img className={style.logroImg}src={logroNoConseguido} alt="Logro" />
+              <img className={style.logroImg} src={logroNoConseguido} alt="Logro" />
+              <img className={style.logroImg} src={logroNoConseguido} alt="Logro" />
             </div>
-            <button className="deleteButton">
+            <button className={style.deleteButton}>
               Eliminar cuenta
-              <FaTrashAlt className="icon" />
+              <FaTrashAlt className={style.icon} />
             </button>
           </div>
         </div>
-        <div className="right">
-          <div className="galeria">
-            <div className="apartado">
+        <div className={style.right}>
+          <div className={style.galeria}>
+            <div className={style.apartado}>
               <h2>Recientes</h2>
               <GrCircleInformation />
             </div>
-            <div className="listRecientes">
-              <div className="recientesCard">
+            <div className={style.listaRecientes}>
+              <div className={style.recientesCard}>
                 <span>Te has suscrito a</span>
-                <div className="cardBody">
+                <div className={style.cardBody}>
                   <p>Evento GreenPeace</p>
                   <p>2022-05-22</p>
                   <img src={playa} alt="playa" />
                 </div>
               </div>
-              <div className="recientesCard">
-                <span>Te has desuscrito de</span>
-                <div className="cardBody">
-                  <p>Evento Carton</p>
+            
+            </div>
+            <div className={style.listaRecientes}>
+              <div className={style.recientesCard}>
+                <span>Te has suscrito a</span>
+                <div className={style.cardBody}>
+                  <p>Evento GreenPeace</p>
+                  <p>2022-05-22</p>
+                  <img src={playa} alt="playa" />
+                </div>
+              </div>       
+            </div>
+            <div className={style.listaRecientes}>
+              <div className={style.recientesCard}>
+                <span>Te has suscrito a</span>
+                <div className={style.cardBody}>
+                  <p>Evento GreenPeace</p>
                   <p>2022-05-22</p>
                   <img src={playa} alt="playa" />
                 </div>
               </div>
-              <div className="recientesCard">
-                <span>Has creado</span>
-                <div className="cardBody">
-                  <p>Evento Papel</p>
-                  <p>2022-05-28</p>
-                  <img src={playa} alt="playa" />
-                </div>
-              </div>
+            
             </div>
           </div>
         </div>
