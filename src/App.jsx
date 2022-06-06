@@ -7,8 +7,9 @@ import DashBoard from "./pages/Dashboard.jsx";
 import Overview from "./pages/Overview.jsx";
 import Perfil from "./pages/Perfil.jsx";
 import Logout from "./pages/Logout.jsx";
-import "./styles/main.css";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.jsx";
+
+import "./styles/main.css";
 
 export function App() {
   return (

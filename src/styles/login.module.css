@@ -31,6 +31,12 @@ section {
   object-fit: cover;
 }
 
+.smBx {
+  color: white;
+  width: 4rem;
+  height: 4rem;
+}
+
 /*********************/
 .contentBx {
   display: flex;
@@ -46,80 +52,32 @@ section {
 
 .formBx h2 {
   color: black;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 1.5rem;
-  font-family: fontCCBold;
   text-transform: uppercase;
-  margin-bottom: 15px;
-  border-bottom: 4px solid var(--color_de_botton);
+  margin-bottom: 20px;
+  border-bottom: 4px solid var(--secondary);
   display: inline-block;
   letter-spacing: 1px;
-}
-
-.formBx .inputBxRegistro {
-  margin-bottom: 15px;
-  margin-top: 45px;
-}
-
-.formBx .inputBxRegistro span {
-  font-family: fontCCLight;
-  font-size: 16px;
-  margin-bottom: 5px;
-  display: inline-block;
-  color: #607d8d;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-
-.formBx .inputBxRegistro input {
-  font-family: fontCCLight;
-  width: 100%;
-  padding: 10px;
-  outline: none;
-  font-weight: 400;
-  border: 1px solid #607d8d;
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: #607d8d;
-  background: transparent;
-  border-radius: 30px;
-}
-
-.formBx .inputBxRegistro input[type="submit"] {
-  background: var(--color_de_botton);
-  color: #fff;
-  outline: none;
-  border: none;
-  font-weight: 500;
-  cursor: pointer;
-  font-family: fontCCLight;
-  font-size: 16px;
-  letter-spacing: 1px;
-  transition: ease 0.5s;
-}
-
-.formBx .inputBxRegistro input[type="submit"]:hover {
-  background: var(--color_mas_oscuro);
-  transition: ease 0.5s;
 }
 
 .remember {
+  margin-top: 40px;
   margin-bottom: 10px;
   color: #607d8d;
-  font-family: fontCCLight;
   font-size: 14px;
   letter-spacing: 1px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
-.formBx .inputBxRegistro p {
+.formBx .inputBx p {
   color: #607d8d;
-  font-family: fontCCLight;
+  font-weight: 300;
 }
 
-.formBx .inputBxRegistro p a {
-  color: var(--color_de_botton);
-  font-family: fontCCLight;
+.formBx .inputBx p a {
+  color: var(--secondary);
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
@@ -138,7 +96,6 @@ section {
   text-align: center;
   margin: 80px 0 10px;
   font-weight: 500;
-  font-family: fontCCMedium;
   letter-spacing: 1px;
 }
 .formBx .sci {
@@ -166,8 +123,8 @@ section {
   transition: ease 0.5s;
 }
 
-.formBx .sci li i {
-  transform: scale(1.8);
+.formBx .sci li box-icon {
+  transform: scale(1.2);
   filter: invert(1);
 }
 
