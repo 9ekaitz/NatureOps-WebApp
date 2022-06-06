@@ -1,20 +1,26 @@
-import React, { useEffect , useState} from "react"
+import React, { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import {useRef} from "react";
-import "../styles/styleRegistro.css"
-import image from "../images/faro.jpg"
-import { gsap } from "gsap"
+import styles from "../styles/registro.module.css";
+import image from "../images/faro.jpg";
+import { gsap } from "gsap";
 import axios from "../api/axios";
 import useAuth from "../hooks/useAuth";
 
+import Input from "../components/Input";
 
 const REGISTRO_URL = "/api/register";
 
-
 function Registro() {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const { onLogin } = useAuth();
-  let ref = useRef(null)
+  const refLogin = useRef();
+  const nameInput = useRef();
+  const emailInput = useRef();
+  const usernameInput = useRef();
+  const passwordInput = useRef();
+  const rPasswordInput = useRef();
+  const submitInput = useRef();
+
   const [errorMessage, setErrorMessage] = useState(true);
 
   const [username, setUsername] = useState("");
@@ -25,14 +31,11 @@ function Registro() {
 
   useEffect(() => {
     setErrorMessage("");
-  }, [username, password, name, correo, passwordRep])
+  }, [username, password, name, correo, passwordRep]);
 
-
-
-  useEffect(() =>{
-    const element = ref.current;
-
-    gsap.fromTo( element.querySelector(".login"),
+  useEffect(() => {
+    gsap.fromTo(
+      refLogin.current,
       {
         delay: 1.2,
         duration: 1,
@@ -48,7 +51,8 @@ function Registro() {
         y: 0,
       }
     );
-    gsap.fromTo( element.querySelector(".name"),
+    gsap.fromTo(
+      nameInput.current,
       {
         delay: 1.4,
         duration: 1,
@@ -64,7 +68,8 @@ function Registro() {
         y: 0,
       }
     );
-    gsap.fromTo( element.querySelector(".email"),
+    gsap.fromTo(
+      emailInput.current,
       {
         delay: 1.6,
         duration: 1,
@@ -80,7 +85,8 @@ function Registro() {
         y: 0,
       }
     );
-    gsap.fromTo( element.querySelector(".username"),
+    gsap.fromTo(
+      usernameInput.current,
       {
         delay: 1.8,
         duration: 1,
@@ -96,7 +102,8 @@ function Registro() {
         y: 0,
       }
     );
-    gsap.fromTo( element.querySelector(".password"),
+    gsap.fromTo(
+      passwordInput.current,
       {
         delay: 2,
         duration: 1,
@@ -112,7 +119,8 @@ function Registro() {
         y: 0,
       }
     );
-    gsap.fromTo( element.querySelector(".passwordrep"),
+    gsap.fromTo(
+      rPasswordInput.current,
       {
         delay: 2.2,
         duration: 1,
@@ -128,7 +136,8 @@ function Registro() {
         y: 0,
       }
     );
-    gsap.fromTo( element.querySelector(".boton"),
+    gsap.fromTo(
+      submitInput.current,
       {
         delay: 2.4,
         duration: 1,
@@ -144,25 +153,25 @@ function Registro() {
         y: 0,
       }
     );
-   
-  },[])
+  }, []);
 
-  const cleanFields = () =>
-  {
+  const cleanFields = () => {
     setUsername("");
     setPassword("");
     setCorreo("");
     setName("");
-  }
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(password != passwordRep)
-    {
+    if (password != passwordRep) {
       setErrorMessage("Las contaseñas no coinciden!");
-    }
-    else
-    {
-      const data = {"username" : username, "password": password, "email": correo, "name": name};
+    } else {
+      const data = {
+        username: username,
+        password: password,
+        email: correo,
+        name: name,
+      };
       try {
         await axios.post(REGISTRO_URL, data, {
           headers: {
@@ -170,58 +179,73 @@ function Registro() {
           },
         });
         cleanFields();
-        onLogin({"username":username, "password":password});
+        onLogin({ username: username, password: password });
       } catch (err) {
-        if(!err?.response)
-        {
+        if (!err?.response) {
           setErrorMessage("El servidor no responde!");
-        }
-        else if(err.response?.status == 409)
-        {
+        } else if (err.response?.status == 409) {
           setErrorMessage(err.response?.data);
         }
-
       }
     }
-  }
-
-
+  };
 
   return (
-    <section ref={ref}>
-      <div className="imgBx" alt="imgen de un faro">
-        <img src={image} alt="imagenFaro"/>
+    <section>
+      <div className={styles.imgBx} alt="imgen de un faro">
+        <img src={image} alt="imagenFaro" />
       </div>
-      <div className="contentBx">
-        <div className="formBx">
-          <h2 className="login">{t("Register.Register")}</h2>
+      <div className={styles.contentBx}>
+        <div className={styles.formBx}>
+          <h2 ref={refLogin}>{t("Register.Register")}</h2>
           <form onSubmit={handleSubmit}>
-            <div className="inputBx name">
-              <span>{t("Register.Name")}</span>
-              <input type="text" name="" value={name}  onChange={(e) => setName(e.target.value)}/>
-            </div>
-            <div className="inputBx email">
-              <span>{t("Register.Email")}</span>
-              <input type="text" name="" value={correo} onChange={(e) => setCorreo(e.target.value)}/>
-            </div>
-            <div className="inputBx username">
-              <span>{t("Register.Username")}</span>
-              <input type="text" name="" value={username} onChange={(e) => setUsername(e.target.value)}/>
-            </div>
-            <div className="inputBx password">
-              <span>{t("Register.Password")}</span>
-              <input type="password" name="" value={password} onChange={(e) => setPassword(e.target.value)}/>
-            </div>
-            <div className="inputBx passwordrep">
-              <span>{t("Register.Repeat Password")}</span>
-              <input type="password" name="" value={passwordRep} onChange={(e) => setPasswordRep(e.target.value)}/>
-            </div>
-            {errorMessage && <p className={errorMessage ? "error" : "errorHidden"}> {errorMessage} </p>}
-            <div className="inputBxRegistro boton">
-              <input type="submit" value={t("Register.Register Button")} name=""/>
-            </div>
+            <Input
+              reference={nameInput}
+              label="Register.Name"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <Input
+              reference={emailInput}
+              label="Register.Email"
+              type="text"
+              value={correo}
+              onChange={(e) => setCorreo(e.target.value)}
+            />
+            <Input
+              reference={usernameInput}
+              label="Register.Username"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <Input
+              reference={passwordInput}
+              label="Register.Password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <Input
+              reference={rPasswordInput}
+              label="Register.Repeat Password"
+              type="password"
+              value={passwordRep}
+              onChange={(e) => setPasswordRep(e.target.value)}
+            />
+            {errorMessage && (
+              <p className={errorMessage ? "error" : "errorHidden"}>
+                {" "}
+                {errorMessage}{" "}
+              </p>
+            )}
+            <Input
+              reference={submitInput}
+              type="submit"
+              value="Register.Register Button"
+            />
           </form>
-            
         </div>
       </div>
     </section>
