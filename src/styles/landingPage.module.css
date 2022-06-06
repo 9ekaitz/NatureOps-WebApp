@@ -1,6 +1,7 @@
 :root {
   /*==== Variables ====*/
   --header-height: 3rem;
+  --secondary: #896eff;
   /*==== Font ====*/
   --big-font-size: 2.5rem;
   --big-font-size-computer: 3.4rem;
@@ -11,7 +12,6 @@
   --color_blanco: #fdfdfd;
   --color_azul_claro: #a296cf;
   --color_azul_muy_oscuro: #6958bb;
-  --color_azul: #896eff;
   /*==== z index ====*/
   --z-fixed: 100;
 }
@@ -150,7 +150,7 @@ a{
   left: calc(50% + 3px);
   width: 0%;
   height: 1.6px;
-  background-color: var(--color_azul);
+  background-color: var(--secondary);
   transition: ease-out 0.4s;
 }
 .navLink:hover::after {
@@ -158,7 +158,7 @@ a{
   width: calc(100% + 6px);
 }
 .navLink:hover {
-  color: var(--color_azul);
+  color: var(--secondary);
 }
 
 .navToggle {
@@ -231,7 +231,7 @@ a{
   letter-spacing: 1px;
 }
 .contenido span {
-  color: var(--color_azul);
+  color: var(--secondary);
   font-weight: 300;
   font-size: 20px;
   margin-bottom: 20px;
@@ -239,7 +239,7 @@ a{
 }
 
 .contenido button {
-  background-color: var(--color_azul);
+  background-color: var(--secondary);
   color: var(--color_blanco);
   font-weight: 300;
   font-size: 1.1rem;

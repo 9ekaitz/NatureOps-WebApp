@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import style from "../styles/styleLandingPage.module.css";
+import style from "../styles/landingPage.module.css";
 import "../styles/main.css";
 import { gsap } from "gsap";
 import { FiMenu } from "react-icons/fi";
@@ -147,7 +147,7 @@ function LandingPage() {
                   href="/"
                   className={`${style.navLink} ${style.itemIdioma}`}
                 >
-                  {t("Landing.Nav.Lenguage")}
+                  {t("Landing.Nav.Language")}
                 </a>
               </li>
             </ul>

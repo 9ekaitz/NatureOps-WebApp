@@ -8,7 +8,33 @@
   --white: #fdfdfd;
   --black: #121212;
   --nav-accent: #e0f4fb;
-  --nav-background: #424242;
+  --nav-background: #222222;
+  --dashboard-bg: #e0f4fb;
+  --header-bg: #fdfdfd;
+  --header-fg: #000;
+  /*==== Colors Landing, Login, Register ====*/
+  --color_muy_azul_claro: #edebfd;
+  --color_blanco: #fdfdfd;
+  --color_azul_claro: #a296cf;
+  --color_azul_muy_oscuro: #6958bb;
+  --color_azul: #896eff;
+}
+
+.dark {
+  /* TODO: fix the theme and change the components */
+  --primary: #48bfe3;
+  --secondary: #896eff;
+  --warning: #ffd028;
+  --danger: #d50000;
+  --success: #00c853;
+  --white: #fdfdfd;
+  --black: #121212;
+  --nav-accent: #e0f4fb;
+  --nav-background: #212121;
+  --dashboard-bg: #121212;
+  --header-bg: #303030;
+  --header-fg: #fdfdfd;
+
   /*==== Colors Landing, Login, Register ====*/
   --color_muy_azul_claro: #edebfd;
   --color_blanco: #fdfdfd;

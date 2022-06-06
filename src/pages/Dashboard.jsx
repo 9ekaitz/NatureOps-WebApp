@@ -11,10 +11,14 @@ import {
 import Nav from "../components/Nav";
 import Header from "../components/Header";
 import useAuth from "../hooks/useAuth";
+import "../themes.css";
+import styles from "../styles/dashboard.module.css";
 
 function DashBoard() {
   const [collapsed, setCollapsed] = useState(false);
-  const {auth} = useAuth();
+  const { auth } = useAuth();
+  const [lightTheme, setLightTheme] = useState(true);
+
   const toggleNav = () => {
     setCollapsed((prev) => !prev);
   };
@@ -47,9 +51,19 @@ function DashBoard() {
     },
   ];
 
+  const toggleTheme = () => {
+    setLightTheme(!lightTheme);
+  };
+
   return (
-    <div id="dashboard">
-      <Header username={auth.userData.username} role="Admin" menuOnClick={toggleNav} />
+    <div className={`${lightTheme ? "light" : "dark"} ${styles.dashboard}`} id="dashboard">
+      <Header
+        username={auth.userData.username}
+        role="Admin"
+        menuOnClick={toggleNav}
+        theme={lightTheme}
+        themeToggle={toggleTheme}
+      />
       <Nav
         collapse={collapsed}
         onClickOverlay={toggleNav}

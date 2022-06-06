@@ -1,16 +1,4 @@
-:root {
-  --primary: #48bfe3;
-  --secondary: #896eff;
-  --warning: #ffd028;
-  --danger: #d50000;
-  --success: #00c853;
-  --white: #fdfdfd;
-  --black: #121212;
-}
-
 .btn {
-  /* FIXME: font family */
-  font-family: "Courier New", Courier, monospace;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3 ease;

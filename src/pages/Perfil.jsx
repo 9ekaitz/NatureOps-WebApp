@@ -76,7 +76,7 @@ function Perfil() {
             "Content-type": "application/json",
           },
         });
-        auth.setAccessToken(response.data.access_token)
+        auth.setAccessToken(response.data.access_token);
         auth.setRefreshToken(response?.data?.refresh_token);
         cleanFields();
         volver();
