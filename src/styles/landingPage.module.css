@@ -254,9 +254,6 @@ a{
   background-color: var(--color_azul_muy_oscuro);
   transition: ease 1s;
 }
-.espera {
-  /*visibility: hidden;*/
-}
 
 box-icon {
   position: absolute;

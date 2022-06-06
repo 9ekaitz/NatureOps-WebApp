@@ -59,9 +59,6 @@ function Perfil() {
   }
 
   const cleanFields = () => {
-    // setUsernameLabel(username);
-    // setUserLabel(nombre);
-    // setCorreoLabel(correo);
     setUsername("");
     setNombre("");
     setCorreo("");
