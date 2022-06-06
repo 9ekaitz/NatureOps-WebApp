@@ -1,22 +1,29 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import "../styles/styleLandingPage.css";
+import style from "../styles/styleLandingPage.module.css";
 import "../styles/main.css";
 import { gsap } from "gsap";
+import { FiMenu } from "react-icons/fi";
+import { MdClose } from "react-icons/md";
+
 
 function LandingPage() {
   const { t } = useTranslation();
   let ref = useRef(null);
+
+  
+  const refNavLogo = useRef();
+  const refNavList = useRef();
+  const refT1 = useRef();
+  const refT2 = useRef();
+  const refT3 = useRef();
+  const refT4 = useRef();
+
   const [toggle, setToggle] = useState(false);
 
-  window.onload = () => {
-    document.getElementById("nav-bar").classList.remove("espera");
-  };
-
   useEffect(() => {
-    const element = ref.current;
     gsap.fromTo(
-      element.querySelector(".nav__logo"),
+      refNavLogo.current,
       {
         delay: 1.2,
         duration: 2.5,
@@ -28,22 +35,8 @@ function LandingPage() {
         opacity: 1,
       }
     );
-    /*gsap.fromTo( element.querySelector(".nav__toggle"),
-      {
-        delay: 1.2,
-        duration: 1,
-        opacity: 0,
-        y: 10,
-      },
-      {
-        delay: 1.2,
-        duration: 1,
-        opacity: 1,
-        y: 0,
-      }
-    );*/
     gsap.fromTo(
-      element.querySelector(".nav__list"),
+      refNavList.current,
       {
         delay: 1.3,
         duration: 2,
@@ -59,7 +52,7 @@ function LandingPage() {
     );
 
     gsap.fromTo(
-      element.querySelector(".T1"),
+      refT1.current,
       {
         delay: 2,
         duration: 1,
@@ -72,7 +65,7 @@ function LandingPage() {
       }
     );
     gsap.fromTo(
-      element.querySelector(".T2"),
+      refT2.current,
       {
         delay: 2.2,
         duration: 1,
@@ -85,7 +78,7 @@ function LandingPage() {
       }
     );
     gsap.fromTo(
-      element.querySelector(".T3"),
+      refT3.current,
       {
         delay: 2.6,
         duration: 1,
@@ -98,7 +91,7 @@ function LandingPage() {
       }
     );
     gsap.fromTo(
-      element.querySelector(".T4"),
+      refT4.current,
       {
         delay: 2.8,
         duration: 1,
@@ -117,44 +110,44 @@ function LandingPage() {
   }
 
   return (
-    <div ref={ref} id="landingPage">
-      <header className="l-header espera" id="nav-bar">
-        <nav className="nav bd-grid">
+    <div ref={ref} id={style.landingPage}>
+      <header className={style.lHeader} id="navBar">
+        <nav className={`${style.nav} ${style.bdGrid}`}>
           <div>
-            <a href="https://www.google.es" className="nav__logo">
+            <a href="https://www.google.es" ref={refNavLogo} className={style.navLogo}>
               NatureOps
             </a>
           </div>
 
-          <div className="nav__toggle" id="nav-toggle">
-            <box-icon name="menu" onClick={() => cerraryAbrir(true)}></box-icon>
+          <div className={style.navToggle} id={style.nav_toggle}>
+            <FiMenu name="menu" onClick={() => cerraryAbrir(true)}></FiMenu>
           </div>
 
           <div
-            className={toggle ? "nav__menu show" : "nav__menu"}
+            className={`${style.navMenu} ${toggle ? style.show : ""}`}
             id="nav-menu"
           >
-            <div className="nav__close" id="nav-close">
-              <box-icon name="x" onClick={() => cerraryAbrir(false)}></box-icon>
+            <div className={style.navClose} id="nav-close">
+              <MdClose name="x" onClick={() => cerraryAbrir(false)}></MdClose>
             </div>
 
-            <ul className="nav__list">
-              <li className="nav__item">
-                <a href="https://www.google.es" className="nav__link">
-                  Quiénes Somos
+            <ul className={style.navList} ref={refNavList}>
+              <li className={style.navItem}>
+                <a href="/" className={style.navLink}>
+                  {t("Landing.Nav.Who we are")}
                 </a>
               </li>
-              <li className="nav__item">
-                <a href="/login" className="nav__link">
-                  Iniciar Sesión
+              <li className={style.navItem}>
+                <a href="/login" className={style.navLink}>
+                  {t("Landing.Nav.Login")}
                 </a>
               </li>
-              <li className="nav__item">
+              <li className={style.navItem}>
                 <a
-                  href="https://www.google.es"
-                  className="nav__link itemIdioma"
+                  href="/"
+                  className={`${style.navLink} ${style.itemIdioma}`}
                 >
-                  Idioma
+                  {t("Landing.Nav.Lenguage")}
                 </a>
               </li>
             </ul>
@@ -162,18 +155,17 @@ function LandingPage() {
         </nav>
       </header>
 
-      <div className="contenido">
-        <span className="T1">{t("Landing.Beluga Presents")}</span>
-        <h3 className="T2">NatureOps para un planeta mas verde</h3>
-        <p className="T3">
-          La cantidad de residuos en las playas y rios ha crecido drasticamente
-          en los últimos años. NatureOps ofrece una solución para luchar contra
-          la contaminación gracias a sus funcionalidades y una comunidad unida.
-        </p>
-        <button className="T4">Comenzar</button>
+      <div className={style.contenido}>
+        <span className={style.T1} ref={refT1}>{t("Landing.Beluga Presents")}</span>
+        <h3 className={style.T2} ref={refT2}>{t("Landing.NatureOps planeta Verde")}</h3>
+        <p className={style.T3} ref={refT3}> {t("Landing.NatureOps problema")}</p>
+        <a href="/login">
+          <button className={style.T4} ref={refT4}>{t("Landing.Start")}</button>
+        </a>
+       
       </div>
 
-      <div className="imagenDeFondo"></div>
+      <div className={style.imagenDeFondo}></div>
     </div>
   );
 }

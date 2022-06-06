@@ -21,7 +21,15 @@
   },
   "Landing": {
     "Beluga Presents": "Beluga Team presenta",
-    "Start Button": "Comenzar"
+    "Start Button": "Comenzar",
+    "Nav":{
+      "Who we are": "¿Quienes somos?",
+      "Login" : "Iniciar Sesión",
+      "Lenguage": "Idioma"
+    },
+    "NatureOps planeta Verde": "NatureOps para un planeta mas verde",
+    "NatureOps problema" : " La cantidad de residuos en las playas y rios ha crecido drasticamente en los últimos años. NatureOps ofrece una solución para luchar contra la contaminación gracias a sus funcionalidades y una comunidad unida.",
+    "Start": "Comenzar"
   },
   "Register": {
     "Register": "Registrarse",

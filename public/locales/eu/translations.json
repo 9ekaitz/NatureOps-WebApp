@@ -20,8 +20,16 @@
     }
   },
   "Landing": {
-    "Beluga Presents": "Beluga Team presentatzen du",
-    "Start Button": "Hasi"
+    "Beluga Presents": "Beluga Teamek presentatzen du",
+    "Start Button": "Hasi",
+    "Nav":{
+      "Who we are": "Nortzuk gara?",
+      "Login" : "Saio hasi",
+      "Lenguage": "Hizkuntza"
+    },
+    "NatureOps planeta Verde": "NatureOps planeta garbiago baten alde",
+    "NatureOps problema" : "Azken urteetan hondartza eta erreketan aurkitu diren hondakinen kantitatea gogorki handitu da. NatureOps-ek ekarritako funtzionalitate eta komunitate batu baten bitartez arazo hau ebazten ahalbidetzen digu.",
+    "Start": "Hasi"
   },
   "Register": {
     "Register": "Izena eman",

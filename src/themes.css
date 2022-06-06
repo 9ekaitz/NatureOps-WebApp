@@ -9,4 +9,10 @@
   --black: #121212;
   --nav-accent: #e0f4fb;
   --nav-background: #424242;
+  /*==== Colors Landing, Login, Register ====*/
+  --color_muy_azul_claro: #edebfd;
+  --color_blanco: #fdfdfd;
+  --color_azul_claro: #a296cf;
+  --color_azul_muy_oscuro: #6958bb;
+  --color_azul: #896eff;
 }
