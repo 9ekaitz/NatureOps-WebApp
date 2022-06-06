@@ -21,16 +21,6 @@
     width: 60%;
 }
 
-.noticia{
-    margin-left: 2rem;
-    padding-left: 5rem;
-}
-
-.noticia input{
-    width: calc(100% - 1rem);
-    margin-top: 1rem;
-}
-
 @media screen and (max-width:1298px) {
     .forma{
         width: fit-content;

@@ -5,6 +5,8 @@ import ReactPaginate from "react-paginate";
 /*IMAGENES*/
 
 import "../styles/styleSidebar.css"
+import "../styles/noticias.css"
+
 import Aside from "./componentsDashBoard/Aside.jsx" 
 
 function Noticias() {
