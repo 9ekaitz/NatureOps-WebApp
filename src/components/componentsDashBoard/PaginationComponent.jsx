@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 
+import style from"../../styles/pagination.module.css"
+
+
 function PaginationComponent({DisplayData, itemsPerPage}){
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
@@ -28,9 +31,10 @@ function PaginationComponent({DisplayData, itemsPerPage}){
         pageCount={pageCount}
         previousLabel="<"
         renderOnZeroPageCount={null}
-        containerClassName="pagination"
-        nextLinkClassName="next"
-        previousLinkClassName="previous"
+        containerClassName={style.pagination}
+        nextLinkClassName={style.next}
+        previousLinkClassName={style.previous}
+        activeClassName={style.active}
       />
     </>
     

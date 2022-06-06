@@ -14,7 +14,7 @@ import img_noticia3 from "../images/noticia3.jpg";
 
 import Aside from "./componentsDashBoard/Aside.jsx"
 
-import "../styles/styleSidebar.css"
+import "../styles/styleSidebar.module.css"
 
 
 

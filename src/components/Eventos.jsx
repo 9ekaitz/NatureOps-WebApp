@@ -9,9 +9,8 @@ import Aside from "./componentsDashBoard/Aside.jsx"
 import PaginationComponent from "./componentsDashBoard/PaginationComponent.jsx";
 
 
-import "../styles/styleSidebar.css"
-import "../styles/styleEventos.css"
-import "../styles/pagination.css"
+import styleSidebar from "../styles/styleSidebar.module.css"
+import styleEventos from "../styles/styleEventos.module.css"
 
 import data from "../data/eventos.json";
 
@@ -31,43 +30,43 @@ function Eventos() {
     let fecha=data[i].fecha;
     let fechaHora=fecha.split(" ");
     DisplayDataItem=
-      <div className={`eventCard ${data[i].destacado?"destacado":""}`}>
+      <div className={data[i].destacado? (styleEventos.eventCard.concat(" "+styleEventos.destacado)): styleEventos.eventCard }>
         <p>{data[i].nombre}</p>
         <p>{fechaHora[0]}</p>
         <p>{fechaHora[1]}</p>
         <p>{data[i].lugar}</p>
-        <div className="imagenCard">
+        <div className={styleEventos.imagenCard}>
           <img src={data[i].foto} alt="playa1"></img>
         </div>
-        <button className="buttonDetalles">Detalles</button>
+        <button className={styleEventos.buttonDetalles}>Detalles</button>
       </div>
     DisplayData[i]=DisplayDataItem;
   }
 
   return(
-    <div className="containerEventos" data-testid="containerEventos">
+    <div className={styleEventos.containerEventos} data-testid="containerEventos">
       <Aside/>
       <main>
         <h1>Eventos</h1>
-        <div className="eventos">
-          <div className="apartado">
+        <div className={styleEventos.eventos}>
+          <div className={styleSidebar.apartado}>
             <h2>Lista de eventos disponibles</h2>
           </div>
-          <div className="listaEventos">
+          <div className={styleEventos.listaEventos}>
             <PaginationComponent DisplayData={DisplayData} itemsPerPage="8"/>         
           </div>
-          <button className="addButton"><FaPlus className="icon" size="17px"/></button>
+          <button className={styleEventos.addButton}><FaPlus className={styleEventos.icon} size="17px"/></button>
         </div>
       </main>
-      <div className="right">
-        <div className="top">
+      <div className={styleSidebar.right}>
+        <div className={styleSidebar.top}>
           <button id="menu-btn" data-testid="botonAbrir" onClick={abrirNavbar}><span><FiMenu/></span></button>
-          <div className="profile">
-            <div className="info">
+          <div className={styleSidebar.profile}>
+            <div className={styleSidebar.info}>
               <p>Hey, <b>Daniel</b> </p>
-              <small className="text-muted">Admin</small>
+              <small className={styleSidebar.textmuted}>Admin</small>
             </div>
-            <div className="profile-photo">
+            <div className={styleSidebar.profilePhoto}>
               <img src={logo} alt="perfil"/>
             </div>
           </div>

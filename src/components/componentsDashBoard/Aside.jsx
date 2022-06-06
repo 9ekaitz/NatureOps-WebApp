@@ -5,7 +5,7 @@ import { CgProfile } from "react-icons/cg"
 import { FiLogOut} from "react-icons/fi"
 import logo from "../../images/logo.png"
 
-import "../../styles/styleSidebar.css"
+import style from "../../styles/styleSidebar.module.css"
 
 
 function Aside() {
@@ -17,15 +17,15 @@ function Aside() {
   }
 
   return(
-    <aside id="asidee" className="cerrar" data-testid="asidea">
-      <div className = "top">
-        <div className="close" id="close-btn">
+    <aside id="asidee" className={style.cerrar} data-testid="asidea">
+      <div className = {style.top}>
+        <div className={style.close} id="close-btn">
           <button data-testid="botonCerrar" onClick={cerrarNavbar}><ImCross /></button>
         </div>
-        <img className="imagenLogo" src={logo} alt="Logo"/>
+        <img className={style.imagenLogo} src={logo} alt="Logo"/>
         <h2>NatureOps</h2>   
       </div>
-      <div className="sidebar">
+      <div className={style.sidebar}>
         <a href="https://www.google.es/">
           <span> <ImNewspaper /></span>
           <h3>News</h3>
@@ -42,7 +42,7 @@ function Aside() {
           <span> <CgProfile /></span>
           <h3>Profile</h3>
         </a>
-        <a className="salir" href="/login">
+        <a className={style.salir} href="/login">
           <span> <FiLogOut /></span>
           <h3>Logout</h3>
         </a>

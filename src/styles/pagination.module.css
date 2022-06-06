@@ -17,6 +17,10 @@
     cursor: pointer;
 }
 
+.active{
+    font-weight: bolder;
+}
+
 li .next, li .previous{
     border: 1px solid var(--azul-oscuro);
     border-radius: 0.5rem;
