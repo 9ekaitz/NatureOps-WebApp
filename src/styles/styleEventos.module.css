@@ -1,9 +1,3 @@
-:root{
-    --box-shadow1: 0 1rem 2rem #FFE79A;
-    --borde-eventoDestacado:#FFD44A;
-    --button-hover: #2ea2c5;
-}
-
 .containerEventos{
     margin: 2rem;
     height: calc(100vh - 4rem);
@@ -52,8 +46,8 @@
 }
  
 .destacado{
-    border: 3px solid var(--borde-eventoDestacado);
-    box-shadow: var(--box-shadow1); 
+    border: 3px solid var(--borde-destacado);
+    box-shadow: 0 1rem 2rem var(--shadow-destacado); 
 }
 
 .eventCard:hover{

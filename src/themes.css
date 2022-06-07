@@ -17,6 +17,10 @@
   --color_blanco: #fdfdfd;
   --color_azul_claro: #a296cf;
   --color_azul_muy_oscuro: #6958bb;
+  /*=== Colors eventos ===*/
+  --shadow-destacado:#FFE79A;
+  --borde-destacado:#FFD44A;
+  --button-hover: #2ea2c5;
 }
 
 .dark {
