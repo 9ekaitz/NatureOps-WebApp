@@ -10,8 +10,8 @@ import {FaPlus} from "react-icons/fa";
 import logo from "../images/logo.png";
 
 /*ESTILO*/
-import "../styles/styleSidebar.css"
-import "../styles/styleSitios.css"
+import styleSidebar from "../styles/styleSidebar.module.css"
+import styleSitio from "../styles/styleSitios.module.css"
 
 /*DATOS*/
 import data from "../data/sitios.json";
@@ -28,35 +28,35 @@ function Sitios() {
   const DisplayData=data.map(
     (sitio)=>{
       return(
-        <div className="sitioCard" key={sitio.id}>
-          <img src={sitio.imagen} alt="img1" className="imgSitios"/>
+        <div className={styleSitio.sitioCard} key={sitio.id}>
+          <img src={sitio.imagen} alt="img1" className={styleSitio.imgSitios}/>
           <h4>{sitio.nombre}</h4>
           <p>{sitio.descripcion}</p>
-          <p className="puntuacion"><b>PUNTUACIÓN: </b>{sitio.puntuacion}</p>
+          <p className={styleSitio.puntuacion}><b>PUNTUACIÓN: </b>{sitio.puntuacion}</p>
         </div>
       );
     }
   )
   
   return(
-    <div className="container" data-testid="container">
+    <div className={styleSidebar.container} data-testid="container">
       <Aside/>
       <main>
         <h1>Sitios</h1>
-        <div className="listSitios">
+        <div className={styleSitio.listSitios}>
           <PaginationComponent DisplayData={DisplayData} itemsPerPage="6"/>
         </div>
-        <button className="buttonAdd"><FaPlus size="18px" color="white"/></button>
+        <button className={styleSitio.buttonAdd}><FaPlus size="18px" color="white"/></button>
       </main>
-      <div className="right">
-        <div className="top">
+      <div className={styleSidebar.right}>
+        <div className={styleSidebar.top}>
           <button id="menu-btn" data-testid="botonAbrir" onClick={abrirNavbar}><span><FiMenu/></span></button>
           <div className="profile">
             <div className="info">
               <p>Hey, <b>Daniel</b> </p>
               <small className="text-muted">Admin</small>
             </div>
-            <div className="profile-photo">
+            <div className={styleSidebar.profilePhoto}>
               <img src={logo} alt="perfil"/>
             </div>
           </div>
