@@ -3,8 +3,6 @@ import FormLugarComponente from "./componentsDashBoard/FormLugarComponent.jsx";
 import FormNuevoLugarComponente from "./componentsDashBoard/FormNuevoLugarComponent.jsx";
 import { FiCheck } from "react-icons/fi"
 
-import PanelBotones from "./componentsDashBoard/PanelBotones.jsx";
-
 import Button from "../components/Button";
 import { BsCamera } from "react-icons/bs";
 import { MdUploadFile } from "react-icons/md";
