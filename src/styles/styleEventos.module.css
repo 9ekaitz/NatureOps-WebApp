@@ -5,13 +5,9 @@
 }
 
 .containerEventos{
-    display:grid;
     width: 100%;
     margin: 0 auto;
     height: 100vh;
-    
-    grid-template-columns: 13% auto auto;
-    
 }
 
 /**** MAIN ****/
@@ -70,10 +66,12 @@ main{
 
 .imagenCard img{
     
-    width: 100%;
-    height: 90%;
+    width: 110%;
+    height: 100%;
     border-radius: 0.8rem;
     margin-bottom: 1rem;
+    align-self: center;
+    justify-self: center;
 }
 
 .imagenCard{
@@ -123,6 +121,10 @@ main{
     .listaEventos{
         grid-template-columns: repeat(3,1fr);
     }
+
+    .pagination{
+        grid-column: span 3;
+    }
 }
 
 @media screen and (max-width: 1446px){
@@ -152,6 +154,10 @@ main{
         grid-template-columns: repeat(2,1fr);
     }
 
+    .eventCard{
+        padding: 1rem;
+    }
+
     main{
         padding-top: 1.4rem;
         padding-left: 2rem;
@@ -162,7 +168,7 @@ main{
 @media screen and (max-width: 600px){
     .containerEventos{
         width: 100%;
-        grid-template-columns: auto;
+        display: block;
     }
 
     .listaEventos{
@@ -172,5 +178,6 @@ main{
      .apartado{
          text-align: center;
     }
+
 }
 

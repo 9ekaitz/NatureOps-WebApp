@@ -1,0 +1,43 @@
+{
+  "Login": {
+    "Login": "Login",
+    "Username": "Username",
+    "Password": "Password",
+    "Login Button": "Login",
+    "Remember me": "Remember me",
+    "Don't have account yet?": "Don't have an account yet?",
+    "Register": "Register",
+    "Social media": "Check out our social media"
+  },
+  "Dashboard": {
+    "Nav": {
+      "Overview": "Overview",
+      "News": "News",
+      "Events": "Events",
+      "Places": "Places",
+      "Profile": "Profile",
+      "Logout": "Logout"
+    }
+  },
+  "Landing": {
+    "Beluga Presents": "Beluga Team presents",
+    "Start Button": "Get Started",
+    "Nav":{
+      "Who we are": "Who are we?",
+      "Login" : "Login",
+      "Language": "Language"
+    },
+    "NatureOps planeta Verde": "NatureOps for a cleaner planet",
+    "NatureOps problema" : "The amount of waste in beaches and rivers have drastically risen in the recent years. NatureOps provides a solution against contamination with its functionalities and a bound-together community",
+    "Start": "Let´s Start"
+  },
+  "Register": {
+    "Register": "Register",
+    "Name": "Name",
+    "Email": "Email",
+    "Username": "Username",
+    "Password": "Password",
+    "Repeat Password": "Repeat password",
+    "Register Button": "Register"
+  }
+}

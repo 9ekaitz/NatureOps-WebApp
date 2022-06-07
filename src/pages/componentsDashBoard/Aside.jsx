@@ -1,15 +1,13 @@
 import React from "react";
 import { ImNewspaper, ImCross } from "react-icons/im";
-import { MdEvent, MdPlace } from "react-icons/md"
-import { CgProfile } from "react-icons/cg"
-import { FiLogOut} from "react-icons/fi"
-import logo from "../../images/logo.png"
+import { MdEvent, MdPlace } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+import { FiLogOut } from "react-icons/fi";
 
-import style from "../../styles/styleSidebar.module.css"
-
+import logo from "../../images/logo.png";
 
 function Aside() {
-  
+
   function cerrarNavbar(){
 
     document.getElementById("asidee").classList.remove("abrir");
@@ -17,20 +15,20 @@ function Aside() {
   }
 
   return(
-    <aside id="asidee" className={style.cerrar} data-testid="asidea">
-      <div className = {style.top}>
-        <div className={style.close} id="close-btn">
-          <button data-testid="botonCerrar" onClick={cerrarNavbar}><ImCross /></button>
+    <aside id="asidee" className="cerrar">
+      <div className = "top">
+        <div className="close" id="close-btn">
+          <button onClick={cerrarNavbar}><ImCross /></button>
         </div>
-        <img className={style.imagenLogo} src={logo} alt="Logo"/>
-        <h2>NatureOps</h2>   
+        <img className="imagenLogo" src={logo} alt="Logo"/>
+        <h2>NatureOps</h2>  
       </div>
-      <div className={style.sidebar}>
+      <div className="sidebar">
         <a href="https://www.google.es/">
           <span> <ImNewspaper /></span>
           <h3>News</h3>
         </a>
-        <a href="/eventos">
+        <a href="https://www.google.es/">
           <span> <MdEvent /></span>
           <h3>Events</h3>
         </a>
@@ -42,7 +40,7 @@ function Aside() {
           <span> <CgProfile /></span>
           <h3>Profile</h3>
         </a>
-        <a className={style.salir} href="/login">
+        <a className="salir" href="/login">
           <span> <FiLogOut /></span>
           <h3>Logout</h3>
         </a>

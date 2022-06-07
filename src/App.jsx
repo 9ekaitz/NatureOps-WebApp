@@ -1,27 +1,28 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Login from "./components/Login.jsx";
-import LandingPage  from "./components/LandingPage.jsx";
-import Registro from "./components/Registro.jsx";
-import DashBoard from "./components/Dashboard.jsx"; 
-import Eventos from "./components/Eventos.jsx"; 
+import { Routes, Route } from "react-router-dom";
+import Eventos from "./pages/Eventos.jsx";
+import Login from "./pages/Login.jsx";
+import LandingPage from "./pages/LandingPage.jsx";
+import Registro from "./pages/Registro.jsx";
+import DashBoard from "./pages/Dashboard.jsx";
+import Overview from "./pages/Overview.jsx";
+import Perfil from "./pages/Perfil.jsx";
+import Logout from "./pages/Logout.jsx";
+
+import "./styles/main.css";
 
 export function App() {
-
   return (
-    <Router>      
-      <Switch>
-        <Route exact path="/" component={LandingPage}/>
-        <Route exact path="/login" component={Login}/>
-        <Route exact path="/registro" component={Registro}/>
-        <Route exact path="/dashboard" component={DashBoard}/>
-        <Route exact path="/eventos" component={Eventos}/>
-
-        
-        
-        
-      </Switch>
-    </Router>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/registro" element={<Registro />} />
+      <Route path="/logout" element={<Logout />} />
+      <Route path="/dashboard" element={<DashBoard />}>
+        <Route path="" element={<Overview />} />
+        <Route path="eventos" element={<Eventos />} />
+        <Route path="perfil" element={<Perfil />} />
+      </Route>
+    </Routes>
   );
 }
-
