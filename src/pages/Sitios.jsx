@@ -1,29 +1,9 @@
 import React from "react";
-/*, { useState }*/
-import Aside from "../components/componentsDashBoard/Aside.jsx";
-/*ICONOS*/
-
-import { FiMenu } from "react-icons/fi";
-import {FaPlus} from "react-icons/fa";
-
-/*IMAGENES*/
-import logo from "../images/logo.png";
-
-/*ESTILO*/
-import styleSidebar from "../styles/styleSidebar.module.css"
 import styleSitio from "../styles/styleSitios.module.css"
-
-/*DATOS*/
 import data from "../data/sitios.json";
 import PaginationComponent from "../components/componentsDashBoard/PaginationComponent.jsx";
 
 function Sitios() {
-
-  function abrirNavbar(){
-
-    document.getElementById("asidee").classList.remove("cerrar");
-    document.getElementById("asidee").classList.add("abrir");
-  }
 
   const DisplayData=data.map(
     (sitio)=>{
@@ -39,30 +19,12 @@ function Sitios() {
   )
   
   return(
-    <div className={styleSitio.container} data-testid="container">
-      <Aside/>
-      <main>
-        <h1>Sitios</h1>
-        <div className={styleSitio.listSitios}>
-          <PaginationComponent DisplayData={DisplayData} itemsPerPage="6"/>
-        </div>
-        <button className={styleSitio.buttonAdd}><FaPlus size="18px" color="white"/></button>
-      </main>
-      <div className={styleSidebar.right}>
-        <div className={styleSidebar.top}>
-          <button id="menu-btn" data-testid="botonAbrir" onClick={abrirNavbar}><span><FiMenu/></span></button>
-          <div className={styleSidebar.profile}>
-            <div className={styleSidebar.info}>
-              <p>Hey, <b>Daniel</b> </p>
-              <small>Admin</small>
-            </div>
-            <div className={styleSidebar.profilePhoto}>
-              <img src={logo} alt="perfil"/>
-            </div>
-          </div>
-        </div>
+    <main className={styleSitio.containerSitios} data-testid="container">
+      <h1>Sitios</h1>
+      <div className={styleSitio.listSitios}>
+        <PaginationComponent DisplayData={DisplayData} itemsPerPage="6" stylePantalla={styleSitio}/>
       </div>
-    </div>
+    </main>
   );
 }
 
