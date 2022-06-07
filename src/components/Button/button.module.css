@@ -7,7 +7,6 @@
 }
 
 .btn:hover {
-  /* transform: translateY(-3px); */
   filter: brightness(90%);
 }
 
