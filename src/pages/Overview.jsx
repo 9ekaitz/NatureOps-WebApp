@@ -1,65 +1,60 @@
 import React from "react";
-/*, { useState }*/
-import Aside from "./componentsDashBoard/Aside.jsx";
-/*ICONOS*/
-import { FiMenu } from "react-icons/fi";
 import { GrCircleInformation } from "react-icons/gr";
 
-/*IMAGENES*/
-import logo from "../images/logo.png";
 import basura from "../images/basura.jpg";
 import img_noticia1 from "../images/noticia1.jpg";
 import img_noticia2 from "../images/noticia2.jpg";
 import img_noticia3 from "../images/noticia3.jpg";
 
-import "../styles/styleSidebar.module.css"
+import "../styles/styleSidebar.css";
 
-
-
-function DashBoard() {
-
-  function abrirNavbar(){
-
-    document.getElementById("asidee").classList.remove("cerrar");
-    document.getElementById("asidee").classList.add("abrir");
-  }
-
-  return(
-    <div className="container">
-      <Aside/>
-      <main>
+function Overview() {
+  return (
+    <main>
+      <div>
         <h1>Dashboard</h1>
         <div className="noticias">
           <div className="card">
-            <img src={img_noticia1} alt="noticia1"/>
+            <img src={img_noticia1} alt="noticia1" />
             <h4>La Costa Vasca contaminada</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
-            impedit quis ipsa fugit excepturi alias voluptatibus ratione.
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
+              sunt numquam quidem, impedit quis ipsa fugit excepturi alias
+              voluptatibus ratione.
             </p>
-            <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">Leer más</a>
+            <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">
+              Leer más
+            </a>
           </div>
           <div className="card">
-            <img src={img_noticia2} alt="noticia2"/>
+            <img src={img_noticia2} alt="noticia2" />
             <h4>La Costa Vasca contaminada</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
-            impedit quis ipsa fugit excepturi alias voluptatibus ratione.
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
+              sunt numquam quidem, impedit quis ipsa fugit excepturi alias
+              voluptatibus ratione.
             </p>
-            <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">Leer más</a>
+            <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">
+              Leer más
+            </a>
           </div>
           <div className="card">
-            <img src={img_noticia3} alt="noticia2"/>
+            <img src={img_noticia3} alt="noticia2" />
             <h4>La Costa Vasca contaminada</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt numquam quidem, 
-            impedit quis ipsa fugit excepturi alias voluptatibus ratione.
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
+              sunt numquam quidem, impedit quis ipsa fugit excepturi alias
+              voluptatibus ratione.
             </p>
-            <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">Leer más</a>
+            <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">
+              Leer más
+            </a>
           </div>
         </div>
-
         <div className="eventos">
           <div className="apartado">
             <h2>Eventos</h2>
-            <GrCircleInformation/>
+            <GrCircleInformation />
           </div>
           <table>
             <thead>
@@ -99,24 +94,12 @@ function DashBoard() {
             </tbody>
           </table>
         </div>
-      </main>
+      </div>
       <div className="right">
-        <div className="top">
-          <button id="menu-btn" onClick={abrirNavbar}><span><FiMenu/></span></button>
-          <div className="profile">
-            <div className="info">
-              <p>Hey, <b>Daniel</b> </p>
-              <small className="text-muted">Admin</small>
-            </div>
-            <div className="profile-photo">
-              <img src={logo} alt="perfil"/>
-            </div>
-          </div>
-        </div>
         <div className="galeria">
           <div className="apartado">
             <h2>Galeria</h2>
-            <GrCircleInformation/>
+            <GrCircleInformation />
           </div>
           <div className="imagen">
             <img src={basura} alt="basura"></img>
@@ -126,8 +109,8 @@ function DashBoard() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 
-export default DashBoard;
+export default Overview;

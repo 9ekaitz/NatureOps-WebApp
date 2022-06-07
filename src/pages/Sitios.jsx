@@ -1,6 +1,6 @@
 import React from "react";
 /*, { useState }*/
-import Aside from "./componentsDashBoard/Aside.jsx";
+import Aside from "../components/componentsDashBoard/Aside.jsx";
 /*ICONOS*/
 
 import { FiMenu } from "react-icons/fi";
@@ -15,7 +15,7 @@ import styleSitio from "../styles/styleSitios.module.css"
 
 /*DATOS*/
 import data from "../data/sitios.json";
-import PaginationComponent from "./componentsDashBoard/PaginationComponent.jsx";
+import PaginationComponent from "../components/componentsDashBoard/PaginationComponent.jsx";
 
 function Sitios() {
 

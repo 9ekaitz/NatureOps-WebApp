@@ -1,27 +1,36 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Login from "./components/Login.jsx";
-import LandingPage  from "./components/LandingPage.jsx";
-import Registro from "./components/Registro.jsx";
-import DashBoard from "./components/Dashboard.jsx"; 
-import Sitios from "./components/Sitios.jsx"; 
+import { Routes, Route } from "react-router-dom";
+import Login from "./pages/Login.jsx";
+import LandingPage from "./pages/LandingPage.jsx";
+import Registro from "./pages/Registro.jsx";
+import DashBoard from "./pages/Dashboard.jsx";
+import Overview from "./pages/Overview.jsx";
+import Perfil from "./pages/Perfil.jsx";
+import Logout from "./pages/Logout.jsx";
+import Sitios from "./pages/Sitios.jsx"
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.jsx";
+
+import "./styles/main.css";
 
 export function App() {
-
   return (
-    <Router>      
-      <Switch>
-        <Route exact path="/" component={LandingPage}/>
-        <Route exact path="/login" component={Login}/>
-        <Route exact path="/registro" component={Registro}/>
-        <Route exact path="/dashboard" component={DashBoard}/>
-        <Route exact path="/sitios" component={Sitios}/>
-
-        
-        
-        
-      </Switch>
-    </Router>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/registro" element={<Registro />} />
+      <Route path="/logout" element={<Logout />} />
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <DashBoard />
+          </ProtectedRoute>
+        }
+      >
+        <Route path="" element={<Overview />} />
+        <Route path="perfil" element={<Perfil />} />
+        <Route path="sitios" element={<Sitios/>}/>
+      </Route>
+    </Routes>
   );
 }
-

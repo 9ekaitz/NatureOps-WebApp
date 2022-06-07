@@ -1,0 +1,43 @@
+{
+  "Login": {
+    "Login": "Iniciar Sesion",
+    "Username": "Nombre de Usuario",
+    "Password": "Contraseña",
+    "Login Button": "Acceder",
+    "Remember me": "Recordar nombre de usuario",
+    "Don't have account yet?": "¿No tienes una cuenta?",
+    "Register": "Registrate",
+    "Social media": "Visita nuestras redes sociales"
+  },
+  "Dashboard": {
+    "Nav": {
+      "Overview": "Resumen",
+      "News": "Noticias",
+      "Events": "Eventos",
+      "Places": "Sitios",
+      "Profile": "Perfil",
+      "Logout": "Cerrar Sesion"
+    }
+  },
+  "Landing": {
+    "Beluga Presents": "Beluga Team presenta",
+    "Start Button": "Comenzar",
+    "Nav":{
+      "Who we are": "¿Quienes somos?",
+      "Login" : "Iniciar Sesión",
+      "Language": "Idioma"
+    },
+    "NatureOps planeta Verde": "NatureOps para un planeta mas verde",
+    "NatureOps problema" : " La cantidad de residuos en las playas y rios ha crecido drasticamente en los últimos años. NatureOps ofrece una solución para luchar contra la contaminación gracias a sus funcionalidades y una comunidad unida.",
+    "Start": "Comenzar"
+  },
+  "Register": {
+    "Register": "Registrarse",
+    "Name": "Nombre",
+    "Email": "Correo electronico",
+    "Username": "Nombre de usuario",
+    "Password": "Contraseña",
+    "Repeat Password": "Repetir contraseña",
+    "Register Button": "Registrarse"
+  }
+}
