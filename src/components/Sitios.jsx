@@ -39,7 +39,7 @@ function Sitios() {
   )
   
   return(
-    <div className={styleSidebar.container} data-testid="container">
+    <div className={styleSitio.container} data-testid="container">
       <Aside/>
       <main>
         <h1>Sitios</h1>
@@ -51,10 +51,10 @@ function Sitios() {
       <div className={styleSidebar.right}>
         <div className={styleSidebar.top}>
           <button id="menu-btn" data-testid="botonAbrir" onClick={abrirNavbar}><span><FiMenu/></span></button>
-          <div className="profile">
-            <div className="info">
+          <div className={styleSidebar.profile}>
+            <div className={styleSidebar.info}>
               <p>Hey, <b>Daniel</b> </p>
-              <small className="text-muted">Admin</small>
+              <small>Admin</small>
             </div>
             <div className={styleSidebar.profilePhoto}>
               <img src={logo} alt="perfil"/>

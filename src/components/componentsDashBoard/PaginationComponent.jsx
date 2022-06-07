@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
-
+import style from "../../styles/pagination.module.css"
 
 function PaginationComponent({DisplayData, itemsPerPage}){
   const [currentItems, setCurrentItems] = useState(null);
@@ -30,15 +30,16 @@ function PaginationComponent({DisplayData, itemsPerPage}){
       {currentItems}
       <ReactPaginate
         breakLabel="..."
-        nextLabel="NEXT >"
+        nextLabel=">"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel="< PREVIOUS"
+        previousLabel="<"
         renderOnZeroPageCount={null}
-        containerClassName="pagination"
-        nextLinkClassName="next"
-        previousLinkClassName="previous"
+        containerClassName={style.pagination.concat(" "+style.span2)}
+        nextLinkClassName={style.next}
+        previousLinkClassName={style.previous}
+        activeClassName={style.active}
       />
     </>
     

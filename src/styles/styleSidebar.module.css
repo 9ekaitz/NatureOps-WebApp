@@ -46,7 +46,6 @@ p{
     width: 100%;
     margin: 0 auto;
     height: 100vh;
-    /*gap: 1.8 rem;*/
     
     grid-template-columns: 14rem auto 23rem;
     
