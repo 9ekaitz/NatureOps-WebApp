@@ -4,7 +4,7 @@ import ReactPaginate from "react-paginate";
 import style from"../../styles/pagination.module.css"
 
 
-function PaginationComponent({DisplayData, itemsPerPage}){
+function PaginationComponent({DisplayData, itemsPerPage, stylePantalla}){
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
@@ -31,7 +31,7 @@ function PaginationComponent({DisplayData, itemsPerPage}){
         pageCount={pageCount}
         previousLabel="<"
         renderOnZeroPageCount={null}
-        containerClassName={style.pagination}
+        containerClassName={style.pagination.concat(" "+stylePantalla.pagination)}
         nextLinkClassName={style.next}
         previousLinkClassName={style.previous}
         activeClassName={style.active}

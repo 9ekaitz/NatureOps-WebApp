@@ -1,16 +1,16 @@
 import React from "react";
-
 import { FaPlus } from "react-icons/fa"
+import { useTranslation } from "react-i18next";
 
 import PaginationComponent from "../components/componentsDashBoard/PaginationComponent.jsx";
 
-import styleSidebar from "../styles/styleSidebar.module.css"
 import styleEventos from "../styles/styleEventos.module.css"
 
 import data from "../data/eventos.json";
 
 
 function Eventos() {
+  const { t } = useTranslation();
 
   const DisplayData=[];
   let DisplayDataItem={};
@@ -27,24 +27,22 @@ function Eventos() {
         <div className={styleEventos.imagenCard}>
           <img src={data[i].foto} alt="playa1"></img>
         </div>
-        <button className={styleEventos.buttonDetalles}>Detalles</button>
+        <button className={styleEventos.buttonDetalles}>{t("Events.More")}</button>
       </div>
     DisplayData[i]=DisplayDataItem;
   }
 
   return(
-    <main className={styleEventos.containerEventos} data-testid="containerEventos">
-      <h1>Eventos</h1>
+    <div className={styleEventos.containerEventos} data-testid="containerEventos">
+      <h1>{t("Events.Events")}</h1>
       <div className={styleEventos.eventos}>
-        <div className={styleSidebar.apartado}>
-          <h2>Lista de eventos disponibles</h2>
-        </div>
+        <h2>{t("Events.List")}</h2>
         <div className={styleEventos.listaEventos}>
-          <PaginationComponent DisplayData={DisplayData} itemsPerPage="8"/>         
+          <PaginationComponent DisplayData={DisplayData} itemsPerPage="8" stylePantalla={styleEventos}/>         
         </div>
         <button className={styleEventos.addButton}><FaPlus className={styleEventos.icon} size="17px"/></button>
       </div>
-    </main>
+    </div>
   );
 }
 

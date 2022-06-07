@@ -39,5 +39,10 @@
     "Password": "Contraseña",
     "Repeat Password": "Repetir contraseña",
     "Register Button": "Registrarse"
+  },
+  "Events":{
+    "Events":"Eventos",
+    "List":"Lista de eventos disponibles",
+    "More":"Detalles"
   }
 }

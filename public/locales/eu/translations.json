@@ -39,5 +39,10 @@
     "Password": "Pasahitza",
     "Repeat Password": "Pasahitza errepikatu",
     "Register Button": "Izena eman"
+  },
+  "Events":{
+    "Events":"Ekitaldiak",
+    "List":"Eskuragarri dauden ekitaldien zerrenda",
+    "More":"Gehiago"
   }
 }
