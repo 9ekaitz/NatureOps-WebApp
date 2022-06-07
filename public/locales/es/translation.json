@@ -39,5 +39,9 @@
     "Password": "Contraseña",
     "Repeat Password": "Repetir contraseña",
     "Register Button": "Registrarse"
+  },
+  "Places":{
+    "Places":"Sitios",
+    "Score":"PUNTUACIÓN: "
   }
 }

@@ -6,15 +6,15 @@ import img_noticia1 from "../images/noticia1.jpg";
 import img_noticia2 from "../images/noticia2.jpg";
 import img_noticia3 from "../images/noticia3.jpg";
 
-import "../styles/styleSidebar.module.css";
+import style from "../styles/styleSidebar.module.css";
 
 function Overview() {
   return (
     <main>
       <div>
         <h1>Dashboard</h1>
-        <div className="noticias">
-          <div className="card">
+        <div className={style.noticias}>
+          <div className={style.card}>
             <img src={img_noticia1} alt="noticia1" />
             <h4>La Costa Vasca contaminada</h4>
             <p>
@@ -26,7 +26,7 @@ function Overview() {
               Leer más
             </a>
           </div>
-          <div className="card">
+          <div className={style.card}>
             <img src={img_noticia2} alt="noticia2" />
             <h4>La Costa Vasca contaminada</h4>
             <p>
@@ -38,7 +38,7 @@ function Overview() {
               Leer más
             </a>
           </div>
-          <div className="card">
+          <div className={style.card}>
             <img src={img_noticia3} alt="noticia2" />
             <h4>La Costa Vasca contaminada</h4>
             <p>
@@ -51,8 +51,8 @@ function Overview() {
             </a>
           </div>
         </div>
-        <div className="eventos">
-          <div className="apartado">
+        <div className={style.eventos}>
+          <div className={style.apartado}>
             <h2>Eventos</h2>
             <GrCircleInformation />
           </div>
@@ -95,16 +95,16 @@ function Overview() {
           </table>
         </div>
       </div>
-      <div className="right">
-        <div className="galeria">
-          <div className="apartado">
+      <div className={style.right}>
+        <div className={style.galeria}>
+          <div className={style.apartado}>
             <h2>Galeria</h2>
             <GrCircleInformation />
           </div>
-          <div className="imagen">
+          <div className={style.imagen}>
             <img src={basura} alt="basura"></img>
           </div>
-          <div className="imagen">
+          <div className={style.imagen}>
             <img src={img_noticia2} alt="basura"></img>
           </div>
         </div>

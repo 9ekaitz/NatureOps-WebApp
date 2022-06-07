@@ -39,5 +39,9 @@
     "Password": "Pasahitza",
     "Repeat Password": "Pasahitza errepikatu",
     "Register Button": "Izena eman"
+  },
+  "Places":{
+    "Places":"Lekuak",
+    "Score":"PUNTUAZIOA: "
   }
 }
