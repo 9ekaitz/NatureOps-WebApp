@@ -6,7 +6,7 @@ import img_noticia1 from "../images/noticia1.jpg";
 import img_noticia2 from "../images/noticia2.jpg";
 import img_noticia3 from "../images/noticia3.jpg";
 
-import "../styles/styleSidebar.css";
+import style from  "../styles/styleSidebar.css";
 
 function Overview() {
   return (

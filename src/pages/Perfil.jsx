@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { GrCircleInformation } from "react-icons/gr";
 import { FaPen, FaTrashAlt, FaSave } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 import Button from "../components/Button";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
@@ -17,7 +18,6 @@ import logroNoConseguido from "../images/logroNoConseguido.png";
 import playa from "../images/playa.jpg";
 
 import useAuth from "../hooks/useAuth";
-
 /*DATOS */
 const UPDATE_URL = "/api/update";
 
@@ -33,6 +33,8 @@ function Perfil() {
   const [userLabel, setUserLabel] = useState("nombre");
   const [correoLabel, setCorreoLabel] = useState("correo");
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
 
   const fetchData = async () => {
     try {
@@ -113,7 +115,7 @@ function Perfil() {
               onChange={(e) => setUsername(e.target.value)}
             />
             <label htmlFor="username" className={styleLabel.labelName}>
-              <span className={styleLabel.contentName}>Username</span>
+              <span className={styleLabel.contentName}>{t("Login.Username")}</span>
             </label>
           </div>
           <div className={style.col} id="col1">
@@ -126,7 +128,7 @@ function Perfil() {
                 onChange={(e) => setNombre(e.target.value)}
               />
               <label htmlFor="name" className={styleLabel.labelName}>
-                <span className={styleLabel.contentName}>Nombre</span>
+                <span className={styleLabel.contentName}>{t("Register.Name")}</span>
               </label>
             </div>
           </div>
@@ -140,7 +142,7 @@ function Perfil() {
                 onChange={(e) => setCorreo(e.target.value)}
               />
               <label htmlFor="email" className={styleLabel.labelName}>
-                <span className={styleLabel.contentName}>Correo</span>
+                <span className={styleLabel.contentName}>{t("Register.Email")}</span>
               </label>
             </div>
           </div>
@@ -153,7 +155,7 @@ function Perfil() {
           )}
 
           <button type="submit" className={styleLabel.saveButton}>
-            Guardar
+            {t("Perfil.Save")}
             <FaSave className={styleLabel.icon} />
           </button>
         </form>
@@ -179,7 +181,7 @@ function Perfil() {
             buttonStyle="btn--primary--solid"
             icon={<FaPen />}
           >
-            Editar
+            {t("Perfil.Edit")}
           </Button>
         </div>
       </div>
@@ -193,8 +195,8 @@ function Perfil() {
           {userForm}
           <div className={style.logros}>
             <div className={style.apartado}>
-              <h2>Logros obtenidos</h2>
-              <a href="https://www.google.com">Ver todos</a>
+              <h2> {t("Perfil.Achivement Obteined")}</h2>
+              <a href="/logros">{t("Perfil.See All")}</a>
             </div>
             <div className={style.listaLogros}>
               <img className={style.logroImg} src={logro} alt="Logro" />
@@ -207,7 +209,7 @@ function Perfil() {
               <img className={style.logroImg} src={logroNoConseguido} alt="Logro" />
             </div>
             <button className={style.deleteButton}>
-              Eliminar cuenta
+              {t("Perfil.Delete Acount")}
               <FaTrashAlt className={style.icon} />
             </button>
           </div>
@@ -215,7 +217,7 @@ function Perfil() {
         <div className={style.right}>
           <div className={style.galeria}>
             <div className={style.apartado}>
-              <h2>Recientes</h2>
+              <h2>{t("Perfil.Recent")}</h2>
               <GrCircleInformation />
             </div>
             <div className={style.listaRecientes}>

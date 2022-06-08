@@ -185,7 +185,7 @@ function Login() {
       </div>
       <div className={styles.contentBx}>
         <div className={styles.formBx}>
-          <h2 ref={refLogin} className={styles.login}>{t("Login.Login")}</h2>
+          <h2 ref={refLogin} className={styles.login}>{t("Login.Username")}</h2>
           <form onSubmit={handleLogin}>
             <Input
               reference={usernameInput}

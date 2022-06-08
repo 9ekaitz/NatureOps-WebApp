@@ -39,5 +39,15 @@
     "Password": "Pasahitza",
     "Repeat Password": "Pasahitza errepikatu",
     "Register Button": "Izena eman"
+  },
+
+  "Perfil" : 
+  {
+    "Save": "Gorde",
+    "Edit": "Aldato",
+    "Achivement Obteined": "Eskuratutako lorpenak",
+    "Delete Acount": "Kontua ezabatu",
+    "Recent": "Azkenaldian",
+    "See All" : "Denak ikusi"
   }
 }

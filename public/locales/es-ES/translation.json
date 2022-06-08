@@ -39,5 +39,14 @@
     "Password": "Contraseña",
     "Repeat Password": "Repetir contraseña",
     "Register Button": "Registrarse"
+  },
+  "Perfil" : 
+  {
+    "Save": "Guardar",
+    "Edit": "Editar",
+    "Achivement Obteined": "Logros obtenidos",
+    "Delete Acount": "Eliminar cuenta",
+    "Recent": "Recientes",
+    "See All" : "Mostrar Todos"
   }
 }
