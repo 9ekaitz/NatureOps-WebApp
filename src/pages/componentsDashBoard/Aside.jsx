@@ -1,11 +1,10 @@
 import React from "react";
 import { ImNewspaper, ImCross } from "react-icons/im";
-import { MdEvent,MdPlace } from "react-icons/md";
+import { MdEvent, MdPlace } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { FiLogOut } from "react-icons/fi";
 
 import logo from "../../images/logo.png";
-
 
 function Aside() {
 
@@ -16,10 +15,10 @@ function Aside() {
   }
 
   return(
-    <aside id="asidee" className="cerrar" data-testid="asidea">
+    <aside id="asidee" className="cerrar">
       <div className = "top">
         <div className="close" id="close-btn">
-          <button data-testid="botonCerrar" onClick={cerrarNavbar}><ImCross /></button>
+          <button onClick={cerrarNavbar}><ImCross /></button>
         </div>
         <img className="imagenLogo" src={logo} alt="Logo"/>
         <h2>NatureOps</h2>  
@@ -41,7 +40,7 @@ function Aside() {
           <span> <CgProfile /></span>
           <h3>Profile</h3>
         </a>
-        <a className="salir" href="https://www.google.es/">
+        <a className="salir" href="/login">
           <span> <FiLogOut /></span>
           <h3>Logout</h3>
         </a>

@@ -1,0 +1,39 @@
+.inputBx {
+  margin-bottom: 20px;
+}
+
+.inputBx span {
+  font-weight: 300;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #607d8d;
+  letter-spacing: 1px;
+}
+
+.inputBx input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-weight: 300;
+  border: 1px solid #607d8d;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #607d8d;
+  background: transparent;
+  border-radius: 30px;
+}
+
+.inputBx input[type="submit"] {
+  background: var(--secondary);
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: ease 0.5s;
+}
+
+.inputBx input[type="submit"]:hover {
+  filter: brightness(90%);
+}
