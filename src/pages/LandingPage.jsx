@@ -4,7 +4,7 @@ import style from "../styles/landingPage.module.css";
 import "../styles/main.css";
 import { gsap } from "gsap";
 import { FiMenu } from "react-icons/fi";
-import { MdClose } from "react-icons/md";
+import { MdClose,MdKeyboardArrowDown } from "react-icons/md";
 
 
 function LandingPage() {
@@ -143,11 +143,16 @@ function LandingPage() {
                 </a>
               </li>
               <li className={style.navItem}>
-                <a
-                  href="/"
-                  className={`${style.navLink} ${style.itemIdioma}`}
-                >
-                  {t("Landing.Nav.Language")}
+                <a href="/" className={`${style.navLink} ${style.itemIdioma}`}>
+                  <div className={style.itemName}>
+                    {t("Landing.Nav.Language")}
+                    <MdKeyboardArrowDown/>
+                  </div>
+                  <div className={style.dropDown}>
+                    <a href="/">{t("Languages.Basque")}</a>
+                    <a href="/">{t("Languages.Spanish")}</a>
+                    <a href="/">{t("Languages.English")}</a>
+                  </div>
                 </a>
               </li>
             </ul>

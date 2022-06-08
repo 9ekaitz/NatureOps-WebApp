@@ -1,4 +1,9 @@
 {
+  "Languages":{
+    "Basque":"Vasco",
+    "Spanish":"Castellano",
+    "English":"Ingles"
+  },
   "Login": {
     "Login": "Iniciar Sesion",
     "Username": "Nombre de Usuario",
@@ -39,5 +44,8 @@
     "Password": "Contraseña",
     "Repeat Password": "Repetir contraseña",
     "Register Button": "Registrarse"
+  },
+  "Achivements":{
+    "Achivements":"Logros"
   }
 }

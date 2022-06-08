@@ -1,4 +1,9 @@
 {
+  "Languages":{
+    "Basque":"Basque",
+    "Spanish":"Spanish",
+    "English":"English"
+  },
   "Login": {
     "Login": "Login",
     "Username": "Username",
@@ -39,5 +44,8 @@
     "Password": "Password",
     "Repeat Password": "Repeat password",
     "Register Button": "Register"
+  },
+  "Achivements":{
+    "Achivements":"Achivements"
   }
 }

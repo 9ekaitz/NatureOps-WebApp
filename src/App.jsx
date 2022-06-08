@@ -7,7 +7,7 @@ import DashBoard from "./pages/Dashboard.jsx";
 import Overview from "./pages/Overview.jsx";
 import Perfil from "./pages/Perfil.jsx";
 import Logout from "./pages/Logout.jsx";
-import Logros from "./components/Logros.jsx"; 
+import Logros from "./pages/Logros.jsx"; 
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.jsx";
 
 import "./styles/main.css";

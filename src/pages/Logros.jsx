@@ -1,36 +1,29 @@
 import React,{useState,useEffect} from "react";
-import Aside from "./componentsDashBoard/Aside.jsx";
 import ReactPaginate from "react-paginate";
-import axios from "../api/axios";
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import { useTranslation } from "react-i18next";
 
-import { FiMenu } from "react-icons/fi";
-
-import logo from "../images/logo.png";
 
 import "../styles/styleSidebar.css";
-import "../styles/styleLogros.css";
-import "../styles/pagination.css";
+import styleLogros from "../styles/styleLogros.module.css";
+import stylePagination from "../styles/pagination.module.css";
 
 function Logros() {
 
-  function abrirNavbar(){
-
-    document.getElementById("asidee").classList.remove("cerrar");
-    document.getElementById("asidee").classList.add("abrir");
-  }
-
+  const { t } = useTranslation();
   const [items, setItems] = useState([]);
   const [pageCount, setpageCount] = useState(0);
+  const axiosPrivate = useAxiosPrivate();
 
   useEffect(() =>{
 
     const fetchData = async () =>{
-      const response = await axios.get("api/achivements/a/0/3");
+      const response = await axiosPrivate.get("/achivements/oihanee/0/3");
       setItems(response.data);
     }
 
     const fetchSize = async () =>{
-      const responseSize = await axios.get("api/achivements/size");
+      const responseSize = await axiosPrivate.get("/achivements/size");
       setpageCount(responseSize.data/3);
     }
    
@@ -42,8 +35,8 @@ function Logros() {
   const handlePageClick = async (data) => {
     const fetchData = async () =>{
      
-      let url = "api/achivements/a/" + data.selected + "/3";
-      const response = await axios.get(url);
+      let url = "api/achivements/oihanee/" + data.selected + "/3";
+      const response = await axiosPrivate.get(url);
       setItems(response.data);
     }
     fetchData();
@@ -53,17 +46,17 @@ function Logros() {
   const DisplayData=items.map(
     (logro)=>{
       return(
-        <div className="logroCard" key={logro.achivement.id} itemsPerPage="8">
-          <div className="logroTop">
-            <img src={cargarImagenNoti(`./${logro.achivement.image}`)} alt={logro.id} className="logroImg"/>
+        <div className={styleLogros.logroCard} key={logro.achivement.id} itemsPerPage="9">
+          <div className={styleLogros.logroTop}>
+            <img src={cargarImagenNoti(`./${logro.achivement.image}`)} alt={logro.id} className={styleLogros.logroImg}/>
             <h4>{logro.achivement.desription}</h4>
           </div>
           <p>{logro.achivement.objetivo}</p>
-          <div className="progress-element">
-            <div className="bar">
-              <div style={{"width": logro.progress + "%", "backgroundColor":"#48BFE3", "height":"20px", "borderRadius":"2px"}}>
+          <div className={styleLogros.progressElement}>
+            <div className={styleLogros.bar}>
+              <div className={styleLogros.progressBars} style={{"width": logro.progresoUsuario + "%", "backgroundColor":"#48BFE3"}}>
               </div>
-              <div style={{"width": (logro.achivement.objetivoMax-logro.progress) + "%", "backgroundColor":"aliceblue", "height":"20px", "borderRadius":"2px"}}>
+              <div className={styleLogros.progressBars} style={{"width": (100-logro.progresoUsuario) + "%", "backgroundColor":"aliceblue"}}>
               </div>
             </div>
           </div>
@@ -74,42 +67,26 @@ function Logros() {
   )
 
   return(
-    <div  className="containerLogros" data-testid="containerLogros">
-      <Aside/>
-      <main>
-        <h1>Logros</h1>
-        <div className="listLogros">
-          {DisplayData}
-          <ReactPaginate
-            breakLabel="..."
-            nextLabel=">"
-            onPageChange={handlePageClick}
-            marginPagesDisplayed={2}
-            pageRangeDisplayed={3}
-            pageCount={pageCount}
-            previousLabel="<"
-            renderOnZeroPageCount={null}
-            containerClassName="pagination"
-            nextLinkClassName="next"
-            previousLinkClassName="previous"
-          />
-        </div>
-      </main>
-      <div className="right">
-        <div className="top">
-          <button id="menu-btn" data-testid="botonAbrir" onClick={abrirNavbar}><span><FiMenu/></span></button>
-          <div className="profile">
-            <div className="info">
-              <p>Hey, <b>Daniel</b> </p>
-              <small className="text-muted">Admin</small>
-            </div>
-            <div className="profile-photo">
-              <img src={logo} alt="perfil"/>
-            </div>
-          </div>
-        </div>
+    <main className={styleLogros.containerLogros}>
+      <h1>{t("Achivements.Achivements")}</h1>
+      <div className={styleLogros.listLogros}>
+        {DisplayData}
+        <ReactPaginate
+          breakLabel="..."
+          nextLabel=">"
+          onPageChange={handlePageClick}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={3}
+          pageCount={pageCount}
+          previousLabel="<"
+          renderOnZeroPageCount={null}
+          containerClassName={stylePagination.pagination.concat(" "+styleLogros.pagination)}
+          nextLinkClassName={stylePagination.next}
+          previousLinkClassName={stylePagination.previous}
+          activeClassName={stylePagination.active}
+        />
       </div>
-    </div>
+    </main>
   );
 }
 
