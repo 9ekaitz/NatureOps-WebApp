@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
+
+import useAuth from "../hooks/useAuth";
+import Button from "../components/Button";
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
+
 import { GrCircleInformation } from "react-icons/gr";
 import { FaPen, FaTrashAlt, FaSave } from "react-icons/fa";
 
-import Button from "../components/Button";
-import useAxiosPrivate from "../hooks/useAxiosPrivate";
-import style from "../styles/stylePerfil.module.css";
-import styleLabel from "../styles/stylePerfilEdit.module.css";
-
-import "../styles/main.css";
-/*IMAGENES*/
 import logro from "../images/logro_img.png";
 import logro2 from "../images/logro_img2.png";
 import logro3 from "../images/logro_img3.png";
 import logroNoConseguido from "../images/logroNoConseguido.png";
 import playa from "../images/playa.jpg";
 
-import useAuth from "../hooks/useAuth";
+import style from "../styles/stylePerfil.module.css";
+import styleLabel from "../styles/stylePerfilEdit.module.css";
 
 /*DATOS */
 const UPDATE_URL = "/api/update";
@@ -141,14 +140,12 @@ function Perfil() {
               </label>
             </div>
           </div>
-
           {errorMessage && (
             <p className={`${errorMessage ? style.error : style.errorHidden}`}>
               {" "}
               {errorMessage}{" "}
             </p>
           )}
-
           <button type="submit" className={styleLabel.saveButton}>
             Guardar
             <FaSave className={styleLabel.icon} />
@@ -157,7 +154,6 @@ function Perfil() {
       </div>
     );
   } else {
-    //Lo que aparece cuando entras a la pagina
     userForm = (
       <div className={style.datosUsuario}>
         <div className={style.datosBody}>
@@ -199,9 +195,21 @@ function Perfil() {
               <img className={style.logroImg} src={logro3} alt="Logro" />
               <img className={style.logroImg} src={logro} alt="Logro" />
               <img className={style.logroImg} src={logro2} alt="Logro" />
-              <img className={style.logroImg}src={logroNoConseguido} alt="Logro" />
-              <img className={style.logroImg} src={logroNoConseguido} alt="Logro" />
-              <img className={style.logroImg} src={logroNoConseguido} alt="Logro" />
+              <img
+                className={style.logroImg}
+                src={logroNoConseguido}
+                alt="Logro"
+              />
+              <img
+                className={style.logroImg}
+                src={logroNoConseguido}
+                alt="Logro"
+              />
+              <img
+                className={style.logroImg}
+                src={logroNoConseguido}
+                alt="Logro"
+              />
             </div>
             <button className={style.deleteButton}>
               Eliminar cuenta
@@ -224,17 +232,6 @@ function Perfil() {
                   <img src={playa} alt="playa" />
                 </div>
               </div>
-            
-            </div>
-            <div className={style.listaRecientes}>
-              <div className={style.recientesCard}>
-                <span>Te has suscrito a</span>
-                <div className={style.cardBody}>
-                  <p>Evento GreenPeace</p>
-                  <p>2022-05-22</p>
-                  <img src={playa} alt="playa" />
-                </div>
-              </div>       
             </div>
             <div className={style.listaRecientes}>
               <div className={style.recientesCard}>
@@ -245,7 +242,16 @@ function Perfil() {
                   <img src={playa} alt="playa" />
                 </div>
               </div>
-            
+            </div>
+            <div className={style.listaRecientes}>
+              <div className={style.recientesCard}>
+                <span>Te has suscrito a</span>
+                <div className={style.cardBody}>
+                  <p>Evento GreenPeace</p>
+                  <p>2022-05-22</p>
+                  <img src={playa} alt="playa" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

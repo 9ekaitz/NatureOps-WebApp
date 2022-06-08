@@ -1,14 +1,17 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import styles from "../styles/login.module.css";
-import image from "../images/playa.jpg";
 import { gsap } from "gsap";
-/*ICONOS DE REDES SOCIALES*/
+
+import useAuth from "../hooks/useAuth";
+import Input from "../components/Input";
+
 import { FaTiktok } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { FiTwitter } from "react-icons/fi";
-import useAuth from "../hooks/useAuth";
-import Input from "../components/Input";
+
+import image from "../images/playa.jpg";
+import styles from "../styles/login.module.css";
+
 
 function Login() {
   const [errorMessage, setErrorMessage] = useState("");
@@ -179,13 +182,15 @@ function Login() {
   }, []);
 
   return (
-    <section>
+    <section id="login" data-testid="login">
       <div className={styles.imgBx}>
         <img src={image} alt="imgen de un faro" />
       </div>
       <div className={styles.contentBx}>
         <div className={styles.formBx}>
-          <h2 ref={refLogin} className={styles.login}>{t("Login.Login")}</h2>
+          <h2 ref={refLogin} className={styles.login}>
+            {t("Login.Login")}
+          </h2>
           <form onSubmit={handleLogin}>
             <Input
               reference={usernameInput}
@@ -222,7 +227,6 @@ function Login() {
               type="submit"
               value="Login.Login Button"
             />
-
             <div ref={refSignUp} className={styles.inputBx}>
               <p>
                 {t("Login.Don't have account yet?")}{" "}
@@ -230,8 +234,9 @@ function Login() {
               </p>
             </div>
           </form>
-
-          <h3 ref={refSocialMedia} className={styles.socialMedia}>{t("Login.Social media")}</h3>
+          <h3 ref={refSocialMedia} className={styles.socialMedia}>
+            {t("Login.Social media")}
+          </h3>
           <ul ref={refSci} className={styles.sci}>
             <li className={styles.smBx}>
               <FiTwitter />

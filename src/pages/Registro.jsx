@@ -1,12 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import styles from "../styles/registro.module.css";
-import image from "../images/faro.jpg";
 import { gsap } from "gsap";
+
 import axios from "../api/axios";
 import useAuth from "../hooks/useAuth";
-
 import Input from "../components/Input";
+
+import image from "../images/faro.jpg";
+
+import styles from "../styles/registro.module.css";
 
 const REGISTRO_URL = "/api/register";
 
@@ -191,7 +193,7 @@ function Registro() {
   };
 
   return (
-    <section>
+    <section data-testid="registro">
       <div className={styles.imgBx} alt="imgen de un faro">
         <img src={image} alt="imagenFaro" />
       </div>

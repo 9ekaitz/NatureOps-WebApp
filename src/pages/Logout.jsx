@@ -1,5 +1,6 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router";
+
 import useAuth from "../hooks/useAuth";
 
 const Logout = () => {
@@ -10,7 +11,7 @@ const Logout = () => {
     navigate("/", { replace: true });
   }, []);
 
-  return <div>Login out th user</div>;
+  return <div data-testId="logout">Login out th user</div>;
 };
 
 export default Logout;

@@ -9,10 +9,18 @@ function Header({ username, role, menuOnClick, theme, themeToggle }) {
   return (
     <header className={styles.header}>
       <div className={styles.headerLeft}>
-        <FiMenu className={styles.iconButton} onClick={menuOnClick} />
+        <FiMenu
+          data-testid="menuBotoia"
+          className={styles.iconButton}
+          onClick={menuOnClick}
+        />
       </div>
       <div className={styles.headerRight}>
-        <LightDarkToggle isLight={theme} onToggle={themeToggle} />
+        <LightDarkToggle
+          data-testid="lightDarkBotoia"
+          isLight={theme}
+          onToggle={themeToggle}
+        />
         <div className={styles.user}>
           {`Hey, ${username}`}
           <span className={styles.role}>{role}</span>

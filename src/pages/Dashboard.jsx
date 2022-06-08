@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router";
+
+import Nav from "../components/Nav";
+import Header from "../components/Header";
+import useAuth from "../hooks/useAuth";
+
 import { ImNewspaper } from "react-icons/im";
 import {
   MdEvent,
@@ -8,11 +13,8 @@ import {
   MdSpaceDashboard,
 } from "react-icons/md";
 
-import Nav from "../components/Nav";
-import Header from "../components/Header";
-import useAuth from "../hooks/useAuth";
-import "../themes.css";
 import styles from "../styles/dashboard.module.css";
+import "../themes.css";
 
 function DashBoard() {
   const [collapsed, setCollapsed] = useState(false);
@@ -56,7 +58,11 @@ function DashBoard() {
   };
 
   return (
-    <div className={`${lightTheme ? "light" : "dark"} ${styles.dashboard}`} id="dashboard">
+    <div
+      className={`${lightTheme ? "light" : "dark"} ${styles.dashboard}`}
+      id="dashboard"
+      data-testid="dashboard"
+    >
       <Header
         username={auth.userData.username}
         role="Admin"

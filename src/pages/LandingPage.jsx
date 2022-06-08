@@ -1,17 +1,16 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import style from "../styles/landingPage.module.css";
-import "../styles/main.css";
 import { gsap } from "gsap";
+
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 
+import style from "../styles/landingPage.module.css";
 
 function LandingPage() {
   const { t } = useTranslation();
   let ref = useRef(null);
 
-  
   const refNavLogo = useRef();
   const refNavList = useRef();
   const refT1 = useRef();
@@ -110,19 +109,21 @@ function LandingPage() {
   }
 
   return (
-    <div ref={ref} id={style.landingPage}>
+    <div ref={ref} id={style.landingPage} data-testid="landingPage">
       <header className={style.lHeader} id="navBar">
         <nav className={`${style.nav} ${style.bdGrid}`}>
           <div>
-            <a href="https://www.google.es" ref={refNavLogo} className={style.navLogo}>
+            <a
+              href="https://www.google.es"
+              ref={refNavLogo}
+              className={style.navLogo}
+            >
               NatureOps
             </a>
           </div>
-
           <div className={style.navToggle} id={style.nav_toggle}>
             <FiMenu name="menu" onClick={() => cerraryAbrir(true)}></FiMenu>
           </div>
-
           <div
             className={`${style.navMenu} ${toggle ? style.show : ""}`}
             id="nav-menu"
@@ -130,7 +131,6 @@ function LandingPage() {
             <div className={style.navClose} id="nav-close">
               <MdClose name="x" onClick={() => cerraryAbrir(false)}></MdClose>
             </div>
-
             <ul className={style.navList} ref={refNavList}>
               <li className={style.navItem}>
                 <a href="/" className={style.navLink}>
@@ -143,10 +143,7 @@ function LandingPage() {
                 </a>
               </li>
               <li className={style.navItem}>
-                <a
-                  href="/"
-                  className={`${style.navLink} ${style.itemIdioma}`}
-                >
+                <a href="/" className={`${style.navLink} ${style.itemIdioma}`}>
                   {t("Landing.Nav.Language")}
                 </a>
               </li>
@@ -154,17 +151,23 @@ function LandingPage() {
           </div>
         </nav>
       </header>
-
       <div className={style.contenido}>
-        <span className={style.T1} ref={refT1}>{t("Landing.Beluga Presents")}</span>
-        <h3 className={style.T2} ref={refT2}>{t("Landing.NatureOps planeta Verde")}</h3>
-        <p className={style.T3} ref={refT3}> {t("Landing.NatureOps problema")}</p>
+        <span className={style.T1} ref={refT1}>
+          {t("Landing.Beluga Presents")}
+        </span>
+        <h3 className={style.T2} ref={refT2}>
+          {t("Landing.NatureOps planeta Verde")}
+        </h3>
+        <p className={style.T3} ref={refT3}>
+          {" "}
+          {t("Landing.NatureOps problema")}
+        </p>
         <a href="/login">
-          <button className={style.T4} ref={refT4}>{t("Landing.Start")}</button>
+          <button className={style.T4} ref={refT4}>
+            {t("Landing.Start")}
+          </button>
         </a>
-       
       </div>
-
       <div className={style.imagenDeFondo}></div>
     </div>
   );

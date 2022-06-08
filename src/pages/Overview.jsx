@@ -1,4 +1,5 @@
 import React from "react";
+
 import { GrCircleInformation } from "react-icons/gr";
 
 import basura from "../images/basura.jpg";
@@ -10,7 +11,7 @@ import "../styles/styleSidebar.css";
 
 function Overview() {
   return (
-    <main>
+    <main data-testid="overview">
       <div>
         <h1>Dashboard</h1>
         <div className="noticias">
