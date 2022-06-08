@@ -1,7 +1,12 @@
+:root
+{
+    --color_azul_muy_oscuro: #6958bb;
+}
+
 .saveButton{
     margin: 1rem;
     width: 70%;
-    background-color: var(--azul-oscuro);
+    background-color: var(--azul-boton-hover);
     color: white;
     border: none;
     padding: 0.5rem;
@@ -12,7 +17,7 @@
 }
 
 .saveButton:hover{
-    background-color: var(--azul-boton-hover);
+    background-color: var(--color_azul_muy_oscuro);
 }
 
 .icon{
