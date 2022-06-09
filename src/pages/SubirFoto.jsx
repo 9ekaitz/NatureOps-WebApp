@@ -1,10 +1,15 @@
 import React, { useState} from "react";
 import FormLugarComponente from "../pages/componentsDashBoard/FormLugarComponent.jsx";
 import FormNuevoLugarComponente from "../pages/componentsDashBoard/FormNuevoLugarComponent.jsx";
-import PanelBotones from "../pages/componentsDashBoard/PanelBotones.jsx";
+import Button from "../components/Button";
+
 
 import { BsCamera } from "react-icons/bs"
 import { MdUploadFile } from "react-icons/md"
+import { useTranslation } from "react-i18next";
+import { FiCheck } from "react-icons/fi"
+import { VscChromeClose } from "react-icons/vsc"
+
 
 
 import "../styles/styleGeneralForms.css"
@@ -15,6 +20,7 @@ import lugares from "../jsons/nombresSitios.json"
 function SubirFotoPrueba() {
 
   let [chosen,setChosen]=useState(null);
+  const { t } = useTranslation();
 
   function changePage(ruta){
     location.href=ruta;
@@ -25,7 +31,6 @@ function SubirFotoPrueba() {
     sessionStorage.removeItem("chosenPhoto");
     changePage(ruta);
   }
-
   const changeHandler = (e) => {
     sessionStorage.removeItem("takenPhoto");
     const file = e.target.files[0];
@@ -38,37 +43,55 @@ function SubirFotoPrueba() {
   var object=JSON.parse(imagenJsonString);
 
   return(
-    <div className={style.claseSubirImagen}>    
+    <main className={style.seleccionarImagenContainer} data-testid="subirImagen">
       <div className={style.seleccionarImagen} data-testid="subirImagen">
-        <h1>Añadir imagen</h1>
+        <h1>{t("UploadImage.AddImage")}</h1>
         <div className={style.añadirImagen}>
-          <h2>Opciones: </h2>
+          <h2>{t("UploadImage.Options")}: </h2>
           <div className={style.divOpciones}>
             <div className={style.subir}>
-              <span id="fileSpan"><MdUploadFile className={style.iconGrande}/>Subir imagen</span>
+              <span id="fileSpan"><MdUploadFile className={style.iconGrande}/>{t("UploadImage.UploadImage")}</span>
               <input type="file" id="fileInput" onChange={changeHandler} accepts="image/*" className="inputFile"/>
             </div>
-            <button className="sacarFoto" onClick={()=>eraseAndChange("/camara")}><BsCamera className={style.iconGrande}/>Sacar foto</button>
+            <button className={style.sacarFoto} onClick={()=>eraseAndChange("/camara")}><BsCamera className={style.iconGrande}/>{t("UploadImage.TakePhoto")}</button>
           </div>
 
           <div className={style.detallesDeFoto}>
-            <h2>Detalles de la foto:</h2>
-            <FormLugarComponente lugares={lugares} labelName="Lugares: "/>
-            <FormNuevoLugarComponente/>
+            <h2>{t("UploadImage.Details")}: </h2>
+            <FormLugarComponente lugares={lugares} labelName={t("CreateEvent.PlaceNewEvent")}/>
+            <FormNuevoLugarComponente labelName={t("CreateEvent.Question")} inputPlaceholder={t("CreateEvent.NameNewEvent")}/>
             <div >
-              <label htmlFor="ubicacion">Tamaño: </label>
-              <input type="text" className={style.inputClass} disabled/>
+              <label htmlFor="tamaño">{t("UploadImage.Size")}: </label>
+              <input type="text" id="tamaño" className={style.inputClass}/>
             </div>        
           </div>
           <div className={style.fotoElegida}>
-            <h2>Foto elegida: </h2>
+            <h2>{t("UploadImage.ChosenImage")}: </h2>
             {object && <img src={object} alt="taken" id="takenIMG" className={style.imgPreview}></img>}
             {chosen && <img src={chosen} alt="chosen" id="chosenIMG" className={style.imgPreview}></img>}
           </div>
-          <PanelBotones numBotones="2" cancelRuta="/evento" acceptRuta="/evento" pantallaFoto={false}/>
+          <div className={style.buttons}>
+            <Button
+              onClick={()=>changePage("evento")}
+              buttonSize="btn--medium"
+              buttonStyle="btn--success--solid"
+              icon={<FiCheck />}
+            >
+              {t("Buttons.Accept")}
+            </Button>
+            <Button
+              onClick={()=>eraseAndChange("evento")}
+              buttonSize="btn--medium"
+              buttonStyle="btn--danger--solid"
+              icon={<VscChromeClose />}
+            >
+              {t("Buttons.Cancel")}
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+
   );
 }
 

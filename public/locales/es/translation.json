@@ -59,5 +59,13 @@
   "Buttons":{
     "Accept":"ACEPTAR",
     "Cancel":"CANCELAR"
+  },
+  "UploadImage":{
+    "AddImage":"Añadir Imagen",
+    "UploadImage":"Sibir Imagen",
+    "Take Photo":"Sacar Foto",
+    "Details":"Detalles",
+    "Size":"Tamaño",
+    "ChosenImage":"Foto Elegida"
   }
 }

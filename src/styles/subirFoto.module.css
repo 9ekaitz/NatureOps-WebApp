@@ -1,14 +1,20 @@
+.seleccionarImagenContainer{
+    align-items: center;
+    justify-items: center;
+    margin-top: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
 .seleccionarImagen{
     display: flex;
     flex-direction: column;
-  
     gap: 1rem;
     background-color: white;
     border-radius: 0.8rem;
     height: fit-content;
     padding: 2rem;
     max-width: calc(1167.2px + 6rem + 4rem);
-    justify-self: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -99,14 +105,6 @@
     border-radius: 0.8rem;
 }
 
-
-
-.claseSubirImagen{
-  
-    max-height: 100vh;
-    padding: 3rem;
-}
-
 .inputClass{
     background-color: white;
     padding: 1rem;
@@ -114,21 +112,38 @@
     border-bottom: 1px solid var(--azul-oscuro);
 }
 
-
-
 .inputClass:focus{
     outline: none;
+}
+
+.buttons{
+    display: flex;
+    gap: 3rem;
+    grid-column: span 2;
+    justify-self: center;
+    margin-top: 1rem;
+}
+
+.buttons svg{
+    height: 1rem;
+    width: 1rem;
+    text-align: end;
+    margin: 0;
 }
 
 
 @media screen and (max-width: 1179px){
 
     .subir>input{
-        padding: 1.5rem;
+        padding: 0;
     }
 
     .subir{
-        padding: 0;
+        padding: 1rem;
+    }
+
+    .buttons{
+        grid-column: span 1;
     }
 }
 
@@ -136,10 +151,11 @@
 
     .seleccionarImagen{
         height: fit-content;
+        margin: 2rem 0;
     }
 
     .divOpciones{
-        grid-column: span 1;;
+        grid-column: span 1;
     }
 
     .añadirImagen{
@@ -154,22 +170,22 @@
 }
 
 @media screen and (max-width: 800px){
-
     .seleccionarImagen{
         align-self: start;
-    }
-    .claseSubirImagen{
-        display: grid;
-        grid-template-columns: auto;
-        width: 100%;
-        overflow-y: auto;
     }
 
 }
 
 @media screen and (max-width:450px){
+
+    .seleccionarImagenContainer{
+        align-items: flex-start;
+        overflow-x: hidden;
+    }
+
     .seleccionarImagen{
-        padding: 1rem 0.5rem;
+        padding: 1rem 0rem;
+        height: fit-content;
     }
 
     .divOpciones{
@@ -177,7 +193,7 @@
     }
 
     .subir,.sacarFoto{
-        width: 90%;
+        width: 80%;
         height: 30%;
     }
 }

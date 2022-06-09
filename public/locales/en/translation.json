@@ -59,5 +59,15 @@
   "Buttons":{
     "Accept":"ACCEPT",
     "Cancel":"CANCEL"
+  },
+
+  "UploadImage":{
+    "AddImage":"Add Image",
+    "Options":"Options",
+    "UploadImage":"Upload Image",
+    "TakePhoto":"Take Photo",
+    "Details":"Image Details",
+    "Size":"Size",
+    "ChosenImage":"Chosen Image"
   }
 }

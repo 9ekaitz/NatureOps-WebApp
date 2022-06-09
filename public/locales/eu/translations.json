@@ -59,5 +59,13 @@
   "Buttons":{
     "Accept":"ONARTU",
     "Cancel":"EZEZTATU"
+  },
+  "UploadImage":{
+    "AddImage":"Argazkia Gehitu",
+    "UploadImage":"Irudia igo",
+    "Take Photo":"Argazkia Atera",
+    "Details":"Xehetasunak",
+    "Size":"Tamaina",
+    "ChosenImage":"Aukeratutako Irudia"
   }
 }
