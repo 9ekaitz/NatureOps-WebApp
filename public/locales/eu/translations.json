@@ -47,7 +47,16 @@
     "DateNewEvent":"Data",
     "TimeNewEvent":"Ordua",
     "DescriptionNewEvent":"Azalpena",
-    "Question":"Toki berri bat erregistratu nahi duzu?",
+    "Question":"Toki berri bat erregistratu nahi duzu?"
+  },
+  "CreateNews":{
+    "CreateNews":"Berria sortu",
+    "Title":"Izenburua",
+    "Author":"Egilea",
+    "Summary":"Laburpena",
+    "SelectImage":"Aukeratu irudia"
+  },
+  "Buttons":{
     "Accept":"ONARTU",
     "Cancel":"EZEZTATU"
   }

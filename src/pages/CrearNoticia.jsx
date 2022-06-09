@@ -2,8 +2,13 @@ import React from "react";
 import { FiCheck } from "react-icons/fi"
 import { VscChromeClose } from "react-icons/vsc"
 import styles from "../styles/crearNoticia.module.css"
+import "../styles/styleGeneralForms.css"
+import { useTranslation } from "react-i18next";
+
 
 function CrearNoticia() {
+
+  const { t } = useTranslation();
 
   function changeText(){
     let input=document.getElementById("fileInput");
@@ -12,36 +17,36 @@ function CrearNoticia() {
     span.innerHTML=fileName;
   }
   return(
-    <div data-testid="noticiaSortu">
-      <div className={`${styles.forma} ${styles.formaNoticia}`}>
-        <h1>Crear noticia</h1>
+    <main data-testid="noticiaSortu" className={styles.noticiaSortu}>
+      <div className={`forma ${styles.formNoticia}`}>
+        <h1>{t("CreateNews.CreateNews")}</h1>
         <div className={styles.formImagen}>
-          <label htmlFor="fname">Titulo: </label>
-          <input type="text" id="fname" name="fname" className={styles.inputClass}/>
+          <label htmlFor="fTitulo">{t("CreateNews.Title")}: </label>
+          <input type="text" id="fTitulo" className={styles.inputClass}/>
         </div>
         <div className={styles.formImagen}>
-          <label htmlFor="fname">Autor: </label>
-          <input type="text" id="fname" name="fname" className={styles.inputClass}/>
+          <label htmlFor="fAutor">{t("CreateNews.Author")}:</label>
+          <input type="text" id="fAutor" className={styles.inputClass}/>
         </div>
         <div className={styles.formImagen}>
-          <label htmlFor="fname">Resumen: </label>
+          <label htmlFor="fResumen">{t("CreateNews.Summary")}: </label>
           <input type="text" id="resumenInput" name="fname" className={styles.inputClass}/>
         </div>
         <div className={styles.foto}>
-          <span id="fileSpan">Seleccionar Imagen</span>
+          <span id="fileSpan">{t("CreateNews.SelectImage")}</span>
           <input type="file" id="fileInput" name="fname" onChange={changeText}/>
         </div>
-        <div className={styles.formImagen}>
-          <label htmlFor="fname">URL: </label>
-          <input type="text" id="fname" name="fname" className={styles.inputClass}/>
+        <div className={`${styles.url} ${styles.formImagen}`}>
+          <label htmlFor="fUrl">URL: </label>
+          <input type="text" id="fUrl" className={styles.inputClass}/>
         </div>         
         <div className="panelBotones">
-          <button className={styles.accept}>ACEPTAR<FiCheck/></button>             
-          <button className={styles.cancel}>CANCELAR<VscChromeClose/></button>
+          <button className="accept">{t("Buttons.Accept")}<FiCheck/></button>             
+          <button className="cancel">{t("Buttons.Cancel")}<VscChromeClose/></button>
         </div>
       </div>
                 
-    </div>
+    </main>
   );
 }
 

@@ -47,7 +47,16 @@
     "DateNewEvent":"Fecha",
     "TimeNewEvent":"Hora",
     "DescriptionNewEvent":"Descripción",
-    "Question":"Quieres registrar un nuevo lugar?",
+    "Question":"Quieres registrar un nuevo lugar?"
+  },
+  "CreateNews":{
+    "CreateNews":"Crear Noticia",
+    "Title":"Titulo",
+    "Author":"Autor",
+    "Summary":"Resumen",
+    "SelectImage":"Seleccionar Imagen"
+  },
+  "Buttons":{
     "Accept":"ACEPTAR",
     "Cancel":"CANCELAR"
   }

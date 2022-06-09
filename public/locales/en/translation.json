@@ -47,7 +47,16 @@
     "DateNewEvent":"Date",
     "TimeNewEvent":"Time",
     "DescriptionNewEvent":"Description",
-    "Question":"Do you want to register a new place?",
+    "Question":"Do you want to register a new place?"
+  },
+  "CreateNews":{
+    "CreateNews":"Create News",
+    "Title":"Title",
+    "Author":"Author",
+    "Summary":"Summary",
+    "SelectImage":"Select Image"
+  },
+  "Buttons":{
     "Accept":"ACCEPT",
     "Cancel":"CANCEL"
   }

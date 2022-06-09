@@ -7,7 +7,6 @@ import DashBoard from "./pages/Dashboard.jsx";
 import Overview from "./pages/Overview.jsx";
 import Perfil from "./pages/Perfil.jsx";
 import Logout from "./pages/Logout.jsx";
-import ProtectedRoute from "./components/ProtectedRoute";
 import SubirFoto from "./pages/SubirFoto.jsx"
 import CrearNoticia from "./pages/CrearNoticia.jsx"
 import CrearEvento from "./pages/CrearEvento.jsx"
@@ -27,9 +26,7 @@ export function App() {
       <Route
         path="/dashboard"
         element={
-          <ProtectedRoute>
-            <DashBoard />
-          </ProtectedRoute>
+          <DashBoard />
         }
       >
         <Route path="" element={<Overview />} />

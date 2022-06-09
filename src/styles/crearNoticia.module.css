@@ -4,30 +4,16 @@
     justify-content: center;
     align-self: center;
     justify-self: center;
+    width: fit-content;
 }
 
-.forma{
-    display: grid;
-    padding: 1rem;
-    gap: 1rem;
-    background-color: white;
-    border-radius: 0.8rem;
-    justify-content: stretch;
-    justify-items: center;
-    align-items: center;
-    width: 70%;
-    box-shadow: var(--box-shadow);
-    max-width: 852px;
-    max-height: 606px;
-    min-height: 568px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-
+.noticiaSortu{
+    margin: 0;
+    padding: 0;
 }
 
-.formNoticia h1{
+
+.formNoticia>h1{
     grid-column:1 / span 2;
 }
 
@@ -44,6 +30,7 @@
 
 .formImagen, .formLugar{
     align-items: center;
+    padding: 1rem;
 }
 
 .inputClass{
@@ -81,51 +68,15 @@
 }
 
 
-.accept, .cancel{
-    background-color: var(--azul-oscuro);
-    border-radius: 2rem;
-    width: fit-content;
-    height: 3rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-    border: none;
-    font-family: 'Candara', sans-serif;
-    font-size: 18px;
-}
 
-.accept{
-    background-color: lightgreen;
-}
-.cancel{
-    background-color: red;
-}
-
-.panelBotones{
-    display: flex;
-    gap: 2rem;
-    grid-column: span 2;
-    margin-bottom: 0.3rem;
-    justify-content: center;
-}
-
-.panelBotones>svg{
-    height: 2rem;
-    width: 2rem;
-    text-align: end;
-    margin: 0;
-}
 
 
 @media screen and (max-width: 800px){
-    .forma{
+
+    .formNoticias{
         width: 70%;
-        min-width: 400px;
         align-items: center;
     }
-    .formNoticia{
-    }
+  
 
 }
