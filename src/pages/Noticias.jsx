@@ -4,9 +4,8 @@ import ReactPaginate from "react-paginate";
 
 /*IMAGENES*/
 
-import "../styles/styleSidebar.css"
-import "../styles/noticias.css"
-
+import "../styles/styleSidebar.css";
+import "../styles/noticias.css";
 
 function Noticias() {
   const axiosPrivate = useAxiosPrivate();
