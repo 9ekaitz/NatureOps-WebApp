@@ -4,7 +4,6 @@
     width: 100%;
     margin: 0 auto;
     height: 100vh;
-    grid-template-columns: 14rem auto 15rem; 
 }
 
 .card p{

@@ -143,17 +143,17 @@ function LandingPage() {
                 </a>
               </li>
               <li className={style.navItem}>
-                <a href="/" className={`${style.navLink} ${style.itemIdioma}`}>
-                  <div className={style.itemName}>
+                <div className={`${style.navLink} ${style.itemIdioma}`}>
+                  <span className={style.itemName}>
                     {t("Landing.Nav.Language")}
                     <MdKeyboardArrowDown/>
-                  </div>
+                  </span>
                   <div className={style.dropDown}>
                     <a href="/">{t("Languages.Basque")}</a>
                     <a href="/">{t("Languages.Spanish")}</a>
                     <a href="/">{t("Languages.English")}</a>
                   </div>
-                </a>
+                </div>
               </li>
             </ul>
           </div>
