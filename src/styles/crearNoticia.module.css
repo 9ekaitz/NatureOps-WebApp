@@ -1,0 +1,131 @@
+.formNoticia{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.forma{
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 0.8rem;
+    justify-content: stretch;
+    justify-items: center;
+    align-items: center;
+    width: 70%;
+    box-shadow: var(--box-shadow);
+    max-width: 852px;
+    max-height: 606px;
+    min-height: 568px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}
+
+.formNoticia h1{
+    grid-column:1 / span 2;
+}
+
+.url{
+    grid-column: span 2;
+    width: 100%;
+    display:  flex;
+    justify-content: center;
+}
+
+.url > input{
+    width: 60%;
+}
+
+.formImagen, .formLugar{
+    align-items: center;
+}
+
+.inputClass{
+    background-color: white;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid var(--azul-oscuro);
+}
+
+.inputClass:focus{
+    outline: none;
+}
+
+.foto{
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    height: 40%;
+    border: 1px solid var(--azul-oscuro);
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+}
+
+.foto{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+
+.accept, .cancel{
+    background-color: var(--azul-oscuro);
+    border-radius: 2rem;
+    width: fit-content;
+    height: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    border: none;
+    font-family: 'Candara', sans-serif;
+    font-size: 18px;
+}
+
+.accept{
+    background-color: lightgreen;
+}
+.cancel{
+    background-color: red;
+}
+
+.panelBotones{
+    display: flex;
+    gap: 2rem;
+    grid-column: span 2;
+    margin-bottom: 0.3rem;
+    justify-content: center;
+}
+
+.panelBotones>svg{
+    height: 2rem;
+    width: 2rem;
+    text-align: end;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 800px){
+    .forma{
+        width: 70%;
+        min-width: 400px;
+        align-items: center;
+    }
+    .formNoticia{
+    }
+
+}

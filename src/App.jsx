@@ -34,13 +34,13 @@ export function App() {
       >
         <Route path="" element={<Overview />} />
         <Route path="perfil" element={<Perfil />} />
-        <Route path="/noticias" element={<Noticias />}/>
-        <Route exact path="/subirFoto" element={<SubirFoto/>}/>
-        <Route exact path="/crearNoticia" element={<CrearNoticia/>}/>
-        <Route exact path="/crearEvento" element={<CrearEvento/>}/>
-        <Route exact path="/evento" element={<Evento/>}/>
-        <Route exact path="/noticias" element={<Noticias/>}/>
-        <Route exact path="/camara" element={<Foto/>}/>
+        <Route path="noticias" element={<Noticias />}/>
+        <Route path="subirFoto" element={<SubirFoto/>}/>
+        <Route path="crearNoticia" element={<CrearNoticia/>}/>
+        <Route path="crearEvento" element={<CrearEvento/>}/>
+        <Route path="eventos" element={<Evento/>}/>
+        <Route path="noticias" element={<Noticias/>}/>
+        <Route path="camara" element={<Foto/>}/>
       </Route>
     </Routes>
   );

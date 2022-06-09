@@ -1,16 +1,14 @@
 import React, { useState} from "react";
-import Aside from "./componentsDashBoard/Aside.jsx"  
-import FormLugarComponente from "./componentsDashBoard/FormLugarComponent.jsx";
-import FormNuevoLugarComponente from "./componentsDashBoard/FormNuevoLugarComponent.jsx";
-
-import PanelBotones from "./componentsDashBoard/PanelBotones.jsx";
+import FormLugarComponente from "../pages/componentsDashBoard/FormLugarComponent.jsx";
+import FormNuevoLugarComponente from "../pages/componentsDashBoard/FormNuevoLugarComponent.jsx";
+import PanelBotones from "../pages/componentsDashBoard/PanelBotones.jsx";
 
 import { BsCamera } from "react-icons/bs"
 import { MdUploadFile } from "react-icons/md"
 
 
 import "../styles/styleGeneralForms.css"
-import "../styles/subirFoto.css"
+import style from "../styles/subirFoto.module.css"
 
 import lugares from "../jsons/nombresSitios.json"
 
@@ -40,33 +38,32 @@ function SubirFotoPrueba() {
   var object=JSON.parse(imagenJsonString);
 
   return(
-    <div className="claseSubirImagen">    
-      <Aside/>
-      <div className="seleccionarImagen" data-testid="subirImagen">
+    <div className={style.claseSubirImagen}>    
+      <div className={style.seleccionarImagen} data-testid="subirImagen">
         <h1>Añadir imagen</h1>
-        <div className="añadirImagen">
+        <div className={style.añadirImagen}>
           <h2>Opciones: </h2>
-          <div className="divOpciones">
-            <div className="subir">
-              <span id="fileSpan"><MdUploadFile className="iconGrande"/>Subir imagen</span>
+          <div className={style.divOpciones}>
+            <div className={style.subir}>
+              <span id="fileSpan"><MdUploadFile className={style.iconGrande}/>Subir imagen</span>
               <input type="file" id="fileInput" onChange={changeHandler} accepts="image/*" className="inputFile"/>
             </div>
-            <button className="sacarFoto" onClick={()=>eraseAndChange("/camara")}><BsCamera className="iconGrande"/>Sacar foto</button>
+            <button className="sacarFoto" onClick={()=>eraseAndChange("/camara")}><BsCamera className={style.iconGrande}/>Sacar foto</button>
           </div>
 
-          <div className="detallesDeFoto">
+          <div className={style.detallesDeFoto}>
             <h2>Detalles de la foto:</h2>
             <FormLugarComponente lugares={lugares} labelName="Lugares: "/>
             <FormNuevoLugarComponente/>
-            <div className="formImagen">
+            <div >
               <label htmlFor="ubicacion">Tamaño: </label>
-              <input type="text" className="inputClass" disabled/>
+              <input type="text" className={style.inputClass} disabled/>
             </div>        
           </div>
-          <div className="fotoElegida">
+          <div className={style.fotoElegida}>
             <h2>Foto elegida: </h2>
-            {object && <img src={object} alt="taken" id="takenIMG" className="imgPreview"></img>}
-            {chosen && <img src={chosen} alt="chosen" id="chosenIMG" className="imgPreview"></img>}
+            {object && <img src={object} alt="taken" id="takenIMG" className={style.imgPreview}></img>}
+            {chosen && <img src={chosen} alt="chosen" id="chosenIMG" className={style.imgPreview}></img>}
           </div>
           <PanelBotones numBotones="2" cancelRuta="/evento" acceptRuta="/evento" pantallaFoto={false}/>
         </div>

@@ -7,7 +7,7 @@ import ReactPaginate from "react-paginate";
 import "../styles/styleSidebar.css"
 import "../styles/noticias.css"
 
-import Aside from "./componentsDashBoard/Aside.jsx" 
+import Aside from "../pages/componentsDashBoard/Aside.jsx" 
 
 function Noticias() {
 

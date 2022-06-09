@@ -1,7 +1,6 @@
 import React from "react";
-import Aside from "./componentsDashBoard/Aside.jsx"  
-import FormLugarComponente from "./componentsDashBoard/FormLugarComponent.jsx";
-import FormNuevoLugarComponente from "./componentsDashBoard/FormNuevoLugarComponent.jsx";
+import FormLugarComponente from "../pages/componentsDashBoard/FormLugarComponent.jsx";
+import FormNuevoLugarComponente from "../pages/componentsDashBoard/FormNuevoLugarComponent.jsx";
 import { FiCheck } from "react-icons/fi"
 import { VscChromeClose } from "react-icons/vsc"
 
@@ -14,7 +13,7 @@ function CrearEvento() {
 
   return(
     <div className="claseSubirImagen" data-testid="eventoaSortu">  
-      <Aside/>
+     
       <div className="forma evento">
         <h1>Crear evento</h1>
         <div className="formImagen">

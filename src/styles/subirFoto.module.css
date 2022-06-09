@@ -1,7 +1,7 @@
 .seleccionarImagen{
     display: flex;
     flex-direction: column;
-    margin: 3rem;
+  
     gap: 1rem;
     background-color: white;
     border-radius: 0.8rem;
@@ -9,6 +9,8 @@
     padding: 2rem;
     max-width: calc(1167.2px + 6rem + 4rem);
     justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .seleccionarImagen>h2, .seleccionarImagen>h1{
@@ -97,6 +99,28 @@
     border-radius: 0.8rem;
 }
 
+
+
+.claseSubirImagen{
+  
+    max-height: 100vh;
+    padding: 3rem;
+}
+
+.inputClass{
+    background-color: white;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid var(--azul-oscuro);
+}
+
+
+
+.inputClass:focus{
+    outline: none;
+}
+
+
 @media screen and (max-width: 1179px){
 
     .subir>input{
@@ -132,8 +156,13 @@
 @media screen and (max-width: 800px){
 
     .seleccionarImagen{
-        margin: 6.6rem 0;
         align-self: start;
+    }
+    .claseSubirImagen{
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        overflow-y: auto;
     }
 
 }
