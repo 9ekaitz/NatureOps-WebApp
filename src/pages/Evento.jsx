@@ -59,7 +59,7 @@ function Evento() {
             buttonStyle="btn--primary--solid"
             icon={<BsImages />}
           >
-            Ver imagenes
+            {t("Buttons.Gallery")}
           </Button>
         </div>
       </div>

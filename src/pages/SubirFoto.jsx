@@ -2,15 +2,12 @@ import React, { useState} from "react";
 import FormLugarComponente from "../pages/componentsDashBoard/FormLugarComponent.jsx";
 import FormNuevoLugarComponente from "../pages/componentsDashBoard/FormNuevoLugarComponent.jsx";
 import Button from "../components/Button";
-
+import { useTranslation } from "react-i18next";
 
 import { BsCamera } from "react-icons/bs"
 import { MdUploadFile } from "react-icons/md"
-import { useTranslation } from "react-i18next";
 import { FiCheck } from "react-icons/fi"
 import { VscChromeClose } from "react-icons/vsc"
-
-
 
 import "../styles/styleGeneralForms.css"
 import style from "../styles/subirFoto.module.css"
@@ -53,12 +50,12 @@ function SubirFotoPrueba() {
               <span id="fileSpan"><MdUploadFile className={style.iconGrande}/>{t("UploadImage.UploadImage")}</span>
               <input type="file" id="fileInput" onChange={changeHandler} accepts="image/*" className="inputFile"/>
             </div>
-            <button className={style.sacarFoto} onClick={()=>eraseAndChange("/camara")}><BsCamera className={style.iconGrande}/>{t("UploadImage.TakePhoto")}</button>
+            <button className={style.sacarFoto} onClick={()=>eraseAndChange("camara")}><BsCamera className={style.iconGrande}/>{t("UploadImage.TakePhoto")}</button>
           </div>
 
           <div className={style.detallesDeFoto}>
             <h2>{t("UploadImage.Details")}: </h2>
-            <FormLugarComponente lugares={lugares} labelName={t("CreateEvent.PlaceNewEvent")}/>
+            <FormLugarComponente lugares={lugares} labelName={t("CreateEvent.Place").concat(":")}/>
             <FormNuevoLugarComponente labelName={t("CreateEvent.Question")} inputPlaceholder={t("CreateEvent.NameNewEvent")}/>
             <div >
               <label htmlFor="tamaño">{t("UploadImage.Size")}: </label>

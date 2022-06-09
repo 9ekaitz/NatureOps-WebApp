@@ -1,6 +1,6 @@
 .mainPantallaCamara{
-    display: grid;
-    grid-template-columns: 14rem auto;
+    display: flex;
+    flex-direction: column;
     padding: 0;
 }
 

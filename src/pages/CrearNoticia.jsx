@@ -4,11 +4,16 @@ import { VscChromeClose } from "react-icons/vsc"
 import styles from "../styles/crearNoticia.module.css"
 import "../styles/styleGeneralForms.css"
 import { useTranslation } from "react-i18next";
+import Button from "../components/Button";
 
 
 function CrearNoticia() {
 
   const { t } = useTranslation();
+
+  function changePage(ruta){
+    location.href=ruta;
+  }
 
   function changeText(){
     let input=document.getElementById("fileInput");
@@ -41,8 +46,22 @@ function CrearNoticia() {
           <input type="text" id="fUrl" className={styles.inputClass}/>
         </div>         
         <div className="panelBotones">
-          <button className="accept">{t("Buttons.Accept")}<FiCheck/></button>             
-          <button className="cancel">{t("Buttons.Cancel")}<VscChromeClose/></button>
+          <Button
+            onClick={()=>changePage("noticias")}
+            buttonSize="btn--medium"
+            buttonStyle="btn--success--solid"
+            icon={<FiCheck />}
+          >
+            {t("Buttons.Accept")}
+          </Button>
+          <Button
+            onClick={()=>changePage("noticias")}
+            buttonSize="btn--medium"
+            buttonStyle="btn--danger--solid"
+            icon={<VscChromeClose />}
+          >
+            {t("Buttons.Cancel")}
+          </Button>
         </div>
       </div>
                 

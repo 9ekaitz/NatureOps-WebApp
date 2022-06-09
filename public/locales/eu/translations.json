@@ -60,7 +60,8 @@
     "Accept":"ONARTU",
     "Cancel":"EZEZTATU",
     "AddImages":"Irudiak Gehitu",
-    "Subscribe":"IZENA EMAN!!"
+    "Subscribe":"IZENA EMAN!!",
+    "Gallery":"Argazkiak Ikusi"
   },
   "UploadImage":{
     "AddImage":"Argazkia Gehitu",
@@ -69,5 +70,11 @@
     "Details":"Xehetasunak",
     "Size":"Tamaina",
     "ChosenImage":"Aukeratutako Irudia"
+  },
+
+  "Camera":{
+    "TakePhoto":"Argazkia atera",
+    "YourPhoto":"Hau da zure argazkia",
+    "UploadQuestion":"Argazki hau igo nahi duzu?"
   }
 }

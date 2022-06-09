@@ -60,7 +60,8 @@
     "Accept":"ACEPTAR",
     "Cancel":"CANCELAR",
     "AddImages":"Añadir Imagenes",
-    "Subscribe":"APUNTATE!!"
+    "Subscribe":"APUNTATE!!",
+    "Gallery":"Ver Imagenes"
   },
   "UploadImage":{
     "AddImage":"Añadir Imagen",
@@ -69,5 +70,11 @@
     "Details":"Detalles",
     "Size":"Tamaño",
     "ChosenImage":"Foto Elegida"
+  },
+
+  "Camera":{
+    "TakePhoto":"Sacar Foto",
+    "YourPhoto":"Esta es tu foto",
+    "UploadQuestion":"Quieres subir la foto?"
   }
 }

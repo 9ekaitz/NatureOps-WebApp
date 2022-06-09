@@ -4,6 +4,7 @@ import FormNuevoLugarComponente from "./componentsDashBoard/FormNuevoLugarCompon
 import { FiCheck } from "react-icons/fi"
 import { VscChromeClose } from "react-icons/vsc"
 import { useTranslation } from "react-i18next";
+import Button from "../components/Button";
 
 
 import "../styles/styleGeneralForms.css"
@@ -42,8 +43,20 @@ function CrearEvento() {
           <textarea id="fDescripcion" className="inputClass"/>
         </div>
         <div className="panelBotones">
-          <button className="accept">{t("CreateEvent.Accept")}<FiCheck/></button>
-          <button className="cancel">{t("CreateEvent.Cancel")}<VscChromeClose/></button>
+          <Button
+            buttonSize="btn--medium"
+            buttonStyle="btn--success--solid"
+            icon={<FiCheck />}
+          >
+            {t("Buttons.Accept")}
+          </Button>
+          <Button
+            buttonSize="btn--medium"
+            buttonStyle="btn--danger--solid"
+            icon={<VscChromeClose />}
+          >
+            {t("Buttons.Cancel")}
+          </Button>
         </div>
       </div>  
     </main>    
