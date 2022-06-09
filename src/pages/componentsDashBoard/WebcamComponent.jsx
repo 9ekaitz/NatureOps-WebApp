@@ -61,7 +61,7 @@ const WebcamCapture = () => {
         <h2>Esta es tu foto: </h2>
         {imgSrc && (<img src={imgSrc} alt="foto" className="fotoCamara"/>)}
         <span>Quieres subir la foto?</span>
-        <PanelBotones numBotones="2" cancelRuta="/subirFoto" acceptRuta="/subirFoto" pantallaFoto={true}/>
+        <PanelBotones numBotones="2" cancelRuta="subirFoto" acceptRuta="subirFoto" pantallaFoto={true}/>
       </div>
     </>
   );

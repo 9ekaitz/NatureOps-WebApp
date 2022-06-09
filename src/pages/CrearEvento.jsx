@@ -1,6 +1,6 @@
 import React from "react";
-import FormLugarComponente from "../pages/componentsDashBoard/FormLugarComponent.jsx";
-import FormNuevoLugarComponente from "../pages/componentsDashBoard/FormNuevoLugarComponent.jsx";
+import FormLugarComponente from "./componentsDashBoard/FormLugarComponent.jsx";
+import FormNuevoLugarComponente from "./componentsDashBoard/FormNuevoLugarComponent.jsx";
 import { FiCheck } from "react-icons/fi"
 import { VscChromeClose } from "react-icons/vsc"
 
