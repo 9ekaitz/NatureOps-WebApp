@@ -6,12 +6,6 @@
     --azul-oscuro: #48BFE3;
 }
 
-/*.claseSubirImagen{
-    display: grid;
-    grid-template-columns: 14rem auto;
-    max-height: 100vh;
-}*/
-
 .ezkerra .cerrar {
    height: 100vh; 
 }
@@ -45,8 +39,8 @@
     width: 50%;
     box-shadow: var(--box-shadow);
     max-width: 852px;
-    max-height: 606px;
-    min-height: 606px;
+    height: 606px;
+    overflow-y: auto;
 
 }
 
@@ -212,13 +206,6 @@ aside{
     
     aside{
         height: calc(100vh - 2rem);
-    }
-
-    .fechaHora {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
     }
 
     .forma{

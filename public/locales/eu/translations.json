@@ -39,5 +39,16 @@
     "Password": "Pasahitza",
     "Repeat Password": "Pasahitza errepikatu",
     "Register Button": "Izena eman"
+  },
+  "CreateEvent":{
+    "CreateEvent":"Ebentua Sortu",
+    "NameNewEvent":"Izena",
+    "PlaceNewEvent":"Tokia",
+    "DateNewEvent":"Data",
+    "TimeNewEvent":"Ordua",
+    "DescriptionNewEvent":"Azalpena",
+    "Question":"Toki berri bat erregistratu nahi duzu?",
+    "Accept":"ONARTU",
+    "Cancel":"EZEZTATU"
   }
 }

@@ -39,5 +39,16 @@
     "Password": "Contraseña",
     "Repeat Password": "Repetir contraseña",
     "Register Button": "Registrarse"
+  },
+  "CreateEvent":{
+    "CreateEvent":"Crear Evento",
+    "NameNewEvent":"Nombre",
+    "PlaceNewEvent":"Lugar",
+    "DateNewEvent":"Fecha",
+    "TimeNewEvent":"Hora",
+    "DescriptionNewEvent":"Descripción",
+    "Question":"Quieres registrar un nuevo lugar?",
+    "Accept":"ACEPTAR",
+    "Cancel":"CANCELAR"
   }
 }
