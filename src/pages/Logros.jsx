@@ -18,12 +18,12 @@ function Logros() {
   useEffect(() =>{
 
     const fetchData = async () =>{
-      const response = await axiosPrivate.get("/achivements/oihanee/0/3");
+      const response = await axiosPrivate.get("/api/achivements/oihanee/0/3");
       setItems(response.data);
     }
 
     const fetchSize = async () =>{
-      const responseSize = await axiosPrivate.get("/achivements/size");
+      const responseSize = await axiosPrivate.get("/api/achivements/size");
       setpageCount(responseSize.data/3);
     }
    
@@ -35,7 +35,7 @@ function Logros() {
   const handlePageClick = async (data) => {
     const fetchData = async () =>{
      
-      let url = "api/achivements/oihanee/" + data.selected + "/3";
+      let url = "/api/achivements/oihanee/" + data.selected + "/3";
       const response = await axiosPrivate.get(url);
       setItems(response.data);
     }
