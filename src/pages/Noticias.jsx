@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import useAuth from "../hooks/useAuth";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import ReactPaginate from "react-paginate";
 
@@ -11,30 +12,35 @@ function Noticias() {
   const axiosPrivate = useAxiosPrivate();
   const [items, setItems] = useState([]);
   const [pageCount, setpageCount] = useState(0);
+  const { onLogout } = useAuth();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axiosPrivate.get("/api/news/0/8");
-      setItems(response.data);
-    };
-
-    const fetchSize = async () => {
+  const fetchData = async () => {
+    try {
       const responseSize = await axiosPrivate.get("/api/news/size");
       setpageCount(responseSize.data / 8);
-    };
+      const response = await axiosPrivate.get("/api/news/0/8");
+      setItems(response.data);
+    } catch (error) {
+      onLogout();
+    }
+  };
 
-    fetchData();
-    fetchSize();
-  }, []);
-
-  const handlePageClick = async (data) => {
-    const fetchData = async () => {
-      console.log(data);
-      let url = "/api/news/" + data.selected + "/8";
+  const fetchNews = async (e) => {
+    let url = "/api/news/" + e.selected + "/8";
+    try {
       const response = await axiosPrivate.get(url);
       setItems(response.data);
-    };
+    } catch (error) {
+      onLogout();
+    }
+  };
+
+  useEffect(() => {
     fetchData();
+  }, []);
+
+  const handlePageClick = async (e) => {
+    fetchNews(e);
   };
 
   const cargarImagenNoti = require.context("../images", true);
