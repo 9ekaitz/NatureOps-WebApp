@@ -17,6 +17,11 @@
       "Places": "Places",
       "Profile": "Profile",
       "Logout": "Logout"
+    },
+    "Main":{
+      "Events":"Events",
+      "PhotoGallery":"Gallery",
+      "More":"More"
     }
   },
   "Landing": {

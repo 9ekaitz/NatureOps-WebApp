@@ -18,27 +18,6 @@
   --box-shadow: 0 2rem 3rem lightblue;
 }
 
-a {
-  color: var(--azul-clarito);
-}
-
-p {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.container{
-    display:grid;
-    width: 100%;
-    margin: 0 auto;
-    height: 100vh;
-    /*gap: 1.8 rem;*/
-    
-    grid-template-columns: 14rem auto 23rem;
-    
-}
-/********************************************/
-/*** NOTICIAS PANTALLA ***/
 .noticiasGeneral{
     display:grid;
     grid-template-columns: 14rem auto;
@@ -49,6 +28,10 @@ p {
     gap: 1.2rem;
     text-align: center;
     align-items: center;
+}
+
+.noticias p{
+  padding: 0 0.5rem;
 }
 
 .noticiasGeneral main{
@@ -84,28 +67,21 @@ p {
     text-decoration: underline;
 }
 
-/**********************************************/
-
-
 .card p {
   margin-bottom: 0.8rem;
 }
 
-/**************/
-/**** MAIN ****/
-/**************/
-main {
+.dashboardContainer {
   display: grid;
   grid-template-columns: 1fr auto;
   padding-top: 1.4rem;
   padding-left: 2rem;
   overflow: auto;
-  /* background-color: #e0f4fb; */
 }
 
 /***NOTICIAS DASHBOARD***/
 
-main .noticias {
+.dashboardContainer .noticias {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
@@ -113,7 +89,7 @@ main .noticias {
   align-items: center;
 }
 
-main .noticias > div {
+.dashboardContainer .noticias > div {
   width: 260px;
   height: 315px;
   background-color: white;
@@ -121,9 +97,9 @@ main .noticias > div {
   box-shadow: var(--box-shadow);
   transition: all 250ms ease;
   text-align: center;
-  /*overflow: hidden;*/
 }
-main .noticias > div > a {
+
+.dashboardContainer a {
   color: var(--azul-oscuro);
 }
 

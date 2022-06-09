@@ -17,6 +17,11 @@
       "Places": "Sitios",
       "Profile": "Perfil",
       "Logout": "Cerrar Sesion"
+    },
+    "Main":{
+      "Events":"Eventos",
+      "PhotoGallery":"Galleria",
+      "More":"Leer más"
     }
   },
   "Landing": {

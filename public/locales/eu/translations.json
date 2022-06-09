@@ -17,6 +17,11 @@
       "Places": "Lekuak",
       "Profile": "Profila",
       "Logout": "Saioa itxi"
+    },
+    "Main":{
+      "Events":"Ebentuak",
+      "PhotoGallery":"Argazkiak",
+      "More":"Gehiago"
     }
   },
   "Landing": {

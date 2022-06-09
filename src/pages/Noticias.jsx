@@ -5,7 +5,7 @@ import ReactPaginate from "react-paginate";
 
 /*IMAGENES*/
 
-import "../styles/styleSidebar.css";
+import "../styles/styleSidebar.module.css";
 import "../styles/noticias.css";
 
 function Noticias() {
