@@ -43,9 +43,9 @@
   "CreateEvent":{
     "CreateEvent":"Create Event",
     "NameNewEvent":"Name",
-    "PlaceNewEvent":"Place",
-    "DateNewEvent":"Date",
-    "TimeNewEvent":"Time",
+    "Place":"Place",
+    "Date":"Date",
+    "Time":"Time",
     "DescriptionNewEvent":"Description",
     "Question":"Do you want to register a new place?"
   },
@@ -58,7 +58,9 @@
   },
   "Buttons":{
     "Accept":"ACCEPT",
-    "Cancel":"CANCEL"
+    "Cancel":"CANCEL",
+    "AddImages":"Add Images",
+    "Subscribe":"SUBSCRIBE!!"
   },
 
   "UploadImage":{

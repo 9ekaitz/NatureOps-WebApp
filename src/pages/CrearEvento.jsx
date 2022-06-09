@@ -24,16 +24,16 @@ function CrearEvento() {
           <input type="text" id="fname" className="inputClass" required/>
         </div>
 
-        <FormLugarComponente lugares={lugares} labelName={t("CreateEvent.PlaceNewEvent").concat(":")}/>
+        <FormLugarComponente lugares={lugares} labelName={t("CreateEvent.Place").concat(":")}/>
         <FormNuevoLugarComponente labelName={t("CreateEvent.Question")} inputPlaceholder={t("CreateEvent.NameNewEvent")}/>
           
         <div className={styleCrearEvento.fechaHora}>
           <div className="formImagen">
-            <label htmlFor="fFecha">{t("CreateEvent.DateNewEvent")}: </label>
+            <label htmlFor="fFecha">{t("CreateEvent.Date")}: </label>
             <input type="date" id="fFecha" className="inputClass"/>
           </div>
           <div className="formImagen">
-            <label htmlFor="fHora">{t("CreateEvent.TimeNewEvent")}: </label>
+            <label htmlFor="fHora">{t("CreateEvent.Time")}: </label>
             <input type="time" id="fHora" className="inputClass"/>
           </div>
         </div>

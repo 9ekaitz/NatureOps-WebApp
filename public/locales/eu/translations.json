@@ -58,7 +58,9 @@
   },
   "Buttons":{
     "Accept":"ONARTU",
-    "Cancel":"EZEZTATU"
+    "Cancel":"EZEZTATU",
+    "AddImages":"Irudiak Gehitu",
+    "Subscribe":"IZENA EMAN!!"
   },
   "UploadImage":{
     "AddImage":"Argazkia Gehitu",

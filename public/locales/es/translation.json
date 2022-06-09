@@ -58,7 +58,9 @@
   },
   "Buttons":{
     "Accept":"ACEPTAR",
-    "Cancel":"CANCELAR"
+    "Cancel":"CANCELAR",
+    "AddImages":"Añadir Imagenes",
+    "Subscribe":"APUNTATE!!"
   },
   "UploadImage":{
     "AddImage":"Añadir Imagen",

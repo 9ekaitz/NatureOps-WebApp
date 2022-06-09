@@ -157,9 +157,9 @@ input[type=file]{
     grid-column: span 2;
 }
 
-.panelBotones>svg{
-    height: 2rem;
-    width: 2rem;
+.panelBotones svg{
+    height: 1rem;
+    width: 1rem;
     text-align: end;
     margin: 0;
 }
