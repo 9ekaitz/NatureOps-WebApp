@@ -164,33 +164,6 @@ input[type=file]{
     margin: 0;
 }
 
-.photos, .gallery, .accept, .cancel{
-    background-color: var(--azul-oscuro);
-    border-radius: 2rem;
-    width: fit-content;
-    height: 3rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-    border: none;
-    font-family: 'Candara', sans-serif;
-    font-size: 18px;
-}
-
-.accept{
-    background-color: lightgreen;
-}
-.cancel{
-    background-color: red;
-}
-
-.photos svg, .gallery svg{
-    color: white;
-    margin-top: 0;
-}
-
 label{
     font-family: 'Candara', sans-serif;
     font-size: 20px;

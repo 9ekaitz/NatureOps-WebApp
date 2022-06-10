@@ -8,6 +8,7 @@ import Button from "../components/Button";
 
 
 import "../styles/styleGeneralForms.css"
+
 import styleCrearEvento from "../styles/crearEvento.module.css"
 
 import lugares from "../jsons/nombresSitios.json"
@@ -17,7 +18,7 @@ function CrearEvento() {
   const { t } = useTranslation();
 
   return( 
-    <main className={styleCrearEvento.eventoContainer}>
+    <main className="single-column">
       <div className={"forma".concat(" "+styleCrearEvento.evento)} data-testid="eventoaSortu">
         <h1>{t("CreateEvent.CreateEvent")}</h1>
         <div className="formImagen">

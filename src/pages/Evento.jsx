@@ -1,6 +1,5 @@
 import React from "react";
 import { FiCheck } from "react-icons/fi"
-//import { VscChromeClose } from "react-icons/vsc"
 import { FaCamera } from "react-icons/fa"
 import { BsImages } from "react-icons/bs"
 import styles from "../styles/evento.module.css"
@@ -25,7 +24,7 @@ function Evento() {
   }
 
   return(
-    <div className={styles.claseSubirImagen} data-testid="eventoa">
+    <div className="single-column" data-testid="eventoa">
       <div className={styles.infoEvento}>
         <div className={styles.tituloEvento}>
           <h1>{data.nombre}</h1>

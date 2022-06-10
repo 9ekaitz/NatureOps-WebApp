@@ -1,12 +1,3 @@
-.claseEvento,.claseSubirImagen{
-    height: 100vh;
-}
-
-.claseSubirImagen{
-  
-    max-height: 100vh;
-}
-
 .infoEvento{
     background-color: white;
     margin: 2rem;
@@ -88,10 +79,6 @@
     .botonesEvento{
         flex-direction: column;
         align-items: center;
-    }
-    .claseSubirImagen{
-        
-        overflow-y: auto;
     }
     
 }

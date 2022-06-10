@@ -22,7 +22,7 @@ function CrearNoticia() {
     span.innerHTML=fileName;
   }
   return(
-    <main data-testid="noticiaSortu" className={styles.noticiaSortu}>
+    <main data-testid="noticiaSortu" className="single-column">
       <div className={`forma ${styles.formNoticia}`}>
         <h1>{t("CreateNews.CreateNews")}</h1>
         <div className={styles.formImagen}>
