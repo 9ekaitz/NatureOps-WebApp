@@ -1,5 +1,6 @@
 import React from "react";
 import { GrCircleInformation } from "react-icons/gr";
+import { useTranslation } from "react-i18next";
 
 import basura from "../images/basura.jpg";
 import img_noticia1 from "../images/noticia1.jpg";
@@ -9,6 +10,9 @@ import img_noticia3 from "../images/noticia3.jpg";
 import style from "../styles/styleSidebar.module.css";
 
 function Overview() {
+
+  const { t } = useTranslation();
+
   return (
     <main className={style.dashboardContainer}>
       <h1>Dashboard</h1>
@@ -52,7 +56,7 @@ function Overview() {
       </div>
       <div className={style.galeria}>
         <div className={style.apartado}>
-          <h2>Galeria</h2>
+          <h2>{t("Dashboard.Main.PhotoGallery")}</h2>
           <GrCircleInformation />
         </div>
         <div className={style.imagen}>
@@ -64,16 +68,16 @@ function Overview() {
       </div>
       <div className={style.eventos}>
         <div className={style.apartado}>
-          <h2>Eventos</h2>
+          <h2>{t("Dashboard.Main.Events")}</h2>
           <GrCircleInformation />
         </div>
         <table>
           <thead>
             <tr>
-              <th>Nombre</th>
-              <th>Lugar</th>
-              <th>Fecha</th>
-              <th>Hora</th>
+              <th>{t("CreateEvent.NameNewEvent")}</th>
+              <th>{t("CreateEvent.Place")}</th>
+              <th>{t("CreateEvent.Date")}</th>
+              <th>{t("CreateEvent.Time")}</th>
               <th></th>
             </tr>
           </thead>
