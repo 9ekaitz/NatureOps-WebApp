@@ -1,11 +1,12 @@
 .containerEventos{
     margin: 2rem;
     height: calc(100vh - 4rem);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .pagination{
     grid-column: span 4;
+    margin-right: 2rem;
 }
 
 .listaEventos{
@@ -135,6 +136,10 @@
     .listaEventos{
         grid-template-columns: repeat(2,1fr);
         margin-right: 1rem;
+    }
+
+    .eventCard img{
+        width: 100%;
     }
 }
 
