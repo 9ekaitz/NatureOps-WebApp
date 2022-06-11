@@ -42,18 +42,18 @@ function Logros() {
     return (
       <div
         className={styleLogros.logroCard}
-        key={logro.achivement.id}
+        key={logro.achievement.id}
         itemsPerPage="9"
       >
         <div className={styleLogros.logroTop}>
           <img
-            src={cargarImagenNoti(`./${logro.achivement.image}`)}
+            src={cargarImagenNoti(`./${logro.achievement.image}`)}
             alt={logro.id}
             className={styleLogros.logroImg}
           />
-          <h4>{logro.achivement.desription}</h4>
+          <h4>{logro.achievement.desription}</h4>
         </div>
-        <p>{logro.achivement.objetivo}</p>
+        <p>{logro.achievement.objetivo}</p>
         <div className={styleLogros.progressElement}>
           <div className={styleLogros.bar}>
             <div
@@ -66,7 +66,7 @@ function Logros() {
             <div
               className={styleLogros.progressBars}
               style={{
-                width: 100 - logro.progresoUsuario + "%",
+                width: 100 - (logro.progress/logro.achievement.objetivoMax * 100) + "%",
                 backgroundColor: "aliceblue",
               }}
             ></div>
