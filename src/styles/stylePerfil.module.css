@@ -216,8 +216,9 @@
   .containerPerfil {
     overflow-y: auto;
   }
-  .right {
-    overflow: hidden;
+
+  .datos{
+    margin: 0;
   }
 }
 
