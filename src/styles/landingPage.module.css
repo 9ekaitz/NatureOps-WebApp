@@ -100,7 +100,6 @@ a{
 .dropDown{
   position: absolute;
   padding: 0 1rem;
-  width: 100%;
   left: 0;
   display: inline-flex;
   flex-direction: column;
@@ -177,8 +176,6 @@ a{
 }
 
 .show {
-  right: 0 !important;
-  height: 100vh;
   height: 100vh;
   right: 0;
 }
