@@ -54,7 +54,7 @@ function Eventos() {
   }
 
   return(
-    <div className={styleEventos.containerEventos} data-testid="containerEventos">
+    <main className={styleEventos.containerEventos} data-testid="containerEventos">
       <h1>{t("Events.Events")}</h1>
       <div className={styleEventos.eventos}>
         <h2>{t("Events.List")}</h2>
@@ -76,7 +76,7 @@ function Eventos() {
         </div>
         <button className={styleEventos.addButton} onClick={()=>navigate("/dashboard/crearEvento")}><FaPlus className={styleEventos.icon} size="17px"/></button>
       </div>
-    </div>
+    </main>
   );
 }
 

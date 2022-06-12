@@ -2,7 +2,7 @@ import React from "react";
 import "@testing-library/jest-dom/extend-expect";
 import { render } from "@testing-library/react";
 
-import Sitios from "../components/Sitios";
+import Sitios from "../pages/Sitios.jsx";
 
 test("Sitios se esta renderizando", () => {
   const componente = render(<Sitios/>);
