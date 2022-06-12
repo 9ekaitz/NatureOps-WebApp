@@ -8,7 +8,7 @@ import { MdClose,MdKeyboardArrowDown } from "react-icons/md";
 
 
 function LandingPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   let ref = useRef(null);
 
   
@@ -18,6 +18,8 @@ function LandingPage() {
   const refT2 = useRef();
   const refT3 = useRef();
   const refT4 = useRef();
+
+  const lang = ["en", "es", "eu"];
 
   const [toggle, setToggle] = useState(false);
 
@@ -149,9 +151,7 @@ function LandingPage() {
                     <MdKeyboardArrowDown/>
                   </span>
                   <div className={style.dropDown}>
-                    <a href="/">{t("Languages.Basque")}</a>
-                    <a href="/">{t("Languages.Spanish")}</a>
-                    <a href="/">{t("Languages.English")}</a>
+                    {lang.map((l, key) => <button key={key} onClick={() => i18n.changeLanguage(l)} >{t(`lang.${l}`)}</button>)}
                   </div>
                 </div>
               </li>
