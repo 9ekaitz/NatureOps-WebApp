@@ -1,8 +1,8 @@
 {
-  "Languages":{
-    "Basque":"Euskara",
-    "Spanish":"Gaztelera",
-    "English":"Ingelesa"
+  "lang": {
+    "eu": "Euskara",
+    "es": "Gaztelera",
+    "en": "Ingelesa"
   },
   "Login": {
     "Login": "Saioa Hasi",
@@ -27,13 +27,13 @@
   "Landing": {
     "Beluga Presents": "Beluga Teamek presentatzen du",
     "Start Button": "Hasi",
-    "Nav":{
+    "Nav": {
       "Who we are": "Nortzuk gara?",
-      "Login" : "Saio hasi",
+      "Login": "Saio hasi",
       "Language": "Hizkuntza"
     },
     "NatureOps planeta Verde": "NatureOps planeta garbiago baten alde",
-    "NatureOps problema" : "Azken urteetan hondartza eta erreketan aurkitu diren hondakinen kantitatea gogorki handitu da. NatureOps-ek ekarritako funtzionalitate eta komunitate batu baten bitartez arazo hau ebaztea ahalbidetzen digu.",
+    "NatureOps problema": "Azken urteetan hondartza eta erreketan aurkitu diren hondakinen kantitatea gogorki handitu da. NatureOps-ek ekarritako funtzionalitate eta komunitate batu baten bitartez arazo hau ebaztea ahalbidetzen digu.",
     "Start": "Hasi"
   },
   "Register": {
@@ -45,7 +45,7 @@
     "Repeat Password": "Pasahitza errepikatu",
     "Register Button": "Izena eman"
   },
-  "Achivements":{
-    "Achivements":"Lorpenak"
+  "Achivements": {
+    "Achivements": "Lorpenak"
   }
 }
