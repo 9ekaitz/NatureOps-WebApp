@@ -39,38 +39,36 @@ function Logros() {
 
   const cargarImagenNoti = require.context("../images", true);
   const DisplayData = items.map((logro) => {
+    console.log(logro);
     return (
       <div
         className={styleLogros.logroCard}
-        key={logro.achivement.id}
-        itemsPerPage="9"
+        key={logro.achievement.id}
       >
         <div className={styleLogros.logroTop}>
           <img
-            src={cargarImagenNoti(`./${logro.achivement.image}`)}
+            src={cargarImagenNoti(`./${logro.achievement.image}`)}
             alt={logro.id}
             className={styleLogros.logroImg}
           />
-          <h4>{logro.achivement.desription}</h4>
+          <h4>{logro.achievement.desription}</h4>
         </div>
-        <p>{logro.achivement.objetivo}</p>
+        <p>{logro.achievement.objetivo}</p>
         <div className={styleLogros.progressElement}>
-          <div className={styleLogros.bar}>
-            <div
-              className={styleLogros.progressBars}
-              style={{
-                width: logro.progresoUsuario + "%",
-                backgroundColor: "#48BFE3",
-              }}
-            ></div>
-            <div
-              className={styleLogros.progressBars}
-              style={{
-                width: 100 - logro.progresoUsuario + "%",
-                backgroundColor: "aliceblue",
-              }}
-            ></div>
-          </div>
+          <div
+            className={styleLogros.progressBars}
+            style={{
+              width: logro.progress + "%",
+              backgroundColor: "#48BFE3",
+            }}
+          ></div>
+          <div
+            className={styleLogros.progressBars}
+            style={{
+              width: 100 - logro.progress + "%",
+              backgroundColor: "aliceblue",
+            }}
+          ></div>
         </div>
       </div>
     );
