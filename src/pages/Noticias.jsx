@@ -5,8 +5,7 @@ import ReactPaginate from "react-paginate";
 
 /*IMAGENES*/
 
-import "../styles/styleSidebar.module.css";
-import "../styles/noticias.css";
+import style from "../styles/noticias.module.css";
 
 function Noticias() {
   const axiosPrivate = useAxiosPrivate();
@@ -46,7 +45,7 @@ function Noticias() {
   const cargarImagenNoti = require.context("../images", true);
   const DisplayNoticias = items.map((record) => {
     return (
-      <div className="card" key={record.id} itemsPerPage="8">
+      <div className={style.card} key={record.id} itemsPerPage="8">
         <img src={cargarImagenNoti(`./${record.image}`)} alt={record.id} />
         <h4>{record.title}</h4>
         <p>{record.subtitle}</p>
@@ -55,28 +54,26 @@ function Noticias() {
     );
   });
   return (
-    <div className="container noticiasGeneral">
-      <main>
-        <h1>Noticias</h1>
-        <div className="noticias">
-          {DisplayNoticias}
-
-          <ReactPaginate
-            breakLabel="..."
-            nextLabel="SIGUIENTE >"
-            onPageChange={handlePageClick}
-            marginPagesDisplayed={2}
-            pageRangeDisplayed={3}
-            pageCount={pageCount}
-            previousLabel="< ANTERIOR"
-            renderOnZeroPageCount={null}
-            containerClassName="pagination"
-            nextLinkClassName="next"
-            previousLinkClassName="previous"
-          />
-        </div>
-      </main>
-    </div>
+    <main className={style.noticiasGeneral}>
+      <h1>Noticias</h1>
+      <div className={style.noticias}>
+        {DisplayNoticias}
+        <ReactPaginate
+          breakLabel="..."
+          nextLabel=">"
+          onPageChange={handlePageClick}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={3}
+          pageCount={pageCount}
+          previousLabel="<"
+          renderOnZeroPageCount={null}
+          containerClassName={style.pagination}
+          nextLinkClassName={style.next}
+          previousLinkClassName={style.previous}
+          activeClassName={style.active}
+        />
+      </div>
+    </main>
   );
 }
 
