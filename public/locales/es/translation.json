@@ -1,4 +1,9 @@
 {
+  "lang": {
+    "eu": "Vasco",
+    "es": "Castellano",
+    "en": "Ingles"
+  },
   "Login": {
     "Login": "Iniciar Sesion",
     "Username": "Nombre de Usuario",
@@ -27,13 +32,13 @@
   "Landing": {
     "Beluga Presents": "Beluga Team presenta",
     "Start Button": "Comenzar",
-    "Nav":{
+    "Nav": {
       "Who we are": "¿Quienes somos?",
-      "Login" : "Iniciar Sesión",
+      "Login": "Iniciar Sesión",
       "Language": "Idioma"
     },
     "NatureOps planeta Verde": "NatureOps para un planeta mas verde",
-    "NatureOps problema" : " La cantidad de residuos en las playas y rios ha crecido drasticamente en los últimos años. NatureOps ofrece una solución para luchar contra la contaminación gracias a sus funcionalidades y una comunidad unida.",
+    "NatureOps problema": " La cantidad de residuos en las playas y rios ha crecido drasticamente en los últimos años. NatureOps ofrece una solución para luchar contra la contaminación gracias a sus funcionalidades y una comunidad unida.",
     "Start": "Comenzar"
   },
   "Register": {
@@ -66,7 +71,10 @@
     "Cancel":"CANCELAR",
     "AddImages":"Añadir Imagenes",
     "Subscribe":"APUNTATE!!",
-    "Gallery":"Ver Imagenes"
+    "Gallery":"Ver Imagenes",
+    "Edit":"Editar",
+    "Save":"Guardar",
+    "Delete":"Eliminar cuenta"
   },
   "UploadImage":{
     "AddImage":"Añadir Imagen",
@@ -81,5 +89,16 @@
     "TakePhoto":"Sacar Foto",
     "YourPhoto":"Esta es tu foto",
     "UploadQuestion":"Quieres subir la foto?"
+  },
+  "Profile":{
+    "Goals":"Logros obtenidos",
+    "Recent":"Recientes",
+    "All":"Ver todos",
+    "Username":"Usuario",
+    "Email":"Correo",
+    "Name":"Nombre"
+  },
+  "Achivements": {
+    "Achivements": "Logros"
   }
 }

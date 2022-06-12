@@ -7,13 +7,14 @@ import DashBoard from "./pages/Dashboard.jsx";
 import Overview from "./pages/Overview.jsx";
 import Perfil from "./pages/Perfil.jsx";
 import Logout from "./pages/Logout.jsx";
-import ProtectedRoute from "./components/ProtectedRoute";
 import SubirFoto from "./pages/SubirFoto.jsx"
 import CrearNoticia from "./pages/CrearNoticia.jsx"
 import CrearEvento from "./pages/CrearEvento.jsx"
 import Evento from "./pages/Evento.jsx"
 import Noticias from "./pages/Noticias.jsx"
 import Foto from "./pages/SacarFoto.jsx"
+import Logros from "./pages/Logros.jsx"; 
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.jsx";
 
 import "./styles/main.css";
 
@@ -41,6 +42,7 @@ export function App() {
         <Route path="evento" element={<Evento/>}/>
         <Route path="noticias" element={<Noticias/>}/>
         <Route path="camara" element={<Foto/>}/>
+        <Route path="logros" element={<Logros />} />
       </Route>
     </Routes>
   );

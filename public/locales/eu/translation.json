@@ -1,4 +1,9 @@
 {
+  "lang": {
+    "eu": "Euskara",
+    "es": "Gaztelera",
+    "en": "Ingelesa"
+  },
   "Login": {
     "Login": "Saioa Hasi",
     "Username": "Erabiltzailea",
@@ -27,13 +32,13 @@
   "Landing": {
     "Beluga Presents": "Beluga Teamek presentatzen du",
     "Start Button": "Hasi",
-    "Nav":{
+    "Nav": {
       "Who we are": "Nortzuk gara?",
-      "Login" : "Saio hasi",
+      "Login": "Saio hasi",
       "Language": "Hizkuntza"
     },
     "NatureOps planeta Verde": "NatureOps planeta garbiago baten alde",
-    "NatureOps problema" : "Azken urteetan hondartza eta erreketan aurkitu diren hondakinen kantitatea gogorki handitu da. NatureOps-ek ekarritako funtzionalitate eta komunitate batu baten bitartez arazo hau ebaztea ahalbidetzen digu.",
+    "NatureOps problema": "Azken urteetan hondartza eta erreketan aurkitu diren hondakinen kantitatea gogorki handitu da. NatureOps-ek ekarritako funtzionalitate eta komunitate batu baten bitartez arazo hau ebaztea ahalbidetzen digu.",
     "Start": "Hasi"
   },
   "Register": {
@@ -66,7 +71,10 @@
     "Cancel":"EZEZTATU",
     "AddImages":"Irudiak Gehitu",
     "Subscribe":"IZENA EMAN!!",
-    "Gallery":"Argazkiak Ikusi"
+    "Gallery":"Argazkiak Ikusi",
+    "Edit":"Editatu",
+    "Save":"Gorde",
+    "Delete":"Kontua ezabatu"
   },
   "UploadImage":{
     "AddImage":"Argazkia Gehitu",
@@ -81,5 +89,16 @@
     "TakePhoto":"Argazkia atera",
     "YourPhoto":"Hau da zure argazkia",
     "UploadQuestion":"Argazki hau igo nahi duzu?"
+  },
+  "Profile":{
+    "Goals":"Eskuratutako lorpenak",
+    "Recent":"Azken ekintzak",
+    "All":"Guztiak ikusi",
+    "Username":"Erabiltzailea",
+    "Email":"Posta elektronikoa",
+    "Name":"Izena"
+  },
+  "Achivements": {
+    "Achivements": "Lorpenak"
   }
 }
