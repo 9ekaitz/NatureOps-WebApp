@@ -50,6 +50,10 @@
     "Repeat Password": "Pasahitza errepikatu",
     "Register Button": "Izena eman"
   },
+  "Places":{
+    "Places":"Lekuak",
+    "Score":"PUNTUAZIOA: "
+  },
   "Events":{
     "Events":"Ekitaldiak",
     "List":"Eskuragarri dauden ekitaldien zerrenda",

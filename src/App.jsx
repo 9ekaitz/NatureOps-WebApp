@@ -8,6 +8,7 @@ import DashBoard from "./pages/Dashboard.jsx";
 import Overview from "./pages/Overview.jsx";
 import Perfil from "./pages/Perfil.jsx";
 import Logout from "./pages/Logout.jsx";
+import Sitios from "./pages/Sitios.jsx"
 import SubirFoto from "./pages/SubirFoto.jsx"
 import CrearNoticia from "./pages/CrearNoticia.jsx"
 import CrearEvento from "./pages/CrearEvento.jsx"
@@ -37,6 +38,7 @@ export function App() {
         <Route path="" element={<Overview />} />
         <Route path="eventos" element={<Eventos />} />
         <Route path="perfil" element={<Perfil />} />
+        <Route path="sitios" element={<Sitios/>}/>
         <Route path="noticias" element={<Noticias />}/>
         <Route path="upload" element={<SubirFoto/>}/>
         <Route path="crearNoticia" element={<CrearNoticia/>}/>

@@ -50,6 +50,10 @@
     "Repeat Password": "Repetir contraseña",
     "Register Button": "Registrarse"
   },
+  "Places":{
+    "Places":"Sitios",
+    "Score":"PUNTUACIÓN: "
+  },
   "Events":{
     "Events":"Eventos",
     "List":"Lista de eventos disponibles",
