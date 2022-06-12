@@ -36,22 +36,6 @@ p {
 .card p {
   margin-bottom: 0.8rem;
 }
-/***************************************************************************/
-/*** ASIDE DA EZKERREKO BARRA OSOA, GOIKO ZATIA TOP, BEHEKO ZATIA SIDEBAR***/
-/***************************************************************************/
-/**************/
-/**** MAIN ****/
-/**************/
-main {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  padding-top: 1.4rem;
-  padding-left: 2rem;
-  overflow: auto;
-  /* background-color: #e0f4fb; */
-}
-
-/***NOTICIAS***/
 
 main .noticias {
   display: grid;
@@ -61,15 +45,14 @@ main .noticias {
   align-items: center;
 }
 
-main .noticias > div {
-  width: 260px;
-  height: 315px;
-  background-color: white;
-  border-radius: 2rem;
-  box-shadow: var(--box-shadow);
-  transition: all 250ms ease;
-  text-align: center;
-  /*overflow: hidden;*/
+main .noticias > div{
+    width: 260px;
+    height: 315px;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: all 250ms ease;
+    text-align: center;
 }
 main .noticias > div > a {
   color: var(--azul-oscuro);

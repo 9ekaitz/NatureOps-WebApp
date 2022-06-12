@@ -4,11 +4,11 @@ import style from "../styles/landingPage.module.css";
 import "../styles/main.css";
 import { gsap } from "gsap";
 import { FiMenu } from "react-icons/fi";
-import { MdClose } from "react-icons/md";
+import { MdClose,MdKeyboardArrowDown } from "react-icons/md";
 
 
 function LandingPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   let ref = useRef(null);
 
   
@@ -18,6 +18,8 @@ function LandingPage() {
   const refT2 = useRef();
   const refT3 = useRef();
   const refT4 = useRef();
+
+  const lang = ["en", "es", "eu"];
 
   const [toggle, setToggle] = useState(false);
 
@@ -143,12 +145,15 @@ function LandingPage() {
                 </a>
               </li>
               <li className={style.navItem}>
-                <a
-                  href="/"
-                  className={`${style.navLink} ${style.itemIdioma}`}
-                >
-                  {t("Landing.Nav.Language")}
-                </a>
+                <div className={`${style.navLink} ${style.itemIdioma}`}>
+                  <span className={style.itemName}>
+                    {t("Landing.Nav.Language")}
+                    <MdKeyboardArrowDown/>
+                  </span>
+                  <div className={style.dropDown}>
+                    {lang.map((l, key) => <button key={key} onClick={() => i18n.changeLanguage(l)} >{t(`lang.${l}`)}</button>)}
+                  </div>
+                </div>
               </li>
             </ul>
           </div>

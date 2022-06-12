@@ -7,6 +7,7 @@ import DashBoard from "./pages/Dashboard.jsx";
 import Overview from "./pages/Overview.jsx";
 import Perfil from "./pages/Perfil.jsx";
 import Logout from "./pages/Logout.jsx";
+import Logros from "./pages/Logros.jsx"; 
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.jsx";
 
 import "./styles/main.css";
@@ -28,6 +29,7 @@ export function App() {
       >
         <Route path="" element={<Overview />} />
         <Route path="perfil" element={<Perfil />} />
+        <Route path="logros" element={<Logros />} />
       </Route>
     </Routes>
   );
