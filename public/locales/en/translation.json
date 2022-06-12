@@ -45,7 +45,20 @@
     "Repeat Password": "Repeat password",
     "Register Button": "Register"
   },
+  "Profile":{
+    "Goals":"Achieved goals",
+    "Recent":"Recent",
+    "All":"See all",
+    "Username":"Username",
+    "Email":"Email",
+    "Name":"Name"
+  },
   "Achivements": {
     "Achivements": "Achivements"
+  },
+  "Buttons":{
+    "Edit":"Edit",
+    "Save":"Save",
+    "Delete":"Delete account"
   }
 }

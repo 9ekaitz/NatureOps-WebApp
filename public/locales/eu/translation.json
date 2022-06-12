@@ -45,7 +45,20 @@
     "Repeat Password": "Pasahitza errepikatu",
     "Register Button": "Izena eman"
   },
+  "Profile":{
+    "Goals":"Eskuratutako lorpenak",
+    "Recent":"Azken ekintzak",
+    "All":"Guztiak ikusi",
+    "Username":"Erabiltzailea",
+    "Email":"Posta elektronikoa",
+    "Name":"Izena"
+  },
   "Achivements": {
     "Achivements": "Lorpenak"
+  },
+  "Buttons":{
+    "Edit":"Editatu",
+    "Save":"Gorde",
+    "Delete":"Kontua ezabatu"
   }
 }
