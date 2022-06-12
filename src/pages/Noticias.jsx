@@ -5,10 +5,13 @@ import ReactPaginate from "react-paginate";
 import FloatingButton from "../components/FloatingButton";
 import { useNavigate } from "react-router";
 import { FiPlus } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
+
 
 import style from "../styles/noticias.module.css";
 
 function Noticias() {
+  const { t } = useTranslation();
   const axiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
 
@@ -58,7 +61,7 @@ function Noticias() {
   });
   return (
     <main className={style.noticiasGeneral}>
-      <h1>Noticias</h1>
+      <h1>{t("Dashboard.Nav.News")}</h1>
       <div className={style.noticias}>
         {DisplayNoticias}
         <ReactPaginate
