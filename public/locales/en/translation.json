@@ -22,6 +22,11 @@
       "Places": "Places",
       "Profile": "Profile",
       "Logout": "Logout"
+    },
+    "Main":{
+      "Events":"Events",
+      "PhotoGallery":"Gallery",
+      "More":"More"
     }
   },
   "Landing": {
@@ -45,6 +50,48 @@
     "Repeat Password": "Repeat password",
     "Register Button": "Register"
   },
+  "CreateEvent":{
+    "CreateEvent":"Create Event",
+    "NameNewEvent":"Name",
+    "Place":"Place",
+    "Date":"Date",
+    "Time":"Time",
+    "DescriptionNewEvent":"Description",
+    "Question":"Do you want to register a new place?"
+  },
+  "CreateNews":{
+    "CreateNews":"Create News",
+    "Title":"Title",
+    "Author":"Author",
+    "Summary":"Summary",
+    "SelectImage":"Select Image"
+  },
+  "Buttons":{
+    "Accept":"ACCEPT",
+    "Cancel":"CANCEL",
+    "AddImages":"Add Images",
+    "Subscribe":"SUBSCRIBE!!",
+    "Gallery":"View Images",
+    "Edit":"Edit",
+    "Save":"Save",
+    "Delete":"Delete account"
+  },
+
+  "UploadImage":{
+    "AddImage":"Add Image",
+    "Options":"Options",
+    "UploadImage":"Upload Image",
+    "TakePhoto":"Take Photo",
+    "Details":"Image Details",
+    "Size":"Size",
+    "ChosenImage":"Chosen Image"
+  },
+
+  "Camera":{
+    "TakePhoto":"Take Photo",
+    "YourPhoto":"This is your photo",
+    "UploadQuestion":"Do you want to upload the photo?"
+  },
   "Profile":{
     "Goals":"Achieved goals",
     "Recent":"Recent",
@@ -55,10 +102,5 @@
   },
   "Achivements": {
     "Achivements": "Achivements"
-  },
-  "Buttons":{
-    "Edit":"Edit",
-    "Save":"Save",
-    "Delete":"Delete account"
   }
 }

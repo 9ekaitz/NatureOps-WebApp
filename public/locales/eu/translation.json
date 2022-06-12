@@ -22,6 +22,11 @@
       "Places": "Lekuak",
       "Profile": "Profila",
       "Logout": "Saioa itxi"
+    },
+    "Main":{
+      "Events":"Ebentuak",
+      "PhotoGallery":"Argazkiak",
+      "More":"Gehiago"
     }
   },
   "Landing": {
@@ -45,6 +50,46 @@
     "Repeat Password": "Pasahitza errepikatu",
     "Register Button": "Izena eman"
   },
+  "CreateEvent":{
+    "CreateEvent":"Ebentua Sortu",
+    "NameNewEvent":"Izena",
+    "PlaceNewEvent":"Tokia",
+    "DateNewEvent":"Data",
+    "TimeNewEvent":"Ordua",
+    "DescriptionNewEvent":"Azalpena",
+    "Question":"Toki berri bat erregistratu nahi duzu?"
+  },
+  "CreateNews":{
+    "CreateNews":"Berria sortu",
+    "Title":"Izenburua",
+    "Author":"Egilea",
+    "Summary":"Laburpena",
+    "SelectImage":"Aukeratu irudia"
+  },
+  "Buttons":{
+    "Accept":"ONARTU",
+    "Cancel":"EZEZTATU",
+    "AddImages":"Irudiak Gehitu",
+    "Subscribe":"IZENA EMAN!!",
+    "Gallery":"Argazkiak Ikusi",
+    "Edit":"Editatu",
+    "Save":"Gorde",
+    "Delete":"Kontua ezabatu"
+  },
+  "UploadImage":{
+    "AddImage":"Argazkia Gehitu",
+    "UploadImage":"Irudia igo",
+    "Take Photo":"Argazkia Atera",
+    "Details":"Xehetasunak",
+    "Size":"Tamaina",
+    "ChosenImage":"Aukeratutako Irudia"
+  },
+
+  "Camera":{
+    "TakePhoto":"Argazkia atera",
+    "YourPhoto":"Hau da zure argazkia",
+    "UploadQuestion":"Argazki hau igo nahi duzu?"
+  },
   "Profile":{
     "Goals":"Eskuratutako lorpenak",
     "Recent":"Azken ekintzak",
@@ -55,10 +100,5 @@
   },
   "Achivements": {
     "Achivements": "Lorpenak"
-  },
-  "Buttons":{
-    "Edit":"Editatu",
-    "Save":"Gorde",
-    "Delete":"Kontua ezabatu"
   }
 }

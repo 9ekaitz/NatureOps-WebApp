@@ -22,6 +22,11 @@
       "Places": "Sitios",
       "Profile": "Perfil",
       "Logout": "Cerrar Sesion"
+    },
+    "Main":{
+      "Events":"Eventos",
+      "PhotoGallery":"Galleria",
+      "More":"Leer más"
     }
   },
   "Landing": {
@@ -45,6 +50,46 @@
     "Repeat Password": "Repetir contraseña",
     "Register Button": "Registrarse"
   },
+  "CreateEvent":{
+    "CreateEvent":"Crear Evento",
+    "NameNewEvent":"Nombre",
+    "PlaceNewEvent":"Lugar",
+    "DateNewEvent":"Fecha",
+    "TimeNewEvent":"Hora",
+    "DescriptionNewEvent":"Descripción",
+    "Question":"Quieres registrar un nuevo lugar?"
+  },
+  "CreateNews":{
+    "CreateNews":"Crear Noticia",
+    "Title":"Titulo",
+    "Author":"Autor",
+    "Summary":"Resumen",
+    "SelectImage":"Seleccionar Imagen"
+  },
+  "Buttons":{
+    "Accept":"ACEPTAR",
+    "Cancel":"CANCELAR",
+    "AddImages":"Añadir Imagenes",
+    "Subscribe":"APUNTATE!!",
+    "Gallery":"Ver Imagenes",
+    "Edit":"Editar",
+    "Save":"Guardar",
+    "Delete":"Eliminar cuenta"
+  },
+  "UploadImage":{
+    "AddImage":"Añadir Imagen",
+    "UploadImage":"Sibir Imagen",
+    "Take Photo":"Sacar Foto",
+    "Details":"Detalles",
+    "Size":"Tamaño",
+    "ChosenImage":"Foto Elegida"
+  },
+
+  "Camera":{
+    "TakePhoto":"Sacar Foto",
+    "YourPhoto":"Esta es tu foto",
+    "UploadQuestion":"Quieres subir la foto?"
+  },
   "Profile":{
     "Goals":"Logros obtenidos",
     "Recent":"Recientes",
@@ -55,10 +100,5 @@
   },
   "Achivements": {
     "Achivements": "Logros"
-  },
-  "Buttons":{
-    "Edit":"Editar",
-    "Save":"Guardar",
-    "Delete":"Eliminar cuenta"
   }
 }

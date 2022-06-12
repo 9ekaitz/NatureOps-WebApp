@@ -3,7 +3,7 @@ import ReactPaginate from "react-paginate";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import { useTranslation } from "react-i18next";
 
-import "../styles/styleSidebar.css";
+import "../styles/styleSidebar.module.css";
 import styleLogros from "../styles/styleLogros.module.css";
 import stylePagination from "../styles/pagination.module.css";
 
