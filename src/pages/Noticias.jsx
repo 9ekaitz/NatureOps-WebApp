@@ -48,8 +48,8 @@ function Noticias() {
       <div className={style.card} key={record.id} itemsPerPage="8">
         <img src={cargarImagenNoti(`./${record.image}`)} alt={record.id} />
         <h4>{record.title}</h4>
-        <p>{record.subtitle}</p>
-        <a href={record.URL}>Leer más</a>
+        <p>{record.content}</p>
+        <a href={record.url}>Leer más</a>
       </div>
     );
   });
