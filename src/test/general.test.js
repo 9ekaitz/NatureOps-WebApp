@@ -2,10 +2,10 @@ import React from "react";
 import "@testing-library/jest-dom/extend-expect";
 import { render } from "@testing-library/react";
 
-import Evento from "../components/Evento";
-import CrearEvento from "../components/CrearEvento"
-import CrearNoticia from "../components/CrearNoticia"
-import SubirImagen from "../components/SubirImagen";
+import Evento from "../pages/Evento.jsx";
+import CrearEvento from "../pages/CrearEvento.jsx"
+import CrearNoticia from "../pages/CrearNoticia.jsx"
+import SubirImagen from "../pages/SubirFoto.jsx";
 
 test("SubirImagen se esta renderizando", () => {
   const componente = render(<SubirImagen/>);
