@@ -38,7 +38,7 @@ function SubirFotoPrueba() {
     var checkBox = document.getElementById("checkSitio");
     var text = document.getElementById("inputOculto");
 
-    if (checkBox.checked == true) {
+    if (checkBox.checked) {
       text.style.display = "block";
     } else {
       text.style.display = "none";
@@ -161,8 +161,8 @@ function SubirFotoPrueba() {
                 className="dropdown"
                 onChange={(e) => setPlace(e.target.value)}
               >
-                {placeList.map((place) => (
-                  <option key={place.name}>{place.name}</option>
+                {placeList.map((onePlace) => (
+                  <option key={onePlace.name}>{onePlace.name}</option>
                 ))}{" "}
               </select>
             </div>

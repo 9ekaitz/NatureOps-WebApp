@@ -46,9 +46,6 @@
     align-items: center;
     padding: 1rem;
     border: 2px solid var(--azul-oscuro);
-}
-
-.sacarFoto,.subir{
     width: 50%;
     height: 60%;
 }
@@ -68,7 +65,6 @@
 }
 
 .subir span, .sacarFoto, .botonPequeño{
-    font-family: poppins, sans-serif;
     font-size: 18px;
 }
 

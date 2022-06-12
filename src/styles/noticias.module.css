@@ -49,14 +49,11 @@
     margin-bottom: 1rem;
     width: 100%;
     border-radius: 0.8rem;
+    color: var(--azul-oscuro);
 }
 
 .pagination:hover{
   cursor:pointer;
-}
-
-.pagination{
-    color: var(--azul-oscuro);
 }
 
 .next:hover, .previous:hover{

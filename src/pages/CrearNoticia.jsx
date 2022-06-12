@@ -31,7 +31,6 @@ function CrearNoticia() {
       url : url, 
       enabled : true
     };
-    valores.to
     try{
       await axiosPrivate.post(URL, valores, {
         headers: {
@@ -42,11 +41,7 @@ function CrearNoticia() {
       navigate("/dashboard/noticias");
 
     } catch (err) {
-      if (!err?.response) {
-        handleClickReset();
-      } else if (err.response?.status == 409) {
-        handleClickReset();
-      }
+      handleClickReset(); 
     }
 
   

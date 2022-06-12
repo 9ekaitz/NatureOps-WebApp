@@ -37,7 +37,7 @@ function SacarFoto(){
   });
   
   function mostrarTexto(){
-    if(mostrar==true){
+    if(mostrar){
       document.getElementById("divFotoID").classList.remove(`${style.oculto}`);
       document.getElementById("divCamaraID").classList.add(`${style.oculto}`);
     }else{

@@ -5,7 +5,7 @@ function FormNuevoLugarComponente({labelName, inputPlaceholder}){
     var checkBox = document.getElementById("checkSitio");
     var text = document.getElementById("inputOculto");
       
-    if (checkBox.checked == true){
+    if (checkBox.checked){
       text.style.display = "block";
     } else {
       text.style.display = "none";
