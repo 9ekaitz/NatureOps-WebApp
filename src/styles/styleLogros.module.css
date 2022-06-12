@@ -6,6 +6,7 @@
     margin: 0 2rem;
     height: 100vh;
     gap: 1rem;
+    overflow-y: auto;
 }
 
 .card p{
@@ -26,9 +27,8 @@
     border-radius: 0.8rem;
     justify-items: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     height: fit-content;
-    padding: 1rem;
 }
 
 .logroCard p{
@@ -75,10 +75,7 @@
 
 @media screen and (max-width: 1100px){
     .containerLogros{
-        width: 100%;
-        grid-template-columns: 7rem auto 10rem;
-        margin:0;
-        height: 100vh;
+        height: calc(100vh - 1rem - 2rem - 1rem);
     }
 
     .listLogros{
@@ -93,7 +90,7 @@
 }
 
 @media screen and (max-width: 800px){
-    .containerLogros{
+    .listLogros{
         width: 100%;
         grid-template-columns: 1fr;
     }
