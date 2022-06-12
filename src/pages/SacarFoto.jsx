@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from "react";
+import { useNavigate } from "react-router";
 import Webcam from "react-webcam";
 import Button from "../components/Button";
 import { useTranslation } from "react-i18next";
@@ -14,7 +15,7 @@ import style from "../styles/camara.module.css"
 
 
 function SacarFoto(){
-
+  const navigate = useNavigate();
   const [mostrar,setMostrar]=useState(false);
   const webcamRef = React.useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
@@ -54,14 +55,9 @@ function SacarFoto(){
     }
   }
 
-  function changePage(ruta){
-    location.href=ruta;
-  }
-
   function eraseAndChange(ruta){
     sessionStorage.removeItem("takenPhoto");
-    sessionStorage.removeItem("chosenPhoto");
-    changePage(ruta);
+    navigate(ruta);
   }
 
   return(
@@ -86,7 +82,7 @@ function SacarFoto(){
         <span>{t("Camera.UploadQuestion")}</span>
         <div className="panelBotones span2 largo">
           <Button
-            onClick={()=>changePage("subirFoto")}
+            onClick={()=> navigate("/dashboard/subirfoto")}
             buttonSize="btn--medium"
             buttonStyle="btn--success--solid"
             icon={<FiCheck />}
@@ -94,7 +90,7 @@ function SacarFoto(){
             {t("Buttons.Accept")}
           </Button>
           <Button
-            onClick={()=>eraseAndChange("subirFoto")}
+            onClick={()=>eraseAndChange("/dashboard/subirfoto")}
             buttonSize="btn--medium"
             buttonStyle="btn--danger--solid"
             icon={<VscChromeClose />}

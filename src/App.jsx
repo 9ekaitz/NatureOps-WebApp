@@ -22,7 +22,7 @@ export function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/registro" element={<Registro />} />
+      <Route path="/register" element={<Registro />} />
       <Route path="/logout" element={<Logout />} />
       <Route
         path="/dashboard"

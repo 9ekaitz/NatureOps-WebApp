@@ -6,7 +6,7 @@ function change_paragraph() {
   
 }
 
-var options = {
+let options = {
   enableHighAccuracy: true,
   timeout: 5000,
   maximumAge: 0
@@ -14,8 +14,8 @@ var options = {
 
 function success(pos) {
 
-  var paragraph = document.getElementById("change-me");
-  var crd = pos.coords;
+  let paragraph = document.getElementById("change-me");
+  let crd = pos.coords;
   
   console.log("Your current position is:");
   console.log("Latitude : " + crd.latitude);
@@ -26,13 +26,13 @@ function success(pos) {
 
  
 
-  var encryptedLat = CryptoJS.AES.encrypt(crd.latitude.toString, "Secret Passphrase");
-  var encryptedLong = CryptoJS.AES.encrypt(crd.longitude, "Secret Passphrase");
+  let encryptedLat = CryptoJS.AES.encrypt(crd.latitude.toString, "Secret Passphrase");
+  let encryptedLong = CryptoJS.AES.encrypt(crd.longitude, "Secret Passphrase");
 
   paragraph.innerHTML = paragraph.innerHTML + "<br>" + "Encrypted Latitude: " + encryptedLat + "<br>" + "Encrypted Longitude: " + encryptedLong;
 
-  var decryptedLat = CryptoJS.AES.decrypt(encryptedLat, "Secret Passphrase");
-  var decryptedLong = CryptoJS.AES.decrypt(encryptedLong, "Secret Passphrase");
+  let decryptedLat = CryptoJS.AES.decrypt(encryptedLat, "Secret Passphrase");
+  let decryptedLong = CryptoJS.AES.decrypt(encryptedLong, "Secret Passphrase");
 
   paragraph.innerHTML = paragraph.innerHTML + "<br>" + "Decrypted Latitude: " + decryptedLat.toString(CryptoJS.enc.Utf8) + "<br>" + "Decrypted Longitude: " + decryptedLong.toString(CryptoJS.enc.Utf8);
     
@@ -43,7 +43,7 @@ function success(pos) {
 
   
 function error(err) {
-  var paragraph = document.getElementById("change-me");
+  let paragraph = document.getElementById("change-me");
   paragraph.innerHTML = "Error: " + err.message;
 }
   
