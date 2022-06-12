@@ -45,7 +45,20 @@
     "Repeat Password": "Repetir contraseña",
     "Register Button": "Registrarse"
   },
+  "Profile":{
+    "Goals":"Logros obtenidos",
+    "Recent":"Recientes",
+    "All":"Ver todos",
+    "Username":"Usuario",
+    "Email":"Correo",
+    "Name":"Nombre"
+  },
   "Achivements": {
     "Achivements": "Logros"
+  },
+  "Buttons":{
+    "Edit":"Editar",
+    "Save":"Guardar",
+    "Delete":"Eliminar cuenta"
   }
 }

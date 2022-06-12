@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { GrCircleInformation } from "react-icons/gr";
 import { FaPen, FaTrashAlt, FaSave } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 import Button from "../components/Button";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import style from "../styles/stylePerfil.module.css";
 import styleLabel from "../styles/stylePerfilEdit.module.css";
-
 import "../styles/main.css";
-/*IMAGENES*/
+
 import logro from "../images/logro_img.png";
 import logro2 from "../images/logro_img2.png";
 import logro3 from "../images/logro_img3.png";
@@ -18,10 +18,11 @@ import playa from "../images/playa.jpg";
 
 import useAuth from "../hooks/useAuth";
 
-/*DATOS */
 const UPDATE_URL = "/api/update";
 
 function Perfil() {
+  const { t } = useTranslation();
+
   const { auth } = useAuth();
   let [edit, setEdit] = useState(false);
   const axiosPrivate = useAxiosPrivate();
@@ -110,7 +111,7 @@ function Perfil() {
               onChange={(e) => setUsername(e.target.value)}
             />
             <label htmlFor="username" className={styleLabel.labelName}>
-              <span className={styleLabel.contentName}>Username</span>
+              <span className={styleLabel.contentName}>{t("Profile.Username")}</span>
             </label>
           </div>
           <div className={style.col} id="col1">
@@ -123,7 +124,7 @@ function Perfil() {
                 onChange={(e) => setNombre(e.target.value)}
               />
               <label htmlFor="name" className={styleLabel.labelName}>
-                <span className={styleLabel.contentName}>Nombre</span>
+                <span className={styleLabel.contentName}>{t("Profile.Name")}</span>
               </label>
             </div>
           </div>
@@ -137,7 +138,7 @@ function Perfil() {
                 onChange={(e) => setCorreo(e.target.value)}
               />
               <label htmlFor="email" className={styleLabel.labelName}>
-                <span className={styleLabel.contentName}>Correo</span>
+                <span className={styleLabel.contentName}>{t("Profile.Email")}</span>
               </label>
             </div>
           </div>
@@ -150,7 +151,7 @@ function Perfil() {
           )}
 
           <button type="submit" className={styleLabel.saveButton}>
-            Guardar
+            {t("Buttons.Save")}
             <FaSave className={styleLabel.icon} />
           </button>
         </form>
@@ -164,9 +165,11 @@ function Perfil() {
           <h2>{usernameLabel}</h2>
           <div className={style.datos}>
             <div className={styleLabel.col}>
+              <p>{t("Profile.Name")}</p>
               <p>{userLabel}</p>
             </div>
             <div className={styleLabel.col}>
+              <p>{t("Profile.Email")}</p>
               <p>{correoLabel}</p>
             </div>
           </div>
@@ -176,7 +179,7 @@ function Perfil() {
             buttonStyle="btn--primary--solid"
             icon={<FaPen />}
           >
-            Editar
+            {t("Buttons.Edit")}
           </Button>
         </div>
       </div>
@@ -190,8 +193,8 @@ function Perfil() {
           {userForm}
           <div className={style.logros}>
             <div className={style.apartado}>
-              <h2>Logros obtenidos</h2>
-              <a href="https://www.google.com">Ver todos</a>
+              <h2>{t("Profile.Goals")}</h2>
+              <a href="logros">{t("Profile.All")}</a>
             </div>
             <div className={style.listaLogros}>
               <img className={style.logroImg} src={logro} alt="Logro" />
@@ -204,7 +207,7 @@ function Perfil() {
               <img className={style.logroImg} src={logroNoConseguido} alt="Logro" />
             </div>
             <button className={style.deleteButton}>
-              Eliminar cuenta
+              {t("Buttons.Delete")}
               <FaTrashAlt className={style.icon} />
             </button>
           </div>
@@ -212,7 +215,7 @@ function Perfil() {
         <div className={style.right}>
           <div className={style.galeria}>
             <div className={style.apartado}>
-              <h2>Recientes</h2>
+              <h2>{t("Profile.Recent")}</h2>
               <GrCircleInformation />
             </div>
             <div className={style.listaRecientes}>
