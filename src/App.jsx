@@ -1,5 +1,6 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; 
+import Eventos from "./pages/Eventos.jsx"; 
 import Login from "./pages/Login.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
 import Registro from "./pages/Registro.jsx";
@@ -34,6 +35,7 @@ export function App() {
         }
       >
         <Route path="" element={<Overview />} />
+        <Route path="eventos" element={<Eventos />} />
         <Route path="perfil" element={<Perfil />} />
         <Route path="noticias" element={<Noticias />}/>
         <Route path="upload" element={<SubirFoto/>}/>

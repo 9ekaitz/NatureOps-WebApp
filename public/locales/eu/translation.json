@@ -50,12 +50,17 @@
     "Repeat Password": "Pasahitza errepikatu",
     "Register Button": "Izena eman"
   },
+  "Events":{
+    "Events":"Ekitaldiak",
+    "List":"Eskuragarri dauden ekitaldien zerrenda",
+    "More":"Gehiago"
+  },
   "CreateEvent":{
     "CreateEvent":"Ebentua Sortu",
     "NameNewEvent":"Izena",
-    "PlaceNewEvent":"Tokia",
-    "DateNewEvent":"Data",
-    "TimeNewEvent":"Ordua",
+    "Place":"Tokia",
+    "Date":"Data",
+    "Time":"Ordua",
     "DescriptionNewEvent":"Azalpena",
     "Question":"Toki berri bat erregistratu nahi duzu?"
   },
@@ -82,7 +87,9 @@
     "Take Photo":"Argazkia Atera",
     "Details":"Xehetasunak",
     "Size":"Tamaina",
-    "ChosenImage":"Aukeratutako Irudia"
+    "ChosenImage":"Aukeratutako Irudia",
+    "Options":"Aukerak",
+    "TakePhoto":"Argazkia atera"
   },
 
   "Camera":{

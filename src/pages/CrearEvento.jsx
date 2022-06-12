@@ -4,6 +4,8 @@ import FormNuevoLugarComponente from "./componentsDashBoard/FormNuevoLugarCompon
 import { FiCheck } from "react-icons/fi"
 import { VscChromeClose } from "react-icons/vsc"
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router";
+
 import Button from "../components/Button";
 
 
@@ -14,6 +16,8 @@ import styleCrearEvento from "../styles/crearEvento.module.css"
 import lugares from "../jsons/nombresSitios.json"
 
 function CrearEvento() {
+
+  const navigate = useNavigate();
 
   const { t } = useTranslation();
 
@@ -52,6 +56,7 @@ function CrearEvento() {
             {t("Buttons.Accept")}
           </Button>
           <Button
+            onClick={()=>navigate("/dashboard/eventos")}
             buttonSize="btn--medium"
             buttonStyle="btn--danger--solid"
             icon={<VscChromeClose />}

@@ -82,7 +82,7 @@ function SacarFoto(){
         <span>{t("Camera.UploadQuestion")}</span>
         <div className="panelBotones span2 largo">
           <Button
-            onClick={()=> navigate("/dashboard/subirfoto")}
+            onClick={()=> navigate("/dashboard/upload")}
             buttonSize="btn--medium"
             buttonStyle="btn--success--solid"
             icon={<FiCheck />}
@@ -90,7 +90,7 @@ function SacarFoto(){
             {t("Buttons.Accept")}
           </Button>
           <Button
-            onClick={()=>eraseAndChange("/dashboard/subirfoto")}
+            onClick={()=>eraseAndChange("/dashboard/upload")}
             buttonSize="btn--medium"
             buttonStyle="btn--danger--solid"
             icon={<VscChromeClose />}

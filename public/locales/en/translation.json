@@ -50,6 +50,11 @@
     "Repeat Password": "Repeat password",
     "Register Button": "Register"
   },
+  "Events":{
+    "Events":"Events",
+    "List":"List of avilable events",
+    "More":"More Info."
+  },
   "CreateEvent":{
     "CreateEvent":"Create Event",
     "NameNewEvent":"Name",

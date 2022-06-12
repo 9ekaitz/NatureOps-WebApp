@@ -8,16 +8,16 @@
     border-radius: 0.8rem;
 }
 
-.selected{
-    font-weight: bolder;
-}
-
 .pagination > li >a{
     color: var(--azul-oscuro);
 }
 
 .pagination:hover{
     cursor: pointer;
+}
+
+.active{
+    font-weight: bolder;
 }
 
 li .next, li .previous{

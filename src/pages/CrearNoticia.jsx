@@ -53,6 +53,7 @@ function CrearNoticia() {
     setSubTitle("");
     setSummary("");
     setUrl("");
+    navigate("/dashboard/noticias");
   }
 
   function changeText(){

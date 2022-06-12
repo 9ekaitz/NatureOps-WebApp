@@ -1,0 +1,166 @@
+.containerEventos{
+    margin: 2rem;
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+}
+
+.pagination{
+    grid-column: span 4;
+    margin-right: 2rem;
+}
+
+.listaEventos{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.eventos{
+    margin-top: 2rem;
+    width: 100%;
+    margin-right: 0;
+}
+
+.eventos h2{
+    margin-bottom: 0.5rem;
+    font-family: poppins, sans-serif;
+}
+
+.eventCard{
+    background: white;
+    border-radius: var(--car-border-radius);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 2rem;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    width: 90%;
+    justify-self: center;
+}
+ 
+.destacado{
+    border: 3px solid var(--borde-destacado);
+    box-shadow: 0 1rem 2rem var(--shadow-destacado); 
+}
+
+.eventCard:hover{
+    box-shadow: none;
+}
+
+.imagenCard img{
+    
+    width: 110%;
+    height: 100%;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.imagenCard{
+    width: 12em;
+}
+
+.buttonDetalles{
+    padding: 0.5rem;
+    border: none;
+    background-color: var(--azul-oscuro);
+    color: var(--color-background);
+    border-radius: var(--car-border-radius);
+
+}
+
+.buttonDetalles:hover{
+    background-color: var(--azul-clarito);
+    color: var(--color-gris);
+}
+
+.addButton{
+    display: flex;
+    float: right;
+    background-color: var(--azul-oscuro);
+    border: none;
+    padding: 1.5rem;
+    border-radius: 4rem;
+    align-items: center;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    position: sticky;
+    bottom: 7%;
+    right: 7%;
+}
+
+.addButton:hover{
+    background-color: var(--button-hover);
+}
+
+.icon{
+    color: white;
+}
+
+@media screen and (max-width: 1670px) {
+    .listaEventos{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .pagination{
+        grid-column: span 3;
+    }
+}
+
+@media screen and (max-width: 1446px){
+    .listaEventos{
+       grid-template-columns: repeat(2,1fr);
+    }
+
+    .pagination{
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .containerEventos{
+        width: 100vw;
+        grid-template-columns: auto;
+        margin:1rem 1rem;
+    }
+
+    .listaEventos{
+        grid-template-columns: repeat(2,1fr);
+        margin-right: 1rem;
+    }
+
+    .eventCard img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .containerEventos{
+        width: 100%;
+        display: block;
+    }
+
+    .listaEventos{
+        grid-template-columns: auto;
+        justify-content: unset;
+    }
+
+     .apartado{
+         text-align: center;
+    }
+
+    .pagination{
+        grid-column: span 1;
+    }
+
+}
+

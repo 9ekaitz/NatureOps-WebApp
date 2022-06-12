@@ -25,7 +25,7 @@
     },
     "Main":{
       "Events":"Eventos",
-      "PhotoGallery":"Galleria",
+      "PhotoGallery":"Galeria",
       "More":"Leer más"
     }
   },
@@ -50,12 +50,17 @@
     "Repeat Password": "Repetir contraseña",
     "Register Button": "Registrarse"
   },
+  "Events":{
+    "Events":"Eventos",
+    "List":"Lista de eventos disponibles",
+    "More":"Detalles"
+  },
   "CreateEvent":{
     "CreateEvent":"Crear Evento",
     "NameNewEvent":"Nombre",
-    "PlaceNewEvent":"Lugar",
-    "DateNewEvent":"Fecha",
-    "TimeNewEvent":"Hora",
+    "Place":"Lugar",
+    "Date":"Fecha",
+    "Time":"Hora",
     "DescriptionNewEvent":"Descripción",
     "Question":"Quieres registrar un nuevo lugar?"
   },
@@ -78,11 +83,13 @@
   },
   "UploadImage":{
     "AddImage":"Añadir Imagen",
-    "UploadImage":"Sibir Imagen",
+    "UploadImage":"Subir Imagen",
     "Take Photo":"Sacar Foto",
     "Details":"Detalles",
     "Size":"Tamaño",
-    "ChosenImage":"Foto Elegida"
+    "ChosenImage":"Foto Elegida",
+    "Options":"Opciones",
+    "TakePhoto":"Sacar Foto"
   },
 
   "Camera":{

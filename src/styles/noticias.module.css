@@ -56,11 +56,16 @@
   cursor:pointer;
 }
 
+.next,.previous{
+    border: 1px solid var(--azul-oscuro);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
 .next:hover, .previous:hover{
   border: 2px solid var(--azul-oscuro);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
+
 }
 
 .active{

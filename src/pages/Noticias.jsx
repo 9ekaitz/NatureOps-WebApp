@@ -2,13 +2,16 @@ import React, { useState, useEffect } from "react";
 import useAuth from "../hooks/useAuth";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import ReactPaginate from "react-paginate";
-
-/*IMAGENES*/
+import FloatingButton from "../components/FloatingButton";
+import { useNavigate } from "react-router";
+import { FiPlus } from "react-icons/fi";
 
 import style from "../styles/noticias.module.css";
 
 function Noticias() {
   const axiosPrivate = useAxiosPrivate();
+  const navigate = useNavigate();
+
   const [items, setItems] = useState([]);
   const [pageCount, setpageCount] = useState(0);
   const { onLogout } = useAuth();
@@ -73,6 +76,9 @@ function Noticias() {
           activeClassName={style.active}
         />
       </div>
+      <FloatingButton handleClick={() => navigate("/dashboard/crearNoticia")}>
+        <FiPlus />
+      </FloatingButton>
     </main>
   );
 }
