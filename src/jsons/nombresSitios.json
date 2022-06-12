@@ -1,0 +1,26 @@
+[
+    {
+        "id":0,
+        "nombre":"Lesaka"
+    },
+    {
+        "id":1,
+        "nombre":"Arrasate"
+    },
+    {
+        "id":2,
+        "nombre":"Donostia"
+    },
+    {
+        "id":3,
+        "nombre":"Zarautz"
+    },
+    {
+        "id":4,
+        "nombre":"Orio"
+    },
+    {
+        "id":5,
+        "nombre":"Deba"
+    }
+]

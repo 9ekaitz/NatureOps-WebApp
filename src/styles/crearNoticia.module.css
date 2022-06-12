@@ -1,0 +1,82 @@
+.formNoticia{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    width: fit-content;
+}
+
+.noticiaSortu{
+    margin: 0;
+    padding: 0;
+}
+
+
+.formNoticia>h1{
+    grid-column:1 / span 2;
+}
+
+.url{
+    grid-column: span 2;
+    width: 100%;
+    display:  flex;
+    justify-content: center;
+}
+
+.url > input{
+    width: 60%;
+}
+
+.formImagen, .formLugar{
+    align-items: center;
+    padding: 1rem;
+}
+
+.inputClass{
+    background-color: white;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid var(--azul-oscuro);
+}
+
+.inputClass:focus{
+    outline: none;
+}
+
+.foto{
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    height: 40%;
+    border: 1px solid var(--azul-oscuro);
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+}
+
+.foto{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+
+
+
+
+@media screen and (max-width: 800px){
+
+    .formNoticias{
+        width: 70%;
+        align-items: center;
+    }
+  
+
+}

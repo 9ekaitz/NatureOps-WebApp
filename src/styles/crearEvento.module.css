@@ -1,0 +1,64 @@
+.eventoContainer{
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.evento{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+    justify-content: space-between;
+    justify-self: center;
+    height: fit-content;
+}
+
+.fechaHora {
+    display: flex;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 1179px){
+
+    .fechaHora {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .evento{
+        width: 70%;
+        gap: 0.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+
+    .eventoContainer{
+        margin-top: 0;
+    
+    }
+    .evento{
+        margin: calc(2rem + 1rem) 0;
+        align-self: flex-start;
+        padding: 0;
+        gap: 3rem;
+        min-width: 350px;
+    }
+
+}
+
+@media screen and (max-width:500px){
+    .evento{
+        width: 80%;
+    }
+}
+
+
+

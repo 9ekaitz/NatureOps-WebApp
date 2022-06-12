@@ -226,7 +226,7 @@ function Login() {
             <div ref={refSignUp} className={styles.inputBx}>
               <p>
                 {t("Login.Don't have account yet?")}{" "}
-                <a href="/registro">{t("Login.Register")}</a>
+                <a href="/register">{t("Login.Register")}</a>
               </p>
             </div>
           </form>

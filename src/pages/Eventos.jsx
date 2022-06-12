@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { FaPlus } from "react-icons/fa"
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router";
+
 import ReactPaginate from "react-paginate";
 
 import styleEventos from "../styles/styleEventos.module.css"
@@ -12,6 +14,7 @@ import data from "../data/eventos.json";
 
 function Eventos() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
@@ -45,7 +48,7 @@ function Eventos() {
         <div className={styleEventos.imagenCard}>
           <img src={data[i].foto} alt="playa1"></img>
         </div>
-        <button className={styleEventos.buttonDetalles}>{t("Events.More")}</button>
+        <button className={styleEventos.buttonDetalles} onClick={()=>navigate("/dashboard/evento")}>{t("Events.More")}</button>
       </div>
     DisplayData[i]=DisplayDataItem;
   }
@@ -71,7 +74,7 @@ function Eventos() {
             activeClassName={style.active}
           />        
         </div>
-        <button className={styleEventos.addButton}><FaPlus className={styleEventos.icon} size="17px"/></button>
+        <button className={styleEventos.addButton} onClick={()=>navigate("/dashboard/crearEvento")}><FaPlus className={styleEventos.icon} size="17px"/></button>
       </div>
     </div>
   );
