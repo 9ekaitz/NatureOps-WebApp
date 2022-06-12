@@ -80,7 +80,7 @@ function SacarFoto(){
         <h2>{t("Camera.YourPhoto")}: </h2>
         {imgSrc && (<img src={imgSrc} alt="foto" className={style.fotoCamara}/>)}
         <span>{t("Camera.UploadQuestion")}</span>
-        <div className="panelBotones span2 largo">
+        <div className={style.botonesFoto.concat(" panelBotones span2 largo")}>
           <Button
             onClick={()=> navigate("/dashboard/upload")}
             buttonSize="btn--medium"

@@ -124,7 +124,7 @@ function SubirFotoPrueba() {
 
   return (
     <main
-      className={style.seleccionarImagenContainer}
+      className="single-column"
       data-testid="subirImagen"
     >
       <div className={style.seleccionarImagen} data-testid="subirImagen">
@@ -156,7 +156,7 @@ function SubirFotoPrueba() {
           <div className={style.detallesDeFoto}>
             <h2>{t("UploadImage.Details")}: </h2>
             <div className="formLugar">
-              <label htmlFor="lname">Lugares</label>
+              <label htmlFor="lname">{t("CreateEvent.Place")}</label>
               <select
                 className="dropdown"
                 onChange={(e) => setPlace(e.target.value)}
@@ -176,14 +176,14 @@ function SubirFotoPrueba() {
                   className="inputClass"
                   onClick={mostrarTexto}
                 ></input>
-                <label htmlFor="lname">Lugar name</label>
+                <label htmlFor="lname"> {t("CreateEvent.Question")}</label>
               </div>
               <input
                 type="text"
                 id="inputOculto"
                 name="lname"
                 className="inputClass oculto"
-                placeholder="Hello"
+                placeholder="Name"
               />
             </div>
             <div>
