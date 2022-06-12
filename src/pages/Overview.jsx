@@ -1,61 +1,52 @@
-import React from "react";
+import React, { useState, useEffect }  from "react";
 import { useNavigate } from "react-router";
 import { GrCircleInformation } from "react-icons/gr";
 import { useTranslation } from "react-i18next";
 import { FiPlus } from "react-icons/fi";
 
 import FloatingButton from "../components/FloatingButton";
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
 
 import basura from "../images/basura.jpg";
-import img_noticia1 from "../images/noticia1.jpg";
 import img_noticia2 from "../images/noticia2.jpg";
-import img_noticia3 from "../images/noticia3.jpg";
 
 import style from "../styles/styleSidebar.module.css";
 
 function Overview() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [items, setItems] = useState([]);
+  const axiosPrivate = useAxiosPrivate();
+
+
+  const fetchData = async () => {
+
+    const response = await axiosPrivate.get("/api/news/0/3");
+    setItems(response.data);
+   
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const cargarImagenNoti = require.context("../images", true);
+  const DisplayNoticias = items.map((record) => {
+    return (
+      <div className={style.card} key={record.id} itemsPerPage="3">
+        <img src={cargarImagenNoti(`./${record.image}`)} alt={record.id} />
+        <h4>{record.title}</h4>
+        <p>{record.content}</p>
+        <a href={record.url}>Leer más</a>
+      </div>
+    );
+  });
+
   return (
     <main className={style.dashboardContainer}>
       <h1>Dashboard</h1>
       <div className={style.noticias}>
-        <div className={style.card}>
-          <img src={img_noticia1} alt="noticia1" />
-          <h4>La Costa Vasca contaminada</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt
-            numquam quidem, impedit quis ipsa fugit excepturi alias voluptatibus
-            ratione.
-          </p>
-          <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">
-            Leer más
-          </a>
-        </div>
-        <div className={style.card}>
-          <img src={img_noticia2} alt="noticia2" />
-          <h4>La Costa Vasca contaminada</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt
-            numquam quidem, impedit quis ipsa fugit excepturi alias voluptatibus
-            ratione.
-          </p>
-          <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">
-            Leer más
-          </a>
-        </div>
-        <div className={style.card}>
-          <img src={img_noticia3} alt="noticia2" />
-          <h4>La Costa Vasca contaminada</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt
-            numquam quidem, impedit quis ipsa fugit excepturi alias voluptatibus
-            ratione.
-          </p>
-          <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">
-            Leer más
-          </a>
-        </div>
+        {DisplayNoticias}
       </div>
       <div className={style.galeria}>
         <div className={style.apartado}>
