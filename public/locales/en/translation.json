@@ -1,4 +1,9 @@
 {
+  "lang": {
+    "eu": "Basque",
+    "es": "Spanish",
+    "en": "English"
+  },
   "Login": {
     "Login": "Login",
     "Username": "Username",
@@ -17,18 +22,23 @@
       "Places": "Places",
       "Profile": "Profile",
       "Logout": "Logout"
+    },
+    "Main":{
+      "Events":"Events",
+      "PhotoGallery":"Gallery",
+      "More":"More"
     }
   },
   "Landing": {
     "Beluga Presents": "Beluga Team presents",
     "Start Button": "Get Started",
-    "Nav":{
+    "Nav": {
       "Who we are": "Who are we?",
-      "Login" : "Login",
+      "Login": "Login",
       "Language": "Language"
     },
     "NatureOps planeta Verde": "NatureOps for a cleaner planet",
-    "NatureOps problema" : "The amount of waste in beaches and rivers have drastically risen in the recent years. NatureOps provides a solution against contamination with its functionalities and a bound-together community",
+    "NatureOps problema": "The amount of waste in beaches and rivers have drastically risen in the recent years. NatureOps provides a solution against contamination with its functionalities and a bound-together community",
     "Start": "Let´s Start"
   },
   "Register": {
@@ -43,5 +53,63 @@
   "Places":{
     "Places":"Places",
     "Score":"SCORE: "
+  },
+  "Events":{
+    "Events":"Events",
+    "List":"List of avilable events",
+    "More":"More Info."
+  },
+  "CreateEvent":{
+    "CreateEvent":"Create Event",
+    "NameNewEvent":"Name",
+    "Place":"Place",
+    "Date":"Date",
+    "Time":"Time",
+    "DescriptionNewEvent":"Description",
+    "Question":"Do you want to register a new place?"
+  },
+  "CreateNews":{
+    "CreateNews":"Create News",
+    "Title":"Title",
+    "Author":"Author",
+    "Summary":"Summary",
+    "SelectImage":"Select Image"
+  },
+  "Buttons":{
+    "Accept":"ACCEPT",
+    "Cancel":"CANCEL",
+    "AddImages":"Add Images",
+    "Subscribe":"SUBSCRIBE!!",
+    "Gallery":"View Images",
+    "Edit":"Edit",
+    "Save":"Save",
+    "Delete":"Delete account"
+  },
+
+  "UploadImage":{
+    "AddImage":"Add Image",
+    "Options":"Options",
+    "UploadImage":"Upload Image",
+    "TakePhoto":"Take Photo",
+    "Details":"Image Details",
+    "Size":"Size",
+    "ChosenImage":"Chosen Image"
+  },
+
+  "Camera":{
+    "TakePhoto":"Take Photo",
+    "YourPhoto":"This is your photo",
+    "UploadQuestion":"Do you want to upload the photo?"
+  },
+  "Profile":{
+    "Goals":"Achieved goals",
+    "Recent":"Recent",
+    "All":"See all",
+    "Username":"Username",
+    "Email":"Email",
+    "Name":"Name"
+  },
+  "Achivements": {
+    "Achivements": "Achivements"
   }
 }

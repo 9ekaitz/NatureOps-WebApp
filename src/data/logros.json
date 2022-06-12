@@ -1,0 +1,108 @@
+[
+    {
+        "id":0,
+        "nombre":"Recoge 10 botellas de plástico",
+        "descripcion":"Para conseguir este logro se deberán sacar fotos de 10 botellas de plástico encontradas en una playa y subirlas a la página.",
+        "progresoUsuario":50,
+        "maximo":100,
+        "imagen":""
+    },
+
+    {
+        "id":1,
+        "nombre":"Recoge 50 botellas de plástico",
+        "descripcion":"Para conseguir este logro se deberán sacar fotos de 10 botellas de plástico encontradas en una playa y subirlas a la página.",
+        "progresoUsuario":85,
+        "maximo":100,  
+        "imagen":""
+    },
+
+    {
+        "id":2,
+        "nombre":"Participa en el evento 'Evento GreenPeace'",
+        "descripcion":"Para conseguir este logro el usuario deberá suscribirse al evento mencionado y permanecer suscrito hasta que acabe. Además deberá subir más de una foto desde el lugar del evento.",
+        "progresoUsuario":0,
+        "maximo":100,  
+        "imagen":""
+    },
+
+    {
+        "id":3,
+        "nombre":"Héroe de las tortugas",
+        "descripcion":"Las tortugas marinas son los uno de los animales más afectados por los residuos que acaban en el mar. Evita que esto pase acudiendo a 20 eventos de limpieza para convertirte en su héroe.",
+        "progresoUsuario":20,
+        "maximo":100,  
+        "imagen":"static/media/logro_img3.1da4f47d1ab1634307a2.png"
+    },
+
+    {
+        "id":4,
+        "nombre":"Amante del planeta",
+        "descripcion":"Acude a 50 eventos de limpieza para demostrar que eres un amante del planeta y de los animales.",
+        "progresoUsuario":80,
+        "maximo":100,  
+        "imagen":"static/media/logro_img2.1c437f60e4101a71b394.png"
+    },
+
+    {
+        "id":5,
+        "nombre":"Rey de la naturaleza",
+        "descripcion":"Recoge y recicla más de 10.000 basuras y sube una foto de cada una a la página para conseguir ser el Rey de la naturaleza. De éste modo habrás ayudado a descontaminar muchos ecosistemas en los que hayas estado.",
+        "progresoUsuario":10,
+        "maximo":100,  
+        "imagen":"/static/media/logro_img.3e25cded951fb3eaf8d1.png"
+    },
+    {
+        "id":6,
+        "nombre":"Recoge 10 botellas de plástico2",
+        "descripcion":"Para conseguir este logro se deberán sacar fotos de 10 botellas de plástico encontradas en una playa y subirlas a la página.",
+        "progresoUsuario":50,
+        "maximo":100,
+        "imagen":"/static/media/logro_img.3e25cded951fb3eaf8d1.png"
+    },
+
+    {
+        "id":7,
+        "nombre":"Recoge 50 botellas de plástico2",
+        "descripcion":"Para conseguir este logro se deberán sacar fotos de 10 botellas de plástico encontradas en una playa y subirlas a la página.",
+        "progresoUsuario":85,
+        "maximo":100,  
+        "imagen":"static/media/logro_img2.1c437f60e4101a71b394.png"
+    },
+
+    {
+        "id":8,
+        "nombre":"Participa en el evento 'Evento GreenPeace'2",
+        "descripcion":"Para conseguir este logro el usuario deberá suscribirse al evento mencionado y permanecer suscrito hasta que acabe. Además deberá subir más de una foto desde el lugar del evento.",
+        "progresoUsuario":0,
+        "maximo":100,  
+        "imagen":"static/media/logro_img3.1da4f47d1ab1634307a2.png"
+    },
+
+    {
+        "id":9,
+        "nombre":"Héroe de las tortugas2",
+        "descripcion":"Las tortugas marinas son los uno de los animales más afectados por los residuos que acaban en el mar. Evita que esto pase acudiendo a 20 eventos de limpieza para convertirte en su héroe.",
+        "progresoUsuario":20,
+        "maximo":100,  
+        "imagen":"static/media/logro_img3.1da4f47d1ab1634307a2.png"
+    },
+
+    {
+        "id":10,
+        "nombre":"Amante del planeta2",
+        "descripcion":"Acude a 50 eventos de limpieza para demostrar que eres un amante del planeta y de los animales.",
+        "progresoUsuario":80,
+        "maximo":100,  
+        "imagen":"static/media/logro_img2.1c437f60e4101a71b394.png"
+    },
+
+    {
+        "id":11,
+        "nombre":"Rey de la naturaleza2",
+        "descripcion":"Recoge y recicla más de 10.000 basuras y sube una foto de cada una a la página para conseguir ser el Rey de la naturaleza. De éste modo habrás ayudado a descontaminar muchos ecosistemas en los que hayas estado.",
+        "progresoUsuario":10,
+        "maximo":100,  
+        "imagen":"/static/media/logro_img.3e25cded951fb3eaf8d1.png"
+    }
+]

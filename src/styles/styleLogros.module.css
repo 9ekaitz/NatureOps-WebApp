@@ -1,0 +1,110 @@
+
+.containerLogros{
+    display:flex;
+    flex-direction: column;
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
+    height: 100vh;
+    gap: 1rem;
+    overflow-y: auto;
+}
+
+.card p{
+    margin-bottom: 0.8rem;
+}
+
+.listLogros{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.logroCard{
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: repeat(3,1fr);
+    background-color: white;
+    border-radius: 0.8rem;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.logroCard p{
+    text-align: center;
+}
+
+.logroImg{
+    width: 100px;
+    height: 70px;
+    margin: 1rem 0;
+}
+
+.logroTop{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.progressElement{
+    display: inline-block;
+    width: 90%;
+}
+
+.progressElement span{
+    margin-right: 1rem;
+}
+
+.pagination{
+    grid-column: span 3;
+}
+
+.progressBars{
+    height:20px;
+    border-radius:2px;
+    display: inline-block;
+}
+
+@media  screen and (max-width:1379px) {
+    
+    .progressElement span{
+        margin-bottom: 1rem;
+    } 
+}
+
+@media screen and (max-width: 1100px){
+    .containerLogros{
+        height: calc(100vh - 1rem - 2rem - 1rem);
+    }
+
+    .listLogros{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 1rem;
+    }  
+    
+    .pagination{
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .listLogros{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .pagination{
+        grid-column: span 1;
+    }
+}
+
+@media screen and (max-width:564px) {
+    .listLogros{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1rem;
+    }
+}
+

@@ -1,0 +1,11 @@
+[
+    {
+        "id":1,
+        "imagen": "basura.jpg"
+    },
+
+    {
+        "id" : 2,
+        "imagen": "noticia2.jpg"
+    } 
+]

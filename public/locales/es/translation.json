@@ -1,4 +1,9 @@
 {
+  "lang": {
+    "eu": "Vasco",
+    "es": "Castellano",
+    "en": "Ingles"
+  },
   "Login": {
     "Login": "Iniciar Sesion",
     "Username": "Nombre de Usuario",
@@ -17,18 +22,23 @@
       "Places": "Sitios",
       "Profile": "Perfil",
       "Logout": "Cerrar Sesion"
+    },
+    "Main":{
+      "Events":"Eventos",
+      "PhotoGallery":"Galeria",
+      "More":"Leer más"
     }
   },
   "Landing": {
     "Beluga Presents": "Beluga Team presenta",
     "Start Button": "Comenzar",
-    "Nav":{
+    "Nav": {
       "Who we are": "¿Quienes somos?",
-      "Login" : "Iniciar Sesión",
+      "Login": "Iniciar Sesión",
       "Language": "Idioma"
     },
     "NatureOps planeta Verde": "NatureOps para un planeta mas verde",
-    "NatureOps problema" : " La cantidad de residuos en las playas y rios ha crecido drasticamente en los últimos años. NatureOps ofrece una solución para luchar contra la contaminación gracias a sus funcionalidades y una comunidad unida.",
+    "NatureOps problema": " La cantidad de residuos en las playas y rios ha crecido drasticamente en los últimos años. NatureOps ofrece una solución para luchar contra la contaminación gracias a sus funcionalidades y una comunidad unida.",
     "Start": "Comenzar"
   },
   "Register": {
@@ -43,5 +53,63 @@
   "Places":{
     "Places":"Sitios",
     "Score":"PUNTUACIÓN: "
+  },
+  "Events":{
+    "Events":"Eventos",
+    "List":"Lista de eventos disponibles",
+    "More":"Detalles"
+  },
+  "CreateEvent":{
+    "CreateEvent":"Crear Evento",
+    "NameNewEvent":"Nombre",
+    "Place":"Lugar",
+    "Date":"Fecha",
+    "Time":"Hora",
+    "DescriptionNewEvent":"Descripción",
+    "Question":"Quieres registrar un nuevo lugar?"
+  },
+  "CreateNews":{
+    "CreateNews":"Crear Noticia",
+    "Title":"Titulo",
+    "Author":"Autor",
+    "Summary":"Resumen",
+    "SelectImage":"Seleccionar Imagen"
+  },
+  "Buttons":{
+    "Accept":"ACEPTAR",
+    "Cancel":"CANCELAR",
+    "AddImages":"Añadir Imagenes",
+    "Subscribe":"APUNTATE!!",
+    "Gallery":"Ver Imagenes",
+    "Edit":"Editar",
+    "Save":"Guardar",
+    "Delete":"Eliminar cuenta"
+  },
+  "UploadImage":{
+    "AddImage":"Añadir Imagen",
+    "UploadImage":"Subir Imagen",
+    "Take Photo":"Sacar Foto",
+    "Details":"Detalles",
+    "Size":"Tamaño",
+    "ChosenImage":"Foto Elegida",
+    "Options":"Opciones",
+    "TakePhoto":"Sacar Foto"
+  },
+
+  "Camera":{
+    "TakePhoto":"Sacar Foto",
+    "YourPhoto":"Esta es tu foto",
+    "UploadQuestion":"Quieres subir la foto?"
+  },
+  "Profile":{
+    "Goals":"Logros obtenidos",
+    "Recent":"Recientes",
+    "All":"Ver todos",
+    "Username":"Usuario",
+    "Email":"Correo",
+    "Name":"Nombre"
+  },
+  "Achivements": {
+    "Achivements": "Logros"
   }
 }

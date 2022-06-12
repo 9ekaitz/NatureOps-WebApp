@@ -1,0 +1,205 @@
+.seleccionarImagenContainer{
+    align-items: center;
+    justify-items: center;
+    margin-top: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+.seleccionarImagen{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 0.8rem;
+    height: fit-content;
+    padding: 2rem;
+    max-width: calc(1167.2px + 6rem + 4rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seleccionarImagen>h2, .seleccionarImagen>h1{
+    margin:0;
+}
+
+.añadirImagen{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,auto);
+    gap: 1rem;
+    height: 80%;
+}
+
+.añadirImagen>h2{
+    grid-column: span 2;
+    height: calc(10% - 0.5rem);
+}
+
+.subir, .sacarFoto{
+    border-radius: 0.8rem;
+    background-color:white ;
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid var(--azul-oscuro);
+    width: 50%;
+    height: 60%;
+}
+
+.divOpciones{
+    display: flex;
+    gap: 1rem;
+    justify-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column: 1 / span 2;
+    width: 100%;
+}
+
+.subir{
+    position: relative;
+}
+
+.subir span, .sacarFoto, .botonPequeño{
+    font-size: 18px;
+}
+
+.subir > svg,.sacarFoto > svg{
+    min-width: 20.11px;
+    min-height: 40.23px;
+}
+
+.subir .iconGrande{
+    margin-right: 1rem;
+}
+.subir:hover, .sacarFoto:hover{
+    border: 3px solid var(--azul-oscuro);
+}
+
+.detallesDeFoto{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 60%;
+}
+
+.fotoElegida{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    gap: 1rem;
+    height: 90%;
+}
+
+.imgPreview{
+    width: auto;
+    max-height: 211.8px;
+    border-radius: 0.8rem;
+}
+
+.inputClass{
+    background-color: white;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid var(--azul-oscuro);
+}
+
+.inputClass:focus{
+    outline: none;
+}
+
+.buttons{
+    display: flex;
+    gap: 3rem;
+    grid-column: span 2;
+    justify-self: center;
+    margin-top: 1rem;
+}
+
+.buttons svg{
+    height: 1rem;
+    width: 1rem;
+    text-align: end;
+    margin: 0;
+}
+
+.dialog {
+    background-color: var(--container-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+@media screen and (max-width: 1179px){
+
+    .subir>input{
+        padding: 0;
+    }
+
+    .subir{
+        padding: 1rem;
+    }
+
+    .buttons{
+        grid-column: span 1;
+    }
+}
+
+@media screen and (max-width:1100px) {
+
+    .seleccionarImagen{
+        height: fit-content;
+        margin: 2rem 0;
+    }
+
+    .divOpciones{
+        grid-column: span 1;
+    }
+
+    .añadirImagen{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(6,auto);
+    }
+
+    .añadirImagen > h2, .panelBotones{
+        grid-column: 1;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    .seleccionarImagen{
+        align-self: start;
+    }
+
+}
+
+@media screen and (max-width:450px){
+
+    .seleccionarImagenContainer{
+        align-items: flex-start;
+        overflow-x: hidden;
+    }
+
+    .seleccionarImagen{
+        padding: 1rem 0rem;
+        height: fit-content;
+    }
+
+    .divOpciones{
+        flex-direction: column;
+    }
+
+    .subir,.sacarFoto{
+        width: 80%;
+        height: 30%;
+    }
+}
