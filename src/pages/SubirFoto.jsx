@@ -16,8 +16,6 @@ import Modal from "../components/Modal";
 import "../styles/styleGeneralForms.css";
 import style from "../styles/subirFoto.module.css";
 
-const SITIOS = ["Protugal", "Miami", "Me lo confirmo", "help"];
-
 function SubirFotoPrueba() {
   const [dialog, setDialog] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -26,16 +24,10 @@ function SubirFotoPrueba() {
   let [image, setImage] = useState(null);
   const [place, setPlace] = useState("");
   const [placeList, setPlaceList] = useState([]);
-  let places = [];
   const [size, setSize] = useState(0);
-  const [file, setFile] = useState();
   const { t } = useTranslation();
   const axiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
-
-  function changePage(ruta) {
-    location.href = ruta;
-  }
 
   function eraseAndChange(ruta) {
     sessionStorage.removeItem("takenPhoto");
@@ -96,7 +88,9 @@ function SubirFotoPrueba() {
   }, []);
 
   useEffect(() => {
-    setPlace(placeList[0].name);
+    if (placeList.size > 0) {
+      setPlace(placeList[0].length);
+    }
   }, [placeList]);
 
   useEffect(() => {

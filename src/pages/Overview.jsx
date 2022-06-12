@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { GrCircleInformation } from "react-icons/gr";
 import { useTranslation } from "react-i18next";
+import { FiPlus } from "react-icons/fi";
+
+import FloatingButton from "../components/FloatingButton";
 
 import basura from "../images/basura.jpg";
 import img_noticia1 from "../images/noticia1.jpg";
@@ -10,9 +14,8 @@ import img_noticia3 from "../images/noticia3.jpg";
 import style from "../styles/styleSidebar.module.css";
 
 function Overview() {
-
   const { t } = useTranslation();
-
+  const navigate = useNavigate();
   return (
     <main className={style.dashboardContainer}>
       <h1>Dashboard</h1>
@@ -21,9 +24,9 @@ function Overview() {
           <img src={img_noticia1} alt="noticia1" />
           <h4>La Costa Vasca contaminada</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
-            sunt numquam quidem, impedit quis ipsa fugit excepturi alias
-            voluptatibus ratione.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt
+            numquam quidem, impedit quis ipsa fugit excepturi alias voluptatibus
+            ratione.
           </p>
           <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">
             Leer más
@@ -33,9 +36,9 @@ function Overview() {
           <img src={img_noticia2} alt="noticia2" />
           <h4>La Costa Vasca contaminada</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
-            sunt numquam quidem, impedit quis ipsa fugit excepturi alias
-            voluptatibus ratione.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt
+            numquam quidem, impedit quis ipsa fugit excepturi alias voluptatibus
+            ratione.
           </p>
           <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">
             Leer más
@@ -45,12 +48,12 @@ function Overview() {
           <img src={img_noticia3} alt="noticia2" />
           <h4>La Costa Vasca contaminada</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
-            sunt numquam quidem, impedit quis ipsa fugit excepturi alias
-            voluptatibus ratione.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sunt
+            numquam quidem, impedit quis ipsa fugit excepturi alias voluptatibus
+            ratione.
           </p>
           <a href="https://www.farodevigo.es/arousa/2022/05/17/basura-marina-cuento-acabar-66204508.html">
-             Leer más
+            Leer más
           </a>
         </div>
       </div>
@@ -109,7 +112,9 @@ function Overview() {
           </tbody>
         </table>
       </div>
-
+      <FloatingButton handleClick={() => navigate("upload")}>
+        <FiPlus />
+      </FloatingButton>
     </main>
   );
 }

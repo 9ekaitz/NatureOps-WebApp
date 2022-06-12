@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { FiCheck } from "react-icons/fi"
 import { VscChromeClose } from "react-icons/vsc"
 import styles from "../styles/crearNoticia.module.css"
@@ -11,9 +12,7 @@ function CrearNoticia() {
 
   const { t } = useTranslation();
 
-  function changePage(ruta){
-    location.href=ruta;
-  }
+  const navigate = useNavigate();
 
   function changeText(){
     let input=document.getElementById("fileInput");
@@ -47,7 +46,7 @@ function CrearNoticia() {
         </div>         
         <div className="panelBotones">
           <Button
-            onClick={()=>changePage("noticias")}
+            onClick={()=>navigate("/dashboard/noticias")}
             buttonSize="btn--medium"
             buttonStyle="btn--success--solid"
             icon={<FiCheck />}
@@ -55,7 +54,7 @@ function CrearNoticia() {
             {t("Buttons.Accept")}
           </Button>
           <Button
-            onClick={()=>changePage("noticias")}
+            onClick={()=>navigate("/dasboard/noticias")}
             buttonSize="btn--medium"
             buttonStyle="btn--danger--solid"
             icon={<VscChromeClose />}

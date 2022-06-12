@@ -35,7 +35,7 @@ export function App() {
         <Route path="" element={<Overview />} />
         <Route path="perfil" element={<Perfil />} />
         <Route path="noticias" element={<Noticias />}/>
-        <Route path="subirFoto" element={<SubirFoto/>}/>
+        <Route path="upload" element={<SubirFoto/>}/>
         <Route path="crearNoticia" element={<CrearNoticia/>}/>
         <Route path="crearEvento" element={<CrearEvento/>}/>
         <Route path="evento" element={<Evento/>}/>
