@@ -61,7 +61,7 @@ function Noticias() {
   });
   return (
     <main className={style.noticiasGeneral}>
-      <h1>{t("Dashboard.Nav.News")}</h1>
+      <h1 className={style.title}>{t("Dashboard.Nav.News")}</h1>
       <div className={style.noticias}>
         {DisplayNoticias}
         <ReactPaginate

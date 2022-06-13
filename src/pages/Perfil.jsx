@@ -193,7 +193,7 @@ function Perfil() {
           {userForm}
           <div className={style.logros}>
             <div className={style.apartado}>
-              <h2>{t("Profile.Goals")}</h2>
+              <h2 className={style.title}>{t("Profile.Goals")}</h2>
               <a href="logros">{t("Profile.All")}</a>
             </div>
             <div className={style.listaLogros}>

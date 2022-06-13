@@ -64,6 +64,7 @@
     height: 100%;
     border: none;
     color: var(--azul-oscuro);
+    background-color: transparent;
     padding-top: 20px;
 }
 

@@ -28,8 +28,7 @@ function CrearNoticia() {
       subtitle: subtitle,
       content: summary,
       image: "noticia2.jpg",
-      url : url, 
-      enabled : true
+      url : url
     };
     try{
       await axiosPrivate.post(URL, valores, {

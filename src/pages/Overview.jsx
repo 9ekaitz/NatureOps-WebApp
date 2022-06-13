@@ -44,7 +44,7 @@ function Overview() {
 
   return (
     <main className={style.dashboardContainer}>
-      <h1>Dashboard</h1>
+      <h1 className={style.title}>Dashboard</h1>
       <div className={style.noticias}>
         {DisplayNoticias}
       </div>
@@ -62,7 +62,7 @@ function Overview() {
       </div>
       <div className={style.eventos}>
         <div className={style.apartado}>
-          <h2>{t("Dashboard.Main.Events")}</h2>
+          <h2 className={style.title}>{t("Dashboard.Main.Events")}</h2>
           <GrCircleInformation />
         </div>
         <table>

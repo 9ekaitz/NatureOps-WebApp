@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: white;
+    background-color: var(--header-bg);
+    color: var(--dashboard-fg);
     border-radius: 0.8rem;
     height: fit-content;
     padding: 2rem;
@@ -31,7 +32,8 @@
 
 .subir, .sacarFoto{
     border-radius: 0.8rem;
-    background-color:white ;
+    background-color:transparent ;
+    color: var(--dashboard-fg);
     text-align: center;
     display: flex;
     gap: 1rem;

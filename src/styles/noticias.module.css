@@ -5,13 +5,18 @@
     overflow-y: auto;
     height: calc(100vh - 4rem - 2rem);
 }
+
+.title {
+    color: var(--dashboard-fg);
+}
+
 .noticias {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 1.2rem;
     text-align: center;
     align-items: center;
-    height: fit-content;
+    flex-grow: 1;
 }
 
 .card p{
@@ -20,17 +25,16 @@
 
 .card {
     width: 100%;
-    height: 315px;
-    background-color: var(--white);
+    background-color: var(--header-bg);
+    color: var(--dashboard-fg);
     border-radius: 2rem;
-    box-shadow: var(--box-shadow);
     transition: all 250ms ease;
     text-align: center;
+    padding-bottom: 1rem;
 }
 
 .card img{
   width: 100%;
-  height: 40%;
   border-radius: 2rem 2rem 0 0;
 }
 
@@ -49,7 +53,8 @@
     margin-bottom: 1rem;
     width: 100%;
     border-radius: 0.8rem;
-    color: var(--azul-oscuro);
+    color: var(--primary);
+    background-color: var(--header-bg);
 }
 
 .pagination:hover{
