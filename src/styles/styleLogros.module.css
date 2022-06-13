@@ -13,17 +13,28 @@
     margin-bottom: 0.8rem;
 }
 
+.title {
+    color: var(--dashboard-fg);
+}
+
 .listLogros{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    flex-grow: 1;
+}
+
+.text {
+    margin-inline: 1.5rem;
 }
 
 .logroCard{
+    position: relative;
     display: grid;
     gap: 1rem;
     grid-template-rows: repeat(3,1fr);
-    background-color: white;
+    background-color: var(--header-bg);
+    color: var(--dashboard-fg);
     border-radius: 0.8rem;
     justify-items: center;
     align-items: center;
@@ -61,6 +72,7 @@
 }
 
 .progressBars{
+    position: absolute;
     height:20px;
     border-radius:2px;
     display: inline-block;

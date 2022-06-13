@@ -52,7 +52,7 @@ section {
 
 .error {
   color: firebrick !important;
-  position: absolute;
+  /* position: absolute; */
 }
 .errorHidden {
   display: none;

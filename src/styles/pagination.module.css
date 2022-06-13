@@ -1,11 +1,12 @@
 .pagination{
-    background-color: white;
+    background-color: var(--header-bg);
     display: flex;
     justify-content: center;
     padding: 1rem;
     gap: 1rem;
     margin-bottom: 1rem;
     border-radius: 0.8rem;
+    height: fit-content;
 }
 
 .active{

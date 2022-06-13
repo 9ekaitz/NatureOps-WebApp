@@ -235,7 +235,7 @@ function Registro() {
               onChange={(e) => setPasswordRep(e.target.value)}
             />
             {errorMessage && (
-              <p className={errorMessage ? "error" : "errorHidden"}>
+              <p className={errorMessage ? styles.error : styles.errorHidden}>
                 {" "}
                 {errorMessage}{" "}
               </p>

@@ -41,10 +41,7 @@ function Logros() {
   const DisplayData = items.map((logro) => {
     console.log(logro);
     return (
-      <div
-        className={styleLogros.logroCard}
-        key={logro.achievement.id}
-      >
+      <div className={styleLogros.logroCard} key={logro.achievement.id}>
         <div className={styleLogros.logroTop}>
           <img
             src={cargarImagenNoti(`./${logro.achievement.image}`)}
@@ -53,20 +50,21 @@ function Logros() {
           />
           <h4>{logro.achievement.desription}</h4>
         </div>
-        <p>{logro.achievement.objetivo}</p>
+        <p className={styleLogros.text}>{logro.achievement.objetivo}</p>
         <div className={styleLogros.progressElement}>
           <div
             className={styleLogros.progressBars}
             style={{
-              width: logro.progress + "%",
-              backgroundColor: "#48BFE3",
+              width: "calc("+100 + "% - 3rem)",
+              backgroundColor: "aliceblue",
             }}
           ></div>
           <div
             className={styleLogros.progressBars}
             style={{
-              width: 100 - logro.progress + "%",
-              backgroundColor: "aliceblue",
+              width:"calc("+
+                (logro.progress / logro.achievement.objetivoMax) * 100 + "% - 3rem)",
+              backgroundColor: "#48BFE3",
             }}
           ></div>
         </div>
@@ -76,7 +74,7 @@ function Logros() {
 
   return (
     <main className={styleLogros.containerLogros}>
-      <h1>{t("Achivements.Achivements")}</h1>
+      <h1 className={styleLogros.title}>{t("Achivements.Achivements")}</h1>
       <div className={styleLogros.listLogros}>
         {DisplayData}
         <ReactPaginate
